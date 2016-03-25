@@ -21,6 +21,7 @@ sap.ui.define([
 		},
 
 		createDetailView: function(){
+			alert("hi");
           var container = this.getView().byId("gridContent");
           var parentCmp = this;
           
