@@ -1,0 +1,12 @@
+{
+	"category": [
+		{
+			"name": "{master1}",
+			"navTo":"view.detail.detail001"
+		},
+		{
+			"name": "{master2}",
+			"navTo":"view.detail.detail002"
+		}
+	]
+}

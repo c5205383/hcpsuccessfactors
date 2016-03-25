@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "hcpsuccessfactors",
+        "description": "hcp successfactors",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#hcpsuccessfactors-Display",
+        "navigationComponentName": "hcpsuccessfactors",
+        "intentSemanticObject": "hcpsuccessfactors",
+        "intentAction": "Display",
+        "html5ApplicationName": "hcpsuccessfactors",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "f8973a53-de1b-494d-ab64-41359438b994"
+        ],
+        "contentPackages": [
+            "99e1bc08-f37c-4ac9-90d0-437e28463182"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Title",
+        "subtitle": "Subtitle",
+        "searchKeywords": "Title,Subtitle",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

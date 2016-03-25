@@ -1,0 +1,36 @@
+{
+  "projectType": [
+    "sap.watt.uitools.ide.fiori",
+    "com.watt.common.builder.sapui5clientbuild",
+    "com.sap.webide.hybrid.cordova"
+  ],
+  "build": {
+    "targetFolder": "dist",
+    "sourceFolder": "webapp",
+    "buildRequired": true,
+    "lastBuildDateTime": "Fri, 25 Mar 2016 01:53:22 GMT"
+  },
+  "generation": [
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.32.0",
+      "dateTimeStamp": "Fri, 25 Mar 2016 01:09:30 GMT"
+    }
+  ],
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hybrid": {
+    "hatVersion": "1.13.3",
+    "appNamespace": "hcpsuccessfactors"
+  },
+  "hcpdeploy": {
+    "account": "c5205383trial",
+    "name": "hcpsuccessfactors",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  }
+}
