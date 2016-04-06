@@ -1,7 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"hcpsuccessfactors/model/models"
-], function(Controller,models) {
+], function(Controller, models) {
 	"use strict";
 
 	return Controller.extend("hcpsuccessfactors.controller.detail.detail002", {
@@ -11,10 +11,10 @@ sap.ui.define([
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf successfactorsext.view.detail.view.detail02
 		 */
-			onInit: function() {
+		onInit: function() {
 			// set the device model
 			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
-			}
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

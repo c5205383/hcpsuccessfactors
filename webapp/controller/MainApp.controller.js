@@ -94,7 +94,7 @@ sap.ui.define([
 
 				// is it a master?
 				var master = (id.indexOf("view.master.") === 0);
-				window.console.log("navTo id"+id);
+				window.console.log("navTo id" + id);
 
 				var app = this.getView().app;
 				if (app.getPage(id, master) === null) {
@@ -102,7 +102,7 @@ sap.ui.define([
 					var type = "XML";
 					var page = sap.ui.view({
 						id: id,
-						viewName:  "hcpsuccessfactors."+ id,
+						viewName: "hcpsuccessfactors." + id,
 						type: type
 					});
 					if (master) {
