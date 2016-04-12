@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"hcpsuccessfactors/controller/BaseController"
+], function(BaseController) {
 	"use strict";
 
-	return Controller.extend("hcpsuccessfactors.controller.MainApp", {
+	return BaseController.extend("hcpsuccessfactors.controller.MainApp", {
 
 		onItemPress: function(evt) {
 			var item = evt.getSource();
@@ -12,14 +12,15 @@ sap.ui.define([
 			var data = model.getProperty(path);
 			window.console.log(data);
 
-			if (data) {
+			this.getRouter().navTo(data.navTo);
+			/*if (data) {
 				sap.ui.getCore().getEventBus().publish("nav", "to", {
 					id: data.navTo,
 					data: {
 						context: item.getBindingContext()
 					}
 				});
-			}
+			}*/
 		},
 
 		getDefaultPage: function() {},
@@ -35,7 +36,7 @@ sap.ui.define([
 			this.getView().setModel(oModel);
 
 			//
-			this.getView().app = this.getView().byId("sfsf-ext-app");
+			/*this.getView().app = this.getView().byId("sfsf-ext-app");
 
 			// subscribe to history changes
 			var historyDefaultHandler = function(navType) {
@@ -68,7 +69,7 @@ sap.ui.define([
 			var bus = sap.ui.getCore().getEventBus();
 			bus.subscribe("nav", "to", this.navHandler, this);
 			bus.subscribe("nav", "back", this.navHandler, this);
-			bus.subscribe("nav", "virtual", this.navHandler, this);
+			bus.subscribe("nav", "virtual", this.navHandler, this);*/
 		},
 		navHandler: function(channelId, eventId, data) {
 			if (eventId === "to") {

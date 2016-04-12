@@ -1,0 +1,42 @@
+<mvc:View 
+	controllerName="hcpsuccessfactors.controller.detail.GoalDetail" 
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>goaldetail-title}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<Panel
+			id="employeePanel"
+			width="auto"
+			class="sapUiResponsiveMargin sapUiNoContentPadding">
+			<headerToolbar>
+				<Toolbar>
+					<Title text="Goal ID {detailModel>/id}" level="H2"/>
+					<ToolbarSpacer />
+				</Toolbar>
+			</headerToolbar>
+			<content>
+				<f:SimpleForm
+					minWidth="1024"
+					editable="false"
+					layout="ResponsiveGridLayout"
+					labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="name" />
+						<Text text="{detailModel>/name}" />
+						<Label text="user id" />
+						<Text text="{detailModel>/userId}" />
+						<Label text="start" />
+						<Text text="{detailModel>/start}" />
+						<Label text="due" />
+						<Text text="{detailModel>/due}" />
+						<Label text="type" />
+						<Text text="{detailModel>/type}" />
+					</f:content>
+				</f:SimpleForm>
+			</content>
+		</Panel>	
+	</Page>
+</mvc:View>

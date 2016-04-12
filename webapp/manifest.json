@@ -62,6 +62,53 @@
 				}
 			}
 		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "hcpsuccessfactors.view",
+				"controlId": "sfsf-ext-app",
+				"controlAggregation": "detailPages",
+				"transition": "slide",
+            	"bypassed": {
+              		"target": "notFound"
+           		}
+			},
+			"routes": [ {
+				"pattern": "detail1",
+				"name": "detail001",
+				"target": "detail001"
+			}, {
+				"pattern": "detail2",
+				"name": "detail002",
+				"target": "detail002"
+			}, {
+				"pattern": "detail2/goalDetail/{id}",
+				"name": "goalDetail",
+				"target": "goalDetail"
+			}],
+			"targets": {
+				"App": {
+					"viewName": "MainApp"
+				},
+				"detail001": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "detail001"
+				},
+				"detail002": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "detail002"
+				},
+				"goalDetail": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "GoalDetail"
+				},
+            	"notFound": {
+               		"viewName": "NotFound",
+               		"transition": "show"
+            	}
+			}
+		},
 		"resources": {
 			"css": [
 				{

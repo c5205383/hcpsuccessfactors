@@ -1,0 +1,45 @@
+{
+	"goals": [{
+		"due": "2011-12-31T23:59:59.000",
+		"id": 2279,
+		"name": "Support WDPR?s growth and expansion into new markets by supporting the opening of the Aulani Resort and Spa by June 2016",
+		"start": "2011-01-01T00:00:00.000",
+		"type": "user",
+		"userId": "cgrant1"
+	}, {
+		"due": "2010-12-31T23:59:59.000",
+		"id": 2,
+		"name": "Customer Satisfaction",
+		"start": "2010-01-01T00:00:00.000",
+		"type": "user",
+		"userId": "cgrant1"
+	}, {
+		"due": "2010-12-31T00:00:00.000",
+		"id": 4,
+		"name": "Financial industry accounts",
+		"start": "2010-01-01T00:00:00.000",
+		"type": "user",
+		"userId": "cgrant1"
+	}, {
+		"due": "2015-12-31T23:59:59.000",
+		"id": 11094,
+		"name": "Support the Recruitment organization?s achievement of hiring requirements with on time, quality hires measured through timely analysis of hiring and recruitment data",
+		"start": "2015-01-01T00:00:00.000",
+		"type": "user",
+		"userId": "cgrant1"
+	}, {
+		"due": "2013-12-31T23:59:59.000",
+		"id": 11111,
+		"name": "Creativity ? drive creativity and innovation to differentiate our content, products, and experience",
+		"start": "2013-01-01T00:00:00.000",
+		"type": "user",
+		"userId": "cgrant1"
+	}, {
+		"due": "2012-01-01T23:59:59.000",
+		"id": 11066,
+		"name": "Diversity ? focus on the diversity of our global workforce, inclusion within our workplace, and embracing the global community",
+		"start": "2011-01-01T00:00:00.000",
+		"type": "user",
+		"userId": "cgrant1"
+	}]
+}

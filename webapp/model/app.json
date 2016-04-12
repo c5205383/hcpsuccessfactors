@@ -2,11 +2,11 @@
 	"category": [
 		{
 			"name": "{master1}",
-			"navTo":"view.detail.detail001"
+			"navTo":"detail001"
 		},
 		{
 			"name": "{master2}",
-			"navTo":"view.detail.detail002"
+			"navTo":"detail002"
 		}
 	]
 }

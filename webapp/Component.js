@@ -24,6 +24,9 @@ sap.ui.define([
 			this.setModel(models.createDeviceModel(), "device");
 			var testCompyList = new sap.ui.model.odata.ODataModel("/destinations/testCompyList/refapp-companylist-web/companylist.svc/", true);
     		this.setModel(testCompyList,"testCompyList");
+    		
+    		// init the router
+    		this.getRouter().initialize();
 		}
 	});
 
