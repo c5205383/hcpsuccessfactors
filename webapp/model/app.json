@@ -7,6 +7,10 @@
 		{
 			"name": "{master2}",
 			"navTo":"detail002"
+		},
+		{
+			"name": "My Goals",
+			"navTo": "myGoal"
 		}
 	]
 }

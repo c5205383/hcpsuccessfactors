@@ -1,0 +1,231 @@
+{
+	"goals": [{
+		"__metadata": {
+			"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2279L)",
+			"type": "SFOData.Goal_1"
+		},
+		"id": "2279",
+		"weight": "0.0",
+		"lastModified": "/Date(1454395086000)/",
+		"done": "5.0",
+		"link": "[[][]]",
+		"state": "purple",
+		"numbering": "2.1",
+		"type": "user",
+		"modifier": "cgrant1",
+		"guid": null,
+		"category": "Business_Process",
+		"flag": -1,
+		"start": "/Date(1293840000000)/",
+		"metric": "Increase revenue by 30%",
+		"userId": "cgrant1",
+		"name": "Support WDPR’s growth and expansion into new markets by supporting the opening of the Aulani Resort and Spa by June 2016",
+		"actual": null,
+		"due": "/Date(1325375999000)/",
+		"initiativesNal": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2279L)/initiativesNal"
+			}
+		},
+		"milestones": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2279L)/milestones"
+			}
+		},
+		"targets": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2279L)/targets"
+			}
+		}
+	}, {
+		"__metadata": {
+			"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2L)",
+			"type": "SFOData.Goal_1"
+		},
+		"id": "2",
+		"weight": null,
+		"lastModified": "/Date(1120856502000)/",
+		"done": "0.0",
+		"link": "[[][]]",
+		"state": null,
+		"numbering": null,
+		"type": "user",
+		"modifier": "athompson1",
+		"guid": null,
+		"category": null,
+		"flag": 1,
+		"start": "/Date(1262304000000)/",
+		"metric": null,
+		"userId": "cgrant1",
+		"name": "Customer Satisfaction",
+		"actual": null,
+		"due": "/Date(1293839999000)/",
+		"initiativesNal": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2L)/initiativesNal"
+			}
+		},
+		"milestones": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2L)/milestones"
+			}
+		},
+		"targets": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(2L)/targets"
+			}
+		}
+	}, {
+		"__metadata": {
+			"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(4L)",
+			"type": "SFOData.Goal_1"
+		},
+		"id": "4",
+		"weight": null,
+		"lastModified": "/Date(1120856984000)/",
+		"done": "0.0",
+		"link": "[[][]]",
+		"state": null,
+		"numbering": null,
+		"type": "user",
+		"modifier": "cgrant1",
+		"guid": null,
+		"category": null,
+		"flag": 1,
+		"start": "/Date(1262304000000)/",
+		"metric": null,
+		"userId": "cgrant1",
+		"name": "Financial industry accounts",
+		"actual": null,
+		"due": "/Date(1293753600000)/",
+		"initiativesNal": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(4L)/initiativesNal"
+			}
+		},
+		"milestones": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(4L)/milestones"
+			}
+		},
+		"targets": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(4L)/targets"
+			}
+		}
+	}, {
+		"__metadata": {
+			"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11094L)",
+			"type": "SFOData.Goal_1"
+		},
+		"id": "11094",
+		"weight": "2.0",
+		"lastModified": "/Date(1454395086000)/",
+		"done": "30.0",
+		"link": "[[www.sap.com][Learning Link]]",
+		"state": "red",
+		"numbering": "3.1",
+		"type": "user",
+		"modifier": "cgrant1",
+		"guid": null,
+		"category": "Learning_and_Growth",
+		"flag": -1,
+		"start": "/Date(1420070400000)/",
+		"metric": null,
+		"userId": "cgrant1",
+		"name": "Support the Recruitment organization’s achievement of hiring requirements with on time, quality hires measured through timely analysis of hiring and recruitment data",
+		"actual": "4",
+		"due": "/Date(1451606399000)/",
+		"initiativesNal": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11094L)/initiativesNal"
+			}
+		},
+		"milestones": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11094L)/milestones"
+			}
+		},
+		"targets": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11094L)/targets"
+			}
+		}
+	}, {
+		"__metadata": {
+			"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11111L)",
+			"type": "SFOData.Goal_1"
+		},
+		"id": "11111",
+		"weight": "0.0",
+		"lastModified": "/Date(1445311961000)/",
+		"done": "0.0",
+		"link": "[[][]]",
+		"state": "white",
+		"numbering": null,
+		"type": "user",
+		"modifier": "cgrant1",
+		"guid": null,
+		"category": "Customer",
+		"flag": -1,
+		"start": "/Date(1356998400000)/",
+		"metric": null,
+		"userId": "cgrant1",
+		"name": "Creativity – drive creativity and innovation to differentiate our content, products, and experience",
+		"actual": null,
+		"due": "/Date(1388534399000)/",
+		"initiativesNal": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11111L)/initiativesNal"
+			}
+		},
+		"milestones": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11111L)/milestones"
+			}
+		},
+		"targets": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11111L)/targets"
+			}
+		}
+	}, {
+		"__metadata": {
+			"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11066L)",
+			"type": "SFOData.Goal_1"
+		},
+		"id": "11066",
+		"weight": "30.0",
+		"lastModified": "/Date(1445311972000)/",
+		"done": "20.0",
+		"link": "[[www.sap.com][Teched]]",
+		"state": "red",
+		"numbering": null,
+		"type": "user",
+		"modifier": "cgrant1",
+		"guid": null,
+		"category": "Customer",
+		"flag": -1,
+		"start": "/Date(1293840000000)/",
+		"metric": "3",
+		"userId": "cgrant1",
+		"name": "Diversity – focus on the diversity of our global workforce, inclusion within our workplace, and embracing the global community",
+		"actual": "23",
+		"due": "/Date(1325462399000)/",
+		"initiativesNal": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11066L)/initiativesNal"
+			}
+		},
+		"milestones": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11066L)/milestones"
+			}
+		},
+		"targets": {
+			"__deferred": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/Goal_1(11066L)/targets"
+			}
+		}
+	}]
+}

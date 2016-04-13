@@ -16,8 +16,15 @@ sap.ui.define([
 		onInit: function() {
 			// set the device model
 			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
-			//this.createDetailView();
-			this.createTestView();
+
+			var isDebug = true;
+			if (!isDebug) {
+				this.createDetailView();
+			} else {
+				this.createTestView();
+			}
+			//
+
 		},
 
 		createDetailView: function() {
@@ -165,10 +172,38 @@ sap.ui.define([
 		createTestView: function() {
 			var page2 = this.getView().byId("detail2page");
 			var oRouter = this.getRouter();
-			var modelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/model/goal.json");
+
+			var modelPath2 = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/goalTemplate.json");
+			var oModel2 = new sap.ui.model.json.JSONModel();
+			oModel2.loadData(modelPath2, null, false);
+			this.getView().setModel(oModel2, "templateModel");
+
+			var data = oModel2.getData();
+			var selectItem = "";
+			var selectItemArray = [];
+			for (var i = 0; i < data.list.length; i++) {
+				selectItem = new sap.ui.core.Item({
+					key: data.list[i].id,
+					text: data.list[i].name
+				});
+				selectItemArray.push(selectItem);
+			}
+			var templateSelect = new sap.m.Select({
+				id: "tSelect",
+				autoAdjustWidth: true,
+				selectKey: data.list[0].id,
+				items: selectItemArray
+			}).attachChange(function(oEvent) {
+				//_this.onTempalteChanged(oEvent);
+			}, this);
+			page2.addContent(templateSelect);
+
+			var url="/mockData/goal_"+data.list[0].id+".json";
+			var modelPath = jQuery.sap.getModulePath("hcpsuccessfactors", url);
 			var oModel = new sap.ui.model.json.JSONModel();
 			oModel.loadData(modelPath, null, false);
 			this.getView().setModel(oModel, "goalModel");
+
 			var goalTable = new sap.m.Table({
 				id: "gTable",
 				columns: [
