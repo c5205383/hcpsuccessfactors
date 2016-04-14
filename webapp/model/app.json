@@ -11,6 +11,10 @@
 		{
 			"name": "My Goals",
 			"navTo": "myGoal"
+		},
+		{
+			"name": "My Forms",
+			"navTo": "myForm"
 		}
 	]
 }
