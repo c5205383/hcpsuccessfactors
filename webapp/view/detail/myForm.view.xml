@@ -2,7 +2,7 @@
 	controllerName="hcpsuccessfactors.controller.detail.myForm" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="Title">
+			<Page title="{i18n>myform-title}">
 				<content></content>
 			</Page>
 		</pages>
