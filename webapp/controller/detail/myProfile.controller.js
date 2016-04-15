@@ -19,6 +19,11 @@ sap.ui.define([
 			var userModel = new JSONModel();
 			userModel.loadData(userModelPath, null, false);
 			this.getView().setModel(userModel, "UserModel");
+			
+			var photoModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/photo.json");
+			var photoModel = new JSONModel();
+			photoModel.loadData(photoModelPath, null, false);
+			this.getView().setModel(photoModel, "photoModel");
 		}
 		
 	});

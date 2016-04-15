@@ -5,10 +5,10 @@
 			"type": "SFOData.User"
 		},
 		"userId": "msaban1",
-		"businessPhone": null,
-		"empId": null,
+		"businessPhone": "null",
+		"empId": "null",
 		"lastModifiedDateTime": "/Date(1226919489000+0000)/",
-		"city": null,
+		"city": "null",
 		"username": "msaban",
 		"addressLine2": null,
 		"addressLine1": null,

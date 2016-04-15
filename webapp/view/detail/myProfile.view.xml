@@ -12,6 +12,7 @@
 						</headerToolbar>
 						<content>
 							<l:VerticalLayout >
+								<Image src="data:image/png; base64,{photoModel>/photo}"> </Image>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-username} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
 									<Text text="{UserModel>/d/username}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
@@ -43,7 +44,6 @@
 							</l:VerticalLayout>
 						</content>
 					</Panel>
-				
 			</Page>
 		</pages>
 	</App>
