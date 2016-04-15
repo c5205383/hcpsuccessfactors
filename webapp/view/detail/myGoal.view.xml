@@ -8,7 +8,7 @@
 					<Toolbar>
 						<Title text="{i18n>GoalListTitle}"/>
 						<ToolbarSpacer/>
-						<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/goalPlans'}">
+						<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/list'}">
 							<items>
 								<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}"/>
 							</items>
