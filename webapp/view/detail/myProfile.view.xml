@@ -1,9 +1,49 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
 	controllerName="hcpsuccessfactors.controller.detail.myProfile" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="{i18n>myprofile-title}">
-				<content></content>
+				
+					<Panel class="sapUiResponsiveMargin" width="auto">
+						<headerToolbar>
+							<Toolbar height="3rem">
+								<Title text="{i18n>infopanel-title}"/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<l:VerticalLayout >
+								<HBox alignItems="Start" class="cssHBox">
+									<Label text="{i18n>infopanel-username} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
+									<Text text="{UserModel>/d/username}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+								</HBox>
+								<HBox alignItems="Start" class="cssHBox">
+									<Label text="{i18n>infopanel-firstname} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
+									<Text text="{UserModel>/d/firstName}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+								</HBox>
+								<HBox alignItems="Start" class="cssHBox">
+									<Label text="{i18n>infopanel-lastname} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
+									<Text text="{UserModel>/d/lastName}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+								</HBox>
+								<HBox alignItems="Start" class="cssHBox">
+									<Label text="{i18n>infopanel-empid} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
+									<Text text="{UserModel>/d/empId}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+								</HBox>
+								<HBox alignItems="Start" class="cssHBox">
+									<Label text="{i18n>infopanel-bphone} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
+									<Text text="{UserModel>/d/businessPhone}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+								</HBox>
+								<HBox alignItems="Start" class="cssHBox">
+									<Label text="{i18n>infopanel-email} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
+									<Text text="{UserModel>/d/email}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+								</HBox>
+								<HBox alignItems="Start" class="cssHBox">
+									<Label text="{i18n>infopanel-city} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
+									<Text text="{UserModel>/d/city}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+								</HBox>
+							</l:VerticalLayout>
+						</content>
+					</Panel>
+				
 			</Page>
 		</pages>
 	</App>

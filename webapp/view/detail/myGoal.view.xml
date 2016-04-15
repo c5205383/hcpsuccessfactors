@@ -17,7 +17,7 @@
 				</headerToolbar>
 				<items>
 					<StandardListItem title="{GoalModel>name}" 
-						description="metric:{GoalModel>metric}" 
+						description="metric: {GoalModel>metric}" 
 						info="{GoalModel>id}"
 						type="Navigation"
 						press="onItemPress"/>

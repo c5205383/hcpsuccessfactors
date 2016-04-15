@@ -181,24 +181,24 @@ sap.ui.define([
 			var data = oModel2.getData();
 			var selectItem = "";
 			var selectItemArray = [];
-			for (var i = 0; i < data.list.length; i++) {
+			for (var i = 0; i < data.goalPlans.length; i++) {
 				selectItem = new sap.ui.core.Item({
-					key: data.list[i].id,
-					text: data.list[i].name
+					key: data.goalPlans[i].id,
+					text: data.goalPlans[i].name
 				});
 				selectItemArray.push(selectItem);
 			}
 			var templateSelect = new sap.m.Select({
 				id: "tSelect",
 				autoAdjustWidth: true,
-				selectKey: data.list[0].id,
+				selectKey: data.goalPlans[0].id,
 				items: selectItemArray
 			}).attachChange(function(oEvent) {
 				//_this.onTempalteChanged(oEvent);
 			}, this);
 			page2.addContent(templateSelect);
 
-			var url="/mockData/goal_"+data.list[0].id+".json";
+			var url="/mockData/goal_"+data.goalPlans[0].id+".json";
 			var modelPath = jQuery.sap.getModulePath("hcpsuccessfactors", url);
 			var oModel = new sap.ui.model.json.JSONModel();
 			oModel.loadData(modelPath, null, false);
