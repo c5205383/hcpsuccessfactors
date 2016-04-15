@@ -15,6 +15,10 @@
 		{
 			"name": "My Forms",
 			"navTo": "myForm"
+		},
+		{
+			"name": "My Profile",
+			"navTo": "myProfile"
 		}
 	]
 }

@@ -98,6 +98,10 @@
 				"pattern": "detail2/goalDetail/{id}",
 				"name": "goalDetail",
 				"target": "goalDetail"
+			}, {
+				"pattern": "myprofile",
+				"name": "myProfile",
+				"target": "myProfile"
 			}],
 			"targets": {
 				"App": {
@@ -122,6 +126,10 @@
 				"myForm": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "myForm"
+				},
+				"myProfile":{
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "myProfile"
 				},
             	"notFound": {
                		"viewName": "NotFound",
