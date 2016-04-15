@@ -1,6 +1,9 @@
-/* Enter your custom styles here */
 .cssHBox {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
+.progressStatus {
+	background-color:#0000FF;
+	color: white
+} 
