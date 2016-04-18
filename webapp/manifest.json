@@ -95,7 +95,7 @@
 				"name": "myForm",
 				"target": "myForm"
 			}, {
-				"pattern": "detail2/goalDetail/{id}",
+				"pattern": "goals/{id}",
 				"name": "goalDetail",
 				"target": "goalDetail"
 			}, {

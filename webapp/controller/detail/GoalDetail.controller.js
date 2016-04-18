@@ -6,11 +6,11 @@ sap.ui.define([
     return BaseController.extend("hcpsuccessfactors.controller.detail.GoalDetail", {
     	
         onInit: function(){
-        	var debug=true;
+        	var debug = false;
         	if(!debug){
         		//
         	}else{
-        		this.bindMockData();
+        		//this.bindMockData();
         	}
         	
         	var oRouter = this.getRouter();
@@ -28,19 +28,24 @@ sap.ui.define([
 			var oArgs, oView;
 			
 			oArgs = oEvent.getParameter("arguments");
-			var data=this.getView().getModel("GoalModel").getData().goals;
+			oView = this.getView();
+			oView.setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
+			
+			oView.bindElement({
+				path: "/goals/" + oArgs.id,
+				model: "GoalModel"
+			});
+			/*var data=this.getView().getModel("GoalModel").getData().goals;
 			//var data=sap.ui.getCore().getModel("GoalModel").getData().goals;
-			//var oItem= oEvent.getSource();
 	    	var clickGoalData;
 	    	for(var i=0;i<data.length;i++){
-	    	   if(data[i].id == oArgs.id){
+	    	   if(data[i].id === oArgs.id){
 	   			   clickGoalData=data[i];
 	   		   }
 	   	    }
 	    	
-			oView = this.getView();
 			var detailModel=new sap.ui.model.json.JSONModel(clickGoalData);
-			oView.setModel(detailModel,"detailModel");
+			oView.setModel(detailModel,"detailModel");*/
 		}
     });
 });

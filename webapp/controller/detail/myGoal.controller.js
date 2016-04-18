@@ -8,6 +8,7 @@ sap.ui.define([
 	return BaseController.extend("hcpsuccessfactors.controller.detail.myGoal", {
 
 		onInit: function() {
+			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");
 			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
 
 			var isDebug = false;
@@ -29,13 +30,12 @@ sap.ui.define([
 				},
 				jsonp: "callback",
 				jsonpCallback: "processResults",
-				async: true,
+				async: false,
 				success: function(tdata) {
 					var planModel = new JSONModel(tdata);
 					_this.getView().setModel(planModel, "GoalPlanModel");
 
-					//var curId = _this.getView().byId("planSelect").getItemAt(0).getKey();
-					var curId=_this.getView().getModel("GoalPlanModel").getData().list[0].id;
+					var curId = _this.getView().getModel("GoalPlanModel").getData().list[0].id;
 					var callBack = "g" + curId;
 					$.ajax({
 						url: "https://middlewarei326962trial.hanatrial.ondemand.com/hcpmiddleware/api/getGoal",
@@ -46,10 +46,13 @@ sap.ui.define([
 						},
 						jsonp: "callback",
 						jsonpCallback: callBack,
-						async: true,
+						async: false,
 						success: function(gdata) {
-							var goalModel = new JSONModel(gdata);
-							_this.getView().setModel(goalModel, "GoalModel");
+							// var goalModel = new JSONModel(gdata);
+							// _this.getView().setModel(goalModel, "GoalModel");
+
+							sap.ui.getCore().getModel("GoalModel").setData(gdata);
+							_this.getView().setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
 						},
 						error: function() {
 							alert("failed to get goal");
@@ -75,7 +78,7 @@ sap.ui.define([
 			this.getView().setModel(goalModel, "GoalModel");
 		},
 
-		onSelectKeyChange: function(){
+		onSelectKeyChange: function() {
 			alert("change");
 			this.getView().getModel("GoalModel").setData({});
 			var curId = this.getView().byId("planSelect").getSelectedKey();
@@ -92,6 +95,7 @@ sap.ui.define([
 				jsonpCallback: callBack,
 				async: true,
 				success: function(cdata) {
+					sap.ui.getCore().getModel("GoalModel").setData(cdata);
 					_this.getView().getModel("GoalModel").setData(cdata);
 				},
 				error: function() {
@@ -103,7 +107,8 @@ sap.ui.define([
 		onItemPress: function(oEvent) {
 			//alert("haha");
 			var oItem = oEvent.getSource();
-			var goalId = oItem.getInfo();
+			//var goalId = oItem.getInfo();
+			var spath = oItem.getBindingContext("GoalModel");
 			/*var goalData=this.getView().getModel("GoalModel").getData().goals;
 			var index;
 			for(var i=0,max=goalData.length; i<max;i++){
@@ -113,7 +118,7 @@ sap.ui.define([
 				}
 			}*/
 			this.getRouter().navTo("goalDetail", {
-				id: goalId
+				id: spath.getPath().substr(7)
 			});
 		}
 

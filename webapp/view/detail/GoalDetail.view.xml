@@ -25,15 +25,15 @@
 					columnsL="1" columnsM="1">
 					<f:content>
 						<Label text="name" />
-						<Text text="{detailModel>/name}" />
+						<Text text="{GoalModel>name}" />
 						<Label text="user id" />
-						<Text text="{detailModel>/userId}" />
+						<Text text="{GoalModel>userId}" />
 						<Label text="start" />
-						<Text text="{detailModel>/start}" />
+						<Text text="{GoalModel>start}" />
 						<Label text="due" />
-						<Text text="{detailModel>/due}" />
+						<Text text="{GoalModel>due}" />
 						<Label text="type" />
-						<Text text="{detailModel>/type}" />
+						<Text text="{GoalModel>type}" />
 					</f:content>
 				</f:SimpleForm>
 			</content>

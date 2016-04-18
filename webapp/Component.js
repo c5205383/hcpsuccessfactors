@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"hcpsuccessfactors/model/models"
-], function(UIComponent, Device, models) {
+	"hcpsuccessfactors/model/models",
+	"sap/ui/model/json/JSONModel"
+], function(UIComponent, Device, models, JSONModel) {
 	"use strict";
 
 	return UIComponent.extend("hcpsuccessfactors.Component", {
@@ -27,6 +28,10 @@ sap.ui.define([
     		
     		// init the router
     		this.getRouter().initialize();
+    		
+    		// init global model
+    		var goalModel = new JSONModel();
+			sap.ui.getCore().setModel(goalModel, "GoalModel");
 		}
 	});
 
