@@ -50,10 +50,6 @@ sap.ui.define([
 		_formatStateBackground:function(oControl, sText){
 		    oControl.addStyleClass("cssBackground");
 			switch(sText){
-				case "None" :
-					$(".cssBackground").css("background-color","#F8FBFC");
-					$(".cssBackground").css("color","black");
-					break;
 				case "Not Started" :
 					$(".cssBackground").css("background-color","white");
 					$(".cssBackground").css("color","black");

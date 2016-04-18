@@ -34,9 +34,6 @@ hcpsuccessfactors.util.format = {
 					break;
 			}
 		}
-		else{
-			sValue = "None";
-		}
 		return sValue;
 	},
 	formatCreatewarning: function(Value) {
