@@ -1,9 +1,16 @@
+.cssLayout {
+	padding-left: 5px;
+	margin-left:15px;
+}
 .cssHBox {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
-.progressStatus {
-	background-color:#0000FF;
-	color: white
-} 
+.cssBackground {
+	background-color:#f7f7f7;
+	color:white;
+}
+.cssWarning {
+	color: #FFD700;
+	font-style: italic;
+}
