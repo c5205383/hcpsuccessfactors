@@ -3,10 +3,10 @@
 	<Page title="{i18n>goaldetail-title} of {detailModel>/name}" showNavButton="true" navButtonPress="onNavBack">
 		<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 			<uxap:headerTitle>
-				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {detailModel>/userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
+				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {GoalModel>userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
 			</uxap:headerTitle>
 			<uxap:headerContent>
-				<Title title="" text="This page is the detail of the goal '{detailModel>/name}'."/>
+				<Title title="" text="This page is the detail of the goal '{GoalModel>name}'."/>
 			</uxap:headerContent>
 			<uxap:sections>
 				<uxap:ObjectPageSection title="Goal Detail">
@@ -16,48 +16,48 @@
 								<l:VerticalLayout width="100%" class="cssLayout">
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Goal ID" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{detailModel>/id}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>id}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Category" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{detailModel>/category}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>category}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Metric" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{detailModel>/metric}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>metric}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Start Date" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'detailModel>/start',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+										<Text text="{path:'GoalModel>start',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
 											maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Due Date" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'detailModel>/due',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+										<Text text="{path:'GoalModel>due',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
 											maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Status" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text id="idState" text="{path:'detailModel>/state',formatter:'hcpsuccessfactors.util.format.formatStatus'}" class="sapUiSmallMarginEnd"
+										<Text id="idState" text="{path:'GoalModel>state',formatter:'hcpsuccessfactors.util.format.formatStatus'}" class="sapUiSmallMarginEnd"
 											textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Type" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{detailModel>/type}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>type}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Progress" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
 										<ProgressIndicator class="sapUiSmallMarginEnd" width="200px" height="12px"
-											percentValue="{path:'detailModel>/done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{detailModel>/done}%"
+											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{detailModel>/done}%"
 											showValue="true" state="None"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
-										<Label text="{path:'detailModel>/userId',formatter:'hcpsuccessfactors.util.format.formatCreatewarning'} " width="500px"
+										<Label text="{path:'GoalModel>userId',formatter:'hcpsuccessfactors.util.format.formatCreatewarning'} " width="500px"
 											class="sapUiSmallMarginEnd cssWarning"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label
-											text="{path:'detailModel>/modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'detailModel>/lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
+											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'detailModel>/lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
 											width="500px" class="sapUiSmallMarginEnd cssWarning"/>
 									</HBox>
 								</l:VerticalLayout>
@@ -82,8 +82,8 @@
 											<ColumnListItem >
 												<cells>
 													<Text text="Modify"/>
-													<Text text="{detailModel>/modifier}"/>
-													<Text text="{path:'detailModel>/lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"/>
+													<Text text="{GoalModel>modifier}"/>
+													<Text text="{path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"/>
 												</cells>
 											</ColumnListItem>
 										</items>
@@ -122,5 +122,4 @@
 			</uxap:sections>
 		</uxap:ObjectPageLayout>
 	</Page>
->>>>>>> branch 'master' of https://github.com/c5205383/hcpsuccessfactors
 </mvc:View>

@@ -80,7 +80,7 @@ sap.ui.define([
 
 		onSelectKeyChange: function() {
 			alert("change");
-			this.getView().getModel("GoalModel").setData({});
+			//this.getView().getModel("GoalModel").setData({});
 			var curId = this.getView().byId("planSelect").getSelectedKey();
 			var callBack = "g" + curId;
 			var _this = this;

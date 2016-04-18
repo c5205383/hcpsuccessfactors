@@ -36,10 +36,9 @@ sap.ui.define([
 				path: "/goals/" + oArgs.id,
 				model: "GoalModel"
 			});
-			/*var data=this.getView().getModel("GoalModel").getData().goals;
-			//var data=sap.ui.getCore().getModel("GoalModel").getData().goals;
+			
+			/*var data=sap.ui.getCore().getModel("GoalModel").getData().goals;
 
-			oView = this.getView();
 			var detailModel=new sap.ui.model.json.JSONModel(clickGoalData);
 			oView.setModel(detailModel,"detailModel");*/
 			
