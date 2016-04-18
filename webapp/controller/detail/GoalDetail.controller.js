@@ -32,7 +32,7 @@ sap.ui.define([
 			var data=this.getView().getModel("GoalModel").getData().goals;
 			//var data=sap.ui.getCore().getModel("GoalModel").getData().goals;
 			//var oItem= oEvent.getSource();
-	    	var clickGoalData;
+	    	/*var clickGoalData;
 	    	for(var i=0;i<data.length;i++){
 	    	   if(data[i].id == oArgs.id){
 	   			   clickGoalData=data[i];
@@ -41,7 +41,7 @@ sap.ui.define([
 	    	
 			oView = this.getView();
 			var detailModel=new sap.ui.model.json.JSONModel(clickGoalData);
-			oView.setModel(detailModel,"detailModel");
+			oView.setModel(detailModel,"detailModel");*/
 			
 			var oControl = this.getView().byId("idState");
 			this._formatStateBackground(oControl,oControl.getText());
