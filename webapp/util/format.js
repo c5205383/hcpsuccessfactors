@@ -3,8 +3,17 @@ hcpsuccessfactors.util.format = {
 	formatDate: function(sValue) {
 		//return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/," ");  
 		if (sValue !== null) {
-			var sSubValue = sValue.replace(/[^0-9]*/g,"")
-			return new Date(parseInt(sSubValue)).toLocaleString();
+			var sSubValue = sValue.substring(0,sValue.indexOf("T"));
+			var lSubValue = sValue.substring((sValue.indexOf("T")+1), sValue.lastIndexOf("."));
+			var middle = lSubValue.substring(0, lSubValue.indexOf(":"));
+			var DateTime;
+			if (parseInt(middle) > 12 && parseInt(middle) <=24){
+				DateTime = sSubValue + ", " + lSubValue + " PM";
+			}
+			else {
+				DateTime = sSubValue + ", " + lSubValue + " AM";
+			}
+			return DateTime;
 		}
 	},
 	formatDone: function(Value) {

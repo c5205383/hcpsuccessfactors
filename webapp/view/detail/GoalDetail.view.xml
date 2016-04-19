@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.m" height="100%"
 	controllerName="hcpsuccessfactors.controller.detail.GoalDetail">
-	<Page title="{i18n>goaldetail-title} of {detailModel>/name}" showNavButton="true" navButtonPress="onNavBack">
+	<Page title="{i18n>goaldetail-title} of {GoalModel>name}" showNavButton="true" navButtonPress="onNavBack">
 		<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 			<uxap:headerTitle>
 				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {GoalModel>userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
@@ -48,7 +48,7 @@
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="Progress" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
 										<ProgressIndicator class="sapUiSmallMarginEnd" width="200px" height="12px"
-											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{detailModel>/done}%"
+											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{GoalModel>done}%"
 											showValue="true" state="None"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
@@ -57,7 +57,7 @@
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label
-											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'detailModel>/lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
+											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
 											width="500px" class="sapUiSmallMarginEnd cssWarning"/>
 									</HBox>
 								</l:VerticalLayout>
