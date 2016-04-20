@@ -1,5 +1,5 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
-	controllerName="hcpsuccessfactors.controller.detail.profileDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	controllerName="hcpsuccessfactors.controller.detail.empCenter.profileDetail" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<Page title="Profile of {UsersModel>username}" showNavButton="true" navButtonPress="onNavBack">
 			<Panel class="sapUiResponsiveMargin" width="auto">

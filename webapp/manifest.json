@@ -134,12 +134,12 @@
 					"viewName": "detail002"
 				},
 				"mygoal": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.goal",
 					"viewName": "myGoal"
 				},
 				"goalDetail": {
-					"viewPath": "hcpsuccessfactors.view.detail",
-					"viewName": "GoalDetail"
+					"viewPath": "hcpsuccessfactors.view.detail.goal",
+					"viewName": "goalDetail"
 				},
 				"myForm": {
 					"viewPath": "hcpsuccessfactors.view.detail",
@@ -150,11 +150,11 @@
 					"viewName": "myProfile"
 				},
 				"employeeCenter": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
 					"viewName": "employeeCenter"
 				},
 				"profileDetail": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
 					"viewName": "profileDetail"
 				},
 				"notFound": {
