@@ -5,22 +5,32 @@ sap.ui.define([
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.detail.employeeCenter", {
-		onInit: function(){
-			var isDebug=true;
-			if(!isDebug){
+		onInit: function() {
+			var isDebug = true;
+			if (!isDebug) {
 				//
-			}else{
+			} else {
 				this.bindMockData();
 			}
 		},
-		
-		bindMockData: function(){
+
+		bindMockData: function() {
 			var usersModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/users.json");
 			var usersModel = new JSONModel();
+			sap.ui.getCore().getModel("UsersModel").loadData(usersModelPath, null, false);
 			usersModel.loadData(usersModelPath, null, false);
 			this.getView().setModel(usersModel, "UsersModel");
-		}
+		},
 		
+		onItemPress: function(oEvent) {
+			//alert("click");
+			var oItem = oEvent.getSource();
+			var spath = oItem.getBindingContext("UsersModel");
+			this.getRouter().navTo("userDetail", {
+				id: spath.getPath().substr(11)
+			});
+		}
+
 	});
 
 });

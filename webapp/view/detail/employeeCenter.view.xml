@@ -4,7 +4,7 @@
 		<pages>
 			<Page title="{i18n>employeeCenter-title}">
 				<content>
-					<Table items="{path:'UsersModel>/d/results'}">
+					<Table id="empTable" items="{path:'UsersModel>/d/results'}">
 						<headerToolbar >
 							<OverflowToolbar>
 								<Title text="{i18n>empTable-title}"/>
@@ -21,7 +21,7 @@
 							<Column ><Text text="{i18n>empTable-uname}"/></Column>
 						</columns>
 						<items>
-							<ColumnListItem>
+							<ColumnListItem type="Active" press="onItemPress">
 								<cells>
 									<ObjectIdentifier title="{UsersModel>username}" text="id: {UsersModel>userId}" />
 									<Text text="{UsersModel>firstName} {UsersModel>lastName}" wrapping="false" />

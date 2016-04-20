@@ -3,7 +3,6 @@
 	<App>
 		<pages>
 			<Page title="{i18n>myprofile-title}">
-				
 					<Panel class="sapUiResponsiveMargin" width="auto">
 						<headerToolbar>
 							<Toolbar height="3rem">

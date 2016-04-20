@@ -114,6 +114,11 @@
 					"pattern": "employeecenter",
 					"name": "employeeCenter",
 					"target": "employeeCenter"
+				},
+				{
+					"pattern": "employeecenter/profile/{id}",
+					"name": "userDetail",
+					"target": "profileDetail"
 				}
 			],
 			"targets": {
@@ -147,6 +152,10 @@
 				"employeeCenter": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "employeeCenter"
+				},
+				"profileDetail": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "profileDetail"
 				},
 				"notFound": {
 					"viewName": "NotFound",
