@@ -4,7 +4,31 @@
 		<pages>
 			<Page title="{i18n>employeeCenter-title}">
 				<content>
-					            
+					<Table items="{path:'UsersModel>/d/results'}">
+						<headerToolbar >
+							<OverflowToolbar>
+								<Title text="{i18n>empTable-title}"/>
+								<ToolbarSpacer />
+								<Button icon="sap-icon://action-settings" press="onConfPress">
+									<layoutData>
+										<OverflowToolbarLayoutData priority="NeverOverflow"/>
+									</layoutData>
+								</Button>		 
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column ><Text text="{i18n>empTable-uid}"/></Column>
+							<Column ><Text text="{i18n>empTable-uname}"/></Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{UsersModel>username}" text="id: {UsersModel>userId}" />
+									<Text text="{UsersModel>firstName} {UsersModel>lastName}" wrapping="false" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>            
 				</content>
 			</Page>
 		</pages>
