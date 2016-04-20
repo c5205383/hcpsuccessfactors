@@ -3,7 +3,9 @@
 	<App>
 		<pages>
 			<Page title="{i18n>employeeCenter-title}">
-				<content></content>
+				<content>
+					            
+				</content>
 			</Page>
 		</pages>
 	</App>
