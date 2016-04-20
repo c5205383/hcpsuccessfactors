@@ -4,7 +4,7 @@
 		<pages>
 			<Page title="{i18n>employeeCenter-title}">
 				<content>
-					<Table id="empTable" items="{path:'UsersModel>/d/results'}">
+					<Table id="empTable" items="{path:'UsersModel>/d/results'}" class="sapUiResponsiveMargin" width="auto">
 						<headerToolbar >
 							<OverflowToolbar>
 								<Title text="{i18n>empTable-title}"/>
@@ -19,12 +19,16 @@
 						<columns>
 							<Column ><Text text="{i18n>empTable-uid}"/></Column>
 							<Column ><Text text="{i18n>empTable-uname}"/></Column>
+							<Column ><Text text="{i18n>empTable-gender}"/></Column>
+							<Column ><Text text="{i18n>empTable-email}"/></Column>
 						</columns>
 						<items>
 							<ColumnListItem type="Active" press="onItemPress">
 								<cells>
 									<ObjectIdentifier title="{UsersModel>username}" text="id: {UsersModel>userId}" />
 									<Text text="{UsersModel>firstName} {UsersModel>lastName}" wrapping="false" />
+									<Text text="{UsersModel>gender}" wrapping="false" />
+									<Text text="{UsersModel>email}" wrapping="false" />
 								</cells>
 							</ColumnListItem>
 						</items>
