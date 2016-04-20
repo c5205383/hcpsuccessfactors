@@ -70,39 +70,52 @@
 				"controlId": "sfsf-ext-app",
 				"controlAggregation": "detailPages",
 				"transition": "slide",
-            	"bypassed": {
-              		"target": "notFound"
-           		}
+				"bypassed": {
+					"target": "notFound"
+				}
 			},
-			"routes": [ {
-				"pattern": "",
-				"name": "home",
-				"target": "mygoal"
-			},{
-				"pattern": "detail1",
-				"name": "detail001",
-				"target": "detail001"
-			}, {
-				"pattern": "detail2",
-				"name": "detail002",
-				"target": "detail002"
-			}, {
-				"pattern": "mygoal",
-				"name": "myGoal",
-				"target": "mygoal"
-			}, {
-				"pattern": "myform",
-				"name": "myForm",
-				"target": "myForm"
-			}, {
-				"pattern": "mygoal/goals/{id}",
-				"name": "goalDetail",
-				"target": "goalDetail"
-			}, {
-				"pattern": "myprofile",
-				"name": "myProfile",
-				"target": "myProfile"
-			}],
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "mygoal"
+				},
+				{
+					"pattern": "detail1",
+					"name": "detail001",
+					"target": "detail001"
+				},
+				{
+					"pattern": "detail2",
+					"name": "detail002",
+					"target": "detail002"
+				},
+				{
+					"pattern": "mygoal",
+					"name": "myGoal",
+					"target": "mygoal"
+				},
+				{
+					"pattern": "myform",
+					"name": "myForm",
+					"target": "myForm"
+				},
+				{
+					"pattern": "mygoal/goals/{id}",
+					"name": "goalDetail",
+					"target": "goalDetail"
+				},
+				{
+					"pattern": "myprofile",
+					"name": "myProfile",
+					"target": "myProfile"
+				},
+				{
+					"pattern": "employeecenter",
+					"name": "employeeCenter",
+					"target": "employeeCenter"
+				}
+			],
 			"targets": {
 				"App": {
 					"viewName": "MainApp"
@@ -127,14 +140,18 @@
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "myForm"
 				},
-				"myProfile":{
+				"myProfile": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "myProfile"
 				},
-            	"notFound": {
-               		"viewName": "NotFound",
-               		"transition": "show"
-            	}
+				"employeeCenter": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "employeeCenter"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"transition": "show"
+				}
 			}
 		},
 		"resources": {
