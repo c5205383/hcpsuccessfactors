@@ -1,0 +1,125 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.m" height="100%"
+	controllerName="hcpsuccessfactors.controller.detail.goal.goalDetail">
+	<Page title="{i18n>goaldetail-title} of {GoalModel>name}" showNavButton="true" navButtonPress="onNavBack">
+		<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+			<uxap:headerTitle>
+				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {GoalModel>userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
+			</uxap:headerTitle>
+			<uxap:headerContent>
+				<Title title="" text="This page is the detail of the goal '{GoalModel>name}'."/>
+			</uxap:headerContent>
+			<uxap:sections>
+				<uxap:ObjectPageSection title="Goal Detail">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="Detail ">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-gid}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<Text text="{GoalModel>id}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-category}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<Text text="{GoalModel>category}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-metric}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<Text text="{GoalModel>metric}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-startdate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<Text text="{path:'GoalModel>start',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+											maxLines="1"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-duedate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<Text text="{path:'GoalModel>due',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+											maxLines="1"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-status}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<Text id="idState" text="{path:'GoalModel>state',formatter:'hcpsuccessfactors.util.format.formatStatus'}" class="sapUiSmallMarginEnd"
+											textAlign="Begin" maxLines="1"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-type}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<Text text="{GoalModel>type}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{i18n>goaldetail-progress}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<ProgressIndicator class="sapUiSmallMarginEnd" width="200px" height="12px"
+											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{GoalModel>done}%"
+											showValue="true" state="None"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label text="{path:'GoalModel>userId',formatter:'hcpsuccessfactors.util.format.formatCreatewarning'} " width="500px"
+											class="sapUiSmallMarginEnd cssWarning"/>
+									</HBox>
+									<HBox alignItems="Start" class="cssHBox">
+										<Label
+											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
+											width="500px" class="sapUiSmallMarginEnd cssWarning"/>
+									</HBox>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+						<uxap:ObjectPageSubSection title="Audit History ">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<Table inset="false" width="80%" border="1px solid red">
+										<columns>
+											<Column width="12em">
+												<Text text="Action"/>
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="User"/>
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="Date"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem >
+												<cells>
+													<Text text="Modify"/>
+													<Text text="{GoalModel>modifier}"/>
+													<Text text="{path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"/>
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="Other">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="Other">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<HBox alignItems="Start" class="cssHBox">
+										<Text text="111111111111111111111111111111111"/>
+									</HBox>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="Other Section">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="Section">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<HBox alignItems="Start" class="cssHBox">
+										<Text text="22222222222222222222"/>
+									</HBox>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Page>
+</mvc:View>

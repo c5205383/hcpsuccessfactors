@@ -1,0 +1,3645 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')",
+				"type": "SFOData.User"
+			},
+			"userId": "msaban1",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1226919489000+0000)/",
+			"city": null,
+			"username": "msaban",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1226919489000+0000)/",
+			"jobCode": "INACTIVE",
+			"defaultFullName": "Max Saban",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "N/A",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1226919489000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_HC_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "Saban",
+			"fax": null,
+			"status": "T",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "en_US",
+			"department": "N/A",
+			"state": null,
+			"timeZone": "EST",
+			"firstName": "Max",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')",
+				"type": "SFOData.User"
+			},
+			"userId": "jvictor1",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1226919489000+0000)/",
+			"city": null,
+			"username": "jvictor",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1226919489000+0000)/",
+			"jobCode": "INACTIVE",
+			"defaultFullName": "Jim Victor",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "N/A",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1226919489000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_HC_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "Victor",
+			"fax": null,
+			"status": "T",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "en_US",
+			"department": "N/A",
+			"state": null,
+			"timeZone": "EST",
+			"firstName": "Jim",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('jvictor1')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')",
+				"type": "SFOData.User"
+			},
+			"userId": "dwall1",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1226919489000+0000)/",
+			"city": null,
+			"username": "dwall",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1226919489000+0000)/",
+			"jobCode": "INACTIVE",
+			"defaultFullName": "David Wall",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "N/A",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1226919489000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_HC_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "Wall",
+			"fax": null,
+			"status": "T",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "en_US",
+			"department": "N/A",
+			"state": null,
+			"timeZone": "EST",
+			"firstName": "David",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('dwall1')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')",
+				"type": "SFOData.User"
+			},
+			"userId": "TestUser101",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1432884593000+0000)/",
+			"city": null,
+			"username": "TestUser101",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1432884593000+0000)/",
+			"jobCode": null,
+			"defaultFullName": "TestUser 101",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "ABC Software New",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1432884593000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_C_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "101",
+			"fax": null,
+			"status": "t",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "english us",
+			"department": "Client Service",
+			"state": null,
+			"timeZone": "US/Alaska",
+			"firstName": "TestUser",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser101')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')",
+				"type": "SFOData.User"
+			},
+			"userId": "TestUser1010",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1432884593000+0000)/",
+			"city": null,
+			"username": "TestUser1010",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1432884593000+0000)/",
+			"jobCode": null,
+			"defaultFullName": "TestUser 1010",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "ABC Software New",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1432884593000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_C_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "1010",
+			"fax": null,
+			"status": "t",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "english us",
+			"department": "Client Service",
+			"state": null,
+			"timeZone": "US/Alaska",
+			"firstName": "TestUser",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1010')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')",
+				"type": "SFOData.User"
+			},
+			"userId": "TestUser1011",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1432884593000+0000)/",
+			"city": null,
+			"username": "TestUser1011",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1432884593000+0000)/",
+			"jobCode": null,
+			"defaultFullName": "TestUser 1011",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "ABC Software New",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1432884593000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_C_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "1011",
+			"fax": null,
+			"status": "t",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "english us",
+			"department": "Client Service",
+			"state": null,
+			"timeZone": "US/Alaska",
+			"firstName": "TestUser",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1011')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')",
+				"type": "SFOData.User"
+			},
+			"userId": "TestUser1012",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1432884593000+0000)/",
+			"city": null,
+			"username": "TestUser1012",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1432884593000+0000)/",
+			"jobCode": null,
+			"defaultFullName": "TestUser 1012",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "ABC Software New",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1432884593000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_C_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "1012",
+			"fax": null,
+			"status": "t",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "english us",
+			"department": "Client Service",
+			"state": null,
+			"timeZone": "US/Alaska",
+			"firstName": "TestUser",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1012')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')",
+				"type": "SFOData.User"
+			},
+			"userId": "TestUser1013",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1432884593000+0000)/",
+			"city": null,
+			"username": "TestUser1013",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1432884593000+0000)/",
+			"jobCode": null,
+			"defaultFullName": "TestUser 1013",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "ABC Software New",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1432884593000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_C_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "1013",
+			"fax": null,
+			"status": "t",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "english us",
+			"department": "Client Service",
+			"state": null,
+			"timeZone": "US/Alaska",
+			"firstName": "TestUser",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1013')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')",
+				"type": "SFOData.User"
+			},
+			"userId": "TestUser1014",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1432884593000+0000)/",
+			"city": null,
+			"username": "TestUser1014",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1432884593000+0000)/",
+			"jobCode": null,
+			"defaultFullName": "TestUser 1014",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "ABC Software New",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1432884593000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_C_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "1014",
+			"fax": null,
+			"status": "t",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "english us",
+			"department": "Client Service",
+			"state": null,
+			"timeZone": "US/Alaska",
+			"firstName": "TestUser",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1014')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}, {
+			"__metadata": {
+				"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')",
+				"type": "SFOData.User"
+			},
+			"userId": "TestUser1015",
+			"businessPhone": null,
+			"empId": null,
+			"lastModifiedDateTime": "/Date(1432884593000+0000)/",
+			"city": null,
+			"username": "TestUser1015",
+			"addressLine2": null,
+			"addressLine1": null,
+			"lastModifiedWithTZ": "/Date(1432884593000+0000)/",
+			"jobCode": null,
+			"defaultFullName": "TestUser 1015",
+			"totalTeamSize": "0",
+			"benchStrength": null,
+			"relocate": null,
+			"title": null,
+			"division": "ABC Software New",
+			"lastReviewDate": null,
+			"mi": null,
+			"lastModified": "/Date(1432884593000)/",
+			"custom02": null,
+			"custom01": null,
+			"custom04": null,
+			"custom03": null,
+			"location": "ACE_C_HQ",
+			"custom06": null,
+			"custom05": null,
+			"custom08": null,
+			"custom07": null,
+			"custom09": null,
+			"travel": null,
+			"reviewFreq": null,
+			"function": null,
+			"riskOfLoss": null,
+			"zipCode": null,
+			"gender": "M",
+			"lastName": "1015",
+			"fax": null,
+			"status": "t",
+			"hireDate": null,
+			"country": null,
+			"email": "weicheng.liang@sap.com",
+			"defaultLocale": "english us",
+			"department": "Client Service",
+			"state": null,
+			"timeZone": "US/Alaska",
+			"firstName": "TestUser",
+			"custom15": null,
+			"impactOfLoss": null,
+			"custom14": null,
+			"custom13": null,
+			"custom12": null,
+			"custom11": null,
+			"custom10": null,
+			"title2": null,
+			"manager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/manager"
+				}
+			},
+			"userSysIdCopyOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userSysIdCopyOfItDeclarationNav"
+				}
+			},
+			"delegateeOfAutoDelegateDetailNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/delegateeOfAutoDelegateDetailNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationNotificationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+				}
+			},
+			"userIdOfHRISChangeLogDataReplicationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfHRISChangeLogDataReplicationNav"
+				}
+			},
+			"competencyRatingNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/competencyRatingNav"
+				}
+			},
+			"userSysIdOfAdvancesAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userSysIdOfAdvancesAccumulationNav"
+				}
+			},
+			"hrReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/hrReports"
+				}
+			},
+			"userSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"codeOfRightToReturnNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/codeOfRightToReturnNav"
+				}
+			},
+			"userIdOfTimeAccountNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfTimeAccountNav"
+				}
+			},
+			"userIdOfEmployeeTimeGroupNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfEmployeeTimeGroupNav"
+				}
+			},
+			"userSysIdOfItDeclarationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userSysIdOfItDeclarationNav"
+				}
+			},
+			"workerIdOfBenefitEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/workerIdOfBenefitEnrollmentNav"
+				}
+			},
+			"auditUserSysIdOfOneTimeDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/auditUserSysIdOfOneTimeDeductionNav"
+				}
+			},
+			"proxy": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/proxy"
+				}
+			},
+			"cust_participant_nameOfcust_cummunity_participantNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/cust_participant_nameOfcust_cummunity_participantNav"
+				}
+			},
+			"nominationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/nominationNav"
+				}
+			},
+			"userSysIdOfRecurringDeductionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userSysIdOfRecurringDeductionNav"
+				}
+			},
+			"delegatorOfAutoDelegateConfigNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/delegatorOfAutoDelegateConfigNav"
+				}
+			},
+			"matrixReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/matrixReports"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationElementNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/usersSysIdOfEmployeeDataReplicationElementNav"
+				}
+			},
+			"externalCodeOfcust_JamCreditNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/externalCodeOfcust_JamCreditNav"
+				}
+			},
+			"userIdOfAccrualCalculationBaseNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfAccrualCalculationBaseNav"
+				}
+			},
+			"externalCodeOfSkillProfileNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/externalCodeOfSkillProfileNav"
+				}
+			},
+			"usersSysIdOfEmployeeDataReplicationConfirmationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+				}
+			},
+			"userIdOfDataReplicationProxyNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfDataReplicationProxyNav"
+				}
+			},
+			"directReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/directReports"
+				}
+			},
+			"workerIdOfBenefitClaimAccumulationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/workerIdOfBenefitClaimAccumulationNav"
+				}
+			},
+			"benchStrengthNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/benchStrengthNav"
+				}
+			},
+			"relocateNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/relocateNav"
+				}
+			},
+			"riskOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/riskOfLossNav"
+				}
+			},
+			"cust_leaderOfcust_communityactivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/cust_leaderOfcust_communityactivityNav"
+				}
+			},
+			"secondManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/secondManager"
+				}
+			},
+			"usersSysIdOfEmpCostDistributionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/usersSysIdOfEmpCostDistributionNav"
+				}
+			},
+			"userIdOfExternalTimeRecordNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfExternalTimeRecordNav"
+				}
+			},
+			"userIdOfEmployeeTimeNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfEmployeeTimeNav"
+				}
+			},
+			"ownerOfTalentPoolNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/ownerOfTalentPoolNav"
+				}
+			},
+			"userSysIdOfNonRecurringPaymentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userSysIdOfNonRecurringPaymentNav"
+				}
+			},
+			"workerIdOfBenefitsExceptionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/workerIdOfBenefitsExceptionNav"
+				}
+			},
+			"userIdOfTemporaryTimeInformationNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfTemporaryTimeInformationNav"
+				}
+			},
+			"userPermissionsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userPermissionsNav"
+				}
+			},
+			"impactOfLossNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/impactOfLossNav"
+				}
+			},
+			"workerOfPaymentInformationV3Nav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/workerOfPaymentInformationV3Nav"
+				}
+			},
+			"approverOfAdvanceNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/approverOfAdvanceNav"
+				}
+			},
+			"hr": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/hr"
+				}
+			},
+			"secondReports": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/secondReports"
+				}
+			},
+			"functionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/functionNav"
+				}
+			},
+			"cust_applicantOfcust_creditActivityNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/cust_applicantOfcust_creditActivityNav"
+				}
+			},
+			"contactEmployeeIdOfBenefitContactNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/contactEmployeeIdOfBenefitContactNav"
+				}
+			},
+			"userIdOfEmployeePayrollResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfEmployeePayrollResultsNav"
+				}
+			},
+			"incumbentOfPositionNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/incumbentOfPositionNav"
+				}
+			},
+			"matrixManager": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/matrixManager"
+				}
+			},
+			"travelNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/travelNav"
+				}
+			},
+			"workerIdOfBenefitEmployeeClaimNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/workerIdOfBenefitEmployeeClaimNav"
+				}
+			},
+			"userIdOfTimeAccountTypeTransferNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfTimeAccountTypeTransferNav"
+				}
+			},
+			"costCenterManagerOfFOCostCenterNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/costCenterManagerOfFOCostCenterNav"
+				}
+			},
+			"userIdOfWorkScheduleNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfWorkScheduleNav"
+				}
+			},
+			"workerIdOfBenefitProgramEnrollmentNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/workerIdOfBenefitProgramEnrollmentNav"
+				}
+			},
+			"userIdOfEmployeeTimeSheetNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfEmployeeTimeSheetNav"
+				}
+			},
+			"userIdOfEmployeePayrollRunResultsNav": {
+				"__deferred": {
+					"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('TestUser1015')/userIdOfEmployeePayrollRunResultsNav"
+				}
+			}
+		}]
+	}
+}

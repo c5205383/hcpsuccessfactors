@@ -70,39 +70,57 @@
 				"controlId": "sfsf-ext-app",
 				"controlAggregation": "detailPages",
 				"transition": "slide",
-            	"bypassed": {
-              		"target": "notFound"
-           		}
+				"bypassed": {
+					"target": "notFound"
+				}
 			},
-			"routes": [ {
-				"pattern": "",
-				"name": "home",
-				"target": "mygoal"
-			},{
-				"pattern": "detail1",
-				"name": "detail001",
-				"target": "detail001"
-			}, {
-				"pattern": "detail2",
-				"name": "detail002",
-				"target": "detail002"
-			}, {
-				"pattern": "mygoal",
-				"name": "myGoal",
-				"target": "mygoal"
-			}, {
-				"pattern": "myform",
-				"name": "myForm",
-				"target": "myForm"
-			}, {
-				"pattern": "mygoal/goals/{id}",
-				"name": "goalDetail",
-				"target": "goalDetail"
-			}, {
-				"pattern": "myprofile",
-				"name": "myProfile",
-				"target": "myProfile"
-			}],
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "mygoal"
+				},
+				{
+					"pattern": "detail1",
+					"name": "detail001",
+					"target": "detail001"
+				},
+				{
+					"pattern": "detail2",
+					"name": "detail002",
+					"target": "detail002"
+				},
+				{
+					"pattern": "mygoal",
+					"name": "myGoal",
+					"target": "mygoal"
+				},
+				{
+					"pattern": "myform",
+					"name": "myForm",
+					"target": "myForm"
+				},
+				{
+					"pattern": "mygoal/goals/{id}",
+					"name": "goalDetail",
+					"target": "goalDetail"
+				},
+				{
+					"pattern": "myprofile",
+					"name": "myProfile",
+					"target": "myProfile"
+				},
+				{
+					"pattern": "employeecenter",
+					"name": "employeeCenter",
+					"target": "employeeCenter"
+				},
+				{
+					"pattern": "employeecenter/profile/{id}",
+					"name": "userDetail",
+					"target": "profileDetail"
+				}
+			],
 			"targets": {
 				"App": {
 					"viewName": "MainApp"
@@ -116,25 +134,33 @@
 					"viewName": "detail002"
 				},
 				"mygoal": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.goal",
 					"viewName": "myGoal"
 				},
 				"goalDetail": {
-					"viewPath": "hcpsuccessfactors.view.detail",
-					"viewName": "GoalDetail"
+					"viewPath": "hcpsuccessfactors.view.detail.goal",
+					"viewName": "goalDetail"
 				},
 				"myForm": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "myForm"
 				},
-				"myProfile":{
+				"myProfile": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "myProfile"
 				},
-            	"notFound": {
-               		"viewName": "NotFound",
-               		"transition": "show"
-            	}
+				"employeeCenter": {
+					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
+					"viewName": "employeeCenter"
+				},
+				"profileDetail": {
+					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
+					"viewName": "profileDetail"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"transition": "show"
+				}
 			}
 		},
 		"resources": {

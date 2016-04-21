@@ -8,7 +8,7 @@
     "targetFolder": "dist",
     "sourceFolder": "webapp",
     "buildRequired": true,
-    "lastBuildDateTime": "Fri, 25 Mar 2016 01:53:22 GMT"
+    "lastBuildDateTime": "Wed, 20 Apr 2016 01:14:28 GMT"
   },
   "generation": [
     {
@@ -34,7 +34,7 @@
     "appNamespace": "hcpsuccessfactors"
   },
   "hcpdeploy": {
-    "account": "c5205383trial",
+    "account": "i326962trial",
     "name": "hcpsuccessfactors",
     "lastVersionWeTriedToDeploy": "1.0.0"
   }

@@ -5,7 +5,7 @@ sap.ui.define([
 ], function(BaseController, models, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.myGoal", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.goal.myGoal", {
 
 		onInit: function() {
 			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");
@@ -22,19 +22,12 @@ sap.ui.define([
 		bindData: function() {
 			var _this = this;
 			$.ajax({
-				url: "https://middlewarei326962trial.hanatrial.ondemand.com/hcpmiddleware/api/getGoalPlanTemplate",
+				url : "/sfsfdataservice/hcp/getGoalPlanTemplate", 
 				type: "GET",
-				dataType: "jsonp",
-				data: {
-					json: "processResults"
-				},
-				jsonp: "callback",
-				jsonpCallback: "processResults",
 				async: false,
 				success: function(tdata) {
-					var planModel = new JSONModel(tdata);
+					var planModel = new JSONModel(JSON.parse(tdata));
 					_this.getView().setModel(planModel, "GoalPlanModel");
-
 					var curId = _this.getView().getModel("GoalPlanModel").getData().list[0].id;
 					var callBack = "g" + curId;
 					$.ajax({

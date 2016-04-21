@@ -1,6 +1,6 @@
 {
   "welcomeFile": "/webapp/index.html",
-  "routes": [
+  "routes": [  
     {
       "path": "/resources",
       "target": {
@@ -18,7 +18,15 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
-    }
+    },
+    {     
+	 "path": "/sfsfdataservice",      
+	 "target": {        
+		"type": "destination",        
+		"name": "sfsfdataservice"     
+	 },     
+	 "description": "dataservice"    
+	}
   ],
   "sendWelcomeFileRedirect": true,
   "cacheControl": [

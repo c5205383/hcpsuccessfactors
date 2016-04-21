@@ -32,6 +32,8 @@ sap.ui.define([
     		// init global model
     		var goalModel = new JSONModel();
 			sap.ui.getCore().setModel(goalModel, "GoalModel");
+			var usersModel = new JSONModel();
+			sap.ui.getCore().setModel(usersModel, "UsersModel");
 		}
 	});
 

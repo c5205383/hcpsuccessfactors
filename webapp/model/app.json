@@ -1,11 +1,11 @@
 {
 	"category": [
 		{
-			"name": "{master1}",
+			"name": "{test1}",
 			"navTo":"detail001"
 		},
 		{
-			"name": "{master2}",
+			"name": "{test2}",
 			"navTo":"detail002"
 		},
 		{
@@ -19,6 +19,10 @@
 		{
 			"name": "My Profile",
 			"navTo": "myProfile"
+		},
+		{
+			"name": "Employee Center",
+			"navTo": "employeeCenter"
 		}
 	]
 }
