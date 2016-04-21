@@ -21,8 +21,8 @@ sap.ui.define([
 				model: "UsersModel"
 			});
 			
-			var oControl = this.getView().byId("idState");
-			this._formatStateBackground(oControl,oControl.getText());
+			//var oControl = this.getView().byId("idState");
+			//this._formatStateBackground(oControl,oControl.getText());
 		}
 		
 		

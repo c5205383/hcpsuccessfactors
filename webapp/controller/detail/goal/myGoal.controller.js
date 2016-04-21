@@ -72,7 +72,7 @@ sap.ui.define([
 		},
 
 		onSelectKeyChange: function() {
-			alert("change");
+			//alert("change");
 			//this.getView().getModel("GoalModel").setData({});
 			var curId = this.getView().byId("planSelect").getSelectedKey();
 			var callBack = "g" + curId;
@@ -98,7 +98,6 @@ sap.ui.define([
 		},
 
 		onItemPress: function(oEvent) {
-			//alert("haha");
 			var oItem = oEvent.getSource();
 			//var goalId = oItem.getInfo();
 			var spath = oItem.getBindingContext("GoalModel");
