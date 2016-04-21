@@ -21,6 +21,7 @@ sap.ui.define([
 
 		bindData: function() {
 			var _this = this;
+			
 			$.ajax({
 				url : "/sfsfdataservice/hcp/getGoalPlanTemplate", 
 				type: "GET",
