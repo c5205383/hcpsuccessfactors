@@ -27,7 +27,6 @@
 	 },     
 	 "description": "dataservice"    
 	}
-
   ],
   "sendWelcomeFileRedirect": true,
   "cacheControl": [
