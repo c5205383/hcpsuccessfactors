@@ -1,10 +1,79 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	controllerName="hcpsuccessfactors.controller.detail.myForm" xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
+	xmlns:uxap="sap.uxap" controllerName="hcpsuccessfactors.controller.detail.myForm" xmlns:html="http://www.w3.org/1999/xhtml" height="100%">
 	<App>
-		<pages>
-			<Page title="{i18n>myform-title}">
-				<content></content>
-			</Page>
-		</pages>
+		<Page title="{i18n>myform-title}">
+			
+					<tnt:ToolPage id="toolPage">
+					
+						<tnt:header>
+							<tnt:ToolHeader>
+							    
+								<Button id="sideNavigationToggleButton" icon="sap-icon://menu2" press="onCollapseExapandPress">
+									<layoutData>
+										<OverflowToolbarLayoutData priority="NeverOverflow"/>
+									</layoutData>
+								</Button>
+							</tnt:ToolHeader>
+						</tnt:header>
+						<tnt:sideContent>
+							<tnt:SideNavigation expanded="true" itemSelect="onItemSelect" class="cssList">
+								<tnt:NavigationList id="navigationList" >
+									<tnt:NavigationListItem text="All Forms" icon="sap-icon://form"></tnt:NavigationListItem>
+									<tnt:NavigationListItem text="In Process" icon="sap-icon://pending">
+										<tnt:NavigationListItem text="Inbos"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="En Route"></tnt:NavigationListItem>
+									</tnt:NavigationListItem>
+									<tnt:NavigationListItem text="Completed" icon="sap-icon://complete">
+										<tnt:NavigationListItem text="Create New Folder"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="360 Reviews"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="Goal Plans"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="Job Description Reviews"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="Performance Reviews"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="Stack Rankings"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="Succession Nominations"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="Talent Reviews"></tnt:NavigationListItem>
+									</tnt:NavigationListItem>
+									<tnt:NavigationListItem text="Form Status" icon="sap-icon://order-status">
+										<tnt:NavigationListItem text="Aggregrate"></tnt:NavigationListItem>
+										<tnt:NavigationListItem text="Individual"></tnt:NavigationListItem>
+									</tnt:NavigationListItem>
+								</tnt:NavigationList>
+							</tnt:SideNavigation>
+						</tnt:sideContent>
+						<tnt:mainContents>
+							<NavContainer id="pageContainer">
+								<pages>
+									<ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
+									    <l:VerticalLayout class="cssFormlayout">
+										<Table inset="false">
+											<columns>
+												<Column width="12em">
+													<Text text="Action"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Text text="User"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Text text="Date"/>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem >
+													<cells>
+														<Text text=""/>
+														<Text text=""/>
+														<Text text=""/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+										</l:VerticalLayout>
+									</ScrollContainer>
+								</pages>
+							</NavContainer>
+						</tnt:mainContents>
+					</tnt:ToolPage>
+
+		</Page>
 	</App>
 </mvc:View>

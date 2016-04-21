@@ -14,3 +14,13 @@
 	color: #FFD700;
 	font-style: italic;
 }
+.cssNote {
+	font-size:9px;
+	font-style: italic;
+}
+.cssFormlayout {
+    margin:10px;
+}
+.cssList {
+    border-right:1px solid #cccccc;
+}
