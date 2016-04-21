@@ -6,7 +6,7 @@
 				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {GoalModel>userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
 			</uxap:headerTitle>
 			<uxap:headerContent>
-				<Title title="" text="This page is the detail of the goal '{GoalModel>name}'."/>
+				<Text text="This page is the detail of the goal '{GoalModel>name}'." design="italic" class="sapUiSmallMarginEnd cssNote"/>
 			</uxap:headerContent>
 			<uxap:sections>
 				<uxap:ObjectPageSection title="Goal Detail">
