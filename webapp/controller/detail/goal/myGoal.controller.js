@@ -29,28 +29,28 @@ sap.ui.define([
 					var planModel = new JSONModel(JSON.parse(tdata));
 					_this.getView().setModel(planModel, "GoalPlanModel");
 					var curId = _this.getView().getModel("GoalPlanModel").getData().list[0].id;
-					var callBack = "g" + curId;
+					//var callBack = "g" + curId;
+					//var items=_this.byId("goalList");
+					//items.setBusy(true);
 					$.ajax({
-						url: "https://middlewarei326962trial.hanatrial.ondemand.com/hcpmiddleware/api/getGoal",
+						url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
 						type: "GET",
-						dataType: "jsonp",
 						data: {
-							id: curId
+							templateId: curId
 						},
-						jsonp: "callback",
-						jsonpCallback: callBack,
 						async: false,
 						success: function(gdata) {
 							// var goalModel = new JSONModel(gdata);
 							// _this.getView().setModel(goalModel, "GoalModel");
-
-							sap.ui.getCore().getModel("GoalModel").setData(gdata);
+                            
+							sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(gdata));
 							_this.getView().setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
 						},
 						error: function() {
 							alert("failed to get goal");
 						}
 					});
+					//items.setBusy(false);
 				},
 				error: function() {
 					alert("failed to get goalPlanTemplate.");
@@ -75,26 +75,26 @@ sap.ui.define([
 			//alert("change");
 			//this.getView().getModel("GoalModel").setData({});
 			var curId = this.getView().byId("planSelect").getSelectedKey();
-			var callBack = "g" + curId;
+			//var callBack = "g" + curId;
 			var _this = this;
+			//var items=_this.byId("goalList");
+			//items.setBusy(true);
 			$.ajax({
-				url: "https://middlewarei326962trial.hanatrial.ondemand.com/hcpmiddleware/api/getGoal",
+				url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
 				type: "GET",
-				dataType: "jsonp",
 				data: {
-					id: curId
+					templateId: curId
 				},
-				jsonp: "callback",
-				jsonpCallback: callBack,
-				async: true,
+				async: false,
 				success: function(cdata) {
-					sap.ui.getCore().getModel("GoalModel").setData(cdata);
-					_this.getView().getModel("GoalModel").setData(cdata);
+					sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(cdata));
+					_this.getView().getModel("GoalModel").setData(JSON.parse(cdata));
 				},
 				error: function() {
 					alert("failed to change goal");
 				}
 			});
+			//items.setBusy(false);
 		},
 
 		onItemPress: function(oEvent) {

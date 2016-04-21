@@ -2,8 +2,8 @@
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page title="{i18n>mygoal-title}" showNavButton="{device>system/phone}" navButtonPress="onNavBack">
 		<content>
-			<List id="invoiceList" class="sapUiResponsiveMargin" width="auto"
-				items="{ path : 'GoalModel>/goals', sorter : { path : 'name'} }">
+			<List id="goalList" class="sapUiResponsiveMargin" width="auto"
+				items="{ path : 'GoalModel>/list', sorter : { path : 'name'} }">
 				<headerToolbar>
 					<Toolbar>
 						<Title text="{i18n>GoalListTitle}"/>
@@ -15,7 +15,7 @@
 						</Select>
 					</Toolbar>
 				</headerToolbar>
-				<items>
+				<items id="goalItems">
 					<StandardListItem title="{GoalModel>name}" 
 						description="metric: {GoalModel>metric}" 
 						info="{GoalModel>id}"
