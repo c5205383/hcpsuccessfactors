@@ -7,3 +7,4 @@ mock_preview_sapui5.html
 sap-ui-cachebuster-info.json
 /webapp/preview_hidden.html
 /.user.project.json
+/dist/

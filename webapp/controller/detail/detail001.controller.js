@@ -1,3 +1,4 @@
+jQuery.sap.require("hcpsuccessfactors.util.httpRequest");
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"hcpsuccessfactors/model/models"
@@ -14,11 +15,29 @@ sap.ui.define([
 		onInit: function() {
 
 			// set the device model
-			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
-			this.createDetailView();
+			//this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
+			//this.createDetailView();
 			//this.getView().setModel(models.createDeviceModel());
-
+            
+            this.doTest();
 		},
+
+        doTest: function() {
+            /*$.ajax({
+                type: "get",
+                async: false,
+                url : "/sfsfdataservice/hcp/getGoalPlanTemplate",
+                success: function(json){
+                    alert(json);
+                    alert("hi");
+                },
+                error: function(){
+                    alert("test error");
+                }
+            });*/
+            var result = hcpsuccessfactors.util.httpRequest.httpGetRequest(null, "sfsfdataservice/hcp","getGoalPlanTemplate", "json");
+            alert(result);
+        },
 
 		createDetailView: function() {
 			alert("hi");
