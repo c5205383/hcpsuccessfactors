@@ -4,6 +4,7 @@
 		<content>
 			<List id="goalList" class="sapUiResponsiveMargin" width="auto"
 				items="{ path : 'GoalModel>/list', sorter : { path : 'name'} }">
+			    <BusyIndicator id="audioBusyIndicator" visible="false"/>
 				<headerToolbar>
 					<Toolbar>
 						<Title text="{i18n>GoalListTitle}"/>
@@ -15,7 +16,7 @@
 						</Select>
 					</Toolbar>
 				</headerToolbar>
-				<items id="goalItems">
+				<items >
 					<StandardListItem title="{GoalModel>name}" 
 						description="metric: {GoalModel>metric}" 
 						info="{GoalModel>id}"
