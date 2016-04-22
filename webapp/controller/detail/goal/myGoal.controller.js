@@ -11,8 +11,8 @@ sap.ui.define([
 			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");
 			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
 
-            this.showBusyIndicator(true);
-
+			this.showBusyIndicator(true);
+			this.byId("goalList").setVisible(false);
 			var isDebug = false;
 			if (!isDebug) {
 				this.bindData();
@@ -20,16 +20,16 @@ sap.ui.define([
 				this.bindMockData();
 			}
 		},
-		
-		showBusyIndicator: function (busy) {
-	      this.busyIndicator = this.getView().byId("audioBusyIndicator");
-	      this.busyIndicator.setVisible(busy);
-	    },
+
+		showBusyIndicator: function(busy) {
+			this.busyIndicator = this.getView().byId("flexBox");
+			this.busyIndicator.setVisible(busy);
+		},
 
 		bindData: function() {
 			var _this = this;
 			$.ajax({
-				url : "/sfsfdataservice/hcp/getGoalPlanTemplate", 
+				url: "/sfsfdataservice/hcp/getGoalPlanTemplate",
 				type: "GET",
 				async: true,
 				success: function(tdata) {
@@ -47,19 +47,22 @@ sap.ui.define([
 						success: function(gdata) {
 							// var goalModel = new JSONModel(gdata);
 							// _this.getView().setModel(goalModel, "GoalModel");
-                            _this.showBusyIndicator(false);
+							_this.showBusyIndicator(false);
+							_this.byId("goalList").setVisible(true);
 							sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(gdata));
 							_this.getView().setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
 						},
 						error: function() {
 							alert("failed to get goal");
 							_this.showBusyIndicator(false);
+							_this.byId("goalList").setVisible(true);
 						}
 					});
 				},
 				error: function() {
 					alert("failed to get goalPlanTemplate.");
 					_this.showBusyIndicator(false);
+					_this.byId("goalList").setVisible(true);
 				}
 			});
 
@@ -78,12 +81,16 @@ sap.ui.define([
 		},
 
 		onSelectKeyChange: function() {
-		    this.showBusyIndicator(true);
-			//alert("change");
+			this.showBusyIndicator(true);
+			//this.byId("goalList").setVisible(false);
+			jQuery.each(this.byId("goalList").getItems(), function(iIndex, indexItem) {
+				indexItem.setVisible(false);
+			});
+			
 			var curId = this.getView().byId("planSelect").getSelectedKey();
 			//var callBack = "g" + curId;
 			var _this = this;
-			
+
 			$.ajax({
 				url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
 				type: "GET",
@@ -92,12 +99,20 @@ sap.ui.define([
 				},
 				async: true,
 				success: function(cdata) {
-				    _this.showBusyIndicator(false);
+					_this.showBusyIndicator(false);
+					//_this.byId("goalList").setVisible(true);
+					jQuery.each(_this.byId("goalList").getItems(), function(iIndex, indexItem) {
+						indexItem.setVisible(true);
+					});
 					sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(cdata));
 					_this.getView().getModel("GoalModel").setData(JSON.parse(cdata));
 				},
 				error: function() {
 					alert("failed to change goal");
+					_this.showBusyIndicator(false);
+					jQuery.each(_this.byId("goalList").getItems(), function(iIndex, indexItem) {
+						indexItem.setVisible(true);
+					});
 				}
 			});
 			//items.setBusy(false);
