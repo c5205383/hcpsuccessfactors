@@ -119,6 +119,11 @@
 					"pattern": "employeecenter/profile/{id}",
 					"name": "userDetail",
 					"target": "profileDetail"
+				},
+				{
+					"pattern": "candidate",
+					"name": "candidate",
+					"target": "candidate"
 				}
 			],
 			"targets": {
@@ -156,6 +161,10 @@
 				"profileDetail": {
 					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
 					"viewName": "profileDetail"
+				},
+				"candidate": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "candidate"
 				},
 				"notFound": {
 					"viewName": "NotFound",

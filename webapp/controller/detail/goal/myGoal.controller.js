@@ -1,3 +1,4 @@
+jQuery.sap.require("hcpsuccessfactors.util.StringUtil");
 sap.ui.define([
 	"hcpsuccessfactors/controller/BaseController",
 	"hcpsuccessfactors/model/models",
@@ -92,7 +93,7 @@ sap.ui.define([
 			var _this = this;
 
 			$.ajax({
-				url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
+				url: "/sfsfdataservice/hcp/getGoalsByTemplateId4j",
 				type: "GET",
 				data: {
 					templateId: curId
@@ -131,7 +132,7 @@ sap.ui.define([
 				}
 			}*/
 			this.getRouter().navTo("goalDetail", {
-				id: spath.getPath().substr(7)
+				id: hcpsuccessfactors.util.StringUtil.subLastWord(spath.getPath())
 			});
 		}
 

@@ -33,7 +33,7 @@ sap.ui.define([
 			oView.setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
 			
 			oView.bindElement({
-				path: "/goals/" + oArgs.id,
+				path: "/list/" + oArgs.id,
 				model: "GoalModel"
 			});
 			

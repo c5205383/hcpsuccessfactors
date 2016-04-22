@@ -1,3 +1,4 @@
+jQuery.sap.require("hcpsuccessfactors.util.StringUtil");
 sap.ui.define([
 	"hcpsuccessfactors/controller/BaseController",
 	"sap/ui/model/json/JSONModel"
@@ -27,7 +28,7 @@ sap.ui.define([
 			var oItem = oEvent.getSource();
 			var spath = oItem.getBindingContext("UsersModel");
 			this.getRouter().navTo("userDetail", {
-				id: spath.getPath().substr(11)
+				id: hcpsuccessfactors.util.StringUtil.subLastWord(spath.getPath())
 			});
 		}
 

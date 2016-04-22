@@ -8,3 +8,4 @@ sap-ui-cachebuster-info.json
 /webapp/preview_hidden.html
 /.user.project.json
 /dist/
+/.project.json
