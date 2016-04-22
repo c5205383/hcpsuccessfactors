@@ -1,11 +1,10 @@
-<mvc:View id="myGoalView" xmlns:core="sap.ui.core" controllerName="hcpsuccessfactors.controller.detail.goal.myGoal" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
-	xmlns:mvc="sap.ui.core.mvc">
+<mvc:View id="myGoalView" xmlns:core="sap.ui.core" controllerName="hcpsuccessfactors.controller.detail.goal.myGoal" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
 	<Page title="{i18n>mygoal-title}" showNavButton="{device>system/phone}" navButtonPress="onNavBack">
 		<content>
-			<List id="invoiceList" class="sapUiResponsiveMargin" width="auto"
-				items="{ path : 'GoalModel>/goals', sorter : { path : 'name'} }">
+			<List id="goalList" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/list', sorter : { path : 'name'} }">
 				<headerToolbar>
-					<Toolbar>
+					<Toolbar id="goalheader">
 						<Title text="{i18n>GoalListTitle}"/>
 						<ToolbarSpacer/>
 						<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/list'}">
@@ -16,13 +15,15 @@
 					</Toolbar>
 				</headerToolbar>
 				<items>
-					<StandardListItem title="{GoalModel>name}" 
-						description="metric: {GoalModel>metric}" 
-						info="{GoalModel>id}"
-						type="Navigation"
+					<StandardListItem title="{GoalModel>name}" description="metric: {GoalModel>metric}" info="{GoalModel>id}" type="Navigation"
 						press="onItemPress"/>
 				</items>
 			</List>
+			<FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false">
+				<items>
+					<BusyIndicator id="audioBusyIndicator" visible="true"/>
+				</items>
+			</FlexBox>
 		</content>
 	</Page>
 </mvc:View>

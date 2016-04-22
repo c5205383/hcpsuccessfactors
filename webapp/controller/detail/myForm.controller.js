@@ -13,11 +13,22 @@ sap.ui.define([
 		},
 
 		onCollapseExapandPress: function(event) {
-			var navigationList = this.getView().byId("navigationList");
-			var expanded = !navigationList.getExpanded();
-
-			navigationList.setExpanded(expanded);
-			navigationList.setWidth(expanded ? "20rem" : "3rem");
+			var viewId = this.getView().getId();
+			var toolPage = sap.ui.getCore().byId(viewId + "--toolPage");
+			var sideExpanded = toolPage.getSideExpanded();
+ 
+			this._setToggleButtonTooltip(sideExpanded);
+ 
+			toolPage.setSideExpanded(!toolPage.getSideExpanded());
+		},
+ 
+		_setToggleButtonTooltip : function(bLarge) {
+			var toggleButton = this.getView().byId('sideNavigationToggleButton');
+			if (bLarge) {
+				toggleButton.setTooltip('Large Size Navigation');
+			} else {
+				toggleButton.setTooltip('Small Size Navigation');
+			}
 		}
 
 	});

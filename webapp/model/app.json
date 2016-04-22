@@ -1,14 +1,6 @@
 {
 	"category": [
 		{
-			"name": "{test1}",
-			"navTo":"detail001"
-		},
-		{
-			"name": "{test2}",
-			"navTo":"detail002"
-		},
-		{
 			"name": "My Goals",
 			"navTo": "myGoal"
 		},

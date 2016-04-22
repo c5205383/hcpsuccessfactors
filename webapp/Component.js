@@ -23,17 +23,17 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-			var testCompyList = new sap.ui.model.odata.ODataModel("/destinations/testCompyList/refapp-companylist-web/companylist.svc/", true);
-    		this.setModel(testCompyList,"testCompyList");
-    		
-    		// init the router
-    		this.getRouter().initialize();
+			//var testCompyList = new sap.ui.model.odata.ODataModel("/destinations/testCompyList/refapp-companylist-web/companylist.svc/", true);
+    		//this.setModel(testCompyList,"testCompyList");
     		
     		// init global model
     		var goalModel = new JSONModel();
 			sap.ui.getCore().setModel(goalModel, "GoalModel");
 			var usersModel = new JSONModel();
 			sap.ui.getCore().setModel(usersModel, "UsersModel");
+    		
+    		// init the router
+    		this.getRouter().initialize();
 		}
 	});
 

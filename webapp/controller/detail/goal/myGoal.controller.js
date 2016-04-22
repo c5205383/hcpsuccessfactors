@@ -11,6 +11,8 @@ sap.ui.define([
 			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");
 			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
 
+			this.showBusyIndicator(true);
+			this.byId("goalList").setVisible(false);
 			var isDebug = false;
 			if (!isDebug) {
 				this.bindData();
@@ -19,41 +21,48 @@ sap.ui.define([
 			}
 		},
 
+		showBusyIndicator: function(busy) {
+			this.busyIndicator = this.getView().byId("flexBox");
+			this.busyIndicator.setVisible(busy);
+		},
+
 		bindData: function() {
 			var _this = this;
 			$.ajax({
-				url : "/sfsfdataservice/hcp/getGoalPlanTemplate", 
+				url: "/sfsfdataservice/hcp/getGoalPlanTemplate",
 				type: "GET",
-				async: false,
+				async: true,
 				success: function(tdata) {
 					var planModel = new JSONModel(JSON.parse(tdata));
 					_this.getView().setModel(planModel, "GoalPlanModel");
 					var curId = _this.getView().getModel("GoalPlanModel").getData().list[0].id;
-					var callBack = "g" + curId;
+					//var callBack = "g" + curId;
 					$.ajax({
-						url: "https://middlewarei326962trial.hanatrial.ondemand.com/hcpmiddleware/api/getGoal",
+						url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
 						type: "GET",
-						dataType: "jsonp",
 						data: {
-							id: curId
+							templateId: curId
 						},
-						jsonp: "callback",
-						jsonpCallback: callBack,
-						async: false,
+						async: true,
 						success: function(gdata) {
 							// var goalModel = new JSONModel(gdata);
 							// _this.getView().setModel(goalModel, "GoalModel");
-
-							sap.ui.getCore().getModel("GoalModel").setData(gdata);
+							_this.showBusyIndicator(false);
+							_this.byId("goalList").setVisible(true);
+							sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(gdata));
 							_this.getView().setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
 						},
 						error: function() {
 							alert("failed to get goal");
+							_this.showBusyIndicator(false);
+							_this.byId("goalList").setVisible(true);
 						}
 					});
 				},
 				error: function() {
 					alert("failed to get goalPlanTemplate.");
+					_this.showBusyIndicator(false);
+					_this.byId("goalList").setVisible(true);
 				}
 			});
 
@@ -72,33 +81,44 @@ sap.ui.define([
 		},
 
 		onSelectKeyChange: function() {
-			alert("change");
-			//this.getView().getModel("GoalModel").setData({});
+			this.showBusyIndicator(true);
+			//this.byId("goalList").setVisible(false);
+			jQuery.each(this.byId("goalList").getItems(), function(iIndex, indexItem) {
+				indexItem.setVisible(false);
+			});
+			
 			var curId = this.getView().byId("planSelect").getSelectedKey();
-			var callBack = "g" + curId;
+			//var callBack = "g" + curId;
 			var _this = this;
+
 			$.ajax({
-				url: "https://middlewarei326962trial.hanatrial.ondemand.com/hcpmiddleware/api/getGoal",
+				url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
 				type: "GET",
-				dataType: "jsonp",
 				data: {
-					id: curId
+					templateId: curId
 				},
-				jsonp: "callback",
-				jsonpCallback: callBack,
 				async: true,
 				success: function(cdata) {
-					sap.ui.getCore().getModel("GoalModel").setData(cdata);
-					_this.getView().getModel("GoalModel").setData(cdata);
+					_this.showBusyIndicator(false);
+					//_this.byId("goalList").setVisible(true);
+					jQuery.each(_this.byId("goalList").getItems(), function(iIndex, indexItem) {
+						indexItem.setVisible(true);
+					});
+					sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(cdata));
+					_this.getView().getModel("GoalModel").setData(JSON.parse(cdata));
 				},
 				error: function() {
 					alert("failed to change goal");
+					_this.showBusyIndicator(false);
+					jQuery.each(_this.byId("goalList").getItems(), function(iIndex, indexItem) {
+						indexItem.setVisible(true);
+					});
 				}
 			});
+			//items.setBusy(false);
 		},
 
 		onItemPress: function(oEvent) {
-			//alert("haha");
 			var oItem = oEvent.getSource();
 			//var goalId = oItem.getInfo();
 			var spath = oItem.getBindingContext("GoalModel");
