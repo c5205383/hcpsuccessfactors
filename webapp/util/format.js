@@ -16,6 +16,14 @@ hcpsuccessfactors.util.format = {
 			return DateTime;
 		}
 	},
+	formatDate2: function(sValue) {
+		//return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/," ");  
+		if (sValue !== null) {
+			var sSubValue = sValue.substring((sValue.indexOf("/")+1),sValue.lastIndexOf("/"));
+			
+			return new Date(parseInt(sSubValue));
+		}
+	},
 	formatDone: function(Value) {
 		return parseInt(Value);
 	},
