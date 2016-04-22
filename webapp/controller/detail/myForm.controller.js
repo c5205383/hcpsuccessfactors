@@ -3,13 +3,25 @@ sap.ui.define([
 	"jquery.sap.global",
 	"sap/ui/core/mvc/Controller",
 	"sap/m/Popover",
-	"sap/m/Button"
-], function(BaseController, jQuery, Controller, Popover, Button) {
+	"sap/ui/model/json/JSONModel"
+], function(BaseController, jQuery, Controller, Popover, JSONModel) {
 	"use strict";
 	return BaseController.extend("hcpsuccessfactors.controller.detail.myForm", {
 
-		onInit: function() {
-
+		onInit: function(){
+			var isDebug=true;
+			if(!isDebug){
+				//
+			}else{
+				this.bindMockData();
+			}
+		},
+		
+		bindMockData: function(){
+			var formModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/myforms.json");
+			var formModel = new JSONModel();
+			formModel.loadData(formModelPath, null, false);
+			this.getView().setModel(formModel, "FormModel");
 		},
 
 		onCollapseExapandPress: function(event) {
