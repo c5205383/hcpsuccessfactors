@@ -16,12 +16,12 @@ hcpsuccessfactors.util.format = {
 			return DateTime;
 		}
 	},
-	formatDate2: function(sValue) {
-		//return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/," ");  
+	formatFormDate: function(sValue) { 
 		if (sValue !== null) {
-			var sSubValue = sValue.substring((sValue.indexOf("/")+1),sValue.lastIndexOf("/"));
-			
-			return new Date(parseInt(sSubValue));
+		    var sSubValue =sValue.replace("/Date(","").replace(")/","");
+		    var dateTime = new Date(parseInt(sSubValue)).toLocaleString().replace(/:\d{1,2}$/," ");
+		    var result = dateTime.substring(0,dateTime.indexOf(","));
+		    return result;
 		}
 	},
 	formatDone: function(Value) {

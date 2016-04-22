@@ -142,7 +142,7 @@
 					"viewName": "goalDetail"
 				},
 				"myForm": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.form",
 					"viewName": "myForm"
 				},
 				"myProfile": {
