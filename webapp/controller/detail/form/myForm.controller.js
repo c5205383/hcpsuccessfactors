@@ -1,4 +1,5 @@
 jQuery.sap.require("hcpsuccessfactors.util.format");
+jQuery.sap.require("hcpsuccessfactors.util.StringUtil");
 sap.ui.define([
 	"hcpsuccessfactors/controller/BaseController",
 	"jquery.sap.global",
