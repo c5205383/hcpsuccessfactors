@@ -5,10 +5,8 @@ sap.ui.define([
 	"sap/ui/core/Fragment",
 	"sap/ui/core/mvc/Controller",
 	"sap/m/Popover",
-	"sap/ui/model/json/JSONModel",
-	"sap/m/Button",
-	"sap/m/CheckBox"
-], function(BaseController, jQuery,Fragment, Controller, Popover, JSONModel, Button, CheckBox) {
+	"sap/ui/model/json/JSONModel"
+], function(BaseController, jQuery,Fragment, Controller, Popover, JSONModel) {
 	"use strict";
 	return BaseController.extend("hcpsuccessfactors.controller.detail.form.myForm", {
 
@@ -45,6 +43,22 @@ sap.ui.define([
 		handleCloseButton: function (oEvent) {
 			this._oPopover.close();
 		},
+		handleSaveButton: function (oEvent) {
+		    alert(sap.ui.getCore().byId("xz").getSelected());
+			if(sap.ui.getCore().byId("xz").getSelected()) {
+                        alert("yes");
+                }
+                else {
+                        alert("no");
+                }
+		},
+		
+		onItemSelect : function(oEvent) {
+			var item = oEvent.getParameter('item');
+			var viewId = this.getView().getId();
+			sap.ui.getCore().byId(viewId + "--pageContainer").to(viewId + "--" + item.getKey());
+		},
+		
 		onCollapseExapandPress: function(event) {
 			var viewId = this.getView().getId();
 			var toolPage = sap.ui.getCore().byId(viewId + "--toolPage");
@@ -61,6 +75,14 @@ sap.ui.define([
 			} else {
 				toggleButton.setTooltip('Small Size Navigation');
 			}
+		},
+			onItemTablePress: function(oEvent) {
+			//alert("click");
+			var oItem = oEvent.getSource();
+			var spath = oItem.getBindingContext("FormModel");
+			this.getRouter().navTo("formdetail", {
+				id: hcpsuccessfactors.util.StringUtil.subLastWord(spath.getPath())
+			});
 		}
 
 	});

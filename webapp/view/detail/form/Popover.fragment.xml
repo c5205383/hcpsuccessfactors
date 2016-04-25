@@ -8,7 +8,7 @@
 		</endButton>
 		<content>
 			<l:VerticalLayout class="sapUiSmallMargin">
-				<CheckBox text="{i18n>myform-table-formtitle}" selected="true"/>
+				<CheckBox text="{i18n>myform-table-formtitle}" selected="true" id="xz"/>
 				<CheckBox text="{i18n>myform-table-employee}" selected="true"/>
 				<CheckBox text="{i18n>myform-table-stepduedate}" selected="true"/>
 				<CheckBox text="{i18n>myform-table-formstartdate}" selected="true"/>
