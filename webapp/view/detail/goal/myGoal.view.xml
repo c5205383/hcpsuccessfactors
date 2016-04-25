@@ -2,17 +2,18 @@
 	xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
 	<Page title="{i18n>mygoal-title}" showNavButton="{device>system/phone}" navButtonPress="onNavBack">
 		<content>
+		    <Toolbar class="sapUiResponsiveMargin" width="auto">
+				<Title text="{i18n>GoalListTitle}"/>
+				<ToolbarSpacer />
+				<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/list'}">
+					<items>
+						<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}"/>
+					</items>
+				</Select>
+			</Toolbar>
 			<List id="goalList" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/list', sorter : { path : 'name'} }">
 				<headerToolbar>
-					<Toolbar id="goalheader">
-						<Title text="{i18n>GoalListTitle}"/>
-						<ToolbarSpacer/>
-						<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/list'}">
-							<items>
-								<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}"/>
-							</items>
-						</Select>
-					</Toolbar>
+					
 				</headerToolbar>
 				<items>
 					<StandardListItem title="{GoalModel>name}" description="metric: {GoalModel>metric}" info="{GoalModel>id}" type="Navigation"
