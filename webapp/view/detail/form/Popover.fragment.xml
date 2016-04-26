@@ -3,12 +3,11 @@
 		<content>
 			<l:VerticalLayout class="sapUiSmallMargin">
 				<CheckBox text="{i18n>myform-table-formtitle}" selected="true" id="i0" select="changeCheckbox"/>
-				<CheckBox text="{i18n>myform-table-employee}" selected="true" id="1" select="changeCheckbox"/>
-				<CheckBox text="{i18n>myform-table-stepduedate}" selected="true" id="2" select="changeCheckbox"/>
-				<CheckBox text="{i18n>myform-table-formstartdate}" selected="true" id="3" select="changeCheckbox"/>
-				<CheckBox text="{i18n>myform-table-formenddate}" selected="true" id="4" select="changeCheckbox"/>
-				<CheckBox text="{i18n>myform-table-formduedate}" selected="true" id="5" select="changeCheckbox"/>
-				<CheckBox text="{i18n>myform-table-lastmodified}" selected="true" id="6" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-employee}" selected="true" id="i1" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formstartdate}" selected="true" id="i2" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formenddate}" selected="true" id="i3" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formduedate}" selected="true" id="i4" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-lastmodified}" selected="true" id="i5" select="changeCheckbox"/>
 			</l:VerticalLayout>
 		</content>
 	</Popover>
