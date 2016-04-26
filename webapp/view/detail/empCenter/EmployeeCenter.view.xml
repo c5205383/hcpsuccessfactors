@@ -9,11 +9,19 @@
 							<OverflowToolbar>
 								<Title text="{i18n>empTable-title}"/>
 								<ToolbarSpacer />
-								<Button icon="sap-icon://action-settings" press="onConfPress">
-									<layoutData>
-										<OverflowToolbarLayoutData priority="NeverOverflow"/>
-									</layoutData>
-								</Button>	
+								<SearchField width="30%" liveChange="onSearch">
+					                <layoutData>
+						            <OverflowToolbarLayoutData priority="NeverOverflow" />
+				                	</layoutData>
+				                </SearchField>
+								<!--  Add the Personalization button -->
+				                <CheckBox text="Enable Personalization Grouping" select="onTableGrouping" />
+				                <!--  Add the Personalization button -->
+				                <Button icon="sap-icon://action-settings" press="onPersoButtonPressed" >
+					                <layoutData>
+						            <OverflowToolbarLayoutData priority="NeverOverflow" />
+					                </layoutData>
+				                </Button>	
 								<Button icon="sap-icon://excel-attachment" press="onPdfPress">
 									<layoutData>
 										<OverflowToolbarLayoutData priority="NeverOverflow"/>
@@ -22,10 +30,10 @@
 							</OverflowToolbar>
 						</headerToolbar>
 						<columns>
-							<Column ><Text text="{i18n>empTable-uid}"/></Column>
-							<Column ><Text text="{i18n>empTable-uname}"/></Column>
-							<Column ><Text text="{i18n>empTable-gender}"/></Column>
-							<Column ><Text text="{i18n>empTable-email}"/></Column>
+							<Column id="userIdCol"><Text text="{i18n>empTable-uid}"/></Column>
+							<Column id="userNameCol"><Text text="{i18n>empTable-uname}"/></Column>
+							<Column id="userGenderCol"><Text text="{i18n>empTable-gender}"/></Column>
+							<Column id="userEmailCol"><Text text="{i18n>empTable-email}"/></Column>
 						</columns>
 						<items>
 							<ColumnListItem type="Active" press="onItemPress">

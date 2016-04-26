@@ -55,10 +55,10 @@
 								<l:VerticalLayout class="cssFormlayout">
 									<Table inset="false" items="{path:'FormModel>/d/results'}" id = "table2-1">
 										<columns>
-											<Column width="300px" demandPopin="true">
+											<Column minScreenWidth="Large" demandPopin="true">
 												<Text text="{i18n>myform-table-formtitle}"/>
 											</Column>
-											<Column width="100px" demandPopin="true">
+											<Column minScreenWidth="Small" demandPopin="true">
 												<Text text="{i18n>myform-table-employee}"/>
 											</Column>
 											<Column minScreenWidth="Tablet" demandPopin="true">
