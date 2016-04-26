@@ -9,7 +9,7 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel"
 ], function(BaseController, jQuery,Fragment, Controller, Popover, JSONModel) {
 	"use strict";
-	return BaseController.extend("hcpsuccessfactors.controller.detail.form.myForm", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.form.MyForm", {
 
 		onInit: function(){
 			var isDebug=true;
