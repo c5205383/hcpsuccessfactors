@@ -2,7 +2,7 @@
     "application": {
         "id": "",
         "title": "hcpsuccessfactors",
-        "description": "hcp successfactors",
+        "description": "fiori",
         "type": "SAP_UI5_Component",
         "componentUrl": "/",
         "appUrl": "#hcpsuccessfactors-Display",
@@ -14,10 +14,10 @@
     },
     "assignment": {
         "groups": [
-            "f8973a53-de1b-494d-ab64-41359438b994"
+            "00000000-0000-1111-0000-00000000"
         ],
         "contentPackages": [
-            "99e1bc08-f37c-4ac9-90d0-437e28463182"
+            "00000000-0000-2222-0000-00000000"
         ],
         "categories": []
     },

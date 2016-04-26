@@ -126,7 +126,7 @@
 					"target": "candidate"
 				},
 				{
-				    "pattern": "myform/formDetail/{id}",
+					"pattern": "myform/formDetail/{id}",
 					"name": "formdetail",
 					"target": "formDetail"
 				}
@@ -172,7 +172,7 @@
 					"viewName": "Candidate"
 				},
 				"formDetail": {
-				    "viewPath": "hcpsuccessfactors.view.detail.form",
+					"viewPath": "hcpsuccessfactors.view.detail.form",
 					"viewName": "Formdetail"
 				},
 				"notFound": {
