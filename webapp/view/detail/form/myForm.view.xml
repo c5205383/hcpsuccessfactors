@@ -53,7 +53,7 @@
 						<pages>
 							<ScrollContainer id="page2-1" horizontal="true" vertical="true" height="100%">
 								<l:VerticalLayout class="cssFormlayout">
-									<Table inset="false" items="{path:'FormModel>/d/results'}">
+									<Table inset="false" items="{path:'FormModel>/d/results'}" id = "table2-1">
 										<columns>
 											<Column width="330px" demandPopin="true">
 												<Text text="{i18n>myform-table-formtitle}"/>
