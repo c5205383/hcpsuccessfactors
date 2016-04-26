@@ -1,0 +1,62 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.m" height="100%"
+	controllerName="hcpsuccessfactors.controller.detail.form.formdetail">
+	<Page title="" showNavButton="true" navButtonPress="onNavBack">
+		<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+			<uxap:sections>
+				<uxap:ObjectPageSection title="route map">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="Route Map">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<HBox alignItems="Start" class="cssHBox">
+										<Text text=""/>
+									</HBox>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				
+				<uxap:ObjectPageSection title="overall rating">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="overall rating">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<HBox alignItems="Start" class="cssHBox">
+										<Text text=""/>
+									</HBox>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="compentency section">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="compentency section">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<HBox alignItems="Start" class="cssHBox">
+										<Text text=""/>
+									</HBox>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="objective section">
+					<uxap:subSections>
+						<uxap:ObjectPageSubSection title="objective section">
+							<uxap:blocks>
+								<l:VerticalLayout width="100%" class="cssLayout">
+									<HBox alignItems="Start" class="cssHBox">
+										<Text text=""/>
+									</HBox>
+								</l:VerticalLayout>
+							</uxap:blocks>
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</Page>
+</mvc:View>
