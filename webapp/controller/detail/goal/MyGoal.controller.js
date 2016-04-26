@@ -36,7 +36,7 @@ sap.ui.define([
 				success: function(tdata) {
 					var planModel = new JSONModel(JSON.parse(tdata));
 					_this.getView().setModel(planModel, "GoalPlanModel");
-					var curId = _this.getView().getModel("GoalPlanModel").getData().list[0].id;
+					var curId = _this.getView().getModel("GoalPlanModel").getData().dataObj[0].id;
 					//var callBack = "g" + curId;
 					$.ajax({
 						url: "/sfsfdataservice/hcp/getGoalsByTemplateId",

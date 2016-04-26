@@ -1,4 +1,4 @@
-2<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.m" height="100%"
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.m" height="100%"
 	controllerName="hcpsuccessfactors.controller.detail.goal.GoalDetail">
 	<Page title="{i18n>goaldetail-title} of {GoalModel>name}" showNavButton="true" navButtonPress="onNavBack">
 		<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">

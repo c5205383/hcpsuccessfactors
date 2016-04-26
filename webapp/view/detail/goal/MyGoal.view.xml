@@ -5,13 +5,13 @@
 		    <Toolbar class="sapUiResponsiveMargin" width="auto">
 				<Title text="{i18n>GoalListTitle}"/>
 				<ToolbarSpacer />
-				<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/list'}">
+				<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/dataObj'}">
 					<items>
 						<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}"/>
 					</items>
 				</Select>
 			</Toolbar>
-			<List id="goalList" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/list', sorter : { path : 'name'} }">
+			<List id="goalList" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/dataObj', sorter : { path : 'name'} }">
 				<headerToolbar>
 					
 				</headerToolbar>
