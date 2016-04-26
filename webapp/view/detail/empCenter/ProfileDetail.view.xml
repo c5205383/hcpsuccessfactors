@@ -1,0 +1,91 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:ux="sap.uxap" 
+	controllerName="hcpsuccessfactors.controller.detail.empCenter.ProfileDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<Page title="Profile of {UsersModel>username}" showNavButton="true" navButtonPress="onNavBack">
+			<ux:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true" showEditHeaderButton="true"
+				editHeaderButtonPress="handleEditBtnPress">
+				<ux:headerTitle>
+					<ux:ObjectPageHeader objectImageURI="" objectTitle="Denise Smith"
+						objectImageShape="Circle" objectImageAlt="Denise Smith" objectSubtitle="Senior UI Developer" isObjectIconAlwaysVisible="false"
+						isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false">
+						<ux:actions>
+							<ux:ObjectPageHeaderActionButton icon="sap-icon://pull-down" text="show section" type="Emphasized"/>
+							<ux:ObjectPageHeaderActionButton icon="sap-icon://show" text="show state" type="Emphasized"/>
+						</ux:actions>
+					</ux:ObjectPageHeader>
+				</ux:headerTitle>
+				<ux:headerContent>
+					<l:VerticalLayout>
+						<Link text="+33 6 4512 5158"/>
+						<Link text="DeniseSmith@sap.com"/>
+					</l:VerticalLayout>
+					<l:HorizontalLayout>
+						<Image src=""></Image>
+						<Image src=""></Image>
+					</l:HorizontalLayout>
+					<l:VerticalLayout>
+						<Label text="Hello! I am Tim and I use UxAP"/>
+						<VBox height="63px">
+							<Label text="Achieved goals"/>
+							<ProgressIndicator percentValue="30" displayValue="30%" showValue="true" state="None"/>
+						</VBox>
+					</l:VerticalLayout>
+					<l:VerticalLayout>
+						<Label text="San Jose, USA"/>
+					</l:VerticalLayout>
+				</ux:headerContent>
+				
+				<ux:sections>
+					<ux:ObjectPageSection title="2014 Goals Plan">
+						<ux:subSections>
+							<ux:ObjectPageSubSection title=" ">
+								<ux:blocks>
+									<Text text="1"/>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+						</ux:subSections>
+					</ux:ObjectPageSection>
+					<ux:ObjectPageSection title="Personal" importance="Medium">
+						<ux:subSections>
+							<ux:ObjectPageSubSection title="Connect">
+								<ux:blocks>
+								    <Text text="2.1"/>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="Payment information">
+								<ux:blocks>
+								    <Text text="2.2.1"/>
+								</ux:blocks>
+								<ux:moreBlocks>
+								    <Text text="2.2.2"/>
+								</ux:moreBlocks>
+							</ux:ObjectPageSubSection>
+						</ux:subSections>
+					</ux:ObjectPageSection>
+					<ux:ObjectPageSection title="Employment">
+						<ux:subSections>
+							<ux:ObjectPageSubSection title="Job information">
+								<ux:blocks>
+								    <Text text="3.1"/>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="Employee Details" mode="Collapsed" importance="Medium">
+								<ux:blocks>
+								    <Text text="3.2.1"/>
+								</ux:blocks>
+								<ux:moreBlocks>
+								    <Text text="3.2.2"/>
+								</ux:moreBlocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="Job Relationship" mode="Collapsed" importance="Low">
+								<ux:blocks>
+									<Text text="3.3"/>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+						</ux:subSections>
+					</ux:ObjectPageSection>
+				</ux:sections>
+			</ux:ObjectPageLayout>
+		</Page>
+	</App>
+</mvc:View>

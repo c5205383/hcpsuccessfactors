@@ -40,31 +40,18 @@ sap.ui.define([
 				this._oPopover.openBy(oButton);
 			});
 		},
-		changeCheckbox: function (oEvent) {
-		    var CId = oEvent.getSource().getId();
-		    var CBId = sap.ui.getCore().byId(CId);
-			if(CBId.getSelected()) {
-                        // alert("yes");
-                        
-                       
+ 
+		handleCloseButton: function (oEvent) {
+			this._oPopover.close();
+		},
+		handleSaveButton: function (oEvent) {
+		    alert(sap.ui.getCore().byId("xz").getSelected());
+			if(sap.ui.getCore().byId("xz").getSelected()) {
+                        alert("yes");
                 }
                 else {
-                        // alert("no"); 
-                        // var ctext = CBId.getId();
-                        var otable = this.byId("table2-1");
-                        var col = parseInt(CBId);
-                        otable.getColumns()[col].setVisible(false);
-                        otable.getItems()[col].setVisible(false);
+                        alert("no");
                 }
-                 /*var otable = this.getView().byId("table2-1");
-                        var ctext = CBId.getText();
-                        for (var i = 0; i < otable.rows[0].childNodesh.length ; i++ ){
-                            if(ctext === otable.rows[0].cells[i]){
-                                for (var j=0; j < otable.rows.length ; j++){
-                                    otable.rows[j].cells[i].style.display = otable.rows[j].cells[i].style.display=="none"?"block":"none";
-                                }
-                            }
-                        }*/
 		},
 		
 		onItemSelect : function(oEvent) {

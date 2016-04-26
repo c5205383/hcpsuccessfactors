@@ -1,4 +1,4 @@
-<mvc:View controllerName="hcpsuccessfactors.controller.detail.detail001" xmlns:core="sap.ui.core"
+<mvc:View controllerName="hcpsuccessfactors.controller.detail.DemoDetail001" xmlns:core="sap.ui.core"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:l="sap.ui.layout">
 	<App>
 		<Page navButtonPress="navBack" showNavButton="{device>system/phone}" title="{i18n>detail001-title}">

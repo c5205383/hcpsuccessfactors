@@ -5,7 +5,7 @@ sap.ui.define([
 ], function(BaseController, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.empCenter.employeeCenter", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.empCenter.EmployeeCenter", {
 		onInit: function() {
 			var isDebug = true;
 			if (!isDebug) {
