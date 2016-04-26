@@ -1,5 +1,5 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
-	controllerName="hcpsuccessfactors.controller.detail.form.MyForm" xmlns:html="http://www.w3.org/1999/xhtml" height="100%">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" controllerName="hcpsuccessfactors.controller.detail.form.MyForm" xmlns:html="http://www.w3.org/1999/xhtml"
+	height="100%">
 	<App>
 		<Page title="{i18n>myform-title}">
 			<tnt:ToolPage id="toolPage">
@@ -53,12 +53,12 @@
 						<pages>
 							<ScrollContainer id="page2-1" horizontal="true" vertical="true" height="100%">
 								<l:VerticalLayout class="cssFormlayout">
-									<Table inset="false" items="{path:'FormModel>/d/results'}">
+									<Table inset="false" items="{path:'FormModel>/d/results'}" id = "table2-1">
 										<columns>
-											<Column width="330px" demandPopin="true">
+											<Column width="300px" demandPopin="true">
 												<Text text="{i18n>myform-table-formtitle}"/>
 											</Column>
-											<Column width="70px" demandPopin="true">
+											<Column width="100px" demandPopin="true">
 												<Text text="{i18n>myform-table-employee}"/>
 											</Column>
 											<Column minScreenWidth="Tablet" demandPopin="true">

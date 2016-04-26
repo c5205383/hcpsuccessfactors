@@ -1,21 +1,14 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
-	<ResponsivePopover title= "Choose to display" class="sapUiPopupWithPadding" placement="Bottom">
-		<beginButton>
-			<Button text="Save" press="handleSaveButton"/>
-		</beginButton>
-		<endButton>
-			<Button text="Cancel" press="handleCloseButton"/>
-		</endButton>
+	<Popover showHeader="false" placement="Bottom" class="sapMOTAPopover sapTntToolHeaderPopover">
 		<content>
 			<l:VerticalLayout class="sapUiSmallMargin">
-				<CheckBox text="{i18n>myform-table-formtitle}" selected="true" id="xz"/>
-				<CheckBox text="{i18n>myform-table-employee}" selected="true"/>
-				<CheckBox text="{i18n>myform-table-stepduedate}" selected="true"/>
-				<CheckBox text="{i18n>myform-table-formstartdate}" selected="true"/>
-				<CheckBox text="{i18n>myform-table-formenddate}" selected="true"/>
-				<CheckBox text="{i18n>myform-table-formduedate}" selected="true"/>
-				<CheckBox text="{i18n>myform-table-lastmodified}" selected="true"/>
+				<CheckBox text="{i18n>myform-table-formtitle}" selected="true" id="i0" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-employee}" selected="true" id="i1" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formstartdate}" selected="true" id="i2" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formenddate}" selected="true" id="i3" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formduedate}" selected="true" id="i4" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-lastmodified}" selected="true" id="i5" select="changeCheckbox"/>
 			</l:VerticalLayout>
 		</content>
-	</ResponsivePopover>
+	</Popover>
 </core:FragmentDefinition>
