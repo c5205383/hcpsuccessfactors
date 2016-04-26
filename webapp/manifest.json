@@ -78,7 +78,7 @@
 				{
 					"pattern": "",
 					"name": "home",
-					"target": "mygoal"
+					"target": "myGoal"
 				},
 				{
 					"pattern": "detail1",
@@ -93,7 +93,7 @@
 				{
 					"pattern": "mygoal",
 					"name": "myGoal",
-					"target": "mygoal"
+					"target": "myGoal"
 				},
 				{
 					"pattern": "myform",
@@ -126,9 +126,9 @@
 					"target": "candidate"
 				},
 				{
-				    "pattern": "myform/forms/{id}",
+				    "pattern": "myform/formDetail/{id}",
 					"name": "formdetail",
-					"target": "formdetail"
+					"target": "formDetail"
 				}
 			],
 			"targets": {
@@ -143,37 +143,37 @@
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "detail002"
 				},
-				"mygoal": {
+				"myGoal": {
 					"viewPath": "hcpsuccessfactors.view.detail.goal",
-					"viewName": "myGoal"
+					"viewName": "MyGoal"
 				},
 				"goalDetail": {
 					"viewPath": "hcpsuccessfactors.view.detail.goal",
-					"viewName": "goalDetail"
+					"viewName": "GoalDetail"
 				},
 				"myForm": {
 					"viewPath": "hcpsuccessfactors.view.detail.form",
-					"viewName": "myForm"
+					"viewName": "MyForm"
 				},
 				"myProfile": {
 					"viewPath": "hcpsuccessfactors.view.detail",
-					"viewName": "myProfile"
+					"viewName": "MyProfile"
 				},
 				"employeeCenter": {
 					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
-					"viewName": "employeeCenter"
+					"viewName": "EmployeeCenter"
 				},
 				"profileDetail": {
 					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
-					"viewName": "profileDetail"
+					"viewName": "ProfileDetail"
 				},
 				"candidate": {
 					"viewPath": "hcpsuccessfactors.view.detail",
-					"viewName": "candidate"
+					"viewName": "Candidate"
 				},
-				"formdetail": {
+				"formDetail": {
 				    "viewPath": "hcpsuccessfactors.view.detail.form",
-					"viewName": "formdetail"
+					"viewName": "Formdetail"
 				},
 				"notFound": {
 					"viewName": "NotFound",

@@ -1,4 +1,4 @@
-<mvc:View id="myGoalView" xmlns:core="sap.ui.core" controllerName="hcpsuccessfactors.controller.detail.goal.myGoal" xmlns="sap.m"
+<mvc:View id="myGoalView" xmlns:core="sap.ui.core" controllerName="hcpsuccessfactors.controller.detail.goal.MyGoal" xmlns="sap.m"
 	xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
 	<Page title="{i18n>mygoal-title}" showNavButton="{device>system/phone}" navButtonPress="onNavBack">
 		<content>

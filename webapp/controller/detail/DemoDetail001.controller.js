@@ -5,7 +5,7 @@ sap.ui.define([
 ], function(Controller, models) {
 	"use strict";
 
-	return Controller.extend("hcpsuccessfactors.controller.detail.detail001", {
+	return Controller.extend("hcpsuccessfactors.controller.detail.DemoDetail001", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

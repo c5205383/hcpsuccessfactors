@@ -6,7 +6,7 @@ sap.ui.define([
 ], function(BaseController, models, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.goal.myGoal", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.goal.MyGoal", {
 
 		onInit: function() {
 			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");

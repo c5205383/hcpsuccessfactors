@@ -5,7 +5,7 @@ sap.ui.define([
 ], function(BaseController, models, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.detail002", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.DemoDetail002", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.

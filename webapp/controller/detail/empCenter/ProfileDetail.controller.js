@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(BaseController) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.empCenter.profileDetail", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.empCenter.ProfileDetail", {
 		onInit: function(){
 			var oRouter = this.getRouter();
 			oRouter.getRoute("userDetail").attachMatched(this._onRouteMatched, this);

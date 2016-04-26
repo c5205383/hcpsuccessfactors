@@ -1,5 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.m" height="100%"
-	controllerName="hcpsuccessfactors.controller.detail.form.formdetail">
+	controllerName="hcpsuccessfactors.controller.detail.form.Formdetail">
 	<Page title="" showNavButton="true" navButtonPress="onNavBack">
 		<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 			<uxap:sections>
