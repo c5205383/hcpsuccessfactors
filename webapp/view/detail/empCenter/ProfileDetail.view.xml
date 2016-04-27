@@ -5,8 +5,8 @@
 			<ux:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true" showEditHeaderButton="true"
 				editHeaderButtonPress="handleEditBtnPress">
 				<ux:headerTitle>
-					<ux:ObjectPageHeader objectImageURI="" objectTitle="{UsersModel>defaultFullName}" objectImageShape="Circle"
-						objectImageAlt="{UsersModel>defaultFullName}" objectSubtitle="{UsersModel>department}, {UsersModel>division}"
+					<ux:ObjectPageHeader objectImageURI="data:image/png; base64,{photoModel>/photo}" objectTitle="{UsersModel>defaultFullName}"
+						objectImageShape="Square" objectImageAlt="{UsersModel>defaultFullName}" objectSubtitle="{UsersModel>department}, {UsersModel>division}"
 						isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false">
 						<ux:actions>
 							<ux:ObjectPageHeaderActionButton icon="sap-icon://pull-down" text="show section" type="Emphasized"/>
@@ -37,7 +37,7 @@
 				<ux:sections>
 					<ux:ObjectPageSection title="{i18n>empDetail-sectionOne}">
 						<ux:subSections>
-							<ux:ObjectPageSubSection title="{i18n>empDetail-sectionOne}2">
+							<ux:ObjectPageSubSection title="{i18n>empDetail-sectionOne}">
 								<ux:blocks>
 									<l:VerticalLayout >
 										<HBox alignItems="Start" class="cssHBox">
@@ -59,18 +59,23 @@
 					</ux:ObjectPageSection>
 					<ux:ObjectPageSection title="{i18n>empDetail-sectionTwo}" importance="Medium">
 						<ux:subSections>
-							<ux:ObjectPageSubSection title="Connect">
+							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-talent}">
 								<ux:blocks>
 									<Text text="2.1"/>
 								</ux:blocks>
 							</ux:ObjectPageSubSection>
-							<ux:ObjectPageSubSection title="Payment information">
+							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-skill}">
 								<ux:blocks>
 									<Text text="2.2.1"/>
 								</ux:blocks>
 								<ux:moreBlocks>
 									<Text text="2.2.2"/>
 								</ux:moreBlocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-functional}">
+								<ux:blocks>
+									<Text text="2.3"/>
+								</ux:blocks>
 							</ux:ObjectPageSubSection>
 						</ux:subSections>
 					</ux:ObjectPageSection>

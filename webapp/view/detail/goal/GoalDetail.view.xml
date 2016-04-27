@@ -95,11 +95,11 @@
 				</uxap:ObjectPageSection>
 				<uxap:ObjectPageSection title="Other">
 					<uxap:subSections>
-						<uxap:ObjectPageSubSection title="Other">
+						<uxap:ObjectPageSubSection title="Other1">
 							<uxap:blocks>
 								<l:VerticalLayout width="100%" class="cssLayout">
 									<HBox alignItems="Start" class="cssHBox">
-										<Text text="111111111111111111111111111111111"/>
+										<Text text="2"/>
 									</HBox>
 								</l:VerticalLayout>
 							</uxap:blocks>
@@ -108,11 +108,11 @@
 				</uxap:ObjectPageSection>
 				<uxap:ObjectPageSection title="Other Section">
 					<uxap:subSections>
-						<uxap:ObjectPageSubSection title="Section">
+						<uxap:ObjectPageSubSection title="Other2">
 							<uxap:blocks>
 								<l:VerticalLayout width="100%" class="cssLayout">
 									<HBox alignItems="Start" class="cssHBox">
-										<Text text="22222222222222222222"/>
+										<Text text="3"/>
 									</HBox>
 								</l:VerticalLayout>
 							</uxap:blocks>
