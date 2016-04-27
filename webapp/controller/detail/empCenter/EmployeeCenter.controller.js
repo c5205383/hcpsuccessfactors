@@ -84,19 +84,19 @@ sap.ui.define([
 					        aColumns : [
 					            {
 					                id: "demoApp-empTable-userIdCol",
-					                order: 2,
+					                order: 1,
 					                text: "{i18n>empTable-uid}",
 					                visible: true
 				                },
 				                {
 					                id: "demoApp-empTable-userNameCol",
-					                order: 1,
+					                order: 0,
 					                text: "{i18n>empTable-uname}",
 					                visible: true
 				                },
 			        	        {
 					                id: "demoApp-empTable-userGenderCol",
-					                order: 0,
+					                order: 2,
 					                text: "{i18n>empTable-gender}",
 					                visible: false
 				                },
