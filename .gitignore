@@ -8,4 +8,7 @@ sap-ui-cachebuster-info.json
 /webapp/preview_hidden.html
 /.user.project.json
 /dist/
+
+# config
 /.project.json
+/flp-config.json
