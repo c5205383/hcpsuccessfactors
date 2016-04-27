@@ -137,11 +137,11 @@
 				},
 				"detail001": {
 					"viewPath": "hcpsuccessfactors.view.detail",
-					"viewName": "detail001"
+					"viewName": "DemoDetail001"
 				},
 				"detail002": {
 					"viewPath": "hcpsuccessfactors.view.detail",
-					"viewName": "detail002"
+					"viewName": "DemoDetail002"
 				},
 				"myGoal": {
 					"viewPath": "hcpsuccessfactors.view.detail.goal",
