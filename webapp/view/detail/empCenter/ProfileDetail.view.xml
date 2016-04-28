@@ -6,7 +6,7 @@
 				editHeaderButtonPress="handleEditBtnPress">
 				<ux:headerTitle>
 					<ux:ObjectPageHeader objectImageURI="data:image/png; base64,{photoModel>/photo}" objectTitle="{UsersModel>defaultFullName}"
-						objectImageShape="Square" objectImageAlt="{UsersModel>defaultFullName}" objectSubtitle="{UsersModel>department}, {UsersModel>division}"
+						objectImageShape="Circle" objectImageAlt="{UsersModel>defaultFullName}" objectSubtitle="{UsersModel>department}, {UsersModel>division}"
 						isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false">
 						<ux:actions>
 							<ux:ObjectPageHeaderActionButton icon="sap-icon://pull-down" text="show section" type="Emphasized"/>
@@ -16,8 +16,14 @@
 				</ux:headerTitle>
 				<ux:headerContent>
 					<l:VerticalLayout>
-						<Link text="{UsersModel>businessPhone}"/>
-						<Link text="{UsersModel>email}"/>
+					    <HBox>
+					        <core:Icon src="sap-icon://iphone" />
+					        <Link text="{UsersModel>businessPhone}"/>
+					    </HBox>
+					    <HBox>
+					        <core:Icon src="sap-icon://email" />
+						    <Link text="{UsersModel>email}"/>
+					    </HBox>
 					</l:VerticalLayout>
 					<!--<l:HorizontalLayout>
 						<Image src=""></Image>
@@ -49,8 +55,8 @@
 											<Text text="{UsersModel>email}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 										</HBox>
 										<HBox alignItems="Start" class="cssHBox">
-											<Label text="{i18n>empDetail-bussinessPhone}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-											<Text text="{UsersModel>bussinessPhone}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+											<Label text="{i18n>empDetail-businessPhone}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UsersModel>businessPhone}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 										</HBox>
 									</l:VerticalLayout>
 								</ux:blocks>
@@ -61,7 +67,16 @@
 						<ux:subSections>
 							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-talent}">
 								<ux:blocks>
-									<Text text="2.1"/>
+									<l:VerticalLayout >
+									    <HBox alignItems="Start" class="cssHBox">
+									        <Label text="{i18n>empDetail-talent-riskofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UsersModel>riskOfLoss}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+									    </HBox>
+									    <HBox alignItems="Start" class="cssHBox">
+									        <Label text="{i18n>empDetail-talent-impactofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UsersModel>impactOfLoss}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+									    </HBox>
+									</l:VerticalLayout>
 								</ux:blocks>
 							</ux:ObjectPageSubSection>
 							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-skill}">
@@ -72,7 +87,7 @@
 									<Text text="2.2.2"/>
 								</ux:moreBlocks>
 							</ux:ObjectPageSubSection>
-							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-functional}">
+							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-community}">
 								<ux:blocks>
 									<Text text="2.3"/>
 								</ux:blocks>
