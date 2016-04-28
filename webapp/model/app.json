@@ -19,6 +19,10 @@
 		{
 			"name": "Candidates",
 			"navTo": "candidate"
+		},
+		{
+			"name": "Employee Transfer",
+			"navTo": "empTransfer"
 		}
 	]
 }

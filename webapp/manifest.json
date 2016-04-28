@@ -129,6 +129,11 @@
 					"pattern": "myform/formDetail/{id}",
 					"name": "formdetail",
 					"target": "formDetail"
+				},
+				{
+					"pattern": "emptransfer",
+					"name": "empTransfer",
+					"target": "empTransfer"
 				}
 			],
 			"targets": {
@@ -170,6 +175,10 @@
 				"candidate": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "Candidate"
+				},
+				"empTransfer": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "EmployeeTransfer"
 				},
 				"formDetail": {
 					"viewPath": "hcpsuccessfactors.view.detail.form",
