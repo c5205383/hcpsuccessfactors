@@ -2,15 +2,13 @@ sap.ui.define([
 	"hcpsuccessfactors/controller/BaseController",
 	"jquery.sap.global",
 	"sap/m/Button",
-	"sap/ui/core/Fragment",
 	"sap/m/MessageToast",
-	"sap/ui/model/Filter",
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel"
-], function(BaseController, jQuery, Button, Fragment, MessageToast, Filter, Controller, JSONModel) {
+], function(BaseController,jQuery, Button, MessageToast, Controller, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.EmployeeTransfer", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.EmployeeTransfer", {
 
 		onInit: function() {
 

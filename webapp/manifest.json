@@ -134,6 +134,56 @@
 					"pattern": "emptransfer",
 					"name": "empTransfer",
 					"target": "empTransfer"
+				},
+				{
+					"pattern": "hiringprocess",
+					"name": "hiringProcess",
+					"target": "hiringProcess"
+				},
+				{
+					"pattern": "onboardProcess",
+					"name": "onboardProcess",
+					"target": "onboardProcess"
+				},
+				{
+					"pattern": "laborTypeChangeProcess",
+					"name": "laborTypeChangeProcess",
+					"target": "laborTypeChangeProcess"
+				},
+				{
+					"pattern": "promotionProcess",
+					"name": "promotionProcess",
+					"target": "promotionProcess"
+				},
+				{
+					"pattern": "contractRenewProcess",
+					"name": "contractRenewProcess",
+					"target": "contractRenewProcess"
+				},
+				{
+					"pattern": "performanceAppraisal",
+					"name": "performanceAppraisal",
+					"target": "performanceAppraisal"
+				},
+				{
+					"pattern": "partTimePartner",
+					"name": "partTimePartner",
+					"target": "partTimePartner"
+				},
+				{
+					"pattern": "terminationProcess",
+					"name": "terminationProcess",
+					"target": "terminationProcess"
+				},
+				{
+					"pattern": "changeStoreManager",
+					"name": "changeStoreManager",
+					"target": "changeStoreManager"
+				},
+				{
+					"pattern": "storePartnerInfo",
+					"name": "storePartnerInfo",
+					"target": "storePartnerInfo"
 				}
 			],
 			"targets": {
@@ -177,12 +227,52 @@
 					"viewName": "Candidate"
 				},
 				"empTransfer": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "EmployeeTransfer"
 				},
 				"formDetail": {
 					"viewPath": "hcpsuccessfactors.view.detail.form",
 					"viewName": "Formdetail"
+				},
+				"hiringProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "HiringProcess"
+				},
+				"onboardProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "OnboardProcess"
+				},
+				"laborTypeChangeProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "LaborTypeChangeProcess"
+				},
+				"promotionProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PromotionProcess"
+				},
+				"contractRenewProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ContractRenewProcess"
+				},
+				"performanceAppraisal": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PerformanceAppraisal"
+				},
+				"partTimePartner": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PartTimePartner"
+				},
+				"terminationProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "TerminationProcess"
+				},
+				"changeStoreManager": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ChangeStoreManager"
+				},
+				"storePartnerInfo": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "StorePartnerInfo"
 				},
 				"notFound": {
 					"viewName": "NotFound",
