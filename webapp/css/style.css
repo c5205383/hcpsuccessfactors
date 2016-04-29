@@ -28,6 +28,10 @@
     margin:0px;
 }
 
+.pageBackground {
+	background-color:white;
+}
+
 .commonmargin{
     margin-left: 3rem;
 }
