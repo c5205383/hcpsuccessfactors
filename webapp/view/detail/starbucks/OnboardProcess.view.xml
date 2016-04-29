@@ -1,9 +1,156 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" 
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.OnboardProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="">
-				<content></content>
+				<content>
+				    <l:VerticalLayout id="containerLayout" width="100%" >
+		           <l:BlockLayout id="BlockLayout">
+		  		    <l:BlockLayoutRow>
+		         <l:BlockLayoutCell class="blockCell">
+			        <Label text="伙伴到职信息表" width="100%" textAlign="Left" class="bordingtitle"/>
+			     </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>
+		    <l:BlockLayoutRow>
+		         <l:BlockLayoutCell
+						width="100%" class="blockCell" >
+			        <Label text="员工编号" class="commonLabel"/>
+			        <Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
+			        <Button text="获取员工性别和出生日期" class="commonmargin"/>
+			        <Button text="读入保存信息" class="commonmargin"/>
+			     </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>
+		    <l:BlockLayoutRow>
+		         <l:BlockLayoutCell
+						width="100%" class="blockCell">
+			        <Label text="身份证号码" textAlign="Left" class="commonLabel"/>
+			        <Input type="text" width="10rem"/>
+			       <Label text="入职日期" textAlign="Left" width="9rem" class="commonmargin"/>
+			        <DatePicker width="15rem"/>
+			     </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>
+		    
+		    <l:BlockLayoutRow>
+				<l:BlockLayoutCell
+						width="40%" class="blockCell">
+				    	<HBox alignItems="Start" width="90%">
+						    <Label text="城市" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="门店" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="中文姓名" class="commonLabel"/>
+							<Input type="text" class="commoninput"/>
+						</HBox>
+							<HBox alignItems="Start" width="90%">
+						    <Label text="英文姓" class="commonLabel" />
+							<Input type="text" wclass="commoninput"/>
+						</HBox>
+					    <HBox alignItems="Start" width="90%">
+						    <Label text="英文名" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+							<HBox alignItems="Start" width="90%">
+						    <Label text="英文姓名" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+						
+				 </l:BlockLayoutCell>
+				 <l:BlockLayoutCell
+				  titleAlignment="left"
+					width="40%">
+				        <HBox alignItems="Start" width="90%">
+						    <Label text="职位" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="基本工资" class="commonLabel" />
+							<Input type="text"  class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="拼音姓(如:Zhang)" class="commonLabel" />
+							<Input type="text"  class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="拼音名(如:sanfeng)" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="拼音姓名" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+				 </l:BlockLayoutCell>
+            </l:BlockLayoutRow>
+            <l:BlockLayoutRow class="rowSpace">
+		         <l:BlockLayoutCell width="40%" class="blockCell">
+		              <HBox alignItems="Start" width="90%">
+						    <Label text="性别" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="用工类型" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+		      </l:BlockLayoutCell>
+		         <l:BlockLayoutCell titleAlignment="left"
+					width="40%">
+		              <HBox alignItems="Start" width="90%">
+						    <Label text="出生日期" class="commonLabel" />
+							 <DatePicker width="12rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="制服型号" class="commonLabel" />
+							<Select width="12rem"><items><core:Item key="111" text="---"></core:Item></items></Select>
+						</HBox>
+		           </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>  
+		    <l:BlockLayoutRow class="rowSpace">
+		         <l:BlockLayoutCell titleAlignment="left" width="40%" class="blockCell">
+		              <HBox alignItems="Start" width="90%">
+						    <Label text="婚姻状况" class="commonLabel" />
+							<Select width="12rem"><items><core:Item key="111" text="---"></core:Item></items></Select>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="最高学历" class="commonLabel" />
+							<Select width="12rem"><items><core:Item key="111" text="---"></core:Item></items></Select>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="专业" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+		      </l:BlockLayoutCell>
+		         <l:BlockLayoutCell titleAlignment="left" width="40%">
+		              <HBox alignItems="Start" width="90%">
+						    <Label text="惯用手(南区填写)" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="毕业学校" class="commonLabel" />
+							<Input type="text" class="commoninput"/>
+						</HBox>
+					    <HBox alignItems="Start" width="90%">
+						    <Label text="毕业时间" class="commonLabel" />
+						    <DatePicker width="12rem"/>
+						</HBox>
+		           </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>  
+		    <l:BlockLayoutRow class="rowSpace">
+		         <l:BlockLayoutCell width="100%">
+		             <Button text="提交" class="commitBtn"/>
+		           </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>
+				 </l:BlockLayout>
+				 </l:VerticalLayout>
+				    
+				    
+				    
+				    
+				    
+				    
+				</content>
 			</Page>
 		</pages>
 	</App>

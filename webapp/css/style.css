@@ -27,3 +27,34 @@
 .cssHorizontalLayout{
     margin:0px;
 }
+
+.pageBackground {
+	background-color:white;
+}
+
+.commonmargin{
+    margin-left: 3rem;
+}
+.commoninput{
+    width: 15rem;
+}
+
+.commonLabel{
+    width: 9rem;
+    padding-top: 1rem;
+}
+
+.rowSpace{
+    margin-top: 5rem;
+}
+
+.blockCell{
+    margin-left: 5rem;
+}
+.commitBtn{
+   margin-left: 5rem; 
+}
+
+.bordingtitle{
+    font-weight: bold;
+}
