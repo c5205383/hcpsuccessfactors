@@ -23,6 +23,10 @@
 		{
 			"name": "Employee Transfer",
 			"navTo": "empTransfer"
+		},
+		{
+		    "name": "Hiring Process",
+		    "navTo": "hiringProcess"
 		}
 	]
 }

@@ -134,6 +134,11 @@
 					"pattern": "emptransfer",
 					"name": "empTransfer",
 					"target": "empTransfer"
+				},
+				{
+					"pattern": "hiringprocess",
+					"name": "hiringProcess",
+					"target": "hiringProcess"
 				}
 			],
 			"targets": {
@@ -183,6 +188,10 @@
 				"formDetail": {
 					"viewPath": "hcpsuccessfactors.view.detail.form",
 					"viewName": "Formdetail"
+				},
+				"hiringProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "HiringProcess"
 				},
 				"notFound": {
 					"viewName": "NotFound",
