@@ -139,6 +139,21 @@
 					"pattern": "hiringprocess",
 					"name": "hiringProcess",
 					"target": "hiringProcess"
+				},
+				{
+					"pattern": "onboardProcess",
+					"name": "onboardProcess",
+					"target": "onboardProcess"
+				},
+				{
+					"pattern": "laborTypeChangeProcess",
+					"name": "laborTypeChangeProcess",
+					"target": "laborTypeChangeProcess"
+				},
+				{
+					"pattern": "promotionProcess",
+					"name": "promotionProcess",
+					"target": "promotionProcess"
 				}
 			],
 			"targets": {
@@ -192,6 +207,18 @@
 				"hiringProcess": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "HiringProcess"
+				},
+				"onboardProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "OnboardProcess"
+				},
+				"laborTypeChangeProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "LaborTypeChangeProcess"
+				},
+				"promotionProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PromotionProcess"
 				},
 				"notFound": {
 					"viewName": "NotFound",

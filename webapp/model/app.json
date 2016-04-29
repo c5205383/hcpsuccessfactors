@@ -27,6 +27,14 @@
 		{
 		    "name": "Hiring Process",
 		    "navTo": "hiringProcess"
+		},
+		{
+		    "name": "Onboard Process",
+		    "navTo": "onboardProcess"
+		},
+		{
+		    "name": "Labor Type Change Process",
+		    "navTo": "laborTypeChangeProcess"
 		}
 	]
 }
