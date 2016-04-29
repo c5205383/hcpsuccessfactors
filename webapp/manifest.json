@@ -154,6 +154,26 @@
 					"pattern": "promotionProcess",
 					"name": "promotionProcess",
 					"target": "promotionProcess"
+				},
+				{
+					"pattern": "contractRenewProcess",
+					"name": "contractRenewProcess",
+					"target": "contractRenewProcess"
+				},
+				{
+					"pattern": "performanceAppraisal",
+					"name": "performanceAppraisal",
+					"target": "performanceAppraisal"
+				},
+				{
+					"pattern": "partTimePartner",
+					"name": "partTimePartner",
+					"target": "partTimePartner"
+				},
+				{
+					"pattern": "terminationProcess",
+					"name": "terminationProcess",
+					"target": "terminationProcess"
 				}
 			],
 			"targets": {
@@ -219,6 +239,22 @@
 				"promotionProcess": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "PromotionProcess"
+				},
+				"contractRenewProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ContractRenewProcess"
+				},
+				"performanceAppraisal": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PerformanceAppraisal"
+				},
+				"partTimePartner": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PartTimePartner"
+				},
+				"terminationProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "TerminationProcess"
 				},
 				"notFound": {
 					"viewName": "NotFound",

@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(BaseController) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.LaborTypeChangeProcess", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.PartTimePartner", {
 
 	});
 
