@@ -1,9 +1,146 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	controllerName="hcpsuccessfactors.controller.detail.starbucks.HiringProcess" xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" 
+	 controllerName="hcpsuccessfactors.controller.detail.starbucks.HiringProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="{i18n>hiringProcess-title}">
-				<content></content>
+				<content>
+				    
+				    		    	<l:VerticalLayout id="containerLayout" width="100%" >
+		<l:BlockLayout id="BlockLayout" >
+		    <l:BlockLayoutRow>
+		         <l:BlockLayoutCell
+						width="100%">
+			        <Label text="伙伴录用流程" width="100%" textAlign="Center"/>
+			     </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>
+			<l:BlockLayoutRow>
+				<l:BlockLayoutCell
+						width="25%">
+				    	<HBox alignItems="Start" width="90%">
+						    <Label text="城市" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="用工类型" width="7rem" />
+							<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="员工类型" width="7rem" />
+							<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="不可重新雇佣" width="7rem" />
+							<CheckBox/>
+						</HBox>
+				 </l:BlockLayoutCell>
+				 <l:BlockLayoutCell
+				  titleAlignment="left"
+					width="25%">
+				    <HBox alignItems="Start" width="90%">
+						    <Label text="门店" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="中文名" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="建议薪酬" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="理由" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+				 </l:BlockLayoutCell>
+				  <l:BlockLayoutCell
+						width="25%">
+				    <HBox alignItems="Start" width="90%">
+						    <Label text="职位" width="7rem" />
+								<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="英文名" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="到职日期" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+				 </l:BlockLayoutCell>
+				 <l:BlockLayoutCell
+				  titleAlignment="left"
+					width="25%">
+				    <HBox alignItems="Start" width="90%">
+						    <Label text="Special Rate" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="身份证号" width="7rem" />
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="是否重新雇佣" width="7rem" />
+						<CheckBox/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+							<Button text="增加到列表"  width="7rem"/>
+						</HBox>
+				 </l:BlockLayoutCell>
+				 </l:BlockLayoutRow>
+				 <l:BlockLayoutRow>
+		         <l:BlockLayoutCell width="100%">
+			        <Table text="" width="100%">
+			            <columns>
+			            	<Column width="15%">
+							   <Text text="是否重新雇佣"/>
+						    </Column>
+						    <Column>
+							   <Text text="城市"/>
+						    </Column>
+						    <Column>
+							   <Text text="门店"/>
+						    </Column>
+						    <Column>
+							   <Text text="职位"/>
+						    </Column>
+						    <Column>
+							   <Text text="用工类型"/>
+						    </Column>
+						    <Column>
+							   <Text text="中文名"/>
+						    </Column>
+						    <Column>
+							   <Text text="英文名"/>
+						    </Column>
+						    <Column>
+							   <Text text="身份证号"/>
+						    </Column>
+						    <Column>
+							   <Text text="员工类型"/>
+						    </Column>
+						    <Column>
+							   <Text text="建议薪酬"/>
+						    </Column>
+						    <Column>
+							   <Text text="SpecialRate"/>
+						    </Column>
+						    <Column>
+							   <Text text="到职日期"/>
+						    </Column>
+			            </columns>
+			        </Table>
+			     </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>
+		    <l:BlockLayoutRow>
+		         <l:BlockLayoutCell width="100%">
+		             <Button text="提交"/>
+		             
+		           </l:BlockLayoutCell>
+		    </l:BlockLayoutRow>  
+				 </l:BlockLayout>
+				 </l:VerticalLayout>
+				</content>
 			</Page>
 		</pages>
 	</App>
