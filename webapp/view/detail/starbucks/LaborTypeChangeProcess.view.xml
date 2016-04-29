@@ -1,9 +1,53 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.LaborTypeChangeProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="">
-				<content></content>
+				<content>
+					<l:VerticalLayout id="containerLayout" width="100%">
+					    <l:BlockLayoutRow>
+								<l:BlockLayoutCell width="100%">
+									<Label text="Before changing" width="100%" textAlign="Left"/>
+								</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow>
+						        <l:BlockLayoutCell width="100%">
+						            <Label text="Name: " />
+						            <Select width="10rem">
+										<items>
+											<core:Item key="111" text=""></core:Item>
+										</items>
+									</Select>
+									<Input type="text" width="10rem"/>
+									<Label text="Subbranch: " />
+									<Input type="text" width="10rem"/>
+						        </l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow>
+						        <l:BlockLayoutCell width="100%">
+						            <Label text="Position: " />
+									<Input type="text" width="10rem"/>
+									<Label text="Type of the Partner:" />
+									<Input type="text" width="10rem"/>
+						        </l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						<l:BlockLayoutRow>
+						        <l:BlockLayoutCell width="100%">
+						            <Label text="Base Pay: " />
+									<Input type="text" width="10rem"/>
+									<Label text="PIR: " />
+									<Input type="text" width="10rem"/>
+									<Label text=" %" />
+						        </l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+						
+						<l:BlockLayoutRow>
+								<l:BlockLayoutCell width="100%">
+									<Label text="Need to modify" width="100%" textAlign="Left"/>
+								</l:BlockLayoutCell>
+						</l:BlockLayoutRow>
+					</l:VerticalLayout>
+				</content>
 			</Page>
 		</pages>
 	</App>
