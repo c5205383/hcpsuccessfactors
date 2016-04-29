@@ -4,38 +4,43 @@
 		<pages>
 			<Page title="{i18n>empTransfer-title}">
 				<content>
-				    
-				    <l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
-				        <Text text="{i18n>empTransfer-choosePartnerId}:" />
-				        <ActionSelect id="selectId" items="{path:'DirectReportsModel>/dataObj'}">
-				            <items >
-				                <core:Item key="{DirectReportsModel>userId}" text="{DirectReportsModel>username}"/>
-				            </items> 
-				        </ActionSelect>
-				        <Text text="{i18n>empTransfer-chooseTransCity}:" />
-				        <Select items="{path:'CityModel>/dataObj'}">
-				            <items>
-				                <core:Item key="{CityModel>cname}" text="{CityModel>cname}"/>
-				            </items> 
-				        </Select>
-				        <Text text="{i18n>empTransfer-chooseTransBranch}:" />
-				        <Select items="{path:'SubbranchModel>/dataObj'}">
-				            <items>
-				                <core:Item key="{SubbranchModel>branchName}" text="{SubbranchModel>branchName}"/>
-				            </items> 
-				        </Select>
-				        <Button text="{i18n>empTransfer-add}" />
-				    </l:VerticalLayout >
-				    <Table >
-				        <headerToolbar >
-							<OverflowToolbar>
+				    <OverflowToolbar>
+							    <Title text="{i18n>empTransfer-title}"/>
+								<ToolbarSpacer />
 				                <Button icon="sap-icon://expand-group" press="onButtonPressed" >
 					                <layoutData>
 						            <OverflowToolbarLayoutData priority="NeverOverflow" />
 					                </layoutData>
 				                </Button>	
 							</OverflowToolbar>
-						</headerToolbar>
+				    <l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
+				        <HBox alignItems="Center" justifyContent="start">
+				        <Text text="{i18n>empTransfer-choosePartnerName}:" design="Bold" width="12rem"/>
+				        <ActionSelect id="selectId" items="{path:'DirectReportsModel>/dataObj'}" width="12rem">
+				            <items >
+				                <core:Item key="{DirectReportsModel>userId}" text="{DirectReportsModel>username}"/>
+				            </items> 
+				        </ActionSelect>
+				        </HBox>
+				        <HBox alignItems="Center" justifyContent="start">
+				        <Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="12rem"/>
+				        <Select items="{path:'CityModel>/dataObj'}" width="12rem">
+				            <items>
+				                <core:Item key="{CityModel>cname}" text="{CityModel>cname}"/>
+				            </items> 
+				        </Select>
+				        </HBox>
+				        <HBox alignItems="Center" justifyContent="start">
+				        <Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="12rem"/>
+				        <Select items="{path:'SubbranchModel>/dataObj'}" width="12rem">
+				            <items>
+				                <core:Item key="{SubbranchModel>branchName}" text="{SubbranchModel>branchName}"/>
+				            </items> 
+				        </Select>
+				        </HBox>
+				        <Button text="{i18n>empTransfer-add}" />
+				    </l:VerticalLayout >
+				    <Table >
 				        <columns>
 							<Column ><Text text="{i18n>empTransTable-id}"/></Column>
 							<Column ><Text text="{i18n>empTransTable-zhname}"/></Column>
