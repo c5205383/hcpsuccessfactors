@@ -17,9 +17,9 @@
 						<HBox alignItems="Center" justifyContent="start">
 							<Text text="{i18n>empTransfer-choosePartnerName}:" design="Bold" width="12rem"/>
 							<SearchField id="searchField" width="20rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
-								suggestionItems="{path:'DirectReportsModel>/dataObj',sorter: {path:'DirectReportsModel>/dataObj/username'}}">
+								suggestionItems="{path:'DirectReportsModel>/dataObj'}">
 								<suggestionItems>
-									<SuggestionItem text="{DirectReportsModel>username}" description="{DirectReportsModel>userId}" key="{DirectReportsModel>userId}"/>
+									<SuggestionItem text="{DirectReportsModel>username}" key="{DirectReportsModel>userId}"/>
 								</suggestionItems>
 							</SearchField>
 						</HBox>
