@@ -1,9 +1,119 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.PromotionProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="">
-				<content></content>
+			<Page title="{i18n>PromotionProcess-title}">
+				<content>
+					<OverflowToolbar>
+						<Title text="{i18n>PromotionProcess-title}"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://expand-group" press="onButtonPressed">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+					</OverflowToolbar>
+					<l:VerticalLayout class="sapUiSmallMargin" id="PromotionProcess">
+						<HBox alignItems="Center" justifyContent="start">
+							<Text text="{i18n>PromotionProcess-choose-partner-id}:" design="Bold" width="8rem"/>
+							<Select width="14rem">
+								<items>
+									<core:Item key="0" text=""></core:Item>
+								</items>
+								<items>
+									<core:Item key="1" text="I0001"></core:Item>
+								</items>
+								<items>
+									<core:Item key="2" text="I0002"></core:Item>
+								</items>
+								<items>
+									<core:Item key="3" text="I0003"></core:Item>
+								</items>
+							</Select>
+							<Text text="{i18n>PromotionProcess-position}:" design="Bold" width="8rem" textAlign="" class="promotion-selector"/>
+							<Select width="14rem">
+								<items>
+									<core:Item key="0" text=""></core:Item>
+								</items>
+								<items>
+									<core:Item key="1" text="Waiter"></core:Item>
+								</items>
+								<items>
+									<core:Item key="2" text="Group leader"></core:Item>
+								</items>
+								<items>
+									<core:Item key="3" text="Branch Manager"></core:Item>
+								</items>
+							</Select>
+							<Button icon="sap-icon://add" press="addPromotion" class="promotion-add-icon"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Text text="{i18n>PromotionProcess-reason}:" design="Bold" width="8rem"/>
+							<Select width="14rem">
+								<items>
+									<core:Item key="0" text=""></core:Item>
+								</items>
+								<items>
+									<core:Item key="1" text="Hard working"></core:Item>
+								</items>
+								<items>
+									<core:Item key="2" text="Good Communication"></core:Item>
+								</items>
+								<items>
+									<core:Item key="3" text="High Skills"></core:Item>
+								</items>
+							</Select>
+							<Text text="{i18n>PromotionProcess-adjust-salary}:" design="Bold" width="8rem" class="promotion-selector"/>
+							<Input width="14rem"></Input>
+							<Button icon="sap-icon://redo" press="redoPromotion" class="promotion-add-icon"/>
+						</HBox>
+					</l:VerticalLayout >
+					<OverflowToolbar>
+						<Title text="{i18n>PromotionProcess-data}"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://expand-group" press="onButtonPressedData">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+					</OverflowToolbar>
+					<l:VerticalLayout class="sapUiSmallMargin" id="DispayPromotionData">
+						<Table >
+							<columns>
+								<Column ><Text text="{i18n>PromotionProcess-partner-id}"/></Column>
+								<Column ><Text text="{i18n>PromotionProcess-name}"/></Column>
+								<Column ><Text text="{i18n>PromotionProcess-branches}"/></Column>
+								<Column ><Text text="{i18n>PromotionProcess-previous-position}"/></Column>
+								<Column ><Text text="{i18n>PromotionProcess-previous-salary}"/></Column>
+								<Column ><Text text="{i18n>PromotionProcess-previous-pir}"/></Column>
+								<Column ><Text text="{i18n>PromotionProcess-new-position}"/></Column>
+								<Column ><Text text="{i18n>PromotionProcess-reason}"/></Column>
+							</columns>
+							<items>
+								<ColumnListItem >
+									<cells><Text text="I0001"/></cells>
+									<cells><Text text="Xiao Hong"/></cells>
+									<cells><Text text="Cheng Du"/></cells>
+									<cells><Text text="Waiter"/></cells>
+									<cells><Text text="100/day"/></cells>
+									<cells><Text text="Degree 10%"/></cells>
+									<cells><Text text="Goup Leader"/></cells>
+									<cells><Text text="Hard Working"/></cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells><Text text="I0002"/></cells>
+									<cells><Text text="Xiao Bai"/></cells>
+									<cells><Text text="Bei Jing"/></cells>
+									<cells><Text text="Waiter"/></cells>
+									<cells><Text text="200/day"/></cells>
+									<cells><Text text="Upgrade 10%"/></cells>
+									<cells><Text text="Group Leader"/></cells>
+									<cells><Text text="Good Communication"/></cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</l:VerticalLayout >
+				</content>
 			</Page>
 		</pages>
 	</App>
