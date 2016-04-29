@@ -4,44 +4,45 @@
 		<pages>
 			<Page title="{i18n>empTransfer-title}">
 				<content>
-				    <OverflowToolbar>
-							    <Title text="{i18n>empTransfer-title}"/>
-								<ToolbarSpacer />
-				                <Button icon="sap-icon://expand-group" press="onButtonPressed" >
-					                <layoutData>
-						            <OverflowToolbarLayoutData priority="NeverOverflow" />
-					                </layoutData>
-				                </Button>	
-							</OverflowToolbar>
-				    <l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
-				        <HBox alignItems="Center" justifyContent="start">
-				        <Text text="{i18n>empTransfer-choosePartnerName}:" design="Bold" width="12rem"/>
-				        <ActionSelect id="selectId" items="{path:'DirectReportsModel>/dataObj'}" width="12rem">
-				            <items >
-				                <core:Item key="{DirectReportsModel>userId}" text="{DirectReportsModel>username}"/>
-				            </items> 
-				        </ActionSelect>
-				        </HBox>
-				        <HBox alignItems="Center" justifyContent="start">
-				        <Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="12rem"/>
-				        <Select items="{path:'CityModel>/dataObj'}" width="12rem">
-				            <items>
-				                <core:Item key="{CityModel>cname}" text="{CityModel>cname}"/>
-				            </items> 
-				        </Select>
-				        </HBox>
-				        <HBox alignItems="Center" justifyContent="start">
-				        <Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="12rem"/>
-				        <Select items="{path:'SubbranchModel>/dataObj'}" width="12rem">
-				            <items>
-				                <core:Item key="{SubbranchModel>branchName}" text="{SubbranchModel>branchName}"/>
-				            </items> 
-				        </Select>
-				        </HBox>
-				        <Button text="{i18n>empTransfer-add}" />
-				    </l:VerticalLayout >
-				    <Table >
-				        <columns>
+					<OverflowToolbar design="Transparent" height="3rem">
+						<Title text="{i18n>empTransfer-title}"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://expand-group" press="onButtonPressed">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+					</OverflowToolbar>
+					<l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
+						<HBox alignItems="Center" justifyContent="start">
+							<Text text="{i18n>empTransfer-choosePartnerName}:" design="Bold" width="12rem"/>
+							<SearchField id="searchField" width="20rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
+								suggestionItems="{path:'DirectReportsModel>/dataObj',sorter: {path:'DirectReportsModel>/dataObj/username'}}">
+								<suggestionItems>
+									<SuggestionItem text="{DirectReportsModel>username}" description="{DirectReportsModel>userId}" key="{DirectReportsModel>userId}"/>
+								</suggestionItems>
+							</SearchField>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="12rem"/>
+							<Select items="{path:'CityModel>/dataObj'}" width="20rem">
+								<items>
+									<core:Item key="{CityModel>cname}" text="{CityModel>cname}"/>
+								</items>
+							</Select>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="12rem"/>
+							<Select items="{path:'SubbranchModel>/dataObj'}" width="20rem">
+								<items>
+									<core:Item key="{SubbranchModel>branchName}" text="{SubbranchModel>branchName}"/>
+								</items>
+							</Select>
+						</HBox>
+						<Button text="{i18n>empTransfer-add}"/>
+					</l:VerticalLayout >
+					<Table >
+						<columns>
 							<Column ><Text text="{i18n>empTransTable-id}"/></Column>
 							<Column ><Text text="{i18n>empTransTable-zhname}"/></Column>
 							<Column ><Text text="{i18n>empTransTable-position}"/></Column>
@@ -53,11 +54,10 @@
 						</columns>
 						<items>
 							<ColumnListItem type="Active" press="onItemPress">
-								<cells>
-								</cells>
+								<cells></cells>
 							</ColumnListItem>
 						</items>
-				    </Table>
+					</Table>
 				</content>
 			</Page>
 		</pages>
