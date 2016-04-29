@@ -49,12 +49,20 @@
 		    "navTo": "performanceAppraisal"
 		},
 		{
-		    "name": "Part-Time Partner",
+		    "name": "Part-Time Partner’s Merit Increase Process",
 		    "navTo": "partTimePartner"
 		},
 		{
 		    "name": "Termination Process",
 		    "navTo": "terminationProcess"
+		},
+		{
+		    "name": "Change Store Manager",
+		    "navTo": "changeStoreManager"
+		},
+		{
+		    "name": "Store Partner’s Personal Information’s Update Process",
+		    "navTo": "storePartnerInfo"
 		}
 	]
 }
