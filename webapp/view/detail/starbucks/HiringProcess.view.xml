@@ -2,86 +2,83 @@
 	 controllerName="hcpsuccessfactors.controller.detail.starbucks.HiringProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="{i18n>hiringProcess-title}">
+			<Page  class="pageBackground" showHeader="false">
 				<content>
-				    
-				    		    	<l:VerticalLayout id="containerLayout" width="100%" >
+	<l:VerticalLayout id="containerLayout" width="100%">
 		<l:BlockLayout id="BlockLayout" >
 		    <l:BlockLayoutRow>
 		         <l:BlockLayoutCell
 						width="100%">
-			        <Label text="伙伴录用流程" width="100%" textAlign="Center"/>
+			        <Label text="伙伴录用流程" width="100%" textAlign="Center" class="bordingtitle"/>
 			     </l:BlockLayoutCell>
 		    </l:BlockLayoutRow>
 			<l:BlockLayoutRow>
 				<l:BlockLayoutCell
-						width="25%">
+						width="30%">
 				    	<HBox alignItems="Start" width="90%">
-						    <Label text="城市" width="7rem" />
+						    <Label text="城市"  class="commonLabel"/>
 							<Input type="text" width="10rem"/>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
-						    <Label text="用工类型" width="7rem" />
-							<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
+						    <Label text="身份证号" class="commonLabel"/>
+							<Input type="text" width="10rem"/>
+						</HBox>
+						 <HBox alignItems="Start" width="90%">
+						    <Label text="Special Rate" class="commonLabel"/>
+							<Input type="text" width="10rem"/>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
-						    <Label text="员工类型" width="7rem" />
+						    <Label text="用工类型" class="commonLabel"/>
 							<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
 						</HBox>
+
 						<HBox alignItems="Start" width="90%">
-						    <Label text="不可重新雇佣" width="7rem" />
+						    <Label text="不可重新雇佣" class="commonLabel"/>
 							<CheckBox/>
 						</HBox>
 				 </l:BlockLayoutCell>
 				 <l:BlockLayoutCell
 				  titleAlignment="left"
-					width="25%">
+					width="30%">
 				    <HBox alignItems="Start" width="90%">
-						    <Label text="门店" width="7rem" />
+						    <Label text="门店" class="commonLabel" />
 							<Input type="text" width="10rem"/>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
-						    <Label text="中文名" width="7rem" />
+						    <Label text="中文名" class="commonLabel" />
 							<Input type="text" width="10rem"/>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
-						    <Label text="建议薪酬" width="7rem" />
+						    <Label text="建议薪酬" class="commonLabel"/>
 							<Input type="text" width="10rem"/>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
-						    <Label text="理由" width="7rem" />
+						    <Label text="理由" class="commonLabel" />
 							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Start" width="90%">
+						    <Label text="是否重新雇佣" class="commonLabel" />
+						<CheckBox/>
 						</HBox>
 				 </l:BlockLayoutCell>
 				  <l:BlockLayoutCell
-						width="25%">
+						width="30%">
 				    <HBox alignItems="Start" width="90%">
-						    <Label text="职位" width="7rem" />
+						    <Label text="职位" class="commonLabel" />
 								<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
-						    <Label text="英文名" width="7rem" />
+						    <Label text="英文名" class="commonLabel" />
 							<Input type="text" width="10rem"/>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
-						    <Label text="到职日期" width="7rem" />
+						    <Label text="到职日期" class="commonLabel" />
 							<Input type="text" width="10rem"/>
 						</HBox>
-				 </l:BlockLayoutCell>
-				 <l:BlockLayoutCell
-				  titleAlignment="left"
-					width="25%">
-				    <HBox alignItems="Start" width="90%">
-						    <Label text="Special Rate" width="7rem" />
-							<Input type="text" width="10rem"/>
-						</HBox>
+
 						<HBox alignItems="Start" width="90%">
-						    <Label text="身份证号" width="7rem" />
-							<Input type="text" width="10rem"/>
-						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="是否重新雇佣" width="7rem" />
-						<CheckBox/>
+						    <Label text="员工类型" class="commonLabel"/>
+							<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
 						</HBox>
 						<HBox alignItems="Start" width="90%">
 							<Button text="增加到列表"  width="7rem"/>
@@ -92,7 +89,7 @@
 		         <l:BlockLayoutCell width="100%">
 			        <Table text="" width="100%">
 			            <columns>
-			            	<Column width="15%">
+			            	<Column width="13%">
 							   <Text text="是否重新雇佣"/>
 						    </Column>
 						    <Column>
@@ -104,28 +101,28 @@
 						    <Column>
 							   <Text text="职位"/>
 						    </Column>
-						    <Column>
+						    <Column  width="9%">
 							   <Text text="用工类型"/>
 						    </Column>
-						    <Column>
+						    <Column  width="8%">
 							   <Text text="中文名"/>
 						    </Column>
-						    <Column>
+						    <Column  width="8%">
 							   <Text text="英文名"/>
 						    </Column>
-						    <Column>
+						    <Column width="9%">
 							   <Text text="身份证号"/>
 						    </Column>
-						    <Column>
+						    <Column width="9%">
 							   <Text text="员工类型"/>
 						    </Column>
-						    <Column>
+						    <Column width="9%">
 							   <Text text="建议薪酬"/>
 						    </Column>
-						    <Column>
+						    <Column width="9%">
 							   <Text text="SpecialRate"/>
 						    </Column>
-						    <Column>
+						    <Column width="9%">
 							   <Text text="到职日期"/>
 						    </Column>
 			            </columns>
@@ -135,12 +132,11 @@
 		    <l:BlockLayoutRow>
 		         <l:BlockLayoutCell width="100%">
 		             <Button text="提交"/>
-		             
 		           </l:BlockLayoutCell>
 		    </l:BlockLayoutRow>  
 				 </l:BlockLayout>
 				 </l:VerticalLayout>
-				</content>
+				 </content>
 			</Page>
 		</pages>
 	</App>
