@@ -4,30 +4,11 @@
 		<pages>
 			<Page title="{i18n>empTransfer-title}">
 				<content>
-				    
-				    <l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
-				        <Text text="{i18n>empTransfer-choosePartnerId}:" />
-				        <ActionSelect id="selectId">
-				            <items>
-				                <core:Item text ="123456"/>
-				                <core:Item text ="654321"/>
-				            </items> 
-				        </ActionSelect>
-				        <Text text="{i18n>empTransfer-chooseTransCity}:" />
-				        <Select >
-				            <items>
-				            </items> 
-				        </Select>
-				        <Text text="{i18n>empTransfer-chooseTransBranch}:" />
-				        <Select >
-				            <items>
-				            </items> 
-				        </Select>
-				        <Button text="{i18n>empTransfer-add}" />
-				    </l:VerticalLayout >
-				    <Table >
-				        <headerToolbar >
+				    <Panel width="auto" id="Panel">
+				         <headerToolbar >
 							<OverflowToolbar>
+							    <Title text="{i18n>empTransfer-title}"/>
+								<ToolbarSpacer />
 				                <Button icon="sap-icon://expand-group" press="onButtonPressed" >
 					                <layoutData>
 						            <OverflowToolbarLayoutData priority="NeverOverflow" />
@@ -35,6 +16,34 @@
 				                </Button>	
 							</OverflowToolbar>
 						</headerToolbar>
+				    <l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
+				        <HBox alignItems="Center" justifyContent="start">
+				        <Text text="{i18n>empTransfer-choosePartnerName}:" design="Bold" width="12rem"/>
+				        <ActionSelect id="selectId"  width="12rem">
+				            <items>
+				                <core:Item text ="123456"/>
+				                <core:Item text ="654321"/>
+				            </items> 
+				        </ActionSelect>
+				        </HBox>
+				        <HBox alignItems="Center" justifyContent="start">
+				        <Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="12rem"/>
+				        <Select width="12rem">
+				            <items>
+				            </items> 
+				        </Select>
+				        </HBox>
+				        <HBox alignItems="Center" justifyContent="start">
+				        <Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="12rem"/>
+				        <Select width="12rem">
+				            <items>
+				            </items> 
+				        </Select>
+				        </HBox>
+				        <Button text="{i18n>empTransfer-add}"/>
+				    </l:VerticalLayout >
+				    </Panel>
+				    <Table >
 				        <columns>
 							<Column ><Text text="{i18n>empTransTable-id}"/></Column>
 							<Column ><Text text="{i18n>empTransTable-zhname}"/></Column>
