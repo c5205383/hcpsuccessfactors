@@ -54,7 +54,7 @@
 		},
 		{
 		    "name": "Termination Process",
-		    "navTo": "TerminationProcess"
+		    "navTo": "terminationProcess"
 		}
 	]
 }
