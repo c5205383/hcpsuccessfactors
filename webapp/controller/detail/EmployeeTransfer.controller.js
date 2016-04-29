@@ -11,11 +11,8 @@ sap.ui.define([
 	return BaseController.extend("hcpsuccessfactors.controller.detail.EmployeeTransfer", {
 
 		onInit: function() {
-			// set explored app's demo model on this sample
-		//	var oModel = new JSONModel(jQuery.sap.getModulePath("sap.ui.demo.mock", "/products.json"));
-		//	this.getView().setModel(oModel);
 
-            var isDebug=true;
+            var isDebug = false;
             if(!isDebug){
                 this.bindData();
             }else{
@@ -51,6 +48,11 @@ sap.ui.define([
 				    alert("failed to get direct reports");
 				}
 			});
+			
+			var cityModel = new JSONModel({"dataObj":[{"cname":"Chengdu"},{"cname":"Shanghai"},{"cname":"Beijing"}]});
+			var subbranchModel = new JSONModel({"dataObj":[{"branchName":"a1"},{"branchName":"b1"},{"branchName":"c1"}]});
+			this.getView().setModel(cityModel, "CityModel");
+			this.getView().setModel(subbranchModel, "SubbranchModel");
         },
         
         bindMockData: function(){
