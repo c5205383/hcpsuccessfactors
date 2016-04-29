@@ -38,33 +38,6 @@
 				                </Button>	
 							</OverflowToolbar>
 						</headerToolbar>
-				    <l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
-				        <HBox alignItems="Center" justifyContent="start">
-				        <Text text="{i18n>empTransfer-choosePartnerName}:" design="Bold" width="12rem"/>
-				        <ActionSelect id="selectId"  width="12rem">
-				            <items>
-				                <core:Item text ="123456"/>
-				                <core:Item text ="654321"/>
-				            </items> 
-				        </ActionSelect>
-				        </HBox>
-				        <HBox alignItems="Center" justifyContent="start">
-				        <Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="12rem"/>
-				        <Select width="12rem">
-				            <items>
-				            </items> 
-				        </Select>
-				        </HBox>
-				        <HBox alignItems="Center" justifyContent="start">
-				        <Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="12rem"/>
-				        <Select width="12rem">
-				            <items>
-				            </items> 
-				        </Select>
-				        </HBox>
-				        <Button text="{i18n>empTransfer-add}"/>
-				    </l:VerticalLayout >
-				    </Panel>
 				    <Table >
 				        <columns>
 							<Column ><Text text="{i18n>empTransTable-id}"/></Column>
