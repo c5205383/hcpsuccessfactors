@@ -182,7 +182,7 @@
 					"viewName": "Candidate"
 				},
 				"empTransfer": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "EmployeeTransfer"
 				},
 				"formDetail": {
@@ -190,7 +190,7 @@
 					"viewName": "Formdetail"
 				},
 				"hiringProcess": {
-					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "HiringProcess"
 				},
 				"notFound": {

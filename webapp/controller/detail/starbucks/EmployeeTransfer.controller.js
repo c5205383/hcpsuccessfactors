@@ -8,7 +8,7 @@ sap.ui.define([
 ], function(BaseController,jQuery, Button, MessageToast, Controller, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.detail.EmployeeTransfer", {
+	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.EmployeeTransfer", {
 
 		onInit: function() {
 
