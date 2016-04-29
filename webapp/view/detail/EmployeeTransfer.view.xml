@@ -1,15 +1,18 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
 	controllerName="hcpsuccessfactors.controller.detail.EmployeeTransfer" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="{i18n>empTransfer-title}">
 				<content>
-				    <HBox justifyContent="SpaceAround" alignItems="Center">
+				    
+				    <l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
 				        <Text text="{i18n>empTransfer-choosePartnerId}:" />
-				        <Select >
+				        <ActionSelect id="selectId">
 				            <items>
+				                <core:Item text ="123456"/>
+				                <core:Item text ="654321"/>
 				            </items> 
-				        </Select>
+				        </ActionSelect>
 				        <Text text="{i18n>empTransfer-chooseTransCity}:" />
 				        <Select >
 				            <items>
@@ -21,8 +24,17 @@
 				            </items> 
 				        </Select>
 				        <Button text="{i18n>empTransfer-add}" />
-				    </HBox>
+				    </l:VerticalLayout >
 				    <Table >
+				        <headerToolbar >
+							<OverflowToolbar>
+				                <Button icon="sap-icon://expand-group" press="onButtonPressed" >
+					                <layoutData>
+						            <OverflowToolbarLayoutData priority="NeverOverflow" />
+					                </layoutData>
+				                </Button>	
+							</OverflowToolbar>
+						</headerToolbar>
 				        <columns>
 							<Column ><Text text="{i18n>empTransTable-id}"/></Column>
 							<Column ><Text text="{i18n>empTransTable-zhname}"/></Column>
