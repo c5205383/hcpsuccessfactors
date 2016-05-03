@@ -11,9 +11,9 @@
 						<HBox alignItems="Center" justifyContent="start">
 							<Label text="Name: " width="5rem"/>
 							<SearchField id="nameSearchField" width="12rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
-								suggestionItems="{path:'DirectReportsModel>/dataObj',sorter: {path:'DirectReportsModel>/dataObj/username'}}">
+								suggestionItems="{path:'DirectReportsModel>/dataObj',sorter: {path:'DirectReportsModel>/dataObj/userId'}}">
 								<suggestionItems>
-									<SuggestionItem text="{DirectReportsModel>userId}" key="{DirectReportsModel>userId}"/>
+									<SuggestionItem text="{DirectReportsModel>username}" key="{DirectReportsModel>userId}"/>
 								</suggestionItems>
 							</SearchField>
 							<Button text="" type="Transparent" enabled="false" width="1rem"/>

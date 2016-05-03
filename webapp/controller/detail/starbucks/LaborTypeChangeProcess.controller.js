@@ -85,10 +85,10 @@ sap.ui.define([
 			var filters = [];
 			if (value) {
 				filters = [new sap.ui.model.Filter([
-					new sap.ui.model.Filter("DirectReportsModel>userId", function(sText) {
+					new sap.ui.model.Filter("userId", function(sText) {
 						return (sText || "").toUpperCase().indexOf(value.toUpperCase()) > -1;
 					}),
-					new sap.ui.model.Filter("DirectReportsModel>username", function(sDes) {
+					new sap.ui.model.Filter("username", function(sDes) {
 						return (sDes || "").toUpperCase().indexOf(value.toUpperCase()) > -1;
 					})
 				], false)];
