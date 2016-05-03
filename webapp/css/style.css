@@ -40,12 +40,12 @@
 }
 
 .commonLabel{
-    width: 9rem;
+    width: 7.5rem;
     padding-top: 1rem;
 }
 
 .rowSpace{
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 .blockCell{
@@ -65,4 +65,15 @@
 
 .promotion-add-icon{
      margin-left: 9rem;
+}
+
+.cssRightPostion{
+	float:right;
+}
+
+.cssMargin{
+	padding-left: 10px;
+    padding-right: 10px;
+	padding-top: 10px;
+    padding-bottom: 10px;
 }

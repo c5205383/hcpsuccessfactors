@@ -2,7 +2,7 @@
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.OnboardProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="">
+			<Page title="" showHeader="false"  class="pageBackground">
 				<content>
 				    <l:VerticalLayout id="containerLayout" width="100%" >
 		           <l:BlockLayout id="BlockLayout">
@@ -25,7 +25,7 @@
 						width="100%" class="blockCell">
 			        <Label text="身份证号码" textAlign="Left" class="commonLabel"/>
 			        <Input type="text" width="10rem"/>
-			       <Label text="入职日期" textAlign="Left" width="9rem" class="commonmargin"/>
+			       <Label text="入职日期" textAlign="Left" width="7.5rem" class="commonmargin"/>
 			        <DatePicker width="15rem"/>
 			     </l:BlockLayoutCell>
 		    </l:BlockLayoutRow>
@@ -144,12 +144,6 @@
 		    </l:BlockLayoutRow>
 				 </l:BlockLayout>
 				 </l:VerticalLayout>
-				    
-				    
-				    
-				    
-				    
-				    
 				</content>
 			</Page>
 		</pages>

@@ -2,8 +2,50 @@
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.ContractRenewProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="">
-				<content></content>
+			<Page title="{i18n>contractRenewProcess-title}" showNavButton="true">
+				<content>
+					<List headerText="{i18n>contractRenewManagement-title}">
+						<InputListItem label="{i18n>contractRenewPartner-title}">
+							<SearchField width="450px" class="cssRightPostion" enableSuggestions="true" search="onSearch" suggest="onSuggest"
+								suggestionItems="{}" value="{/data/partnerID}">
+								<suggestionItems>
+									<SuggestionItem text="{Name}" description="{path:'Price'} {path:'CurrencyCode'}" key="{ProductId}" />
+								</suggestionItems>
+							</SearchField>
+						</InputListItem>
+						<InputListItem label="{i18n>contractRenewPosition-title}">
+							<Select width="450px" class="cssRightPostion" selectedKey="{/data/position}" change="onKeyChanged">
+								<core:Item key="P1" text="Position1" />
+								<core:Item key="P2" text="Position2" />
+
+								<core:Item key="P3" text="Position3" />
+								<core:Item key="P4" text="Position4" />
+								<core:Item key="P5" text="Position5" />
+							</Select>
+						</InputListItem>
+						<InputListItem label="{i18n>contractRenewStartDate-title}">
+							<DatePicker width="450px" class="cssRightPostion" value="{/data/contractStartDate}" valueFormat="yyyy-MM-dd" displayFormat="long" />
+						</InputListItem>
+						<InputListItem label="{i18n>contractRenewEndDate-title}">
+							<DatePicker width="450px" class="cssRightPostion" value="{/data/contractEndDate}" valueFormat="yyyy-MM-dd" displayFormat="long" />
+						</InputListItem>
+						<InputListItem label="{i18n>contractRenewSender-title}">
+							<Input width="450px" class="cssRightPostion" editable="false" design="Bold" value="{/data/contractRenewSender}" />
+						</InputListItem>
+						<InputListItem label="{i18n>contractRenewSendDate-title}">
+							<DatePicker width="450px" class="cssRightPostion" value="{/data/contractRenewSendDate}" valueFormat="yyyy-MM-dd"
+								displayFormat="long" />
+						</InputListItem>
+					</List>
+					<Label text="{i18n>contractRenewComments-title}" design="Bold" class="cssMargin" />
+					<TextArea width="100%" rows="8" class="cssMargin" value="{/data/contractRenewComments}" />
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Button text="{i18n>contractRenewAction-title}" type="Accept" />
+					</Toolbar>
+				</footer>
 			</Page>
 		</pages>
 	</App>
