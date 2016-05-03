@@ -2,7 +2,7 @@
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.EmployeeTransfer" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="{i18n>empTransfer-title}">
+			<Page title="{i18n>empTransfer-title}" id="employee-transfer">
 				<content>
 					<OverflowToolbar design="Transparent" height="3rem">
 						<Title text="{i18n>empTransfer-title}"/>
@@ -19,13 +19,13 @@
 							<SearchField id="searchField" width="20rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
 								suggestionItems="{path:'DirectReportsModel>/dataObj'}">
 								<suggestionItems>
-									<SuggestionItem text="{DirectReportsModel>username}" key="{DirectReportsModel>userId}"/>
+									<SuggestionItem text="{DirectReportsModel>defaultFullName}" key="{DirectReportsModel>userId}"/>
 								</suggestionItems>
 							</SearchField>
 						</HBox>
 						<HBox alignItems="Center" justifyContent="start">
 							<Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="12rem"/>
-							<Select items="{path:'CityModel>/dataObj'}" width="20rem">
+							<Select items="{path:'CityModel>/dataObj'}" width="20rem" id="transcity">
 								<items>
 									<core:Item key="{CityModel>cname}" text="{CityModel>cname}"/>
 								</items>
@@ -33,15 +33,15 @@
 						</HBox>
 						<HBox alignItems="Center" justifyContent="start">
 							<Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="12rem"/>
-							<Select items="{path:'SubbranchModel>/dataObj'}" width="20rem">
+							<Select items="{path:'SubbranchModel>/dataObj'}" width="20rem" id="transbranch">
 								<items>
 									<core:Item key="{SubbranchModel>branchName}" text="{SubbranchModel>branchName}"/>
 								</items>
 							</Select>
 						</HBox>
-						<Button text="{i18n>empTransfer-add}"/>
+						<Button text="{i18n>empTransfer-add}" press="OnAddPress"/>
 					</l:VerticalLayout >
-					<Table >
+					<Table inset="true" id="transfertable">
 						<columns>
 							<Column ><Text text="{i18n>empTransTable-id}"/></Column>
 							<Column ><Text text="{i18n>empTransTable-zhname}"/></Column>
@@ -53,9 +53,6 @@
 							<Column ><Text text="{i18n>empTransTable-effectiveDate}"/></Column>
 						</columns>
 						<items>
-							<ColumnListItem type="Active" press="onItemPress">
-								<cells></cells>
-							</ColumnListItem>
 						</items>
 					</Table>
 				</content>
