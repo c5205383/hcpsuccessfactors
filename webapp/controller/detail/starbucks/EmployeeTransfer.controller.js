@@ -21,7 +21,7 @@ sap.ui.define([
 			var oView = this.getView();
 			oView.setModel(this.oModel);
 			this.oSF = oView.byId("searchField");
-			this.onButtonPressed();
+			//this.onButtonPressed();
 		},
 
 		bindData: function() {

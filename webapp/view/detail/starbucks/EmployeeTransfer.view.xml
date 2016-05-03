@@ -4,60 +4,77 @@
 		<pages>
 			<Page title="{i18n>empTransfer-title}">
 				<content>
-					<OverflowToolbar design="Transparent" height="3rem">
-						<Title text="{i18n>empTransfer-title}"/>
-						<ToolbarSpacer/>
-						<Button icon="sap-icon://expand-group" press="onButtonPressed">
+					<OverflowToolbar design="Transparent">
+						<Title text="{i18n>empTransfer-title}" />
+						<ToolbarSpacer />
+						<Button icon="sap-icon://expand-group">
 							<layoutData>
-								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
 							</layoutData>
 						</Button>
 					</OverflowToolbar>
-					<l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout">
-						<HBox alignItems="Center" justifyContent="start">
-							<Text text="{i18n>empTransfer-choosePartnerName}:" design="Bold" width="12rem"/>
-							<SearchField id="searchField" width="20rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
+					<l:VerticalLayout class="sapUiSmallMargin" id="SelectLayout" width="100%">
+						<HBox alignItems="Center" justifyContent="start" class="cssHBox">
+							<Text text="{i18n>empTransfer-choosePartnerName}" design="Bold" width="200px" />
+							<SearchField id="searchField" width="400px" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
 								suggestionItems="{path:'DirectReportsModel>/dataObj'}">
 								<suggestionItems>
-									<SuggestionItem text="{DirectReportsModel>username}" key="{DirectReportsModel>userId}"/>
+									<SuggestionItem text="{DirectReportsModel>username}" key="{DirectReportsModel>userId}" />
 								</suggestionItems>
 							</SearchField>
 						</HBox>
-						<HBox alignItems="Center" justifyContent="start">
-							<Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="12rem"/>
-							<Select items="{path:'CityModel>/dataObj'}" width="20rem">
+						<HBox alignItems="Center" justifyContent="start" class="cssHBox">
+							<Text text="{i18n>empTransfer-chooseTransCity}:" design="Bold" width="200px" />
+							<Select items="{path:'CityModel>/dataObj'}" width="400px">
 								<items>
-									<core:Item key="{CityModel>cname}" text="{CityModel>cname}"/>
+									<core:Item key="{CityModel>cname}" text="{CityModel>cname}" />
 								</items>
 							</Select>
 						</HBox>
-						<HBox alignItems="Center" justifyContent="start">
-							<Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="12rem"/>
-							<Select items="{path:'SubbranchModel>/dataObj'}" width="20rem">
+						<HBox alignItems="Center" justifyContent="start" class="cssHBox">
+							<Text text="{i18n>empTransfer-chooseTransBranch}:" design="Bold" width="200px" />
+							<Select items="{path:'SubbranchModel>/dataObj'}" width="400px">
 								<items>
-									<core:Item key="{SubbranchModel>branchName}" text="{SubbranchModel>branchName}"/>
+									<core:Item key="{SubbranchModel>branchName}" text="{SubbranchModel>branchName}" />
 								</items>
 							</Select>
 						</HBox>
-						<Button text="{i18n>empTransfer-add}"/>
-					</l:VerticalLayout >
-					<Table >
-						<columns>
-							<Column ><Text text="{i18n>empTransTable-id}"/></Column>
-							<Column ><Text text="{i18n>empTransTable-zhname}"/></Column>
-							<Column ><Text text="{i18n>empTransTable-position}"/></Column>
-							<Column ><Text text="{i18n>empTransTable-city}"/></Column>
-							<Column ><Text text="{i18n>empTransTable-preSubbranch}"/></Column>
-							<Column ><Text text="{i18n>empTransTable-transCity}"/></Column>
-							<Column ><Text text="{i18n>empTransTable-transSubbranch}"/></Column>
-							<Column ><Text text="{i18n>empTransTable-effectiveDate}"/></Column>
-						</columns>
-						<items>
-							<ColumnListItem type="Active" press="onItemPress">
-								<cells></cells>
-							</ColumnListItem>
-						</items>
-					</Table>
+						<Button text="{i18n>empTransfer-add}" class="cssHBox" width="100px" />
+						<Table>
+							<columns>
+								<Column>
+									<Text text="{i18n>empTransTable-id}" />
+								</Column>
+								<Column>
+									<Text text="{i18n>empTransTable-zhname}" />
+								</Column>
+								<Column>
+									<Text text="{i18n>empTransTable-position}" />
+								</Column>
+								<Column>
+									<Text text="{i18n>empTransTable-city}" />
+								</Column>
+								<Column>
+									<Text text="{i18n>empTransTable-preSubbranch}" />
+								</Column>
+								<Column>
+									<Text text="{i18n>empTransTable-transCity}" />
+								</Column>
+								<Column>
+									<Text text="{i18n>empTransTable-transSubbranch}" />
+								</Column>
+								<Column>
+									<Text text="{i18n>empTransTable-effectiveDate}" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Active" press="onItemPress">
+									<cells></cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</l:VerticalLayout>
+
 				</content>
 			</Page>
 		</pages>
