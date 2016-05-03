@@ -10,10 +10,10 @@
 						</HBox>
 						<HBox alignItems="Center" justifyContent="start">
 							<Label text="Name: " width="5rem"/>
-							<SearchField width="12rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
+							<SearchField id="nameSearchField" width="12rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
 								suggestionItems="{path:'DirectReportsModel>/dataObj',sorter: {path:'DirectReportsModel>/dataObj/username'}}">
 								<suggestionItems>
-									<SuggestionItem text="{DirectReportsModel>username}" description="{DirectReportsModel>userId}" key="{DirectReportsModel>userId}"/>
+									<SuggestionItem text="{DirectReportsModel>userId}" key="{DirectReportsModel>userId}"/>
 								</suggestionItems>
 							</SearchField>
 							<Button text="" type="Transparent" enabled="false" width="1rem"/>
@@ -27,7 +27,7 @@
 							<Input type="text" width="20rem"/>
 							<Button text="" type="Transparent" enabled="false" width="0.5rem"/>
 							<core:Icon src="sap-icon://sys-help" press="onShowPositionDialog" width="1rem"/>
-							<Button text="" type="Transparent" enabled="false" width="1rem"/>
+							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
 							<Label text="Type of the Partner:" width="8rem"/>
 							<Input type="text" width="10rem"/>
 						</HBox>
@@ -65,7 +65,7 @@
 							<Input type="text" width="20rem"/>
 							<Button text="" type="Transparent" enabled="false" width="0.5rem"/>
 							<core:Icon src="sap-icon://sys-help" press="onShowPositionDialog" width="1rem"/>
-							<Button text="" type="Transparent" enabled="false" width="1rem"/>
+							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
 							<Label text="PIR: " width="8rem"/>
 							<Input type="text" width="10rem"/>
 							<Button text="" type="Transparent" enabled="false" width="1rem"/>

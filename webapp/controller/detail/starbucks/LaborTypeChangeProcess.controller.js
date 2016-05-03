@@ -13,8 +13,9 @@ sap.ui.define([
 			} else {
 				this.bindMockData();
 			}
+			this.nameSearchField = this.byId("nameSearchField");
 		},
-		
+
 		bindData: function() {
 			var _this = this;
 			$.ajax({
@@ -51,9 +52,25 @@ sap.ui.define([
 			this.getView().setModel(cityModel, "CityModel");
 			this.getView().setModel(subbranchModel, "SubbranchModel");
 		},
-		
-		onShowPositionDialog: function(){
-		    alert("hi");
+
+		_getDialog: function() {
+			if (!this._oDialog) {
+				this._oDialog = sap.ui.xmlfragment("hcpsuccessfactors.view.detail.starbucks.PositionDetailDialog", this);
+				this.getView().addDependent(this._oDialog);
+			}
+			return this._oDialog;
+		},
+
+		onOpenDialog: function() {
+			this._getDialog().open();
+		},
+
+		onShowPositionDialog: function() {
+			this.onOpenDialog();
+		},
+
+		onCloseDialog: function() {
+			this._getDialog().close();
 		},
 		
 		onSearch: function(event) {
@@ -77,8 +94,8 @@ sap.ui.define([
 				], false)];
 			}
 
-			this.oSF.getBinding("suggestionItems").filter(filters);
-			this.oSF.suggest();
+			this.nameSearchField.getBinding("suggestionItems").filter(filters);
+			this.nameSearchField.suggest();
 		}
 	});
 
