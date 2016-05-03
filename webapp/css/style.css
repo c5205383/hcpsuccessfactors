@@ -3,6 +3,7 @@
 	margin-left:15px;
 }
 .cssHBox {
+	padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -40,12 +41,12 @@
 }
 
 .commonLabel{
-    width: 9rem;
+    width: 7.5rem;
     padding-top: 1rem;
 }
 
 .rowSpace{
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 .blockCell{
@@ -57,4 +58,23 @@
 
 .bordingtitle{
     font-weight: bold;
+}
+
+.promotion-selector{
+    margin-left: 3rem;
+}
+
+.promotion-add-icon{
+     margin-left: 9rem;
+}
+
+.cssRightPostion{
+	float:right;
+}
+
+.cssMargin{
+	padding-left: 10px;
+    padding-right: 10px;
+	padding-top: 10px;
+    padding-bottom: 10px;
 }

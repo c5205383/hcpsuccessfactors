@@ -21,6 +21,7 @@ sap.ui.define([
 			} else {
 				this.bindMockData();
 			}
+
 			this.oSF = this.byId("searchField");
 			this.onButtonPressed();
 		},

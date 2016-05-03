@@ -1,9 +1,87 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.LaborTypeChangeProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="">
-				<content></content>
+				<content>
+					<l:VerticalLayout id="containerLayout" class="sapUiResponsiveMargin" width="auto">
+						<HBox alignItems="Center" justifyContent="start">
+								<Label text="Before changing" width="100%" textAlign="Left" design="Bold"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Name: " width="5rem"/>
+							<SearchField id="nameSearchField" width="12rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
+								suggestionItems="{path:'DirectReportsModel>/dataObj',sorter: {path:'DirectReportsModel>/dataObj/userId'}}">
+								<suggestionItems>
+									<SuggestionItem text="{DirectReportsModel>username}" key="{DirectReportsModel>userId}"/>
+								</suggestionItems>
+							</SearchField>
+							<Button text="" type="Transparent" enabled="false" width="1rem"/>
+							<Input type="text" width="7rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="Subbranch: " width="8rem"/>
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Position: " width="5rem"/>
+							<Input type="text" width="20rem"/>
+							<Button text="" type="Transparent" enabled="false" width="0.5rem"/>
+							<core:Icon src="sap-icon://sys-help" press="onShowPositionDialog" width="1rem"/>
+							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
+							<Label text="Type of the Partner:" width="8rem"/>
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Base pay: " width="5rem"/>
+							<Input type="text" width="20rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="PIR: " width="8rem"/>
+							<Input type="text" width="10rem"/>
+							<Button text="" type="Transparent" enabled="false" width="1rem"/>
+							<Label text="%"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+						    <Button text="" type="Transparent" enabled="false" width="3rem"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+								<Label text="Need to modify" width="100%" textAlign="Left" design="Bold"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Position: " width="5rem"/>
+							<SearchField width="12rem" placeholder="search for..." enableSuggestions="true" search="onSearch" suggest="onSuggest"
+								suggestionItems="{path:'DirectReportsModel>/dataObj',sorter: {path:'DirectReportsModel>/dataObj/username'}}">
+								<suggestionItems>
+									<SuggestionItem text="{DirectReportsModel>username}" description="{DirectReportsModel>userId}" key="{DirectReportsModel>userId}"/>
+								</suggestionItems>
+							</SearchField>
+							<Button text="" type="Transparent" enabled="false" width="1rem"/>
+							<Input type="text" width="7rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="Partner type: " width="8rem"/>
+							<Input type="text" width="10rem"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Base pay: " width="5rem"/>
+							<Input type="text" width="20rem"/>
+							<Button text="" type="Transparent" enabled="false" width="0.5rem"/>
+							<core:Icon src="sap-icon://sys-help" press="onShowPositionDialog" width="1rem"/>
+							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
+							<Label text="PIR: " width="8rem"/>
+							<Input type="text" width="10rem"/>
+							<Button text="" type="Transparent" enabled="false" width="1rem"/>
+							<Label text="%"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+						    <Label text="Effective date: " width="5rem"/>
+							<DatePicker width="20rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Button text="Get the latest PIR"/>
+						</HBox>
+						<HBox alignItems="Center" justifyContent="start">
+							<Button text="Submmit"/>
+						</HBox>
+					</l:VerticalLayout>
+				</content>
 			</Page>
 		</pages>
 	</App>
