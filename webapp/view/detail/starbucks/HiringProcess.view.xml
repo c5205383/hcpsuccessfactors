@@ -1,142 +1,126 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" 
-	 controllerName="hcpsuccessfactors.controller.detail.starbucks.HiringProcess" xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	controllerName="hcpsuccessfactors.controller.detail.starbucks.HiringProcess" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page  class="pageBackground" showHeader="false">
+			<Page title="{i18n>hiringProcess-title}">
 				<content>
-	<l:VerticalLayout id="containerLayout" width="100%">
-		<l:BlockLayout id="BlockLayout" >
-		    <l:BlockLayoutRow>
-		         <l:BlockLayoutCell
-						width="100%">
-			        <Label text="伙伴录用流程" width="100%" textAlign="Center" class="bordingtitle"/>
-			     </l:BlockLayoutCell>
-		    </l:BlockLayoutRow>
-			<l:BlockLayoutRow>
-				<l:BlockLayoutCell
-						width="30%">
-				    	<HBox alignItems="Start" width="90%">
-						    <Label text="城市"  class="commonLabel"/>
-							<Input type="text" width="10rem"/>
+					<OverflowToolbar design="Transparent">
+						<Title text="{i18n>hiringProcess-title}"/>
+						<ToolbarSpacer/>
+					</OverflowToolbar>
+					<l:VerticalLayout alignItems="Center" class="sapUiResponsiveMargin" width="auto">
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="City: " width="8rem"/>
+							<Input type="text" width="15rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="Store: " width="8rem"/>
+							<Input type="text" width="15rem"/>
 						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="身份证号" class="commonLabel"/>
-							<Input type="text" width="10rem"/>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Position: " width="8rem"/>
+							<Select width="15rem">
+								<items>
+									<core:Item key="111" text=""></core:Item>
+								</items>
+							</Select>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="Special Rate: " width="8rem"/>
+							<Input type="text" width="15rem"/>
 						</HBox>
-						 <HBox alignItems="Start" width="90%">
-						    <Label text="Special Rate" class="commonLabel"/>
-							<Input type="text" width="10rem"/>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Chinese Name: " width="8rem"/>
+							<Input type="text" width="15rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="English Name: " width="8rem"/>
+							<Input type="text" width="15rem"/>
 						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="用工类型" class="commonLabel"/>
-							<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="ID Number: " width="8rem"/>
+							<Input type="text" width="15rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="Whether hire again: " width="8rem"/>
+							<CheckBox text="" width="5rem"/>
 						</HBox>
-
-						<HBox alignItems="Start" width="90%">
-						    <Label text="不可重新雇佣" class="commonLabel"/>
-							<CheckBox/>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Employment Type: " width="8rem"/>
+							<Select width="15rem">
+								<items>
+									<core:Item key="111" text=""></core:Item>
+								</items>
+							</Select>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="Employee Type: " width="8rem"/>
+							<Select width="15rem">
+								<items>
+									<core:Item key="111" text=""></core:Item>
+								</items>
+							</Select>
 						</HBox>
-				 </l:BlockLayoutCell>
-				 <l:BlockLayoutCell
-				  titleAlignment="left"
-					width="30%">
-				    <HBox alignItems="Start" width="90%">
-						    <Label text="门店" class="commonLabel" />
-							<Input type="text" width="10rem"/>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Payroll Suggestion: " width="8rem"/>
+							<Input type="text" width="15rem"/>
+							<Button text="" type="Transparent" enabled="false" width="3rem"/>
+							<Label text="Start Date: " width="8rem"/>
+							<DatePicker width="15rem"/>
 						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="中文名" class="commonLabel" />
-							<Input type="text" width="10rem"/>
+						<HBox alignItems="Center" justifyContent="start">
+							<Label text="Do not hire: " width="8rem"/>
+							<CheckBox text="" width="5rem" select="onCheckBoxPressed"/>
 						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="建议薪酬" class="commonLabel"/>
-							<Input type="text" width="10rem"/>
+						<HBox alignItems="Center" justifyContent="start" id="reason">
+							<Label text="Reason: " width="8rem"/>
+							<Input type="text" width="41rem"/>
 						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="理由" class="commonLabel" />
-							<Input type="text" width="10rem"/>
+						<HBox alignItems="Center" justifyContent="start">
+							<Button text="Add to table"/>
 						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="是否重新雇佣" class="commonLabel" />
-						<CheckBox/>
+						<HBox alignItems="Center" justifyContent="start">
+							<Table text="" width="100%">
+								<columns>
+									<Column width="13%">
+										<Text text="Whether hire again"/>
+									</Column>
+									<Column>
+										<Text text="City"/>
+									</Column>
+									<Column>
+										<Text text="Store"/>
+									</Column>
+									<Column>
+										<Text text="Position"/>
+									</Column>
+									<Column width="9%">
+										<Text text="Employment Type"/>
+									</Column>
+									<Column width="8%">
+										<Text text="Chinese Name"/>
+									</Column>
+									<Column width="8%">
+										<Text text="English Name"/>
+									</Column>
+									<Column width="9%">
+										<Text text="ID Number"/>
+									</Column>
+									<Column width="9%">
+										<Text text="Employee Type"/>
+									</Column>
+									<Column width="9%">
+										<Text text="Payroll Suggesstion"/>
+									</Column>
+									<Column width="9%">
+										<Text text="Special Rate"/>
+									</Column>
+									<Column width="9%">
+										<Text text="Start Date"/>
+									</Column>
+								</columns>
+							</Table>
 						</HBox>
-				 </l:BlockLayoutCell>
-				  <l:BlockLayoutCell
-						width="30%">
-				    <HBox alignItems="Start" width="90%">
-						    <Label text="职位" class="commonLabel" />
-								<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
+						<HBox alignItems="Center" justifyContent="start">
+							<Button text="Submit"/>
 						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="英文名" class="commonLabel" />
-							<Input type="text" width="10rem"/>
-						</HBox>
-						<HBox alignItems="Start" width="90%">
-						    <Label text="到职日期" class="commonLabel" />
-							<Input type="text" width="10rem"/>
-						</HBox>
-
-						<HBox alignItems="Start" width="90%">
-						    <Label text="员工类型" class="commonLabel"/>
-							<Select width="10rem"><items><core:Item key="111" text=""></core:Item></items></Select>
-						</HBox>
-						<HBox alignItems="Start" width="90%">
-							<Button text="增加到列表"  width="7rem"/>
-						</HBox>
-				 </l:BlockLayoutCell>
-				 </l:BlockLayoutRow>
-				 <l:BlockLayoutRow>
-		         <l:BlockLayoutCell width="100%">
-			        <Table text="" width="100%">
-			            <columns>
-			            	<Column width="13%">
-							   <Text text="是否重新雇佣"/>
-						    </Column>
-						    <Column>
-							   <Text text="城市"/>
-						    </Column>
-						    <Column>
-							   <Text text="门店"/>
-						    </Column>
-						    <Column>
-							   <Text text="职位"/>
-						    </Column>
-						    <Column  width="9%">
-							   <Text text="用工类型"/>
-						    </Column>
-						    <Column  width="8%">
-							   <Text text="中文名"/>
-						    </Column>
-						    <Column  width="8%">
-							   <Text text="英文名"/>
-						    </Column>
-						    <Column width="9%">
-							   <Text text="身份证号"/>
-						    </Column>
-						    <Column width="9%">
-							   <Text text="员工类型"/>
-						    </Column>
-						    <Column width="9%">
-							   <Text text="建议薪酬"/>
-						    </Column>
-						    <Column width="9%">
-							   <Text text="SpecialRate"/>
-						    </Column>
-						    <Column width="9%">
-							   <Text text="到职日期"/>
-						    </Column>
-			            </columns>
-			        </Table>
-			     </l:BlockLayoutCell>
-		    </l:BlockLayoutRow>
-		    <l:BlockLayoutRow>
-		         <l:BlockLayoutCell width="100%">
-		             <Button text="提交"/>
-		           </l:BlockLayoutCell>
-		    </l:BlockLayoutRow>  
-				 </l:BlockLayout>
-				 </l:VerticalLayout>
-				 </content>
+					</l:VerticalLayout>
+				</content>
 			</Page>
 		</pages>
 	</App>
