@@ -131,6 +131,11 @@
 					"target": "formDetail"
 				},
 				{
+					"pattern": "myshop",
+					"name": "myShop",
+					"target": "myShop"
+				},
+				{
 					"pattern": "emptransfer",
 					"name": "empTransfer",
 					"target": "empTransfer"
@@ -225,6 +230,10 @@
 				"candidate": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "Candidate"
+				},
+				"myShop": {
+				    "viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "MyShop"
 				},
 				"empTransfer": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
