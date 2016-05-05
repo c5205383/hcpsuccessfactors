@@ -47,7 +47,7 @@
 		<InputListItem label="{i18n>hiringProcess-payrollsuggestion}">
 		    <Input width="250px" class="cssRightPostion cssInput" design="Bold"/>
 		</InputListItem>
-			<InputListItem label="{i18n>hiringProcess-startdate}">
+			<InputListItem label="{i18n>hiringProcess-hiredate}">
 			<DatePicker width="250px" class="cssRightPostion" displayFormat="long"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-donothire}">

@@ -52,9 +52,15 @@
 									<Text text="{i18n>hiringProcess-specialrate}" wrapping="false"/>
 								</Column>
 								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-startdate}" wrapping="false"/>
+									<Text text="{i18n>hiringProcess-hiredate}" wrapping="false"/>
 								</Column>
 							</columns>
+							<items>
+											<ColumnListItem type="Active" press="onItemTablePress">
+												<cells>
+												    </cells>
+												    </ColumnListItem>
+												    </items>
 						</Table>
 				<!--</l:VerticalLayout>-->
 				</content>

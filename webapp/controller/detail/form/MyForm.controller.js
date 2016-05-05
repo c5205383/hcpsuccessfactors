@@ -44,7 +44,7 @@ sap.ui.define([
 			var CId = oEvent.getSource().getId();
 			var CBId = sap.ui.getCore().byId(CId);
 			var otable = this.byId("table2-1");
-			var str = CId.substring((CId.lastIndexOf("i") + 1));
+			var str = CId.substring((CId.lastIndexOf("m") + 1));
 			var col = parseInt(str);
 			if (CBId.getSelected()) {
 				// alert("yes");

@@ -12,7 +12,7 @@
 				<CheckBox text="{i18n>hiringProcess-employeetype}" selected="true" id="i8" select="changeCheckbox"/>
 				<CheckBox text="{i18n>hiringProcess-payrollsuggestion}" selected="true" width = "150px" id="i9" select="changeCheckbox"/>
 				<CheckBox text="{i18n>hiringProcess-specialrate}" selected="true" id="i10" select="changeCheckbox"/>
-				<CheckBox text="{i18n>hiringProcess-startdate}" selected="true" id="i11" select="changeCheckbox"/>
+				<CheckBox text="{i18n>hiringProcess-hiredate}" selected="true" id="i11" select="changeCheckbox"/>
 			</l:VerticalLayout>
 		</content>
 	</Popover>
