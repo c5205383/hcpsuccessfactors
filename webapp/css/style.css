@@ -78,3 +78,17 @@
 	padding-top: 10px;
     padding-bottom: 10px;
 }
+.cssInput{
+    height: 2.5rem;
+    margin: 0.25rem 0 0.25rem 0;
+    border: 1px solid #bfbfbf;
+    background: #ffffff;
+}
+.cssInput:hover {
+    border-color: #007cc0;
+}
+.cssTable {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
