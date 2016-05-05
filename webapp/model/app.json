@@ -33,6 +33,10 @@
 		    "navTo": "onboardProcess"
 		},
 		{
+		    "name": "Approval List",
+		    "navTo": "approvalList"
+		},
+		{
 			"name": "Employee Transfer",
 			"navTo": "empTransfer"
 		},

@@ -189,6 +189,11 @@
 					"pattern": "storePartnerInfo",
 					"name": "storePartnerInfo",
 					"target": "storePartnerInfo"
+				},
+				{
+				    "pattern": "approvalList",
+					"name": "approvalList",
+					"target": "approvalList"
 				}
 			],
 			"targets": {
@@ -282,6 +287,10 @@
 				"storePartnerInfo": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "StorePartnerInfo"
+				},
+				"approvalList": {
+				    "viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ApprovalList"
 				},
 				"notFound": {
 					"viewName": "NotFound",
