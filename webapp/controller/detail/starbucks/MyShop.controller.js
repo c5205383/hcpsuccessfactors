@@ -4,7 +4,9 @@ sap.ui.define([
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.MyShop", {
-
+		onPress: function(oEvent) {
+			this.getRouter().navTo("hiringProcess", {});
+		}
 	});
 
 });

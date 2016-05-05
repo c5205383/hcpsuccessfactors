@@ -1,9 +1,33 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.MyShop" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="{i18n>myShop-title}">
-				<content></content>
+			<Page id="myshoppage" title="{i18n>myShop-title}">
+				<content>
+					<List items="">
+						<headerToolbar>
+							<Toolbar>
+								<content>
+									<Title text="{i18n>myShop-title}" level="H2"/>
+									<ToolbarSpacer/>
+									<Select id="myshopSelector" change="" items="">
+										<items>
+											<core:Item key="" text=""/>
+										</items>
+									</Select>
+									<Button icon="sap-icon://add-contact" press="onPress">
+										<layoutData>
+											<OverflowToolbarLayoutData priority="NeverOverflow"/>
+										</layoutData>
+									</Button>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+						<items>
+							<StandardListItem title="Name:{name}" info="Position: {position}" press="onPressed" type="Active"/>
+						</items>
+					</List>
+				</content>
 			</Page>
 		</pages>
 	</App>
