@@ -25,10 +25,6 @@
 		    "navTo": "myShop"
 		},
 		{
-		    "name": "Hiring Process",
-		    "navTo": "hiringProcess"
-		},
-		{
 		    "name": "Onboard Process",
 		    "navTo": "onboardProcess"
 		},
