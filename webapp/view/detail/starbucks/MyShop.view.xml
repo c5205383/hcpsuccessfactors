@@ -6,7 +6,7 @@
 				<content>
 					<List items="">
 						<headerToolbar>
-							<Toolbar>
+							<Toolbar class="sapUiSmallMargin">
 								<content>
 									<Title text="{i18n>myShop-title}" level="H2"/>
 									<ToolbarSpacer/>
@@ -23,7 +23,7 @@
 								</content>
 							</Toolbar>
 						</headerToolbar>
-						<items>
+						<items class=".sapMListUl">
 							<StandardListItem title="Name:{name}" info="Position: {position}" press="onPressed" type="Active"/>
 						</items>
 					</List>
