@@ -68,6 +68,7 @@
 					<Toolbar>
 						<ToolbarSpacer/>
 						<Button text="Submit" type="Accept"/>
+						    <Button text = "Cancel" press="onPress"/>
 					</Toolbar>
 				</footer>
 			</Page>
