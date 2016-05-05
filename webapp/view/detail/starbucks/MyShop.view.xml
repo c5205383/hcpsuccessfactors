@@ -4,7 +4,7 @@
 		<pages>
 			<Page id="myshoppage" title="{i18n>myShop-title}">
 				<content>
-					<List items="">
+					<List items="" >
 						<headerToolbar>
 							<Toolbar class="sapUiSmallMargin">
 								<content>
