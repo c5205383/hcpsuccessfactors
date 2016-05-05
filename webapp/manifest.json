@@ -131,6 +131,11 @@
 					"target": "formDetail"
 				},
 				{
+					"pattern": "myshop",
+					"name": "myShop",
+					"target": "myShop"
+				},
+				{
 					"pattern": "emptransfer",
 					"name": "empTransfer",
 					"target": "empTransfer"
@@ -184,6 +189,11 @@
 					"pattern": "storePartnerInfo",
 					"name": "storePartnerInfo",
 					"target": "storePartnerInfo"
+				},
+				{
+				    "pattern": "approvalList",
+					"name": "approvalList",
+					"target": "approvalList"
 				}
 			],
 			"targets": {
@@ -225,6 +235,10 @@
 				"candidate": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "Candidate"
+				},
+				"myShop": {
+				    "viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "MyShop"
 				},
 				"empTransfer": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
@@ -273,6 +287,10 @@
 				"storePartnerInfo": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "StorePartnerInfo"
+				},
+				"approvalList": {
+				    "viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ApprovalList"
 				},
 				"notFound": {
 					"viewName": "NotFound",

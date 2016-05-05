@@ -16,14 +16,14 @@
 				</ux:headerTitle>
 				<ux:headerContent>
 					<l:VerticalLayout>
-					    <HBox>
-					        <core:Icon src="sap-icon://iphone" />
-					        <Link text="{UsersModel>businessPhone}"/>
-					    </HBox>
-					    <HBox>
-					        <core:Icon src="sap-icon://email" />
-						    <Link text="{UsersModel>email}"/>
-					    </HBox>
+						<HBox>
+							<core:Icon src="sap-icon://iphone" width="1rem"/>
+							<Link text="{UsersModel>businessPhone}"/>
+						</HBox>
+						<HBox>
+							<core:Icon src="sap-icon://email" width="1rem"/>
+							<Link text="{UsersModel>email}"/>
+						</HBox>
 					</l:VerticalLayout>
 					<!--<l:HorizontalLayout>
 						<Image src=""></Image>
@@ -68,14 +68,14 @@
 							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-talent}">
 								<ux:blocks>
 									<l:VerticalLayout >
-									    <HBox alignItems="Start" class="cssHBox">
-									        <Label text="{i18n>empDetail-talent-riskofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										<HBox alignItems="Start" class="cssHBox">
+											<Label text="{i18n>empDetail-talent-riskofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
 											<Text text="{UsersModel>riskOfLoss}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
-									    </HBox>
-									    <HBox alignItems="Start" class="cssHBox">
-									        <Label text="{i18n>empDetail-talent-impactofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+										</HBox>
+										<HBox alignItems="Start" class="cssHBox">
+											<Label text="{i18n>empDetail-talent-impactofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
 											<Text text="{UsersModel>impactOfLoss}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
-									    </HBox>
+										</HBox>
 									</l:VerticalLayout>
 								</ux:blocks>
 							</ux:ObjectPageSubSection>

@@ -21,8 +21,8 @@
 			"navTo": "candidate"
 		},
 		{
-			"name": "Employee Transfer",
-			"navTo": "empTransfer"
+		    "name": "My Shop",
+		    "navTo": "myShop"
 		},
 		{
 		    "name": "Hiring Process",
@@ -31,6 +31,14 @@
 		{
 		    "name": "Onboard Process",
 		    "navTo": "onboardProcess"
+		},
+		{
+		    "name": "Approval List",
+		    "navTo": "approvalList"
+		},
+		{
+			"name": "Employee Transfer",
+			"navTo": "empTransfer"
 		},
 		{
 		    "name": "Labor Type Change Process",
