@@ -62,9 +62,6 @@ sap.ui.define([
 		},
 		onCloseDialog: function (oEvent) {
 			this._oDialog.close();
-		},
-		onPress: function(oEvent) {
-			this.getRouter().navTo("myShop", {});
 		}
 	});
 
