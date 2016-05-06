@@ -137,6 +137,28 @@ sap.ui.define([
 				}));
 			oTable.addItem(itemList);
 			this.onCloseDialog();
+		},
+		onBack: function(){
+		    var array = [];
+		    var currentUser = {};
+		  //  var name = [];
+		  //  var position = [];
+		    var i;
+		    var otable = this.byId("hiringtable");
+		    for ( i = 0;i < otable.getItems().length;i++){
+		      //  var add = "{fullname:" + otable.getItems()[i].getCells()[5].getText() + ", Title:" + otable.getItems()[i].getCells()[3].getText() + "}";
+		      //  data.push(add);
+		      currentUser.fullname = otable.getItems()[i].getCells()[5].getText();
+		      currentUser.title = otable.getItems()[i].getCells()[3].getText();
+		      array.push(currentUser);
+		    }
+		 /*   var data = JSON.stringify({
+						FullName : name,
+						Title : position
+		    });*/
+		    localStorage.setItem("userinfo",JSON.stringify(array));
+		    this.onNavBack();
+		    
 		}
 	});
 
