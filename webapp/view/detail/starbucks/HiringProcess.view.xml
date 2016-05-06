@@ -56,10 +56,6 @@
 								</Column>
 							</columns>
 							<items>
-											<ColumnListItem type="Active" press="onItemTablePress">
-												<cells>
-												    </cells>
-												    </ColumnListItem>
 												    </items>
 						</Table>
 				<!--</l:VerticalLayout>-->

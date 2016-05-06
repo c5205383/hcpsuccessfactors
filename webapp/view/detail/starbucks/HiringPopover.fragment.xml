@@ -8,11 +8,11 @@
 				<CheckBox text="{i18n>hiringProcess-position}" selected="true" id="i3" select="changeCheckbox"/>
 				<CheckBox text="{i18n>hiringProcess-employmenttype}" selected="true" id="i4" width = "150px"  select="changeCheckbox"/>
 				<CheckBox text="{i18n>hiringProcess-defaultFullName}" selected="true" id="i5" select="changeCheckbox"/>
-				<CheckBox text="{i18n>hiringProcess-idnumber}" selected="true" id="i7" select="changeCheckbox"/>
-				<CheckBox text="{i18n>hiringProcess-employeetype}" selected="true" id="i8" select="changeCheckbox"/>
-				<CheckBox text="{i18n>hiringProcess-payrollsuggestion}" selected="true" width = "150px" id="i9" select="changeCheckbox"/>
-				<CheckBox text="{i18n>hiringProcess-specialrate}" selected="true" id="i10" select="changeCheckbox"/>
-				<CheckBox text="{i18n>hiringProcess-hiredate}" selected="true" id="i11" select="changeCheckbox"/>
+				<CheckBox text="{i18n>hiringProcess-idnumber}" selected="true" id="i6" select="changeCheckbox"/>
+				<CheckBox text="{i18n>hiringProcess-employeetype}" selected="true" id="i7" select="changeCheckbox"/>
+				<CheckBox text="{i18n>hiringProcess-payrollsuggestion}" selected="true" width = "150px" id="i8" select="changeCheckbox"/>
+				<CheckBox text="{i18n>hiringProcess-specialrate}" selected="true" id="i9" select="changeCheckbox"/>
+				<CheckBox text="{i18n>hiringProcess-hiredate}" selected="true" id="i10" select="changeCheckbox"/>
 			</l:VerticalLayout>
 		</content>
 	</Popover>

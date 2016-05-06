@@ -4,13 +4,13 @@
 		title="Add New Hiring">
 	    <List>
 		<InputListItem label="{i18n>hiringProcess-city}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold"/>
+		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item1"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-store}">
-		    <Input width="250px" class="cssRightPostion cssInput " editable="true" design="Bold"/>
+		    <Input width="250px" class="cssRightPostion cssInput " editable="true" design="Bold" id = "item2"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-position}">
-			<Select width="250px" class="cssRightPostion">
+			<Select width="250px" class="cssRightPostion" id = "item3">
 				<core:Item key="P1" text="Position1"/>
 				<core:Item key="P2" text="Position2"/>
 				<core:Item key="P3" text="Position3"/>
@@ -19,36 +19,36 @@
 			</Select>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-specialrate}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold"/>
+		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item4"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-defaultFullName}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold"/>
+		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item5"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-idnumber}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold"/>
+		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item6"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-whetherhireagain}">
-		    <CheckBox width="250px" class="cssRightPostion" design="Bold"/>
+		    <CheckBox width="250px" class="cssRightPostion" design="Bold" id = "item7"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-employmenttype}">
-			<Select width="250px" class="cssRightPostion">
+			<Select width="250px" class="cssRightPostion" id = "item8">
 				<core:Item key="P1" text="Employment1"/>
 				<core:Item key="P2" text="Employment2"/>
 				<core:Item key="P3" text="Employment3"/>
 			</Select>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-employeetype}">
-			<Select width="250px" class="cssRightPostion">
+			<Select width="250px" class="cssRightPostion" id = "item9">
 				<core:Item key="P1" text="Employee1"/>
 				<core:Item key="P2" text="Employee2"/>
 				<core:Item key="P3" text="Employee3"/>
 			</Select>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-payrollsuggestion}">
-		    <Input width="250px" class="cssRightPostion cssInput" design="Bold"/>
+		    <Input width="250px" class="cssRightPostion cssInput" design="Bold" id = "item10"/>
 		</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-hiredate}">
-			<DatePicker width="250px" class="cssRightPostion" displayFormat="long"/>
+			<DatePicker width="250px" class="cssRightPostion" displayFormat="long" id = "item11"/>
 		</InputListItem>
 		<InputListItem label="{i18n>hiringProcess-donothire}">
 		    <CheckBox width="250px" class="cssRightPostion" design="Bold" select="onCheckBoxPressed"/>
@@ -57,7 +57,7 @@
 		<Label text="{i18n>hiringProcess-reason}" id="reason1" design="Bold" class="cssMargin" visible="false"/>
 		<TextArea width="100%" rows="3"  id="reason2" visible="false" class="cssMargin "  />
 		<beginButton>
-			<Button text="Save" press="onCloseDialog" type="Accept" />
+			<Button text="Save" press="onOKDialog" type="Accept" />
 		</beginButton>
 		<endButton>
 			<Button text="Close" press="onCloseDialog" />

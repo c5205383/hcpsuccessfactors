@@ -41,12 +41,18 @@ sap.ui.define([
 			var otable = this.byId("hiringtable");
 			var str = CId.substring((CId.lastIndexOf("i") + 1));
 			var col = parseInt(str);
+			var len = otable.getItems().length;
+			var i,j;
 			if (CBId.getSelected()) {
 				otable.getColumns()[col].setVisible(true);
-				otable.getItems()[col].setVisible(true);
+			    for(i = 0; i<len ; i++){
+				otable.getItems()[i].getCells()[col].setVisible(true);
+			    }
 			} else {
 				otable.getColumns()[col].setVisible(false);
-				otable.getItems()[col].setVisible(false);
+				for(j = 0; j<len ; j++){
+				otable.getItems()[j].getCells()[col].setVisible(false);
+			    }
 			}
 		},
 		handleTableSelectDialogPress: function(oEvent) {
@@ -62,6 +68,75 @@ sap.ui.define([
 		},
 		onCloseDialog: function (oEvent) {
 			this._oDialog.close();
+		},
+		onOKDialog: function () {
+			var oTable = this.byId("hiringtable");
+		    var itemList = new sap.m.ColumnListItem({
+			});
+			itemList.setType("Active");
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item7").getSelected().toString(),
+					wrapping: false
+				}));
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item1").getValue(),
+					wrapping: false
+				})
+			);
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item2").getValue(),
+					wrapping: false
+				})
+			);
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item3").getSelectedItem().getText(),
+					wrapping: false
+				}));
+				itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item8").getSelectedItem().getText(),
+					wrapping: false
+				})
+			);
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item5").getValue(),
+					wrapping: false
+				}));
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item6").getValue(),
+					wrapping: false
+				}));
+			
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item9").getSelectedItem().getText(),
+					wrapping: false
+				})
+			);
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item10").getValue(),
+					wrapping: false
+				}));
+				
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item4").getValue(),
+					wrapping: false
+				}));
+			itemList.addCell(
+				new sap.m.Text({
+					text: sap.ui.getCore().byId("item11").getValue(),
+					wrapping: false
+				}));
+			oTable.addItem(itemList);
+			this.onCloseDialog();
 		}
 	});
 
