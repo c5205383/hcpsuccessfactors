@@ -92,3 +92,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.sapMListUl {
+    padding: 0 2rem;
+    margin: 0;
+}
