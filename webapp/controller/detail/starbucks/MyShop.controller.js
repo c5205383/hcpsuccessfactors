@@ -30,13 +30,27 @@ sap.ui.define([
 
 		onChange: function(oEvent) {
 			var text = oEvent.getParameter("selectedItem").getText();
-			var _this = this;
-
-			if (text !== "Active") {
-				var data = JSON.parse(localStorage.getItem('userinfo'));
-				alert(data.fullname );
+		//	var _this = this;
+            var oActive = this.byId("ActiveList");
+            var oInactive = this.byId("InactiveList");
+			if (text === "Active" && oInactive.getVisible()) {
+			oActive.setVisible(true);
+			oInactive.setVisible(false);
+			oInactive.destroyItems();
+			}
+			if(text !== "Active" && oActive.getVisible()){
+			    oActive.setVisible(false);
+			
+			var data = JSON.parse(localStorage.getItem('userinfo'));
+				for(var i = 0;i < data.length;i++){
+				    var itemList = new sap.m.StandardListItem({
+				        title: "Name: "+ data[i].fullname,
+				        info: "Position: " + data[i].title
+				    });
+				    oInactive.addItem(itemList);
+				    oInactive.setVisible(true);
+				}
 			}
 		}
 	});
-
 });
