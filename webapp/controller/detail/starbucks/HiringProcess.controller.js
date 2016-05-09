@@ -8,6 +8,8 @@ sap.ui.define([
 ], function(BaseController, jQuery, Fragment, Dialog,Controller, Popover) {
 	"use strict";
 
+
+		    var array = [];
 	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.HiringProcess", {
 		onCheckBoxPressed: function() {
 			var oLabel = sap.ui.getCore().byId("reason1");
@@ -139,8 +141,6 @@ sap.ui.define([
 			this.onCloseDialog();
 		},
 		onBack: function(){
-		    var array = [];
-		    
 		  //  var name = [];
 		  //  var position = [];
 		    var i;
@@ -159,6 +159,13 @@ sap.ui.define([
 		    });*/
 		    localStorage.setItem("userinfo",JSON.stringify(array));
 		    this.onNavBack();
+		    otable.destroyItems();                         
+		    
+		},
+		onBackCancel: function(){
+		    var otable = this.byId("hiringtable");
+		    this.onNavBack();
+		    otable.destroyItems(); 
 		    
 		}
 	});

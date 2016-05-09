@@ -2,8 +2,6 @@
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.MyShop" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page id="myshoppage" title="{i18n>myShop-title}">
 		<content>
-			<List items="{/dataObj/}">
-				<headerToolbar>
 					<Toolbar class="sapUiSmallMargin">
 						<content>
 							<Title text="{i18n>myShop-title}" level="H2"/>
@@ -21,9 +19,15 @@
 							</Button>
 						</content>
 					</Toolbar>
-				</headerToolbar>
+			<List items="{/dataObj/}" id ="ActiveList">
 				<items class=".sapMListUl">
 					<StandardListItem title="Name: {defaultFullName}" info="Position: {title}" press="onPressed" type="Navigation"/>
+				</items>
+			</List>
+			<List id="InactiveList" visible="flase">
+			    
+				<items class=".sapMListUl">
+				    
 				</items>
 			</List>
 		</content>
