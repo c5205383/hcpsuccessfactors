@@ -31,21 +31,10 @@ sap.ui.define([
 		onChange: function(oEvent) {
 			var text = oEvent.getParameter("selectedItem").getText();
 			var _this = this;
-			
-			if (text !== "Active") {
 
-				$.ajax({
-					url: "/sfsfdataservice/hcp/getUserDirectReports",
-					type: "GET",
-					async: true,
-					success: function(tdata) {
-						var oModel = new JSONModel(JSON.parse(tdata));
-						_this.getView().setModel(oModel);
-					},
-					error: function() {
-						alert("failed to get MyShop.");
-					}
-				});
+			if (text !== "Active") {
+				var data = JSON.parse(localStorage.getItem('userinfo'));
+				alert(data.fullname );
 			}
 		}
 	});
