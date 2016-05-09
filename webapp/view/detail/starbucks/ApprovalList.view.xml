@@ -1,9 +1,30 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	controllerName="hcpsuccessfactors.controller.detail.starbucks.ApprovalList" xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="hcpsuccessfactors.controller.detail.starbucks.ApprovalList"
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="">
-				<content></content>
+			<Page navButtonPress="navBack" showNavButton="true" title="{i18n>workflow-title}">
+				<content>
+					<List items="{path:'/d/results'}">
+						<headerToolbar>
+							<Toolbar>
+								<content>
+									<Title text="{i18n>workflow-list-title}" level="H2" />
+									<ToolbarSpacer />
+									<Select id="idGoalPlanSelector" change="onSelectKeyChange" items="{path:'mGoalPlanList>/d/results'}">
+										<items>
+											<core:Item key="{mGoalPlanList>id}" text="{mGoalPlanList>name}" />
+										</items>
+									</Select>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+						<items>
+							<StandardListItem title="{numbering} {name}" description="Metric:{metric}" info="ID: {id}" press="onPressed" type="Active" />
+						</items>
+					</List>
+					<!-- <FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false"> <items> <BusyIndicator id="audioBusyIndicator" 
+						visible="true" /> </items> </FlexBox> -->
+				</content>
 			</Page>
 		</pages>
 	</App>
