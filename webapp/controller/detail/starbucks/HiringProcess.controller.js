@@ -140,7 +140,7 @@ sap.ui.define([
 		},
 		onBack: function(){
 		    var array = [];
-		    var currentUser = {};
+		    
 		  //  var name = [];
 		  //  var position = [];
 		    var i;
@@ -148,6 +148,7 @@ sap.ui.define([
 		    for ( i = 0;i < otable.getItems().length;i++){
 		      //  var add = "{fullname:" + otable.getItems()[i].getCells()[5].getText() + ", Title:" + otable.getItems()[i].getCells()[3].getText() + "}";
 		      //  data.push(add);
+		      var currentUser = {};
 		      currentUser.fullname = otable.getItems()[i].getCells()[5].getText();
 		      currentUser.title = otable.getItems()[i].getCells()[3].getText();
 		      array.push(currentUser);
