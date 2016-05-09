@@ -23,7 +23,7 @@
 					</Toolbar>
 				</headerToolbar>
 				<items class=".sapMListUl">
-					<StandardListItem title="Name:{defaultFullName}" info="Position: {title}" press="onPressed" type="Navigation"/>
+					<StandardListItem title="Name: {defaultFullName}" info="Position: {title}" press="onPressed" type="Navigation"/>
 				</items>
 			</List>
 		</content>
