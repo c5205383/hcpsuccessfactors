@@ -4,17 +4,22 @@
 		<pages>
 			<Page navButtonPress="navBack" showNavButton="true" title="{i18n>workflow-title}">
 				<content>
-					<List items="{path:'/d/results'}">
+					<List items="{path:'EventReason>/dataObj'}">
 						<headerToolbar>
 							<Toolbar>
 								<content>
 									<Title text="{i18n>workflow-list-title}" level="H2" />
 									<ToolbarSpacer />
-									<Select id="idGoalPlanSelector" change="onSelectKeyChange" items="{path:'mGoalPlanList>/d/results'}">
+									<Select width="30%" id="idGoalPlanSelector" change="onSelectKeyChange" items="{path:'EventReason>/dataObj'}">
 										<items>
-											<core:Item key="{mGoalPlanList>id}" text="{mGoalPlanList>name}" />
+											<core:Item key="{EventReason>event}" text="{EventReason>name} ( {EventReason>externalCode} )" />
 										</items>
 									</Select>
+									<Button icon="sap-icon://refresh" press="onRefreshPressed">
+										<layoutData>
+											<OverflowToolbarLayoutData priority="NeverOverflow" />
+										</layoutData>
+									</Button>
 								</content>
 							</Toolbar>
 						</headerToolbar>
@@ -22,8 +27,11 @@
 							<StandardListItem title="{numbering} {name}" description="Metric:{metric}" info="ID: {id}" press="onPressed" type="Active" />
 						</items>
 					</List>
-					<!-- <FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false"> <items> <BusyIndicator id="audioBusyIndicator" 
-						visible="true" /> </items> </FlexBox> -->
+					<FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false">
+						<items>
+							<BusyIndicator id="audioBusyIndicator" visible="true" />
+						</items>
+					</FlexBox>
 				</content>
 			</Page>
 		</pages>

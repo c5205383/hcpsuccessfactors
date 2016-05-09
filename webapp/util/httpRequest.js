@@ -1,40 +1,43 @@
 jQuery.sap.declare("hcpsuccessfactors.util.httpRequest");
 hcpsuccessfactors.util.httpRequest = {
 
-	httpGetRequest: function(host, serviceUrl, path, datatype, param, data) {
+	httpGetRequest : function(host, url, async, onSuccess, onError) {
 
 		var result = null;
-		var serviceHostUrl = serviceUrl;
-		var relativeServiceUrl = path;
-		var allServiceUrl = (function getServiceUrl(_serviceHostUrl, _relativeServiceUrl) {
+		var datatype = "json";
+		var relativeServiceUrl = url;
+		var allServiceUrl = (function getServiceUrl(_relativeServiceUrl) {
 			var sOrigin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "");
 			if (host == null) {
-				return sOrigin + "/" + _serviceHostUrl + "/" + _relativeServiceUrl;
+				return sOrigin + "/" + _relativeServiceUrl;
 			} else {
-				return host + "/" + _serviceHostUrl + "/" + _relativeServiceUrl;
+				return host + "/" + _relativeServiceUrl;
 			}
-		})(serviceHostUrl, relativeServiceUrl);
+		})(relativeServiceUrl);
 
-		if (param) {
-			allServiceUrl += param;
-		}
+		/*
+		 * if (param) { allServiceUrl += param; }
+		 */
 		jQuery.ajax({
-			url: allServiceUrl,
-			async: false,
-			type: 'GET',
-			data: data,
-			dataType: datatype,
-			contentType: datatype === "json" ? "application/json" : "application/xml",
-			success: function(rdata) {
+			url : allServiceUrl,
+			async : async,
+			type : 'GET',
+			// data : data,
+			dataType : datatype,
+			contentType : datatype === "json" ? "application/json" : "application/xml",
+			success : function(rdata) {
 				result = {
-					success: true,
-					data: rdata
+					success : true,
+					data : rdata
 				};
+				if (typeof onSuccess === 'function') {
+					onSuccess(result);
+				}
 			},
-			error: function(jqXHR, textStatus, errorThrown) {
+			error : function(jqXHR, textStatus, errorThrown) {
 				result = {
-					success: false,
-					data: textStatus + "\n" + errorThrown
+					success : false,
+					data : textStatus + "\n" + errorThrown
 				};
 
 			}
@@ -42,7 +45,7 @@ hcpsuccessfactors.util.httpRequest = {
 		return result;
 	},
 
-	httpPostRequest: function(host, path, datatype, param, data) {
+	httpPostRequest : function(host, path, datatype, param, data) {
 
 		var result = null;
 		var serviceHostUrl = host;
@@ -57,18 +60,18 @@ hcpsuccessfactors.util.httpRequest = {
 			allServiceUrl += param;
 		}
 		jQuery.ajax({
-			url: allServiceUrl,
-			async: false,
-			type: 'POST',
-			data: data,
-			dataType: datatype,
-			contentType: datatype === "json" ? "application/json" : "application/xml",
-			success: function(rdata) {
+			url : allServiceUrl,
+			async : false,
+			type : 'POST',
+			data : data,
+			dataType : datatype,
+			contentType : datatype === "json" ? "application/json" : "application/xml",
+			success : function(rdata) {
 
 				result = rdata;
 
 			},
-			error: function(jqXHR, textStatus, errorThrown) {
+			error : function(jqXHR, textStatus, errorThrown) {
 				result = "03-Save Failed" + textStatus + "\n" + errorThrown;
 			}
 		});
