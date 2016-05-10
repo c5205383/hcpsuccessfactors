@@ -24,21 +24,18 @@
 							</Toolbar>
 						</headerToolbar>
 						<items>
-							<ObjectListItem title="{i18n>workflow-requst-for} {WorkFlow>subjectId}" type="Active" press="onListItemPress" numberUnit="{CurrencyCode}">
-								<firstStatus>
-									<ObjectStatus text="{Status}" state="" />
-								</firstStatus>
-								<attributes>
-									<ObjectAttribute text="{WorkFlow>requestType}" />
-									<ObjectAttribute text="{Width} x {Depth} x {Height} {DimUnit}" />
-								</attributes>
-							</ObjectListItem>
+							<StandardListItem title="{i18n>workflow-requst-for} {WorkFlow>subjectId}" description="{}" info="{Status}" infoState="{}"
+								type="Navigation" />
 						</items>
 					</List>
-					<!-- <FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false"> <items> <BusyIndicator id="audioBusyIndicator" 
-						visible="true" /> </items> </FlexBox> -->
 				</content>
-
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Button text="{i18n>workflow-requst-approve}" type="Accept" />
+						<Button text="{i18n>workflow-requst-reject}" type="Reject" />
+					</Toolbar>
+				</footer>
 			</Page>
 		</pages>
 	</App>
