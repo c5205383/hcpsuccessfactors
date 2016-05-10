@@ -4,7 +4,7 @@
 		<pages>
 			<Page navButtonPress="navBack" showNavButton="true" title="{i18n>workflow-title}">
 				<content>
-					<List items="{path:'EventReason>/dataObj'}">
+					<List items="{path:'WorkFlow>/dataObj'}">
 						<headerToolbar>
 							<Toolbar>
 								<content>
@@ -24,15 +24,21 @@
 							</Toolbar>
 						</headerToolbar>
 						<items>
-							<StandardListItem title="{numbering} {name}" description="Metric:{metric}" info="ID: {id}" press="onPressed" type="Active" />
+							<ObjectListItem title="{i18n>workflow-requst-for} {WorkFlow>subjectId}" type="Active" press="onListItemPress" numberUnit="{CurrencyCode}">
+								<firstStatus>
+									<ObjectStatus text="{Status}" state="" />
+								</firstStatus>
+								<attributes>
+									<ObjectAttribute text="{WorkFlow>requestType}" />
+									<ObjectAttribute text="{Width} x {Depth} x {Height} {DimUnit}" />
+								</attributes>
+							</ObjectListItem>
 						</items>
 					</List>
-					<FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false">
-						<items>
-							<BusyIndicator id="audioBusyIndicator" visible="true" />
-						</items>
-					</FlexBox>
+					<!-- <FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false"> <items> <BusyIndicator id="audioBusyIndicator" 
+						visible="true" /> </items> </FlexBox> -->
 				</content>
+
 			</Page>
 		</pages>
 	</App>

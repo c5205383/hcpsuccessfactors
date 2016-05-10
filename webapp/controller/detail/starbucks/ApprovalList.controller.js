@@ -7,15 +7,8 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 			this.onRefreshPressed();
 		},
 
-		onRefreshPressed : function(oEvent) {
-			this._showBusyIndicator(true);
-			var t = setTimeout((function(_this) {
-				return function() {
-					_this._showBusyIndicator(false);
-				};
-			})(this), 5000 * 6);
-
-			var isDebug = true;
+		getEventReason : function() {
+			var isDebug = false;
 			if (window.location.hostname === "localhost" || window.location.hostname == "127.0.0.1")
 				isDebug = true;
 			var host;
@@ -32,18 +25,82 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 			var that = this;
 			var result = httpRequest.httpGetRequest(host, url, true, function(result) {
 				if (result != null) {
-					that._showBusyIndicator(false);
+					that.hideBusyIndicator();
 					if (result.success === true) {
 						var oEventReasonModel = new sap.ui.model.json.JSONModel();
 						oEventReasonModel.setData(result.data);
 						that.getView().setModel(oEventReasonModel, "EventReason");
 					} else {
-						//TODO: ERROR
+						// TODO: ERROR
 
 					}
 				}
 			});
+		},
 
+		getWorkflow : function(requestBy, requestFor, eventReason) {
+			var isDebug = false;
+			if (window.location.hostname === "localhost" || window.location.hostname == "127.0.0.1")
+				isDebug = true;
+			var host;
+			var url;
+
+			if (isDebug) {
+				host = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "");
+				url = "hcpmiddleware/hcp/getWorkflow";
+
+			} else {
+				var host = null;
+				var url = "sfsfdataservice/hcp/getWorkflow";
+			}
+			var that = this;
+			var result = httpRequest.httpGetRequest(host, url, true, function(result) {
+				if (result != null) {
+					that.hideBusyIndicator();
+					if (result.success === true) {
+						var oEventReasonModel = new sap.ui.model.json.JSONModel();
+						oEventReasonModel.setData(result.data);
+						that.getView().setModel(oEventReasonModel, "WorkFlow");
+					} else {
+						// TODO: ERROR
+
+					}
+				}
+			});
+		},
+
+		onSelectKeyChange : function(oEvent) {
+			this.showBusyIndicator(1000 * 10);
+			this.getWorkflow();
+		},
+
+		hideBusyIndicator : function() {
+			sap.ui.core.BusyIndicator.hide();
+		},
+
+		showBusyIndicator : function(iDuration, iDelay) {
+			sap.ui.core.BusyIndicator.show(iDelay);
+
+			if (iDuration && iDuration > 0) {
+				if (this._sTimeoutId) {
+					jQuery.sap.clearDelayedCall(this._sTimeoutId);
+					this._sTimeoutId = null;
+				}
+
+				this._sTimeoutId = jQuery.sap.delayedCall(iDuration, this, function() {
+					this.hideBusyIndicator();
+				});
+			}
+		},
+		onRefreshPressed : function(oEvent) {
+
+			/*
+			 * this._showBusyIndicator(true); var t =
+			 * setTimeout((function(_this) { return function() {
+			 * _this._showBusyIndicator(false); }; })(this), 5000 * 6);
+			 */
+			this.showBusyIndicator(1000 * 10);
+			this.getEventReason();
 		},
 
 		_showBusyIndicator : function(busy) {
