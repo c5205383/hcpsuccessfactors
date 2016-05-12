@@ -19,54 +19,94 @@
 						</Button>
 					</OverflowToolbar>
 					<!--<l:VerticalLayout alignItems="Center" class="sapUiResponsiveMargin" width="auto">-->
-						<Table width="100%" id="hiringtable">
-							<columns >
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-whetherhireagain}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-city}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-store}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-position}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-employmenttype}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-defaultFullName}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-idnumber}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-employeetype}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-payrollsuggestion}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-specialrate}" wrapping="false"/>
-								</Column>
-								<Column minScreenWidth="Tablet" demandPopin="true">
-									<Text text="{i18n>hiringProcess-hiredate}" wrapping="false"/>
-								</Column>
-							</columns>
-							<items>
-												    </items>
-						</Table>
-				<!--</l:VerticalLayout>-->
+					<Table width="100%" id="hiringtable">
+						<columns >
+							<!--<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-whetherhireagain}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-city}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-store}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-position}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-employmenttype}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-defaultFullName}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-idnumber}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-employeetype}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-payrollsuggestion}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-specialrate}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-hiredate}" wrapping="false"/>
+							</Column>-->
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-username}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-userId}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-personIdExternal}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-firstName}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-lastName}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-gender}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-company}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-jobCode}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-startDate}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-status}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-businessUnit}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-managerId}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-initials}" wrapping="false"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiringProcess-eventReason}" wrapping="false"/>
+							</Column>
+						</columns>
+						<items></items>
+					</Table>
+					<!--</l:VerticalLayout>-->
 				</content>
 				<footer>
 					<Toolbar>
 						<ToolbarSpacer/>
 						<Button text="Submit" type="Accept"/>
-						    
-						    <Button text = "Save" type="Reject" press="onBack"/>
-						    <Button text = "Cancel" press="onBackCancel"/>
+						<Button text="Save" type="Reject" press="onBack"/>
+						<Button text="Cancel" press="onBackCancel"/>
 					</Toolbar>
 				</footer>
 			</Page>

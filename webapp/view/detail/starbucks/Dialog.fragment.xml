@@ -1,66 +1,108 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-	<Dialog
-		noDataText="No Products Found"
-		title="Add New Hiring">
-	    <List>
-		<InputListItem label="{i18n>hiringProcess-city}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item1"/>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-store}">
-		    <Input width="250px" class="cssRightPostion cssInput " editable="true" design="Bold" id = "item2"/>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-position}">
-			<Select width="250px" class="cssRightPostion" id = "item3">
-				<core:Item key="P1" text="Position1"/>
-				<core:Item key="P2" text="Position2"/>
-				<core:Item key="P3" text="Position3"/>
-				<core:Item key="P4" text="Position4"/>
-				<core:Item key="P5" text="Position5"/>
-			</Select>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-specialrate}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item4"/>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-defaultFullName}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item5"/>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-idnumber}">
-		    <Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id = "item6"/>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-whetherhireagain}">
-		    <CheckBox width="250px" class="cssRightPostion" design="Bold" id = "item7"/>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-employmenttype}">
-			<Select width="250px" class="cssRightPostion" id = "item8">
-				<core:Item key="P1" text="Employment1"/>
-				<core:Item key="P2" text="Employment2"/>
-				<core:Item key="P3" text="Employment3"/>
-			</Select>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-employeetype}">
-			<Select width="250px" class="cssRightPostion" id = "item9">
-				<core:Item key="P1" text="Employee1"/>
-				<core:Item key="P2" text="Employee2"/>
-				<core:Item key="P3" text="Employee3"/>
-			</Select>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-payrollsuggestion}">
-		    <Input width="250px" class="cssRightPostion cssInput" design="Bold" id = "item10"/>
-		</InputListItem>
+	<Dialog noDataText="No Products Found" title="Add New Hiring">
+		<!--<List>
+			<InputListItem label="{i18n>hiringProcess-city}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="item1"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-store}">
+				<Input width="250px" class="cssRightPostion cssInput " editable="true" design="Bold" id="item2"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-position}">
+				<Select width="250px" class="cssRightPostion" id="item3">
+					<core:Item key="P1" text="Position1"/>
+					<core:Item key="P2" text="Position2"/>
+					<core:Item key="P3" text="Position3"/>
+					<core:Item key="P4" text="Position4"/>
+					<core:Item key="P5" text="Position5"/>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-specialrate}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="item4"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-defaultFullName}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="item5"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-idnumber}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="item6"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-whetherhireagain}">
+				<CheckBox width="250px" class="cssRightPostion" design="Bold" id="item7"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-employmenttype}">
+				<Select width="250px" class="cssRightPostion" id="item8">
+					<core:Item key="P1" text="Employment1"/>
+					<core:Item key="P2" text="Employment2"/>
+					<core:Item key="P3" text="Employment3"/>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-employeetype}">
+				<Select width="250px" class="cssRightPostion" id="item9">
+					<core:Item key="P1" text="Employee1"/>
+					<core:Item key="P2" text="Employee2"/>
+					<core:Item key="P3" text="Employee3"/>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-payrollsuggestion}">
+				<Input width="250px" class="cssRightPostion cssInput" design="Bold" id="item10"/>
+			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-hiredate}">
-			<DatePicker width="250px" class="cssRightPostion" displayFormat="long" id = "item11"/>
-		</InputListItem>
-		<InputListItem label="{i18n>hiringProcess-donothire}">
-		    <CheckBox width="250px" class="cssRightPostion" design="Bold" select="onCheckBoxPressed"/>
-		</InputListItem>
+				<DatePicker width="250px" class="cssRightPostion" displayFormat="long" id="item11"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-donothire}">
+				<CheckBox width="250px" class="cssRightPostion" design="Bold" select="onCheckBoxPressed"/>
+			</InputListItem>
 		</List>
 		<Label text="{i18n>hiringProcess-reason}" id="reason1" design="Bold" class="cssMargin" visible="false"/>
-		<TextArea width="100%" rows="3"  id="reason2" visible="false" class="cssMargin "  />
+		<TextArea width="100%" rows="3" id="reason2" visible="false" class="cssMargin "/> -->
+		<List>
+			<InputListItem label="{i18n>hiringProcess-username}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_uname"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-userId}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_uid"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-personIdExternal}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_eid"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-firstName}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_fn"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-lastName}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_ln"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-gender}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_gender"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-initials}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_init"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-company}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_company" value="ACE_USA"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-jobCode}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_job" value="ADMIN-1"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-startDate}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_start" value="1388534400000"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-status}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_status" value="Active"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-businessUnit}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_unit" value="ACE_CORP"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-managerId}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_manger" value="NO_MANAGER"/>
+			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-eventReason}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_event" value="HIRNEW"/>
+			</InputListItem>
+		</List>
 		<beginButton>
-			<Button text="Save" press="onOKDialog" type="Accept" />
+			<Button text="Save" press="onOKDialog" type="Accept"/>
 		</beginButton>
 		<endButton>
-			<Button text="Close" press="onCloseDialog" />
+			<Button text="Close" press="onCloseDialog"/>
 		</endButton>
 	</Dialog>
 </core:FragmentDefinition>
