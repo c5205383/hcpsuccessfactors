@@ -4,8 +4,9 @@ sap.ui.define([
 	"sap/ui/core/Fragment",
 	"sap/m/Dialog",
 	"sap/ui/core/mvc/Controller",
-	"sap/m/Popover"
-], function(BaseController, jQuery, Fragment, Dialog, Controller, Popover) {
+	"sap/m/Popover",
+	"sap/ui/model/json/JSONModel"
+], function(BaseController, jQuery, Fragment, Dialog, Controller, Popover, JSONModel) {
 	"use strict";
 
 	var array = [];
@@ -63,13 +64,18 @@ sap.ui.define([
 
 		handleTableSelectDialogPress: function(oEvent) {
 			if (!this._oDialog) {
-				this._oDialog = sap.ui.xmlfragment("hcpsuccessfactors.view.detail.starbucks.Dialog", this);
+				this._oDialog = sap.ui.xmlfragment("testDialog","hcpsuccessfactors.view.detail.starbucks.Dialog", this);
 			}
-
-			this.getView().addDependent(this._oDialog);
+			
+            this.getView().addDependent(this._oDialog);
 			// toggle compact style
 			jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._oDialog);
-
+            //bind data
+            var dialogModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/dialogdata.json");
+			var dialogModel = new JSONModel();
+			dialogModel.loadData(dialogModelPath, null, false);
+			this._oDialog.setModel(dialogModel, "DialogModel");
+			
 			this._oDialog.open();
 		},
 
@@ -142,7 +148,7 @@ sap.ui.define([
 					text: sap.ui.getCore().byId("item11").getValue(),
 					wrapping: false
 				}));*/
-			itemList.addCell(
+			/*itemList.addCell(
 				new sap.m.Text({
 					text: sap.ui.getCore().byId("hp_uname").getValue(),
 					wrapping: false
@@ -225,9 +231,14 @@ sap.ui.define([
 					text: sap.ui.getCore().byId("hp_event").getValue(),
 					wrapping: false
 				})
-			);
-			oTable.addItem(itemList);
+			);*/
+			var data = this._oDialog.getModel("DialogModel").getData();
+			var jsonstr = "{\"emp\":["+JSON.stringify(data)+"]}";
+			data = JSON.parse(jsonstr);
+			var tableModel = new JSONModel(data);
+			//oTable.addItem(itemList);
 			this.onCloseDialog();
+			oTable.setModel(tableModel, "TableModel");
 		},
 
 		onBack: function() {
