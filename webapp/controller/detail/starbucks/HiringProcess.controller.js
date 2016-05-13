@@ -12,6 +12,10 @@ sap.ui.define([
 	var array = [];
 	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.HiringProcess", {
 
+		onInit: function() {
+
+		},
+		
 		onCheckBoxPressed: function() {
 			var oLabel = sap.ui.getCore().byId("reason1");
 			var oTextarea = sap.ui.getCore().byId("reason2");
@@ -22,10 +26,6 @@ sap.ui.define([
 				oLabel.setVisible(true);
 				oTextarea.setVisible(true);
 			}
-		},
-
-		onInit: function() {
-
 		},
 
 		handleResponsivePopoverPress: function(oEvent) {
@@ -148,99 +148,33 @@ sap.ui.define([
 					text: sap.ui.getCore().byId("item11").getValue(),
 					wrapping: false
 				}));*/
-			/*itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_uname").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_uid").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_eid").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_fn").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_ln").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_gender").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_init").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_company").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_job").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_start").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_status").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_unit").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_manger").getValue(),
-					wrapping: false
-				})
-			);
-			itemList.addCell(
-				new sap.m.Text({
-					text: sap.ui.getCore().byId("hp_event").getValue(),
-					wrapping: false
-				})
-			);*/
+			//oTable.addItem(itemList);
+			
 			var data = this._oDialog.getModel("DialogModel").getData();
 			var jsonstr = "{\"emp\":["+JSON.stringify(data)+"]}";
 			data = JSON.parse(jsonstr);
 			var tableModel = new JSONModel(data);
-			//oTable.addItem(itemList);
+			
 			this.onCloseDialog();
 			oTable.setModel(tableModel, "TableModel");
 		},
 
+        onSubmitData: function(){
+            var empdata = this._oDialog.getModel("DialogModel").getData();
+            $.ajax({
+                url: "/sfsfdataservice/hcp/createEmpEmployment",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(empdata),
+                success: function(str){
+                    console.log(str);
+                },
+                error: function(){
+                    console.error("failed to upsert emp");
+                }
+            });
+        },
+        
 		onBack: function() {
 			//  var name = [];
 			//  var position = [];

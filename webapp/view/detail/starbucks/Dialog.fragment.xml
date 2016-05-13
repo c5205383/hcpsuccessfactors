@@ -56,25 +56,25 @@
 		<TextArea width="100%" rows="3" id="reason2" visible="false" class="cssMargin "/> -->
 		<List>
 			<InputListItem label="{i18n>hiringProcess-username}">
-				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_uname"/>
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_uname" value="{DialogModel>/username}"/>
 			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-userId}">
-				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_uid"/>
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_uid" value="{DialogModel>/userId}"/>
 			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-personIdExternal}">
-				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_eid"/>
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_eid" value="{DialogModel>/personIdExternal}"/>
 			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-firstName}">
-				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_fn"/>
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_fn" value="{DialogModel>/firstName}"/>
 			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-lastName}">
-				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_ln"/>
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_ln" value="{DialogModel>/lastName}"/>
 			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-gender}">
-				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_gender"/>
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_gender" value="{DialogModel>/gender}"/>
 			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-initials}">
-				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_init"/>
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_init" value="{DialogModel>/initials}"/>
 			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-company}">
 				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_company" value="{DialogModel>/company}"/>

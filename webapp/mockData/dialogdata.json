@@ -6,11 +6,11 @@
 	"businessUnit":"ACE_CORP",
 	"managerId":"NO_MANAGER",
 	"status":"Active",
-	"username":"",
-	"userId":"",
-	"personIdExternal":"",
-	"gender":"",
-	"initials":"",
-	"firstName":"",
-	"lastName":""
+	"username":"hcptestuser02",
+	"userId":"hcptestuser02",
+	"personIdExternal":"hcp02",
+	"gender":"M",
+	"initials":"hcp01",
+	"firstName":"testuser02",
+	"lastName":"hcp"
 }
