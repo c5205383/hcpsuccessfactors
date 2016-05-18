@@ -24,8 +24,8 @@
 							</Toolbar>
 						</headerToolbar>
 						<items>
-							<StandardListItem title="{i18n>workflow-requst-for} {WorkFlow>subjectId}" description="{}" info="{Status}" infoState="{}"
-								type="Navigation" />
+							<StandardListItem title="{i18n>workflow-requst-for} {WorkFlow>subjectId}" description="{WorkFlow>requestType}" info="{WorkFlow>wfRequest/0/status}"
+								infoState="{}" type="Navigation" />
 						</items>
 					</List>
 				</content>

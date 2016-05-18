@@ -47,11 +47,11 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 
 			if (isDebug) {
 				host = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "");
-				url = "hcpmiddleware/hcp/getWorkflow";
+				url = "hcpmiddleware/hcp/getEmpWorkflow";
 
 			} else {
 				var host = null;
-				var url = "sfsfdataservice/hcp/getWorkflow";
+				var url = "sfsfdataservice/hcp/getEmpWorkflow";
 			}
 			var that = this;
 			var result = httpRequest.httpGetRequest(host, url, true, function(result) {
@@ -70,7 +70,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 		},
 
 		onSelectKeyChange : function(oEvent) {
-			this.showBusyIndicator(1000 * 10);
+			this.showBusyIndicator(1000 * 60);
 			this.getWorkflow();
 		},
 
@@ -99,7 +99,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 			 * setTimeout((function(_this) { return function() {
 			 * _this._showBusyIndicator(false); }; })(this), 5000 * 6);
 			 */
-			this.showBusyIndicator(1000 * 10);
+			this.showBusyIndicator(1000 * 60);
 			this.getEventReason();
 		},
 
