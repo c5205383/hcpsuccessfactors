@@ -4,7 +4,7 @@
 		<pages>
 			<Page navButtonPress="navBack" showNavButton="true" title="{i18n>workflow-title}">
 				<content>
-					<List items="{path:'WorkFlow>/dataObj'}">
+					<Table inset="false" items="{path:'WorkFlow>/dataObj'}">
 						<headerToolbar>
 							<Toolbar>
 								<content>
@@ -23,11 +23,35 @@
 								</content>
 							</Toolbar>
 						</headerToolbar>
+						<columns>
+							<Column  design="bold">
+								<Text text="Requested By" />
+							</Column>
+							<Column design="bold">
+								<Text text="Requested For" />
+							</Column>
+							<Column design="bold">
+								<Text text="Request Type" />
+							</Column>
+							<Column design="bold">
+								<Text text="Request Status" />
+							</Column>
+							<Column hAlign="Right">
+								<Text text="Actions" />
+							</Column>
+						</columns>
 						<items>
-							<StandardListItem title="{i18n>workflow-requst-for} {WorkFlow>subjectId}" description="{WorkFlow>requestType}" info="{WorkFlow>wfRequest/0/status}"
-								infoState="{}" type="Navigation" />
+							<ColumnListItem>
+								<cells>
+									<Text text="{}" />
+									<Text text="{WorkFlow>subjectId}" />
+									<Text text="{WorkFlow>requestType} ({WorkFlow>eventReason})" />
+									<Text text="{WorkFlow>wfRequest/0/status}" />
+									<Text text="{}" />
+								</cells>
+							</ColumnListItem>
 						</items>
-					</List>
+					</Table>
 				</content>
 				<footer>
 					<Toolbar>
