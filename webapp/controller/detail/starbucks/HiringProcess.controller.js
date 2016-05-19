@@ -168,6 +168,7 @@ sap.ui.define([
                 data: JSON.stringify(empdata),
                 success: function(str){
                     console.log(str);
+                    alert("Create succeeded");
                 },
                 error: function(){
                     console.error("failed to upsert emp");

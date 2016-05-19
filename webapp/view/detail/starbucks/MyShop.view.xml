@@ -2,32 +2,26 @@
 	controllerName="hcpsuccessfactors.controller.detail.starbucks.MyShop" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page id="myshoppage" title="{i18n>myShop-title}">
 		<content>
-					<Toolbar class="sapUiSmallMargin">
-						<content>
-							<Title text="{i18n>myShop-title}" level="H2"/>
-							<ToolbarSpacer/>
-							<Select id="myshopSelector" change="onChange">
-								<items>
-									<core:Item key="1" text="Active"/>
-									    <core:Item key="2" text="Inactive"/>
-								</items>
-							</Select>
-							<Button icon="sap-icon://add-contact" press="onPress">
-								<layoutData>
-									<OverflowToolbarLayoutData priority="NeverOverflow"/>
-								</layoutData>
-							</Button>
-						</content>
-					</Toolbar>
-			<List items="{/dataObj/}" id ="ActiveList">
+			<Toolbar class="sapUiSmallMargin">
+				<content>
+					<Title text="{i18n>myShop-title}" level="H2"/>
+					<ToolbarSpacer/>
+					<Select id="myshopSelector" change="onActiveChange">
+						<items>
+							<core:Item key="active" text="Active"/>
+							<core:Item key="inactive" text="Inactive"/>
+						</items>
+					</Select>
+					<Button icon="sap-icon://add-contact" press="onAddButtonPress">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow"/>
+						</layoutData>
+					</Button>
+				</content>
+			</Toolbar>
+			<List items="{path:'DRModel>/dataObj/'}" id="ActiveList">
 				<items class=".sapMListUl">
-					<StandardListItem title="Name: {defaultFullName}" info="Position: {title}" press="onPressed" type="Navigation"/>
-				</items>
-			</List>
-			<List id="InactiveList" visible="flase">
-			    
-				<items class=".sapMListUl">
-				    
+					<StandardListItem title="Name: {DRModel>defaultFullName}" info="Position: {DRModel>title}" press="onListItemPress" type="Navigation"/>
 				</items>
 			</List>
 		</content>

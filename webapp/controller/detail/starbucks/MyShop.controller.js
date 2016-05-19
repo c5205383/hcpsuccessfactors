@@ -6,10 +6,15 @@ sap.ui.define([
 
 	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.MyShop", {
 		onInit: function() {
-			// var oModel = new sap.ui.model.json.JSONModel();
-			// oModel.loadData("/sfsfdataservice/hcp/getUserDirectReports");
-			// this.getView().setModel(oModel);
-			var _this = this;
+			var DRModel = new JSONModel();
+			DRModel.loadData("/sfsfdataservice/hcp/getUserDirectReports");
+			this.getView().setModel(DRModel, "DRModel");
+			
+			//var InactiveModel = new JSONModel();
+			//InactiveModel.loadData();
+			//this.getView().setModel(InactiveModel, "InactiveModel");
+			
+			/*var _this = this;
 			$.ajax({
 				url: "/sfsfdataservice/hcp/getUserDirectReports",
 				type: "GET",
@@ -21,36 +26,21 @@ sap.ui.define([
 				error: function() {
 					alert("failed to get MyShop.");
 				}
-			});
+			});*/
 		},
 
-		onPress: function(oEvent) {
+		onAddButtonPress: function( /*oEvent*/ ) {
 			this.getRouter().navTo("hiringProcess", {});
 		},
 
-		onChange: function(oEvent) {
-			var text = oEvent.getParameter("selectedItem").getText();
-		//	var _this = this;
-            var oActive = this.byId("ActiveList");
-            var oInactive = this.byId("InactiveList");
-			if (text === "Active" && oInactive.getVisible()) {
-			oActive.setVisible(true);
-			oInactive.setVisible(false);
-			oInactive.destroyItems();
-			}
-			if(text !== "Active" && oActive.getVisible()){
-			    oActive.setVisible(false);
-			
-			var data = JSON.parse(localStorage.getItem('userinfo'));
-				for(var i = 0;i < data.length;i++){
-				    var itemList = new sap.m.StandardListItem({
-				        title: "Name: "+ data[i].fullname,
-				        info: "Position: " + data[i].title
-				    });
-				    oInactive.addItem(itemList);
-				    oInactive.setVisible(true);
-				}
+		onActiveChange: function(oEvent) {
+			var selectValue = oEvent.getParameter("selectedItem").getText();
+			if (selectValue === "Active") {
+                //
+			} else {
+                //
 			}
 		}
+
 	});
 });
