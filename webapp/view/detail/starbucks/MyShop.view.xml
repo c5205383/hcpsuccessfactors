@@ -6,6 +6,11 @@
 				<content>
 					<Title text="{i18n>myShop-title}" level="H2"/>
 					<ToolbarSpacer/>
+					<Button icon="sap-icon://refresh" press="onRefreshPressed">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow"/>
+						</layoutData>
+					</Button>
 					<Select id="myshopSelector" change="onActiveChange">
 						<items>
 							<core:Item key="active" text="Active"/>
@@ -24,6 +29,11 @@
 					<StandardListItem title="Name: {DRModel>defaultFullName}" info="Position: {DRModel>title}" press="onListItemPress" type="Navigation"/>
 				</items>
 			</List>
+			<FlexBox id="flexBox" width="100%" height="50%" alignItems="Center" justifyContent="Center" visible="false">
+				<items>
+					<BusyIndicator id="audioBusyIndicator" visible="true"/>
+				</items>
+			</FlexBox>
 		</content>
 	</Page>
 </mvc:View>

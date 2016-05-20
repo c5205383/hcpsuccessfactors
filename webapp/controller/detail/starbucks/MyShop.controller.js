@@ -7,28 +7,41 @@ sap.ui.define([
 	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.MyShop", {
 		onInit: function() {
 			var DRModel = new JSONModel();
-			DRModel.loadData("/sfsfdataservice/hcp/getUserDirectReports");
 			this.getView().setModel(DRModel, "DRModel");
+			
+			this.loadData();
 			
 			//var InactiveModel = new JSONModel();
 			//InactiveModel.loadData();
 			//this.getView().setModel(InactiveModel, "InactiveModel");
-			
-			/*var _this = this;
+		},
+		
+        onRefreshPressed: function() {
+            this.loadData();    
+        },
+        
+        loadData: function(){
+			this.byId("ActiveList").setVisible(false);
+            this.showBusyIndicator(true);
+			//this.getView().getModel("DRModel").loadData("/sfsfdataservice/hcp/getUserDirectReports", null, true);
+			var _this = this;
 			$.ajax({
 				url: "/sfsfdataservice/hcp/getUserDirectReports",
 				type: "GET",
 				async: true,
-				success: function(tdata) {
-					var oModel = new JSONModel(JSON.parse(tdata));
-					_this.getView().setModel(oModel);
+				success: function(drdata) {
+				    _this.getView().getModel("DRModel").setData(JSON.parse(drdata));
 				},
 				error: function() {
-					alert("failed to get MyShop.");
+					console.error("failed to get MyShop.");
+				},
+				complete: function() {
+				    _this.showBusyIndicator(false);
+			        _this.byId("ActiveList").setVisible(true);
 				}
-			});*/
-		},
-
+			});
+        },
+        
 		onAddButtonPress: function( /*oEvent*/ ) {
 			this.getRouter().navTo("hiringProcess", {});
 		},
@@ -40,7 +53,12 @@ sap.ui.define([
 			} else {
                 //
 			}
+		},
+		
+        showBusyIndicator: function(busy) {
+			this.busyIndicator = this.getView().byId("flexBox");
+			this.busyIndicator.setVisible(busy);
 		}
-
+		
 	});
 });
