@@ -70,6 +70,9 @@
 			<InputListItem label="{i18n>hiringProcess-lastName}">
 				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_ln" value="{DialogModel>/lastName}"/>
 			</InputListItem>
+			<InputListItem label="{i18n>hiringProcess-email}">
+				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_email" value="{DialogModel>/emailAddress}"/>
+			</InputListItem>
 			<InputListItem label="{i18n>hiringProcess-gender}">
 				<Input width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" id="hp_gender" value="{DialogModel>/gender}"/>
 			</InputListItem>

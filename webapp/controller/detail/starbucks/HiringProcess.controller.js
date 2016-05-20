@@ -5,8 +5,9 @@ sap.ui.define([
 	"sap/m/Dialog",
 	"sap/ui/core/mvc/Controller",
 	"sap/m/Popover",
-	"sap/ui/model/json/JSONModel"
-], function(BaseController, jQuery, Fragment, Dialog, Controller, Popover, JSONModel) {
+	"sap/ui/model/json/JSONModel",
+	"sap/m/MessageToast"
+], function(BaseController, jQuery, Fragment, Dialog, Controller, Popover, JSONModel, MessageToast) {
 	"use strict";
 
 	var array = [];
@@ -62,9 +63,9 @@ sap.ui.define([
 			}
 		},
 
-		handleTableSelectDialogPress: function(oEvent) {
+		handleTableSelectDialogPress: function(/*oEvent*/) {
 			if (!this._oDialog) {
-				this._oDialog = sap.ui.xmlfragment("testDialog","hcpsuccessfactors.view.detail.starbucks.Dialog", this);
+				this._oDialog = sap.ui.xmlfragment("hcpsuccessfactors.view.detail.starbucks.Dialog", this);
 			}
 			
             this.getView().addDependent(this._oDialog);
@@ -79,7 +80,7 @@ sap.ui.define([
 			this._oDialog.open();
 		},
 
-		onCloseDialog: function(oEvent) {
+		onCloseDialog: function(/*oEvent*/) {
 			this._oDialog.close();
 		},
 
@@ -168,7 +169,8 @@ sap.ui.define([
                 data: JSON.stringify(empdata),
                 success: function(str){
                     console.log(str);
-                    alert("Create succeeded");
+                    //alert("Create succeeded");
+                    MessageToast.show("Create succeeded");
                 },
                 error: function(){
                     console.error("failed to upsert emp");

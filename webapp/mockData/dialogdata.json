@@ -4,7 +4,7 @@
 	"eventReason":"HIRNEW",
 	"company":"ACE_USA",
 	"businessUnit":"ACE_CORP",
-	"managerId":"NO_MANAGER",
+	"managerId":"cgrant1",
 	"status":"Active",
 	"username":"hcptestuser02",
 	"userId":"hcptestuser02",
@@ -12,5 +12,6 @@
 	"gender":"M",
 	"initials":"hcp01",
 	"firstName":"testuser02",
-	"lastName":"hcp"
+	"lastName":"hcp",
+	"emailAddress":"zero.yu@sap.com"
 }
