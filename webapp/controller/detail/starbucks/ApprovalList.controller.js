@@ -140,29 +140,56 @@ sap.ui.define([
 	            type: "GET",
 	            success: function(erdata) {
 				    _this.getView().getModel("EventReason").setData(JSON.parse(erdata));
-				    var key = _this.getView().getModel("EventReason").getData().dataObj[0].externalCode;
-				    _this.getView().getModel("WorkFlow").loadData("/sfsfdataservice/hcp/getEmpWorkflow", {"eventReason":key, "userId":"admin"});
-				},
+				    var eventReason = _this.getView().getModel("EventReason").getData().dataObj[0].externalCode;
+				    //_this.getView().getModel("WorkFlow").loadData("/sfsfdataservice/hcp/getEmpWorkflow", {"eventReason":eventReason, "userId":"admin"});
+					_this.loadWfData(eventReason);
+	            },
 				error: function() {
 					//console.error("failed to get MyShop.");
 				},
 				complete: function() {
-				    //_this.showBusyIndicator(false);
-			        //_this.byId("ActiveList").setVisible(true);
 				}
 	        });
 	    },
 	    
 	    onSelectKeyChange: function() {
 	    	var eventReason = this.getView().byId("eventReasonSelector").getSelectedKey();
-	    	var planModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/empwf.json");
-			//var planModel = new JSONModel();
-			//planModel.loadData(planModelPath, null, false);
-			//this.getView().setModel(planModel, "GoalPlanModel");
-			this.getView().getModel("WorkFlow").loadData(planModelPath, null, false);
-	    }
+	    	this.loadWfData(eventReason);
+	    	//var planModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/empwf.json");
+			//this.getView().getModel("WorkFlow").loadData(planModelPath, null, false);
+	    },
 	    
-	    
+	    showBusyIndicator: function(busy) {
+			this.busyIndicator = this.getView().byId("flexBox");
+			this.busyIndicator.setVisible(busy);
+		},
+		
+		loadWfData: function(eventReason){
+			//this.getView().getModel("WorkFlow").loadData("/sfsfdataservice/hcp/getEmpWorkflow", {"eventReason":eventReason, "userId":"admin"});
+			var _this = this;
+			this.byId("ApprovalListTable").setVisible(false);
+			this.showBusyIndicator(true);
+			$.ajax({
+				url: "/sfsfdataservice/hcp/getEmpWorkflow",
+				type: "GET",
+				async: true,
+				data: {
+					"eventReason": eventReason,
+					"userId": "admin"
+				},
+				success: function(wfdata) {
+				    _this.getView().getModel("WorkFlow").setData(JSON.parse(wfdata));
+				},
+				error: function() {
+					console.error("failed to get workflow data.");
+				},
+				complete: function() {
+				    _this.showBusyIndicator(false);
+			        _this.byId("ApprovalListTable").setVisible(true);
+				}
+			});
+			
+		}
 	});
 
 });
