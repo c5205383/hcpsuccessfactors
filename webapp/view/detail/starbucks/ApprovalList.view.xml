@@ -10,9 +10,9 @@
 								<content>
 									<Title text="{i18n>workflow-list-title}" level="H2" />
 									<ToolbarSpacer />
-									<Select width="30%" id="idGoalPlanSelector" change="onSelectKeyChange" items="{path:'EventReason>/dataObj'}">
+									<Select width="30%" id="eventReasonSelector" change="onSelectKeyChange" items="{path:'EventReason>/dataObj'}">
 										<items>
-											<core:Item key="{EventReason>event}" text="{EventReason>name} ( {EventReason>externalCode} )" />
+											<core:Item key="{EventReason>externalCode}" text="{EventReason>name} ( {EventReason>externalCode} )" />
 										</items>
 									</Select>
 									<Button icon="sap-icon://refresh" press="onRefreshPressed">
@@ -43,10 +43,10 @@
 						<items>
 							<ColumnListItem>
 								<cells>
-									<Text text="{}" />
-									<Text text="{WorkFlow>subjectId}" />
-									<Text text="{WorkFlow>requestType} ({WorkFlow>eventReason})" />
-									<Text text="{WorkFlow>wfRequest/0/status}" />
+									<Text text="{WorkFlow>createdBy}" />
+									<Text text="{WorkFlow>wfRequest/0/empWf/subjectId}" />
+									<Text text="{WorkFlow>wfRequest/0/empWf/requestType}" />
+									<Text text="{WorkFlow>status}" />
 									<Text text="{}" />
 								</cells>
 							</ColumnListItem>
