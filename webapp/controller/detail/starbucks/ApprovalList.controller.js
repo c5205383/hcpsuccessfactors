@@ -115,8 +115,9 @@
 sap.ui.define([
 	"hcpsuccessfactors/controller/BaseController",
 	"hcpsuccessfactors/util/httpRequest",
-	"sap/ui/model/json/JSONModel"
-], function(BaseController, httpRequest, JSONModel) {
+	"sap/ui/model/json/JSONModel",
+	"sap/m/MessageToast"
+], function(BaseController, httpRequest, JSONModel,MessageToast) {
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.detail.starbucks.ApprovalList", {
@@ -189,7 +190,142 @@ sap.ui.define([
 				}
 			});
 			
+		},
+		
+				onAcceptPress: function() {
+			var oTable = this.byId("ApprovalListTable");
+			var oItems = oTable.getSelectedItems();
+			var that = this;
+			var str = "";
+			if (oItems.length > 0) {
+				for (var i = 0; i < oItems.length; i++) {
+					str += "Requested by:\t" + oItems[i].getCells()[0].getText() + ",\t\t\t\tRequested for:\t" + oItems[i].getCells()[1].getText() +
+						"\t\n";
+				}
+				var dialog = new sap.m.Dialog({
+					title: "Confirm",
+					type: "Message",
+					content: new sap.m.Text({
+						text: "Are you sure you want to approve belows request?\n\n" + str + "\n"
+					}),
+					beginButton: new sap.m.Button({
+						text: "Approve",
+						type: "Accept",
+						press: function() {
+							MessageToast.show("Submit success!");
+							that.getView().setBusy(true);
+							for (var j = 0; j < oItems.length; j++) {
+								oItems[j].getCells()[4].setText("Approve");
+							}
+							that.getView().setBusy(false);
+							dialog.close();
+						}
+					}),
+					endButton: new sap.m.Button({
+						text: "Cancel",
+						press: function() {
+							dialog.close();
+						}
+					}),
+					afterClose: function() {
+						dialog.destroy();
+					}
+				});
+
+				dialog.open();
+			} else {
+				var warnDialog = new sap.m.Dialog({
+					title: "Warning",
+					type: "Message",
+					state: "Warning",
+					content: new sap.m.Text({
+						text: "Approve invaild! Please select at least one item!"
+					}),
+					beginButton: new sap.m.Button({
+						text: "OK",
+						press: function() {
+							warnDialog.close();
+						}
+					}),
+					afterClose: function() {
+						warnDialog.destroy();
+					}
+				});
+
+				warnDialog.open();
+			}
+		},
+		onRejectPress: function() {
+			var oTable = this.byId("ApprovalListTable");
+			var oItems = oTable.getSelectedItems();
+			var that = this;
+			var str = "";
+			if (oItems.length > 0) {
+				for (var i = 0; i < oItems.length; i++) {
+					str += "Requested by:\t" + oItems[i].getCells()[0].getText() + ",\t\t\t\tRequested for:\t" + oItems[i].getCells()[1].getText() +
+						"\t\n";
+				}
+				var rejectDialog = new sap.m.Dialog({
+					title: "Reject",
+					type: "Message",
+					content: [
+						new sap.m.Text({
+							text: "Are you sure you want to reject belows request?\n\n" + str + "\n"
+						}),
+						new sap.m.TextArea("rejectDialogTextarea", {
+							width: "100%",
+							placeholder: "Add note......"
+						})
+					],
+					beginButton: new sap.m.Button({
+						text: "Reject",
+						type: "Reject",
+						press: function() {
+							var sText = sap.ui.getCore().byId("rejectDialogTextarea").getValue();
+							MessageToast.show("Note is: " + sText);
+							that.getView().setBusy(true);
+							for (var j = 0; j < oItems.length; j++) {
+								oItems[j].getCells()[4].setText("Reject");
+							}
+							that.getView().setBusy(false);
+							rejectDialog.close();
+						}
+					}),
+					endButton: new sap.m.Button({
+						text: "Cancel",
+						press: function() {
+							rejectDialog.close();
+						}
+					}),
+					afterClose: function() {
+						rejectDialog.destroy();
+					}
+				});
+
+				rejectDialog.open();
+			} else {
+				var warnDialog2 = new sap.m.Dialog({
+					title: "Warning",
+					type: "Message",
+					state: "Warning",
+					content: new sap.m.Text({
+						text: "Reject invaild! Please select at least one item!"
+					}),
+					beginButton: new sap.m.Button({
+						text: "OK",
+						press: function() {
+							warnDialog2.close();
+						}
+					}),
+					afterClose: function() {
+						warnDialog2.destroy();
+					}
+				});
+
+				warnDialog2.open();
+			}
 		}
+
 	});
 
 });
