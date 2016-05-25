@@ -162,6 +162,8 @@ sap.ui.define([
 
         onSubmitData: function(){
             var empdata = this._oDialog.getModel("DialogModel").getData();
+            var _this = this;
+            this.getView().setBusy(true);
             $.ajax({
                 url: "/sfsfdataservice/hcp/createEmpEmployment",
                 type: "POST",
@@ -174,6 +176,10 @@ sap.ui.define([
                 },
                 error: function(){
                     console.error("failed to upsert emp");
+                    MessageToast.show("Create failed");
+                },
+                complete: function() {
+                	_this.getView().setBusy(false);
                 }
             });
         },

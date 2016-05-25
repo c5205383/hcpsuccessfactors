@@ -6,12 +6,12 @@
 	"businessUnit":"ACE_CORP",
 	"managerId":"cgrant1",
 	"status":"Active",
-	"username":"hcptestuser02",
-	"userId":"hcptestuser02",
-	"personIdExternal":"hcp02",
+	"username":"hcptestuser05",
+	"userId":"hcptestuser05",
+	"personIdExternal":"hcptestuser05",
 	"gender":"M",
-	"initials":"hcp01",
-	"firstName":"testuser02",
+	"initials":"hcp05",
+	"firstName":"testuser05",
 	"lastName":"hcp",
 	"emailAddress":"zero.yu@sap.com"
 }
