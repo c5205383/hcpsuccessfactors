@@ -14,31 +14,31 @@
 								<Image src="data:image/png; base64,{photoModel>/photo}"> </Image>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-username} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
-									<Text text="{UserModel>/d/username}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+									<Text text="{UserModel>/dataObj/username}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
 								</HBox>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-firstname} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
-									<Text text="{UserModel>/d/firstName}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+									<Text text="{UserModel>/dataObj/firstName}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
 								</HBox>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-lastname} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
-									<Text text="{UserModel>/d/lastName}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+									<Text text="{UserModel>/dataObj/lastName}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
 								</HBox>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-empid} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
-									<Text text="{UserModel>/d/empId}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+									<Text text="{UserModel>/dataObj/empId}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
 								</HBox>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-bphone} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
-									<Text text="{UserModel>/d/businessPhone}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+									<Text text="{UserModel>/dataObj/businessPhone}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
 								</HBox>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-email} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
-									<Text text="{UserModel>/d/email}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+									<Text text="{UserModel>/dataObj/email}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
 								</HBox>
 								<HBox alignItems="Start" class="cssHBox">
 									<Label text="{i18n>infopanel-city} " design="Bold" width="200px" class="sapUiSmallMarginEnd"></Label>
-									<Text text="{UserModel>/d/city}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
+									<Text text="{UserModel>/dataObj/city}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"></Text>
 								</HBox>
 							</l:VerticalLayout>
 						</content>

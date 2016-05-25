@@ -1,5 +1,5 @@
 {
-	"d": {
+	"dataObj": {
 		"__metadata": {
 			"uri": "https://sfapiqacand.sflab.ondemand.com:443/odata/v2/User('msaban1')",
 			"type": "SFOData.User"

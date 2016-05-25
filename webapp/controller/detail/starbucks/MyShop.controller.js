@@ -58,6 +58,14 @@ sap.ui.define([
         showBusyIndicator: function(busy) {
 			this.busyIndicator = this.getView().byId("flexBox");
 			this.busyIndicator.setVisible(busy);
+		},
+		
+		onListItemPress: function(oEvent) {
+			var oItem = oEvent.getSource();
+			var uid = oItem.getBindingContext("DRModel").getObject().userId;
+			this.getRouter().navTo("navToMyProfile", {
+				id: uid
+			});
 		}
 		
 	});

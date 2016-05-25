@@ -111,6 +111,11 @@
 					"target": "myProfile"
 				},
 				{
+					"pattern": "myprofile/{id}",
+					"name": "navToMyProfile",
+					"target": "myProfile"
+				},
+				{
 					"pattern": "employeecenter",
 					"name": "employeeCenter",
 					"target": "employeeCenter"
