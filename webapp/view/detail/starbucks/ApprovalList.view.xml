@@ -18,7 +18,7 @@
 							</layoutData>
 						</Button>
 					</Toolbar>
-					<Table id="ApprovalListTable" inset="false" items="{path:'WorkFlow>/dataObj'}">
+					<Table id="ApprovalListTable" mode="MultiSelect" inset="false" items="{path:'WorkFlow>/dataObj'}">
 						<headerToolbar></headerToolbar>
 						<columns>
 							<Column design="bold">
@@ -44,7 +44,7 @@
 									<Text text="{WorkFlow>wfRequest/0/empWf/subjectId}"/>
 									<Text text="{WorkFlow>wfRequest/0/empWf/requestType}"/>
 									<Text text="{WorkFlow>status}"/>
-									<Text text="{}"/>
+									<Text />
 								</cells>
 							</ColumnListItem>
 						</items>
@@ -58,8 +58,8 @@
 				<footer>
 					<Toolbar>
 						<ToolbarSpacer/>
-						<Button text="{i18n>workflow-requst-approve}" type="Accept"/>
-						<Button text="{i18n>workflow-requst-reject}" type="Reject"/>
+						<Button text="{i18n>workflow-requst-approve}" type="Accept" press="onAcceptPress"/>
+						<Button text="{i18n>workflow-requst-reject}" type="Reject" press="onRejectPress"/>
 					</Toolbar>
 				</footer>
 			</Page>
