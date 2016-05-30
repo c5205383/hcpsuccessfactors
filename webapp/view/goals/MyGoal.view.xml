@@ -1,0 +1,22 @@
+<mvc:View id="myGoalView" xmlns:core="sap.ui.core" controllerName="hcpsuccessfactors.controller.goals.MyGoal" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>mygoal-title}" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<Toolbar class="sapUiResponsiveMargin" width="auto">
+				<Title text="{i18n>GoalListTitle}" />
+				<ToolbarSpacer />
+				<Select id="goalPlanSelectId" width="20%" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/d/results'}">
+					<items>
+						<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}" />
+					</items>
+				</Select>
+			</Toolbar>
+			<List id="goalListId" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/d/results', sorter : { path : 'name'} }">
+				<items>
+					<StandardListItem title="{GoalModel>name}" description="metric: {GoalModel>metric}" info="{GoalModel>id}" type="Navigation"
+						press="onItemPress" />
+				</items>
+			</List>
+		</content>
+	</Page>
+</mvc:View>

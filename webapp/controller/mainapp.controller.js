@@ -1,45 +1,39 @@
-sap.ui.define([
-	"hcpsuccessfactors/controller/BaseController"
-], function(BaseController) {
+sap.ui.define([ "hcpsuccessfactors/controller/BaseController" ], function(BaseController) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.MainApp1", {
+	return BaseController.extend("hcpsuccessfactors.controller.mainapp", {
 
-		onItemPress: function(evt) {
-			var item = evt.getSource();
-			var model = this.getView().getModel();
-			var path = item.getBindingContext().getPath();
-			var data = model.getProperty(path);
-			window.console.log(data);
+		onTilePressed : function(evt) {
+			var oTile = evt.getSource();
+			var oContext = oTile.getBindingContext();
 
-			this.getRouter().navTo(data.navTo);
-			/*if (data) {
-				sap.ui.getCore().getEventBus().publish("nav", "to", {
-					id: data.navTo,
-					data: {
-						context: item.getBindingContext()
-					}
-				});
-			}*/
+			if (oContext != undefined) {
+				var model = oContext.getModel();
+				var path = oContext.getPath();
+				var data = model.getProperty(path);
+				window.console.log(data);
+				this.getRouter().navTo(data.navTo);
+			}
 		},
 
-		getDefaultPage: function() {},
+		getDefaultPage : function() {
+		},
 
-		onInit: function() {
-			//load needed jquery file 
+		onInit : function() {
+			// load needed jquery file
 			jQuery.sap.require("jquery.sap.history");
 
-			// set master categories
-			var modelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/model/app.json");
+			// initial tile container page
+			var appDataPath = "/model/app.json";
+			var modelPath = jQuery.sap.getModulePath("hcpsuccessfactors", appDataPath);
 			var oModel = new sap.ui.model.json.JSONModel();
 			oModel.loadData(modelPath, null, false);
 			this.getView().setModel(oModel);
 
-			//
-			/*this.getView().app = this.getView().byId("sfsf-ext-app");
+			this.getView().app = this.getView().byId("sfsf-ext-app");
 
 			// subscribe to history changes
-			var historyDefaultHandler = function(navType) {
+			/*var historyDefaultHandler = function(navType) {
 				if (navType === jQuery.sap.history.NavType.Back) {
 					this.navBack(this.getDefaultPage());
 				} else {
@@ -56,22 +50,23 @@ sap.ui.define([
 						this.navTo(params.id, params.data, false);
 					}
 				}
-			};
-			jQuery.sap.history({
-				routes: [{
-					path: "page",
-					handler: jQuery.proxy(historyPageHandler, this)
-				}],
-				defaultHandler: jQuery.proxy(historyDefaultHandler, this)
-			});
+			};*/
+			/*jQuery.sap.history({
+				routes : [ {
+					path : "page",
+					handler : jQuery.proxy(historyPageHandler, this)
+				} ],
+				defaultHandler : jQuery.proxy(historyDefaultHandler, this)
+			});*/
 
 			// subscribe to event bus
 			var bus = sap.ui.getCore().getEventBus();
 			bus.subscribe("nav", "to", this.navHandler, this);
 			bus.subscribe("nav", "back", this.navHandler, this);
-			bus.subscribe("nav", "virtual", this.navHandler, this);*/
+			bus.subscribe("nav", "virtual", this.navHandler, this);
+
 		},
-		navHandler: function(channelId, eventId, data) {
+		navHandler : function(channelId, eventId, data) {
 			if (eventId === "to") {
 				this.navTo(data.id, data.data, true);
 			} else if (eventId === "back") {
@@ -79,10 +74,12 @@ sap.ui.define([
 			} else if (eventId === "virtual") {
 				jQuery.sap.history.addVirtualHistory();
 			} else {
-				jQuery.sap.log.error("'nav' event cannot be processed. There's no handler registered for event with id: " + eventId);
+				jQuery.sap.log
+						.error("'nav' event cannot be processed. There's no handler registered for event with id: "
+								+ eventId);
 			}
 		},
-		navTo: function(id, data, writeHistory) {
+		navTo : function(id, data, writeHistory) {
 
 			if (id === undefined) {
 				// invalid parameter
@@ -102,9 +99,9 @@ sap.ui.define([
 					alert(id);
 					var type = "XML";
 					var page = sap.ui.view({
-						id: id,
-						viewName: "hcpsuccessfactors." + id,
-						type: type
+						id : id,
+						viewName : "hcpsuccessfactors." + id,
+						type : type
 					});
 					if (master) {
 						app.addMasterPage(page);
@@ -120,7 +117,7 @@ sap.ui.define([
 				// write browser history
 				if ((writeHistory === undefined || writeHistory) && (jQuery.device.is.phone || master)) {
 					jQuery.sap.history.addHistory("page", {
-						id: id
+						id : id
 					}, false);
 				}
 
@@ -128,7 +125,7 @@ sap.ui.define([
 				jQuery.sap.log.info("navTo - to page: " + id + " [" + writeHistory + "]");
 			}
 		},
-		navBack: function(id) {
+		navBack : function(id) {
 
 			if (!id) {
 

@@ -81,6 +81,13 @@
 					"target": "home"
 				},
 				{
+					"pattern": "mygoal",
+					"name": "mygoal",
+					"target": "mygoal"
+				},
+				
+				
+				{
 					"pattern": "detail1",
 					"name": "detail001",
 					"target": "detail001"
@@ -90,11 +97,7 @@
 					"name": "detail002",
 					"target": "detail002"
 				},
-				{
-					"pattern": "mygoal",
-					"name": "myGoal",
-					"target": "myGoal"
-				},
+				
 				{
 					"pattern": "myform",
 					"name": "myForm",
@@ -205,6 +208,11 @@
 				"home": {
 					"viewName": "mainapp"
 				},
+				"mygoal": {
+					"viewPath": "hcpsuccessfactors.view.goals",
+					"viewName": "MyGoal"
+				},
+				
 				"detail001": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "DemoDetail001"
@@ -213,10 +221,7 @@
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "DemoDetail002"
 				},
-				"myGoal": {
-					"viewPath": "hcpsuccessfactors.view.detail.goal",
-					"viewName": "MyGoal"
-				},
+				
 				"goalDetail": {
 					"viewPath": "hcpsuccessfactors.view.detail.goal",
 					"viewName": "GoalDetail"

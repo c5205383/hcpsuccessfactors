@@ -1,0 +1,22 @@
+<mvc:View controllerName="hcpsuccessfactors.controller.mainapp" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App id="sfsf-ext-app">
+		<pages>
+			<Page id="main-shell-master" title="{i18n>main-app-title}" icon="sap-icon://action" class="sapUiStdPage" showNavButton="false">
+				<content>
+					<TileContainer id="container" tileDelete="handleTileDelete" tiles="{/TileCollection}">
+						<StandardTile icon="sap-icon://{icon}" type="{type}" number="{number}" numberUnit="{numberUnit}" title="{title}" info="{info}"
+							infoState="{infoState}" press="onTilePressed" />
+					</TileContainer>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Button text="{i18n>main-app-edit-btn}" press="handleEditPressed" />
+						<ToolbarSpacer />
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
