@@ -2,7 +2,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 	"use strict";
 	return Controller.extend("hcpsuccessfactors.controller.BaseController", {
 
-		serviceUrl : "hcpsuccessfactors/hcp/",
+		serviceUrl : "hcpmiddleware/hcp/",
 		deployedUrl : "sfsfdataservice/hcp/",
 		
 		getRouter : function() {
