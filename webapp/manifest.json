@@ -39,7 +39,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "hcpsuccessfactors.view.MainApp",
+			"viewName": "hcpsuccessfactors.view.mainapp",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -68,7 +68,7 @@
 				"viewType": "XML",
 				"viewPath": "hcpsuccessfactors.view",
 				"controlId": "sfsf-ext-app",
-				"controlAggregation": "detailPages",
+				"controlAggregation": "pages",
 				"transition": "slide",
 				"bypassed": {
 					"target": "notFound"
@@ -78,7 +78,7 @@
 				{
 					"pattern": "",
 					"name": "home",
-					"target": "myGoal"
+					"target": "home"
 				},
 				{
 					"pattern": "detail1",
@@ -202,8 +202,8 @@
 				}
 			],
 			"targets": {
-				"App": {
-					"viewName": "MainApp"
+				"home": {
+					"viewName": "mainapp"
 				},
 				"detail001": {
 					"viewPath": "hcpsuccessfactors.view.detail",

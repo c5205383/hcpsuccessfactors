@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(BaseController) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.MainApp", {
+	return BaseController.extend("hcpsuccessfactors.controller.MainApp1", {
 
 		onItemPress: function(evt) {
 			var item = evt.getSource();
