@@ -136,7 +136,7 @@ sap.ui.define([
 	    
 	    loadData: function() {
 	        var _this = this;
-	        $.ajax({
+	        /*$.ajax({
 	            url: "/sfsfdataservice/hcp/getFOEventReason",
 	            type: "GET",
 	            success: function(erdata) {
@@ -150,7 +150,13 @@ sap.ui.define([
 				},
 				complete: function() {
 				}
-	        });
+	        });*/
+	        var scallback = function(data){
+	        	_this.getView().getModel("EventReason").setData(data);
+				var eventReason = _this.getView().getModel("EventReason").getData().d.results[0].externalCode;
+				_this.loadWfData(eventReason);
+	        };
+	        this.httpGet("FOEventReason", null, null, null, scallback, null);
 	    },
 	    
 	    onSelectKeyChange: function() {

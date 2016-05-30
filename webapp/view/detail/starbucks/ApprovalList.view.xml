@@ -7,7 +7,7 @@
 					<Toolbar>
 						<Title text="{i18n>workflow-list-title}" level="H2"/>
 						<ToolbarSpacer/>
-						<Select width="30%" id="eventReasonSelector" change="onSelectKeyChange" items="{path:'EventReason>/dataObj'}">
+						<Select width="30%" id="eventReasonSelector" change="onSelectKeyChange" items="{path:'EventReason>/d/results'}">
 							<items>
 								<core:Item key="{EventReason>externalCode}" text="{EventReason>name} ( {EventReason>externalCode} )"/>
 							</items>
