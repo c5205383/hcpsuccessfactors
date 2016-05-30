@@ -16,6 +16,35 @@ sap.ui.define([
 			} else {
 				this.getRouter().navTo("appHome", {}, true /*no history*/);
 			}
+		},
+		
+		httpGet: function(entitySet, id, expand, query, succallback, compcallback){
+			var url = entitySet + (id !== null? "("+id+")" : "") + 
+				(function(){
+					if(expand !== null && query !== null) {
+						return "?$expand="+expand+"&$filter="+query+"&$format=json";
+					} else if(expand !== null) {
+						return "?$expand="+expand+"&$format=json";
+					} else if(query !== null) {
+						return "?$filter="+query+"&$format=json";
+					} else {
+						return "?$format=json";
+					}
+				})();
+			$.ajax({
+				url: "/pmapi/"+url,
+				type: "GET",
+				async: true,
+				success: function(gdata) {
+					succallback(gdata);
+				},
+				error: function() {
+					console.error("failed.");
+				},
+				complete: function() {
+					compcallback();
+				}
+			});
 		}
 	});
 });

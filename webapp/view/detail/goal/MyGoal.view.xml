@@ -4,6 +4,7 @@
 		<content>
 		    <Toolbar class="sapUiResponsiveMargin" width="auto">
 				<Title text="{i18n>GoalListTitle}"/>
+				<Button id="bt" press="onPress" text="button" />
 				<ToolbarSpacer />
 				<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/dataObj'}">
 					<items>

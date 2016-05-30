@@ -23,6 +23,13 @@
 			"name": "sfsfdataservice"
 		},
 		"description": "dataservice"
+	}, {
+		"path": "/pmapi",
+		"target": {
+			"type": "destination",
+			"name": "pmapi"
+		},
+		"description": "dataservice"
 	}],
 	"sendWelcomeFileRedirect": true,
 	"cacheControl": [{

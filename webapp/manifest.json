@@ -196,7 +196,7 @@
 					"target": "storePartnerInfo"
 				},
 				{
-				    "pattern": "approvalList",
+					"pattern": "approvalList",
 					"name": "approvalList",
 					"target": "approvalList"
 				}
@@ -242,7 +242,7 @@
 					"viewName": "Candidate"
 				},
 				"myShop": {
-				    "viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "MyShop"
 				},
 				"empTransfer": {
@@ -294,7 +294,7 @@
 					"viewName": "StorePartnerInfo"
 				},
 				"approvalList": {
-				    "viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "ApprovalList"
 				},
 				"notFound": {
