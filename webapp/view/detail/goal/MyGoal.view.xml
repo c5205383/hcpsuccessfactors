@@ -4,15 +4,14 @@
 		<content>
 		    <Toolbar class="sapUiResponsiveMargin" width="auto">
 				<Title text="{i18n>GoalListTitle}"/>
-				<Button id="bt" press="onPress" text="button" />
 				<ToolbarSpacer />
-				<Select id="planSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/dataObj'}">
+				<Select id="goalTempateSelect" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/d/results'}">
 					<items>
 						<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}"/>
 					</items>
 				</Select>
 			</Toolbar>
-			<List id="goalList" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/dataObj', sorter : { path : 'name'} }">
+			<List id="goalList" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/d/results', sorter : { path : 'name'} }">
 				<headerToolbar>
 					
 				</headerToolbar>

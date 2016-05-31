@@ -1,50 +1,53 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History"
-], function (Controller, History) {
+], function(Controller, History) {
 	"use strict";
 	return Controller.extend("hcpsuccessfactors.controller.BaseController", {
-		getRouter : function () {
+		getRouter: function() {
 			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
-		onNavBack: function (oEvent) {
+		
+		onNavBack: function(oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
 			sPreviousHash = oHistory.getPreviousHash();
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				this.getRouter().navTo("appHome", {}, true /*no history*/);
+				this.getRouter().navTo("appHome", {}, true /*no history*/ );
 			}
 		},
-		
-		httpGet: function(entitySet, id, expand, query, succallback, compcallback){
-			var url = entitySet + (id !== null? "("+id+")" : "") + 
-				(function(){
-					if(expand !== null && query !== null) {
-						return "?$expand="+expand+"&$filter="+query+"&$format=json";
-					} else if(expand !== null) {
-						return "?$expand="+expand+"&$format=json";
-					} else if(query !== null) {
-						return "?$filter="+query+"&$format=json";
+
+		httpGet: function(sEntitySet, sId, sExpand, sQuery, fnSuccessCallback, fnErrorCallback, fnCompleteCallback) {
+			var url = sEntitySet + (sId !== null ? "(" + sId + ")" : "") +
+				(function() {
+					if (sExpand !== null && sQuery !== null) {
+						return "?$expand=" + sExpand + "&$filter=" + sQuery + "&$format=json";
+					} else if (sExpand !== null) {
+						return "?$expand=" + sExpand + "&$format=json";
+					} else if (sQuery !== null) {
+						return "?$filter=" + sQuery + "&$format=json";
 					} else {
 						return "?$format=json";
 					}
 				})();
 			$.ajax({
-				url: "/pmapi/"+url,
+				url: "/pmapi/" + url,
 				type: "GET",
 				async: true,
-				success: function(gdata) {
-					succallback(gdata);
+				success: function(oData) {
+					fnSuccessCallback(oData);
 				},
 				error: function() {
-					console.error("failed.");
+					jQuery.sap.log.error("failed to get");
+					fnErrorCallback();
 				},
 				complete: function() {
-					compcallback();
+					fnCompleteCallback();
 				}
 			});
 		}
+		
 	});
 });

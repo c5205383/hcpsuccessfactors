@@ -8,147 +8,107 @@ sap.ui.define([
 
 	return BaseController.extend("hcpsuccessfactors.controller.detail.goal.MyGoal", {
 
+		/**
+		 * @event
+		 * @name onInit
+		 * @description Called when a controller is instantiated and its View controls (if available) are already created. Mainly set model.
+		 * @memberOf hcpsuccessfactors.view.goal.MyGoal
+		 */
 		onInit: function() {
-			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");
-			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
-
-			this.showBusyIndicator(true);
-			this.byId("goalList").setVisible(false);
-			var isDebug = false;
-			if (!isDebug) {
-				this.bindData();
-			} else {
-				this.bindMockData();
-			}
+			this._bindModel();
+			this._loadData();
 		},
 
-		showBusyIndicator: function(busy) {
-			this.busyIndicator = this.getView().byId("flexBox");
-			this.busyIndicator.setVisible(busy);
+		/**
+		 * @function
+		 * @name _bindModel
+		 * @description bind model
+		 */
+		_bindModel: function() {
+			var oView = this.getView();
+			//bind i18n and device info model
+			oView.setModel(sap.ui.getCore().getModel("i18n"), "i18n");
+			oView.setModel(models.createDeviceModel(), "device").bindElement("device>/");
+			//bind goal plan template model
+			var oPlanModel = new JSONModel();
+			oView.setModel(oPlanModel, "GoalPlanModel");
+			//bind goal model
+			var oGoalModel = new JSONModel();
+			oView.setModel(oGoalModel, "GoalModel");
 		},
 
-		bindData: function() {
+		/**
+		 * @function
+		 * @name _loadData
+		 * @description retrieve goal data via ajax from
+		 */
+		_loadData: function() {
 			var _this = this;
-			$.ajax({
-				url: "/sfsfdataservice/hcp/getGoalPlanTemplate",
-				type: "GET",
-				async: true,
-				success: function(tdata) {
-					var planModel = new JSONModel(JSON.parse(tdata));
-					_this.getView().setModel(planModel, "GoalPlanModel");
-					var curId = _this.getView().getModel("GoalPlanModel").getData().dataObj[0].id;
-					//var callBack = "g" + curId;
-					$.ajax({
-						url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
-						type: "GET",
-						data: {
-							templateId: curId
-						},
-						async: true,
-						success: function(gdata) {
-							// var goalModel = new JSONModel(gdata);
-							// _this.getView().setModel(goalModel, "GoalModel");
-							_this.showBusyIndicator(false);
-							_this.byId("goalList").setVisible(true);
-							sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(gdata));
-							_this.getView().setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
-						},
-						error: function() {
-							alert("failed to get goal");
-							_this.showBusyIndicator(false);
-							_this.byId("goalList").setVisible(true);
-						}
-					});
-				},
-				error: function() {
-					alert("failed to get goalPlanTemplate.");
-					_this.showBusyIndicator(false);
-					_this.byId("goalList").setVisible(true);
-				}
-			});
+			var iTemplateId;
 
+			this._showBusyIndicator(true);
+			//callback func of getting goal succeed
+			var fnGoalSucCallback = function(oData) {
+				_this.getView().getModel("GoalModel").setData(oData);
+			};
+			//callback func of getting template succeed
+			var fnTemplateSucCallback = function(oData) {
+				_this.getView().getModel("GoalPlanModel").setData(oData);
+				iTemplateId = oData.d.results[0].id;
+				//to get goal data
+				_this.httpGet("Goal_" + iTemplateId, null, null, null, fnGoalSucCallback, null, null);
+			};
+			//callback func of getting data complete
+			var fnComCallback = function() {
+				_this._showBusyIndicator(false);
+			};
+			//to get tempate data
+			this.httpGet("GoalPlanTemplate", null, null, null, fnTemplateSucCallback, null, fnComCallback);
 		},
 
-		bindMockData: function() {
-			var planModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/goalTemplate.json");
-			var planModel = new JSONModel();
-			planModel.loadData(planModelPath, null, false);
-			this.getView().setModel(planModel, "GoalPlanModel");
-
-			var goalModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/goal_1.json");
-			var goalModel = new JSONModel();
-			goalModel.loadData(goalModelPath, null, false);
-			this.getView().setModel(goalModel, "GoalModel");
+		/**
+		 * @function
+		 * @name _showBusyIndicator
+		 * @description show busy indicator of whole view or not
+		 */
+		_showBusyIndicator: function(busy) {
+			this.getView().setBusy(busy);
 		},
 
+		/**
+		 * @function
+		 * @name onSelectKeyChange
+		 * @description Event handler when change the goal plan template select
+		 */
 		onSelectKeyChange: function() {
-			this.showBusyIndicator(true);
-			this.byId("goalList").setVisible(false);
-			/*jQuery.each(this.byId("goalList").getItems(), function(iIndex, indexItem) {
-				indexItem.setVisible(false);
-			});*/
-			
-			var curId = this.getView().byId("planSelect").getSelectedKey();
-			//var callBack = "g" + curId;
+			var iTemplateId = this.byId("goalTempateSelect").getSelectedKey();
 			var _this = this;
-
-			$.ajax({
-				url: "/sfsfdataservice/hcp/getGoalsByTemplateId",
-				type: "GET",
-				data: {
-					templateId: curId
-				},
-				async: true,
-				success: function(cdata) {
-					_this.showBusyIndicator(false);
-					_this.byId("goalList").setVisible(true);
-					/*jQuery.each(_this.byId("goalList").getItems(), function(iIndex, indexItem) {
-						indexItem.setVisible(true);
-					});*/
-					sap.ui.getCore().getModel("GoalModel").setData(JSON.parse(cdata));
-					_this.getView().getModel("GoalModel").setData(JSON.parse(cdata));
-				},
-				error: function() {
-					alert("failed to change goal");
-					_this.showBusyIndicator(false);
-					_this.byId("goalList").setVisible(true);
-					/*jQuery.each(_this.byId("goalList").getItems(), function(iIndex, indexItem) {
-						indexItem.setVisible(true);
-					});*/
-				}
-			});
-			//items.setBusy(false);
+			//callback func of getting goal succeed
+			var fnGoalSucCallback = function (oData) {
+				_this.getView().getModel("GoalModel").setData(oData);
+			};
+			//callback func of getting goal complete
+			var fnComCallback = function () {
+				_this._showBusyIndicator(false);
+			};
+			this._showBusyIndicator(true);
+			//to get goal data
+			this.httpGet("Goal_" + iTemplateId, null, null, null, fnGoalSucCallback, null, fnComCallback);
 		},
 
+		/**
+		 * @function
+		 * @name onItemPress
+		 * @description Event handler when pressing the goal item
+		 * @param {sap.ui.base.Event} - oEvent The fired event.
+		 */
 		onItemPress: function(oEvent) {
 			var oItem = oEvent.getSource();
-			//var goalId = oItem.getInfo();
-			var spath = oItem.getBindingContext("GoalModel");
-			/*var goalData=this.getView().getModel("GoalModel").getData().goals;
-			var index;
-			for(var i=0,max=goalData.length; i<max;i++){
-				if(goalData[i].id==goalId){
-					index=i;
-					break;
-				}
-			}*/
+			var sPath = oItem.getBindingContext("GoalModel");
+
 			this.getRouter().navTo("goalDetail", {
-				id: hcpsuccessfactors.util.StringUtil.subLastWord(spath.getPath())
+				id: hcpsuccessfactors.util.StringUtil.subLastWord(sPath.getPath())
 			});
-		},
-		
-		onPress: function(){
-			var oView = this.getView();
-			var data = null;
-			var scallback = function(gdata) {
-				data = gdata;	
-			};
-			var ccallback = function() {
-				oView.setBusy(false);
-				alert(JSON.stringify(data));
-			};
-			oView.setBusy(true);
-			this.httpGet("GoalPlanTemplate", null, null, null, scallback, ccallback);
 		}
 
 	});
