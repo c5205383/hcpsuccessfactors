@@ -10,6 +10,11 @@
 						<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}" />
 					</items>
 				</Select>
+				<Button icon="sap-icon://refresh" press="onRefreshPressed">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Button>
 			</Toolbar>
 			<List id="goalListId" class="sapUiResponsiveMargin" width="auto" items="{ path : 'GoalModel>/d/results', sorter : { path : 'name'} }">
 				<items>

@@ -72,31 +72,23 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 			});
 		},
 
-		bindMockData : function() {
-			var planModelPath = jQuery.sap.getModulePath("starbucksdemo", "/mockData/goalTemplate.json");
-			var planModel = new JSONModel();
-			planModel.loadData(planModelPath, null, false);
-			this.getView().setModel(planModel, "GoalPlanModel");
-
-			var goalModelPath = jQuery.sap.getModulePath("starbucksdemo", "/mockData/goal_1.json");
-			var goalModel = new JSONModel();
-			goalModel.loadData(goalModelPath, null, false);
-			this.getView().setModel(goalModel, "GoalModel");
-		},
-
 		onSelectKeyChange : function(oEvent) {
-
 			if (oEvent.getSource() == undefined)
 				return;
-
-			var key = event.getSource().getSelectedKey();
-			var oList = that.getView().byId("goalListId");
+			var key = oEvent.getSource().getSelectedKey();
+			var oList = this.getView().byId("goalListId");
 			oList.setBusy(true);
 			this.bindGoalListData(key, oList);
 		},
 
+		onRefreshPressed : function(oEvent) {
+			var oSelector = this.getView().byId("goalPlanSelectId");
+			oSelector.setBusy(true);
+			this.bindGoalPlanData(oSelector);
+		},
+
 		onItemPress : function(oEvent) {
-			var navTo = "view.detail.goal.GoalDetail";
+			var navTo = "view.goals.GoalDetail";
 			var oItem = oEvent.getSource();
 			var oContext = oItem.getBindingContext("GoalModel");
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
