@@ -1,12 +1,12 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:uxap="sap.uxap" xmlns:l="sap.ui.layout" xmlns="sap.m" height="100%"
 	controllerName="hcpsuccessfactors.controller.detail.goal.GoalDetail">
-	<Page title="{i18n>goaldetail-title} of {GoalModel>name}" showNavButton="true" navButtonPress="onNavBack">
+	<Page title="{i18n>goaldetail-title} of {GoalModel>/d/name}" showNavButton="true" navButtonPress="onNavBack">
 		<uxap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 			<uxap:headerTitle>
-				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {GoalModel>userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
+				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {GoalModel>/d/userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
 			</uxap:headerTitle>
 			<uxap:headerContent>
-				<Title title="" text="This page is the detail of the goal '{GoalModel>name}'."/>
+				<Title title="" text="This page is the detail of the goal '{GoalModel>/d/name}'."/>
 			</uxap:headerContent>
 			<uxap:sections>
 				<uxap:ObjectPageSection title="Goal Detail">
@@ -16,48 +16,48 @@
 								<l:VerticalLayout width="100%" class="cssLayout">
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-gid}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{GoalModel>id}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>/d/id}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-category}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{GoalModel>category}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>/d/category}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-metric}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{GoalModel>metric}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>/d/metric}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-startdate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'GoalModel>start',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+										<Text text="{path:'GoalModel>/d/start',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
 											maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-duedate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'GoalModel>due',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+										<Text text="{path:'GoalModel>/d/due',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
 											maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-status}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text id="idState" text="{path:'GoalModel>state',formatter:'hcpsuccessfactors.util.format.formatStatus'}" class="sapUiSmallMarginEnd"
+										<Text id="idState" text="{path:'GoalModel>/d/state',formatter:'hcpsuccessfactors.util.format.formatStatus'}" class="sapUiSmallMarginEnd"
 											textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-type}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{GoalModel>type}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										<Text text="{GoalModel>/d/type}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-progress}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
 										<ProgressIndicator class="sapUiSmallMarginEnd" width="200px" height="12px"
-											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{GoalModel>done}%"
+											percentValue="{path:'GoalModel>/d/done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{GoalModel>done}%"
 											showValue="true" state="None"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
-										<Label text="{path:'GoalModel>userId',formatter:'hcpsuccessfactors.util.format.formatCreatewarning'} " width="500px"
+										<Label text="{path:'GoalModel>/d/userId',formatter:'hcpsuccessfactors.util.format.formatCreatewarning'} " width="500px"
 											class="sapUiSmallMarginEnd cssWarning"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label
-											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
+											text="{path:'GoalModel>/d/modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
 											width="500px" class="sapUiSmallMarginEnd cssWarning"/>
 									</HBox>
 								</l:VerticalLayout>
@@ -82,8 +82,8 @@
 											<ColumnListItem >
 												<cells>
 													<Text text="Modify"/>
-													<Text text="{GoalModel>modifier}"/>
-													<Text text="{path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"/>
+													<Text text="{GoalModel>/d/modifier}"/>
+													<Text text="{path:'GoalModel>/d/lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"/>
 												</cells>
 											</ColumnListItem>
 										</items>

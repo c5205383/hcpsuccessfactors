@@ -6,46 +6,70 @@ sap.ui.define([
     "use strict";
     return BaseController.extend("hcpsuccessfactors.controller.detail.goal.GoalDetail", {
     	
+    	/**
+		 * @event
+		 * @name onInit
+		 * @description Called when a controller is instantiated and its View controls (if available) are already created. Mainly set model.
+		 * @memberOf hcpsuccessfactors.view.goal.GoalDetail
+		 */
         onInit: function(){
-        	var debug = false;
-        	if(!debug){
-        		//
-        	}else{
-        		//this.bindMockData();
-        	}
-        	
-        	var oRouter = this.getRouter();
-			oRouter.getRoute("goalDetail").attachMatched(this._onRouteMatched, this);
+        	this._bindModel();
+        	this.getRouter().getRoute("goalDetail").attachMatched(this._onRouteMatched, this);
         },
         
-        bindMockData: function(){
-        	var goalModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/goal_1.json");
-			var goalModel = new JSONModel();
-			goalModel.loadData(goalModelPath, null, false);
-			this.getView().setModel(goalModel, "GoalModel");
+        /**
+		 * @function
+		 * @name _bindModel
+		 * @description bind model
+		 */
+        _bindModel : function () {
+        	var oGoalModel = new JSONModel();
+        	this.getView().setModel(oGoalModel, "GoalModel");
         },
         
+        /**
+		 * @function
+		 * @name _loadData
+		 * @description retrieve goal data via ajax from odata
+		 * @param {String} id of the goal
+		 */
+        _loadData : function (sTemplateId, sGoalId) {
+        	var _this = this;
+			//callback func of getting goal succeed
+			var fnGoalSucCallback = function (oData) {
+				_this.getView().getModel("GoalModel").setData(oData);
+			};
+			//callback func of getting goal complete
+			var fnComCallback = function () {
+				//_this._showBusyIndicator(false);
+			};
+			//this._showBusyIndicator(true);
+			//to get goal data
+			this.httpGet("Goal_" + sTemplateId, sGoalId, null, null, fnGoalSucCallback, null, fnComCallback);
+        },
+        
+        /**
+		 * @function
+		 * @name _onRouteMatched
+		 * @description when matching route name 'goalDetail'
+		 * @param {sap.ui.base.Event} - oEvent The fired event.
+		 */
         _onRouteMatched : function (oEvent) {
-			var oArgs, oView;
+			var oArgs = oEvent.getParameter("arguments");
 			
-			oArgs = oEvent.getParameter("arguments");
-			oView = this.getView();
-			oView.setModel(sap.ui.getCore().getModel("GoalModel"), "GoalModel");
-			
-			oView.bindElement({
-				path: "/dataObj/" + oArgs.id,
-				model: "GoalModel"
-			});
-			
-			/*var data=sap.ui.getCore().getModel("GoalModel").getData().goals;
-
-			var detailModel=new sap.ui.model.json.JSONModel(clickGoalData);
-			oView.setModel(detailModel,"detailModel");*/
+			this._loadData(oArgs.tid, oArgs.gid);
 			
 			var oControl = this.getView().byId("idState");
-			this._formatStateBackground(oControl,oControl.getText());
+			this._formatStateBackground(oControl, oControl.getText());
 		},
 		
+		/**
+		 * @function
+		 * @name _formatStateBackground
+		 * @description format state background
+		 * @param {sap.ui.core.Control} - the control
+		 * @param {String} - the text of the control
+		 */
 		_formatStateBackground:function(oControl, sText){
 		    oControl.addStyleClass("cssBackground");
 			switch(sText){
@@ -74,10 +98,7 @@ sap.ui.define([
 					$(".cssBackground").css("color","white");
 					break;
 			}
-			//if(sText.toLowerCase()==="white" || sText.toLowerCase()==="red"){
-			//	$(".cssBackground").css("background-color",sText.toLowerCase());
-				//oControl.addStyleClass("cssBackgroundColor");
-		//	}
 		}
+		
     });
 });

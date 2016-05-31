@@ -37,14 +37,20 @@ sap.ui.define([
 				type: "GET",
 				async: true,
 				success: function(oData) {
-					fnSuccessCallback(oData);
+					if (fnSuccessCallback) {
+						fnSuccessCallback(oData);
+					}
 				},
 				error: function() {
 					jQuery.sap.log.error("failed to get");
-					fnErrorCallback();
+					if (fnErrorCallback) {
+						fnErrorCallback();
+					}
 				},
 				complete: function() {
-					fnCompleteCallback();
+					if (fnCompleteCallback) {
+						fnCompleteCallback();
+					}
 				}
 			});
 		}

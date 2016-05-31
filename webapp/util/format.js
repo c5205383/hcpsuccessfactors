@@ -2,7 +2,7 @@ jQuery.sap.declare("hcpsuccessfactors.util.format");
 hcpsuccessfactors.util.format = {
 	formatDate: function(sValue) {
 		//return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/," ");  
-		if (sValue !== null) {
+		if (sValue) {
 			var sSubValue = sValue.substring(0,sValue.indexOf("T"));
 			var lSubValue = sValue.substring((sValue.indexOf("T")+1), sValue.lastIndexOf("."));
 			var middle = lSubValue.substring(0, lSubValue.indexOf(":"));

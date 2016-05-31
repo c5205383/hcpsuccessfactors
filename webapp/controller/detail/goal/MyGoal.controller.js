@@ -14,7 +14,7 @@ sap.ui.define([
 		 * @description Called when a controller is instantiated and its View controls (if available) are already created. Mainly set model.
 		 * @memberOf hcpsuccessfactors.view.goal.MyGoal
 		 */
-		onInit: function() {
+		onInit: function () {
 			this._bindModel();
 			this._loadData();
 		},
@@ -24,7 +24,7 @@ sap.ui.define([
 		 * @name _bindModel
 		 * @description bind model
 		 */
-		_bindModel: function() {
+		_bindModel: function () {
 			var oView = this.getView();
 			//bind i18n and device info model
 			oView.setModel(sap.ui.getCore().getModel("i18n"), "i18n");
@@ -40,26 +40,26 @@ sap.ui.define([
 		/**
 		 * @function
 		 * @name _loadData
-		 * @description retrieve goal data via ajax from
+		 * @description retrieve goal data via ajax from odata
 		 */
-		_loadData: function() {
+		_loadData: function () {
 			var _this = this;
-			var iTemplateId;
+			var sTemplateId;
 
 			this._showBusyIndicator(true);
 			//callback func of getting goal succeed
-			var fnGoalSucCallback = function(oData) {
+			var fnGoalSucCallback = function (oData) {
 				_this.getView().getModel("GoalModel").setData(oData);
 			};
 			//callback func of getting template succeed
-			var fnTemplateSucCallback = function(oData) {
+			var fnTemplateSucCallback = function (oData) {
 				_this.getView().getModel("GoalPlanModel").setData(oData);
-				iTemplateId = oData.d.results[0].id;
+				sTemplateId = oData.d.results[0].id;
 				//to get goal data
-				_this.httpGet("Goal_" + iTemplateId, null, null, null, fnGoalSucCallback, null, null);
+				_this.httpGet("Goal_" + sTemplateId, null, null, null, fnGoalSucCallback, null, null);
 			};
 			//callback func of getting data complete
-			var fnComCallback = function() {
+			var fnComCallback = function () {
 				_this._showBusyIndicator(false);
 			};
 			//to get tempate data
@@ -70,8 +70,9 @@ sap.ui.define([
 		 * @function
 		 * @name _showBusyIndicator
 		 * @description show busy indicator of whole view or not
+		 * @param {Boolean} true or false
 		 */
-		_showBusyIndicator: function(busy) {
+		_showBusyIndicator: function (busy) {
 			this.getView().setBusy(busy);
 		},
 
@@ -80,8 +81,8 @@ sap.ui.define([
 		 * @name onSelectKeyChange
 		 * @description Event handler when change the goal plan template select
 		 */
-		onSelectKeyChange: function() {
-			var iTemplateId = this.byId("goalTempateSelect").getSelectedKey();
+		onSelectKeyChange: function () {
+			var sTemplateId = this.byId("goalTempateSelect").getSelectedKey();
 			var _this = this;
 			//callback func of getting goal succeed
 			var fnGoalSucCallback = function (oData) {
@@ -93,7 +94,7 @@ sap.ui.define([
 			};
 			this._showBusyIndicator(true);
 			//to get goal data
-			this.httpGet("Goal_" + iTemplateId, null, null, null, fnGoalSucCallback, null, fnComCallback);
+			this.httpGet("Goal_" + sTemplateId, null, null, null, fnGoalSucCallback, null, fnComCallback);
 		},
 
 		/**
@@ -102,12 +103,14 @@ sap.ui.define([
 		 * @description Event handler when pressing the goal item
 		 * @param {sap.ui.base.Event} - oEvent The fired event.
 		 */
-		onItemPress: function(oEvent) {
+		onItemPress: function (oEvent) {
 			var oItem = oEvent.getSource();
-			var sPath = oItem.getBindingContext("GoalModel");
+			var sGoalId = oItem.getInfo();
+			var sTemplateId = this.byId("goalTempateSelect").getSelectedKey(); 
 
 			this.getRouter().navTo("goalDetail", {
-				id: hcpsuccessfactors.util.StringUtil.subLastWord(sPath.getPath())
+				tid: sTemplateId,
+				gid: sGoalId
 			});
 		}
 
