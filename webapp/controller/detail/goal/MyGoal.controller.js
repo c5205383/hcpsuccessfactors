@@ -135,6 +135,20 @@ sap.ui.define([
 			this.getRouter().navTo("goalDetail", {
 				id: hcpsuccessfactors.util.StringUtil.subLastWord(spath.getPath())
 			});
+		},
+		
+		onPress: function(){
+			var oView = this.getView();
+			var data = null;
+			var scallback = function(gdata) {
+				data = gdata;	
+			};
+			var ccallback = function() {
+				oView.setBusy(false);
+				alert(JSON.stringify(data));
+			};
+			oView.setBusy(true);
+			this.httpGet("GoalPlanTemplate", null, null, null, scallback, ccallback);
 		}
 
 	});
