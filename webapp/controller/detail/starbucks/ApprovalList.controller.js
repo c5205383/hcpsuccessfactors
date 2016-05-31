@@ -156,7 +156,7 @@ sap.ui.define([
 				var eventReason = _this.getView().getModel("EventReason").getData().d.results[0].externalCode;
 				_this.loadWfData(eventReason);
 	        };
-	        this.httpGet("FOEventReason", null, null, null, scallback, null, null);
+	        this.httpGet(true, "FOEventReason", null, null, null, scallback, null, null);
 	    },
 	    
 	    onSelectKeyChange: function() {
@@ -198,7 +198,7 @@ sap.ui.define([
 			
 		},
 		
-				onAcceptPress: function() {
+		onAcceptPress: function() {
 			var oTable = this.byId("ApprovalListTable");
 			var oItems = oTable.getSelectedItems();
 			var that = this;

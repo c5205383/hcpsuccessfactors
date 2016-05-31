@@ -16,6 +16,23 @@ hcpsuccessfactors.util.format = {
 			return DateTime;
 		}
 	},
+	
+	/**
+	* @function
+	* @name formatTimestamp
+	* @description retrieve goal data via ajax from odata
+	* @param {String} - sTimestamp like '/Date(1356998399000)'
+	* @return {String} date value
+	*/
+	formatTimestamp : function (sTimestamp) {
+		if (sTimestamp) {
+			var aTmp = sTimestamp.split("(");
+			var sValue = aTmp[1].split(")")[0];
+			var date = new Date(parseInt(sValue, 10));
+			return date.toUTCString();
+		}
+	},
+	
 	formatFormDate: function(sValue) { 
 		if (sValue !== null) {
 		    var sSubValue =sValue.replace("/Date(","").replace(")/","");
@@ -24,9 +41,11 @@ hcpsuccessfactors.util.format = {
 		    return result;
 		}
 	},
+	
 	formatDone: function(Value) {
 		return parseInt(Value);
 	},
+	
 	formatStatus: function(Value) {
 		var sValue;
 		if (Value !== null) {
@@ -53,6 +72,7 @@ hcpsuccessfactors.util.format = {
 		}
 		return sValue;
 	},
+	
 	formatCreatewarning: function(Value) {
 		if (Value !== null){
 			var sValue = "▲ Alert-Created by ";

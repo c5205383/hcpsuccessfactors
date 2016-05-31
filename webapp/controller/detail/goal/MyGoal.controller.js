@@ -56,24 +56,14 @@ sap.ui.define([
 				_this.getView().getModel("GoalPlanModel").setData(oData);
 				sTemplateId = oData.d.results[0].id;
 				//to get goal data
-				_this.httpGet("Goal_" + sTemplateId, null, null, null, fnGoalSucCallback, null, null);
+				_this.httpGet(false, "Goal_" + sTemplateId, null, null, null, fnGoalSucCallback, null, null);
 			};
 			//callback func of getting data complete
 			var fnComCallback = function () {
 				_this._showBusyIndicator(false);
 			};
 			//to get tempate data
-			this.httpGet("GoalPlanTemplate", null, null, null, fnTemplateSucCallback, null, fnComCallback);
-		},
-
-		/**
-		 * @function
-		 * @name _showBusyIndicator
-		 * @description show busy indicator of whole view or not
-		 * @param {Boolean} true or false
-		 */
-		_showBusyIndicator: function (busy) {
-			this.getView().setBusy(busy);
+			this.httpGet(false, "GoalPlanTemplate", null, null, null, fnTemplateSucCallback, null, fnComCallback);
 		},
 
 		/**
@@ -94,7 +84,7 @@ sap.ui.define([
 			};
 			this._showBusyIndicator(true);
 			//to get goal data
-			this.httpGet("Goal_" + sTemplateId, null, null, null, fnGoalSucCallback, null, fnComCallback);
+			this.httpGet(true, "Goal_" + sTemplateId, null, null, null, fnGoalSucCallback, null, fnComCallback);
 		},
 
 		/**

@@ -41,11 +41,11 @@ sap.ui.define([
 			};
 			//callback func of getting goal complete
 			var fnComCallback = function () {
-				//_this._showBusyIndicator(false);
+				_this._showBusyIndicator(false);
 			};
-			//this._showBusyIndicator(true);
+			this._showBusyIndicator(true);
 			//to get goal data
-			this.httpGet("Goal_" + sTemplateId, sGoalId, null, null, fnGoalSucCallback, null, fnComCallback);
+			this.httpGet(true, "Goal_" + sTemplateId, sGoalId, null, null, fnGoalSucCallback, null, fnComCallback);
         },
         
         /**

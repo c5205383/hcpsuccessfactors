@@ -4,10 +4,11 @@ sap.ui.define([
 ], function(Controller, History) {
 	"use strict";
 	return Controller.extend("hcpsuccessfactors.controller.BaseController", {
+		
 		getRouter: function() {
 			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
-		
+
 		onNavBack: function(oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
@@ -19,7 +20,20 @@ sap.ui.define([
 			}
 		},
 
-		httpGet: function(sEntitySet, sId, sExpand, sQuery, fnSuccessCallback, fnErrorCallback, fnCompleteCallback) {
+		/**
+		 * @function
+		 * @name httpGet
+		 * @description retrieve data from odata
+		 * @param {Boolean} bAsync - async or not
+		 * @param {String} sEntitySet - entity set
+		 * @param {String} sId - id of entity set
+		 * @param {String} sExpand - expand
+		 * @param {String} sQuery - filter
+		 * @param {Function} fnSuccessCallback- invoke when success
+		 * @param {Function} fnErrorCallback - invoke when error
+		 * @param {Function} fnCompleteCallback - invoke when complete
+		 */
+		httpGet: function(bAsync, sEntitySet, sId, sExpand, sQuery, fnSuccessCallback, fnErrorCallback, fnCompleteCallback) {
 			var url = sEntitySet + (sId !== null ? "(" + sId + ")" : "") +
 				(function() {
 					if (sExpand !== null && sQuery !== null) {
@@ -35,7 +49,7 @@ sap.ui.define([
 			$.ajax({
 				url: "/pmapi/" + url,
 				type: "GET",
-				async: true,
+				async: bAsync,
 				success: function(oData) {
 					if (fnSuccessCallback) {
 						fnSuccessCallback(oData);
@@ -53,7 +67,17 @@ sap.ui.define([
 					}
 				}
 			});
-		}
+		},
 		
+		/**
+		 * @function
+		 * @name _showBusyIndicator
+		 * @description show busy indicator of whole view or not
+		 * @param {Boolean} bBusy - true or false
+		 */
+		_showBusyIndicator : function (bBusy) {
+			this.getView().setBusy(bBusy);
+		}
+
 	});
 });
