@@ -85,6 +85,11 @@
 					"name": "mygoal",
 					"target": "mygoal"
 				},
+				{
+					"pattern": "myteam",
+					"name": "myteam",
+					"target": "myteam"
+				},
 				
 				
 				{
@@ -211,6 +216,10 @@
 				"mygoal": {
 					"viewPath": "hcpsuccessfactors.view.goals",
 					"viewName": "MyGoal"
+				},
+				"myteam": {
+					"viewPath": "hcpsuccessfactors.view.employee",
+					"viewName": "MyTeam"
 				},
 				
 				"detail001": {

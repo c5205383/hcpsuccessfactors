@@ -10,7 +10,7 @@
 			"icon" : "employee",
 			"number" : "8",
 			"title" : "My Team",
-			"navTo": ""
+			"navTo": "myteam"
 		},
 		{
 			"icon": "documents",

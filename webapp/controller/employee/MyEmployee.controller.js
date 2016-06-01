@@ -1,8 +1,8 @@
-sap.ui.define([ "starbucksdemo/controller/BaseController", "sap/ui/model/json/JSONModel",
-		"starbucksdemo/util/httpRequest" ], function(BaseController, JSONModel, httpRequest) {
+sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/json/JSONModel",
+		"hcpsuccessfactors/util/httpRequest" ], function(BaseController, JSONModel, httpRequest) {
 	"use strict";
 
-	return BaseController.extend("starbucksdemo.controller.detail.starbucks.MyShop", {
+	return BaseController.extend("hcpsuccessfactors.controller.employee.MyEmployee", {
 		onInit : function() {
 			this.onRefreshPressed();
 			this.getView().addEventDelegate({
