@@ -6,10 +6,9 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 		deployedUrl : "sfsfdataservice/hcp/",
 
 		getRouter : function(oController) {
-			var router;
-			router = sap.ui.core.UIComponent.getRouterFor(oController);
-			if (router === undefined && oController != undefined) {
-				this.getRouter(oController.getParent());
+			var router = sap.ui.core.UIComponent.getRouterFor(oController);
+			if (router === undefined && oController.getParent != undefined) {
+				router = this.getRouter(oController.getParent());
 			}
 			return router;
 		},
@@ -20,7 +19,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {
-				this.getRouter().navTo("home", {}, true /* no history */);
+				this.getRouter(this).navTo("home", {}, true /* no history */);
 			}
 		},
 
@@ -81,62 +80,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 					compcallback();
 				}
 			});
-		},
-
-		httpGet : function(entitySet, id, expand, query, succallback, compcallback) {
-			var url = entitySet + (id !== null ? "(" + id + ")" : "") + (function() {
-				if (expand !== null && query !== null) {
-					return "?$expand=" + expand + "&$filter=" + query + "&$format=json";
-				} else if (expand !== null) {
-					return "?$expand=" + expand + "&$format=json";
-				} else if (query !== null) {
-					return "?$filter=" + query + "&$format=json";
-				} else {
-					return "?$format=json";
-				}
-			})();
-			$.ajax({
-				url : "/pmapi/" + url,
-				type : "GET",
-				async : true,
-				success : function(gdata) {
-					succallback(gdata);
-				},
-				error : function() {
-					console.error("failed.");
-				},
-				complete : function() {
-					compcallback();
-				}
-			});
-		},
-
-		httpGet : function(entitySet, id, expand, query, succallback, compcallback) {
-			var url = entitySet + (id !== null ? "(" + id + ")" : "") + (function() {
-				if (expand !== null && query !== null) {
-					return "?$expand=" + expand + "&$filter=" + query + "&$format=json";
-				} else if (expand !== null) {
-					return "?$expand=" + expand + "&$format=json";
-				} else if (query !== null) {
-					return "?$filter=" + query + "&$format=json";
-				} else {
-					return "?$format=json";
-				}
-			})();
-			$.ajax({
-				url : "/pmapi/" + url,
-				type : "GET",
-				async : true,
-				success : function(gdata) {
-					succallback(gdata);
-				},
-				error : function() {
-					console.error("failed.");
-				},
-				complete : function() {
-					compcallback();
-				}
-			});
 		}
+
 	});
 });
