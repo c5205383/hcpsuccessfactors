@@ -207,6 +207,11 @@
 					"pattern": "approvalList",
 					"name": "approvalList",
 					"target": "approvalList"
+				},
+				{
+					"pattern": "admincenter",
+					"name": "admincenter",
+					"target": "admincenter"
 				}
 			],
 			"targets": {
@@ -310,6 +315,10 @@
 				"approvalList": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "ApprovalList"
+				},
+				"admincenter": {
+					"viewPath": "hcpsuccessfactors.view.admincenter",
+					"viewName": "AdminCenter"
 				},
 				"notFound": {
 					"viewName": "NotFound",
