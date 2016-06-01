@@ -45,7 +45,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 		},
 
 		onListItemPress : function(oEvent) {
-			var navTo = "view.detail.empCenter.ProfileDetail";
+			var navTo = "view.employee.ProfileDetail";
 			var oItem = oEvent.getSource();
 			var oContext = oItem.getBindingContext();
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
