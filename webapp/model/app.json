@@ -22,7 +22,7 @@
 			"icon" : "travel-expense-report",
 			"type" : "Monitor",
 			"title" : "Admin Center",
-			"navTo" : ""
+			"navTo" : "admincenter"
 		},
 		{
 			"icon" : "travel-expense-report",
