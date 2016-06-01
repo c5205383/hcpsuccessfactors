@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
+	controllerName="starbucksdemo.controller.detail.starbucks.MyShop" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="myshoppage" title="{i18n>myShop-title}">
+		<content>
+			<Toolbar class="sapUiSmallMargin">
+				<content>
+					<Title text="{i18n>myShop-title}" level="H2" />
+					<ToolbarSpacer />
+					<Select id="myshopSelector" change="onChange">
+						<items>
+							<core:Item key="1" text="Active" />
+							<core:Item key="2" text="Inactive" />
+						</items>
+					</Select>
+					<Button icon="sap-icon://add-contact" press="onPress" tooltip="{i18n>myShop-add-employee}">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow" />
+						</layoutData>
+					</Button>
+					<Button icon="sap-icon://refresh" press="onRefreshPressed">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow" />
+						</layoutData>
+					</Button>
+				</content>
+			</Toolbar>
+			<List id="myActiveEmployeeListId" items="{/results/}" mode="MultiSelect" selectionChange="onSelectionChanged">
+				<infoToolbar>
+					<Toolbar visible="false" id="idInfoToolbar">
+						<Label id="idFilterLabel" />
+					</Toolbar>
+				</infoToolbar>
+				<items>
+					<StandardListItem title="{defaultFullName}" info="Position: {title}" press="onListItemPress" type="Navigation" />
+				</items>
+			</List>
+			<MessageStrip id="messageStripId" text="" visible="false" class="cssMessageTrip" showIcon="true" showCloseButton="true" />
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer />
+				<Button text="{i18n>myshop-transfer-employee}" press="onTransferShopPressed" />
+				<Button text="{i18n>myshop-promote-employee}" />
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
