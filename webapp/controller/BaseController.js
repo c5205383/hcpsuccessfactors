@@ -50,7 +50,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 				url = this.serviceUrl + path;
 
 			} else {
-				var url = deployedUrl + path;
+				var url = this.deployedUrl + path;
 			}
 			return url;
 		},
