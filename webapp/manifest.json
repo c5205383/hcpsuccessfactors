@@ -211,6 +211,7 @@
 			],
 			"targets": {
 				"home": {
+					"viewPath": "hcpsuccessfactors.view",
 					"viewName": "overview"
 				},
 				"mygoal": {
