@@ -1,28 +1,25 @@
 jQuery.sap.declare("hcpsuccessfactors.util.httpRequest");
 hcpsuccessfactors.util.httpRequest = {
 
-	httpGetRequest : function(host, url, async, onSuccess, onError) {
+	httpGetRequest : function(host, url, data, async, onSuccess, onError) {
 
 		var result = null;
 		var datatype = "json";
 		var relativeServiceUrl = url;
 		var allServiceUrl = (function getServiceUrl(_relativeServiceUrl) {
-			var sOrigin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "");
+			var sOrigin = window.location.protocol + "//" + window.location.hostname
+					+ (window.location.port ? ":" + window.location.port : "");
 			if (host == null) {
 				return sOrigin + "/" + _relativeServiceUrl;
 			} else {
 				return host + "/" + _relativeServiceUrl;
 			}
 		})(relativeServiceUrl);
-
-		/*
-		 * if (param) { allServiceUrl += param; }
-		 */
 		jQuery.ajax({
 			url : allServiceUrl,
 			async : async,
 			type : 'GET',
-			// data : data,
+			data : data,
 			dataType : datatype,
 			contentType : datatype === "json" ? "application/json" : "application/xml",
 			success : function(rdata) {
@@ -39,40 +36,53 @@ hcpsuccessfactors.util.httpRequest = {
 					success : false,
 					data : textStatus + "\n" + errorThrown
 				};
-
+				if (typeof onSuccess === 'function') {
+					onError(result);
+				}
 			}
 		});
 		return result;
 	},
 
-	httpPostRequest : function(host, path, datatype, param, data) {
+	httpPostRequest : function(host, url, data, async, onSuccess, onError) {
 
 		var result = null;
-		var serviceHostUrl = host;
-		var relativeServiceUrl = path;
-		var allServiceUrl = (function getServiceUrl(_serviceHostUrl, _relativeServiceUrl) {
-			var sOrigin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ":" + window.location.port : "");
-			return sOrigin + '/' + _serviceHostUrl + '/' + _relativeServiceUrl;
-		})(serviceHostUrl, relativeServiceUrl);
+		var datatype = "json";
+		var relativeServiceUrl = url;
+		var allServiceUrl = (function getServiceUrl(_relativeServiceUrl) {
+			var sOrigin = window.location.protocol + "//" + window.location.hostname
+					+ (window.location.port ? ":" + window.location.port : "");
+			if (host == null) {
+				return sOrigin + "/" + _relativeServiceUrl;
+			} else {
+				return host + "/" + _relativeServiceUrl;
+			}
+		})(relativeServiceUrl);
 
-		if (param) {
-			// allServiceUrl += "?redirect=" + param;
-			allServiceUrl += param;
-		}
 		jQuery.ajax({
 			url : allServiceUrl,
-			async : false,
+			async : async,
 			type : 'POST',
 			data : data,
 			dataType : datatype,
 			contentType : datatype === "json" ? "application/json" : "application/xml",
 			success : function(rdata) {
-
-				result = rdata;
-
+				result = {
+					success : true,
+					data : rdata
+				};
+				if (typeof onSuccess === 'function') {
+					onSuccess(result);
+				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
-				result = "03-Save Failed" + textStatus + "\n" + errorThrown;
+				result = {
+					success : false,
+					data : textStatus + "\n" + errorThrown
+				};
+				if (typeof onSuccess === 'function') {
+					onError(result);
+				}
 			}
 		});
 		return result;

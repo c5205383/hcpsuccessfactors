@@ -1,0 +1,7 @@
+<mvc:View controllerName="hcpsuccessfactors.controller.mainapp" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App id="sfsf-ext-app">
+		<pages>
+		</pages>
+	</App>
+</mvc:View>

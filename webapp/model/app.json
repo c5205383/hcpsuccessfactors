@@ -1,72 +1,91 @@
 {
-	"category": [
+	"TileCollection" : [
 		{
-			"name": "My Goals",
-			"navTo": "myGoal"
+			"icon" : "target-group",
+			"type" : "Monitor",
+			"title" : "My Goals",
+			"navTo" : "mygoal"
 		},
 		{
-			"name": "My Forms",
-			"navTo": "myForm"
+			"icon" : "employee",
+			"number" : "8",
+			"title" : "My Team",
+			"navTo": ""
 		},
 		{
-			"name": "My Profile",
-			"navTo": "myProfile"
+			"icon": "documents",
+			"type" : "Monitor",
+			"title" : "Forms",
+			"navTo" : ""
 		},
 		{
-			"name": "Employee Center",
-			"navTo": "employeeCenter"
+			"icon" : "travel-expense-report",
+			"type" : "Monitor",
+			"title" : "Admin Center",
+			"navTo" : ""
 		},
 		{
-			"name": "Candidates",
-			"navTo": "candidate"
+			"icon" : "travel-expense-report",
+			"type" : "Monitor",
+			"title" : "Charts",
+			"navTo" : ""
 		},
 		{
-		    "name": "My Shop",
-		    "navTo": "myShop"
+			"icon" : "lab",
+			"number" : "1",
+			"numberUnit" : "Invention",
+			"title" : "Test Lab Reports",
+			"info" : "8 Days Ago"
 		},
 		{
-		    "name": "Onboard Process",
-		    "navTo": "onboardProcess"
+			"icon" : "inbox",
+			"type" : "Monitor",
+			"title" : "Leave Request History"
 		},
 		{
-		    "name": "Approval List",
-		    "navTo": "approvalList"
+			"type" : "Create",
+			"title" : "Create Purchase Order",
+			"info" : "890€ Open Budget",
+			"infoState" : "Success"
 		},
 		{
-			"name": "Employee Transfer",
-			"navTo": "empTransfer"
+			"icon" : "stethoscope",
+			"number" : "3",
+			"title" : "Yearly Health Check",
+			"info" : "3 year overdue",
+			"infoState" : "Error"
 		},
 		{
-		    "name": "Labor Type Change Process",
-		    "navTo": "laborTypeChangeProcess"
+			"icon" : "meal",
+			"type" : "Monitor",
+			"title" : "Meal Schedule"
 		},
 		{
-		    "name": "Promotion Process",
-		    "navTo": "promotionProcess"
+			"icon" : "cart",
+			"number" : "787",
+			"numberUnit" : "euro",
+			"title" : "My Shopping Carts",
+			"info" : "Waiting for Approval",
+			"infoState" : "Warning"
 		},
 		{
-		    "name": "Contract Renew Process",
-		    "navTo": "contractRenewProcess"
+			"icon" : "factory",
+			"number" : "2",
+			"numberUnit" : "Outages",
+			"title" : "Factory Power Management",
+			"info" : "Production On Hold",
+			"infoState" : "Error"
 		},
 		{
-		    "name": "Performance Appraisal",
-		    "navTo": "performanceAppraisal"
+			"icon" : "calendar",
+			"title" : "Team Calendar"
 		},
 		{
-		    "name": "Part-Time Partner’s Merit Increase Process",
-		    "navTo": "partTimePartner"
-		},
-		{
-		    "name": "Termination Process",
-		    "navTo": "terminationProcess"
-		},
-		{
-		    "name": "Change Store Manager",
-		    "navTo": "changeStoreManager"
-		},
-		{
-		    "name": "Store Partner’s Personal Information’s Update Process",
-		    "navTo": "storePartnerInfo"
+			"icon" : "pie-chart",
+			"number" : "5",
+			"title" : "Financial Reports",
+			"info" : "4 day ago",
+			"infoState" : "Warning"
 		}
 	]
 }
