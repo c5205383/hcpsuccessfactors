@@ -20,17 +20,15 @@
 		},
 		{
 			"icon" : "travel-expense-report",
-			"number" : "281",
-			"numberUnit" : "euro",
-			"title" : "Travel Reimbursement",
-			"info" : "1 day ago"
+			"type" : "Monitor",
+			"title" : "Admin Center",
+			"navTo" : ""
 		},
 		{
-			"icon" : "loan",
-			"number" : "2380",
-			"numberUnit" : "euro",
-			"title" : "My Salary",
-			"info" : "8 days ago"
+			"icon" : "travel-expense-report",
+			"type" : "Monitor",
+			"title" : "Charts",
+			"navTo" : ""
 		},
 		{
 			"icon" : "lab",

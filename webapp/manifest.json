@@ -77,11 +77,6 @@
 			"routes": [
 				{
 					"pattern": "",
-					"name": "",
-					"target": ""
-				},
-				{
-					"pattern": "home",
 					"name": "home",
 					"target": "home"
 				},
@@ -211,7 +206,7 @@
 			],
 			"targets": {
 				"home": {
-					"viewName": "mainapp"
+					"viewName": "overview"
 				},
 				"mygoal": {
 					"viewPath": "hcpsuccessfactors.view.goals",

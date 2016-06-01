@@ -12,7 +12,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
 			sPreviousHash = oHistory.getPreviousHash();
-			if (sPreviousHash !== undefined && sPreviousHash !=="") {
+			if (sPreviousHash !== undefined ) {
 				window.history.go(-1);
 			} else {
 				this.getRouter().navTo("home", {}, true /* no history */);

@@ -3,32 +3,12 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController" ], function(BaseCo
 
 	return BaseController.extend("hcpsuccessfactors.controller.mainapp", {
 
-		onTilePressed : function(evt) {
-			var oTile = evt.getSource();
-			var oContext = oTile.getBindingContext();
-
-			if (oContext != undefined) {
-				var model = oContext.getModel();
-				var path = oContext.getPath();
-				var data = model.getProperty(path);
-				window.console.log(data);
-				this.getRouter().navTo(data.navTo);
-			}
-		},
-
 		getDefaultPage : function() {
 		},
 
 		onInit : function() {
 			// load needed jquery file
 			jQuery.sap.require("jquery.sap.history");
-
-			// initial tile container page
-			var appDataPath = "/model/app.json";
-			var modelPath = jQuery.sap.getModulePath("hcpsuccessfactors", appDataPath);
-			var oModel = new sap.ui.model.json.JSONModel();
-			oModel.loadData(modelPath, null, false);
-			this.getView().setModel(oModel);
 
 			this.getView().app = this.getView().byId("sfsf-ext-app");
 
