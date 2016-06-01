@@ -5,12 +5,8 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 		serviceUrl : "hcpmiddleware/hcp/",
 		deployedUrl : "sfsfdataservice/hcp/",
 
-		getRouter : function(oController) {
-			var router = sap.ui.core.UIComponent.getRouterFor(oController);
-			if (router === undefined && oController.getParent != undefined) {
-				router = this.getRouter(oController.getParent());
-			}
-			return router;
+		getRouter : function() {
+			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
 		onNavBack : function(oEvent) {
 			var oHistory, sPreviousHash;
