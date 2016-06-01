@@ -2,7 +2,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 		"hcpsuccessfactors/util/httpRequest" ], function(BaseController, JSONModel, httpRequest) {
 	"use strict";
 
-	return BaseController.extend("hcpsuccessfactors.controller.employee.MyEmployee", {
+	return BaseController.extend("hcpsuccessfactors.controller.employee.MyTeam", {
 		onInit : function() {
 			this.onRefreshPressed();
 			this.getView().addEventDelegate({
@@ -13,7 +13,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 		},
 
 		_onBeforeShow : function(event) {
-
 			if (event && event.data) {
 				if (event.data.result != undefined) {
 					var message = "";
@@ -82,14 +81,12 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 		},
 
 		getMyEmployeeList : function(oList) {
-
 			var host = this.getServiceHost();
-			var url = this.getServiceUrl("getUserDirectReports");
+			var url = this.getServiceUrl("getEmpDirectReports");
 
 			var that = this;
 			var result = httpRequest.httpGetRequest(host, url, null, true, function(result) {
 				if (result != null) {
-					// that.hideBusyIndicator();
 					oList.setBusy(false);
 					if (result.success === true) {
 						var oModel = new sap.ui.model.json.JSONModel();
@@ -100,6 +97,8 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 					}
 				}
+			}, function(error) {
+				oList.setBusy(false);
 			});
 		},
 

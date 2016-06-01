@@ -1,18 +1,18 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
-	controllerName="hcpsuccessfactors.controller.employee.MyEmployee" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page id="myshoppage" title="{i18n>myShop-title}">
+	controllerName="hcpsuccessfactors.controller.employee.MyTeam" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>myTeam-page-title}" showNavButton="true" navButtonPress="onNavBack">
 		<content>
 			<Toolbar class="sapUiSmallMargin">
 				<content>
-					<Title text="{i18n>myShop-title}" level="H2" />
+					<Title text="{i18n>myTeam-title}" level="H2" />
 					<ToolbarSpacer />
-					<Select id="myshopSelector" change="onChange">
+					<Select id="selectorId" change="onChange">
 						<items>
 							<core:Item key="1" text="Active" />
 							<core:Item key="2" text="Inactive" />
 						</items>
 					</Select>
-					<Button icon="sap-icon://add-contact" press="onPress" tooltip="{i18n>myShop-add-employee}">
+					<Button icon="sap-icon://add-contact" press="onPress" tooltip="{i18n>myTeam-add-employee}">
 						<layoutData>
 							<OverflowToolbarLayoutData priority="NeverOverflow" />
 						</layoutData>
@@ -39,8 +39,8 @@
 		<footer>
 			<Toolbar>
 				<ToolbarSpacer />
-				<Button text="{i18n>myshop-transfer-employee}" press="onTransferShopPressed" />
-				<Button text="{i18n>myshop-promote-employee}" />
+				<Button text="{i18n>myTeam-transfer-employee}" press="onTransferShopPressed" />
+				<Button text="{i18n>myTeam-promote-employee}" />
 			</Toolbar>
 		</footer>
 	</Page>
