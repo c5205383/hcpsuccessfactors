@@ -4,7 +4,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 	"use strict";
 	return BaseController.extend("hcpsuccessfactors.controller.goals.GoalDetail", {
 
-		onNavBack : function(event) {
+		/*onNavBack : function(event) {
 			var navTo = "view.goals.MyGoal";
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
 				id : navTo,
@@ -12,7 +12,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 					mutiple : false
 				}
 			});
-		},
+		},*/
 
 		onInit : function() {
 
