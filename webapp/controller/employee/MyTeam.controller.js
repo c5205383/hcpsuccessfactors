@@ -5,7 +5,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 	return BaseController.extend("hcpsuccessfactors.controller.employee.MyTeam", {
 
 		sProfileDetailPageName : "hcpsuccessfactors.view.employee.ProfileDetail",
-		sHiringPageName : "hcpsuccessfactors.view.employee.Hiring",
+		sHiringPageName : "hcpsuccessfactors.view.employee.HiringEmployee",
 		sTransferPageName : "hcpsuccessfactors.view.employee.Transfer",
 
 		onInit : function() {
@@ -40,9 +40,9 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 			}
 		},
 
-		onPress : function(oEvent) {
+		onAddPressed : function(oEvent) {
 			// this.getRouter().navTo("hiringProcess", {});
-			var navTo = "view.detail.starbucks.HiringProcess";
+			var navTo = this.sHiringPageName;
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
 				id : navTo
 			});

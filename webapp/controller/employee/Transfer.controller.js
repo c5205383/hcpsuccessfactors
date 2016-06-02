@@ -5,6 +5,8 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 
 	return BaseController.extend("hcpsuccessfactors.controller.employee.Transfer", {
 
+		sMyTeamPageName : "hcpsuccessfactors.view.employee.MyTeam",
+
 		onInit : function() {
 			this.getView().addEventDelegate({
 				onBeforeShow : jQuery.proxy(function(event) {
@@ -54,6 +56,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 
 					}
 				}
+			}, function(error) {
 			});
 		},
 
@@ -72,7 +75,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 				if (result != null) {
 					if (result.success === true) {
 						var data = result.data;
-						var navTo = "view.detail.starbucks.MyShop";
+						var navTo = that.sMyTeamPageName;
 						sap.ui.getCore().getEventBus().publish("nav", "to", {
 							id : navTo,
 							data : {
@@ -130,11 +133,15 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 		},
 
 		onBackCancel : function(event) {
-			var navTo = "view.detail.starbucks.MyShop";
+			this.onNavBack();
+		},
+
+		onNavBack : function(event) {
+			var navTo = this.sMyTeamPageName;
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
 				id : navTo
 			});
-		}
+		},
 
 	});
 

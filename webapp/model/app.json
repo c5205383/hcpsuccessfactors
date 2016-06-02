@@ -16,7 +16,7 @@
 			"icon": "documents",
 			"type" : "Monitor",
 			"title" : "Forms",
-			"navTo" : ""
+			"navTo" : "myform"
 		},
 		{
 			"icon" : "travel-expense-report",
