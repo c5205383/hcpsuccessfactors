@@ -2,7 +2,7 @@
 	controllerName="hcpsuccessfactors.controller.admincenter.AdminCenter" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>admincenter-page-title}" showNavButton="true" navButtonPress="onNavBack">
 		<content>
-			<List class="sapUiResponsiveMargin" width="auto">
+			<List class="sapUiResponsiveMargin" width="auto" items="{ path : 'BJsModel>/d/results'}">
 				<headerToolbar>
 					<Toolbar>
 						<Title text="{i18n>admincenter-page-batchjob-title}"/>
@@ -16,16 +16,16 @@
 							<core:Icon size="2rem" src="sap-icon://e-care" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
 							<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
 								<HBox>
-									<Label text="name" />
+									<Label text="{i18n>admincenter-page-batchjob-name}: {BJsModel>name}" />
 									<Label width="1.5rem" text="" />
-									<Label text="type" />
+									<Label text="{i18n>admincenter-page-batchjob-type}: {BJsModel>type}" />
 								</HBox>
-								<Label text="description: xxxxxxxxxxxxxxxxxxxxxx"/>
+								<Label text="{i18n>admincenter-page-batchjob-description}: {BJsModel>info}"/>
 							</VBox>
 						</HBox>
 						<HBox justifyContent="End" width="50%">
 							<Button icon="sap-icon://begin" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
-							<Button icon="sap-icon://delete" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+							<Button press="onDeleteBJPress" icon="sap-icon://delete" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
 							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
 						</HBox>
 					</HBox>
