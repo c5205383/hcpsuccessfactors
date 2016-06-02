@@ -17,18 +17,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 			});
 		},
 
-		initActionSelect : function() {
-			var oActionSelect = this.getView().byId("myTeamActionSelectId");
-			oActionSelect.addButton(new sap.m.Button({
-				text : "{i18n>myTeam-transfer-employee-btn}",
-				press : this.onTransferShopPressed()
-			}));
-			oActionSelect.addButton(new sap.m.Button({
-				text : "{{i18n>myTeam-promote-employee-btn}}",
-				press : this.onTransferShopPressed()
-			}));
-		},
-
 		_onBeforeShow : function(event) {
 			if (event && event.data) {
 				if (event.data.result != undefined) {
