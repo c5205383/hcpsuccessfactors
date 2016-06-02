@@ -39,8 +39,8 @@
 		<footer>
 			<Toolbar>
 				<ToolbarSpacer />
-				<Button text="{i18n>myTeam-transfer-employee}" press="onTransferShopPressed" />
-				<Button text="{i18n>myTeam-promote-employee}" />
+				<Button text="{i18n>myTeam-transfer-employee-btn}" press="onTransferShopPressed" />
+				<Button text="{i18n>myTeam-promote-employee-btn}" />
 			</Toolbar>
 		</footer>
 	</Page>
