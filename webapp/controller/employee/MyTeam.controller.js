@@ -6,6 +6,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 		sProfileDetailPageName : "hcpsuccessfactors.view.employee.ProfileDetail",
 		sHiringPageName : "hcpsuccessfactors.view.employee.Hiring",
+		sTransferPageName : "hcpsuccessfactors.view.employee.Transfer",
 
 		onInit : function() {
 			this.onRefreshPressed();
@@ -72,7 +73,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 			}
 
 			if (aContexts) {
-				var navTo = "view.detail.starbucks.TransferShop";
+				var navTo = this.sTransferPageName;
 				sap.ui.getCore().getEventBus().publish("nav", "to", {
 					id : navTo,
 					data : {

@@ -1,4 +1,4 @@
-jQuery.sap.require("hcpsuccessfactors.util.format");
+jQuery.sap.require("hcpsuccessfactors.util.formatter");
 sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/json/JSONModel" ], function(
 		BaseController, JSONModel) {
 	"use strict";
