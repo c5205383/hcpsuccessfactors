@@ -6,7 +6,7 @@
 				<uxap:ObjectPageHeader objectTitle="Detail View of Goal for {GoalModel>userId}" level="H2" design="Bold"></uxap:ObjectPageHeader>
 			</uxap:headerTitle>
 			<uxap:headerContent>
-				<Title title="" text="This page is the detail of the goal '{GoalModel>name}'."/>
+				<Title title="" text="This page is the detail of the goal '{GoalModel>name}'." class="cssGoalDetailTitle"/>
 			</uxap:headerContent>
 			<uxap:sections>
 				<uxap:ObjectPageSection title="Goal Detail">
@@ -28,13 +28,13 @@
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-startdate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'GoalModel>start',formatter:'hcpsuccessfactors.util.formatter.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
-											maxLines="1"/>
+										<Text text="{path:'GoalModel>start',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" class="sapUiSmallMarginEnd"
+											textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-duedate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'GoalModel>due',formatter:'hcpsuccessfactors.util.formatter.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
-											maxLines="1"/>
+										<Text text="{path:'GoalModel>due',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" class="sapUiSmallMarginEnd"
+											textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-status}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
@@ -51,18 +51,13 @@
 											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.formatter.formatDone'}" displayValue="{GoalModel>done}%"
 											showValue="true" state="None"/>
 									</HBox>
-									<HBox alignItems="Start" class="cssHBox">
-										<Label text="{path:'GoalModel>userId',formatter:'hcpsuccessfactors.util.formatter.formatCreatewarning'} " width="500px"
-											class="sapUiSmallMarginEnd cssWarning"/>
-									</HBox>
-									<HBox alignItems="Start" class="cssHBox">
-										<Label
-											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.formatter.formatModifywarning'} {path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.formatter.formatDate'}"
-											width="500px" class="sapUiSmallMarginEnd cssWarning"/>
-									</HBox>
 								</l:VerticalLayout>
 							</uxap:blocks>
 						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+				<uxap:ObjectPageSection title="Other">
+					<uxap:subSections>
 						<uxap:ObjectPageSubSection title="Audit History ">
 							<uxap:blocks>
 								<l:VerticalLayout width="100%" class="cssLayout">
@@ -79,41 +74,19 @@
 											</Column>
 										</columns>
 										<items>
-											<ColumnListItem >
+											<ColumnListItem>
 												<cells>
+													<Text text="Create"/>
+													<Text text="{GoalModel>userId}"/>
+													<Text text=""/>
+														</cells></ColumnListItem><ColumnListItem><cells>
 													<Text text="Modify"/>
 													<Text text="{GoalModel>modifier}"/>
-													<Text text="{path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.formatter.formatDate'}"/>
+													<Text text="{path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}"/>
 												</cells>
 											</ColumnListItem>
 										</items>
 									</Table>
-								</l:VerticalLayout>
-							</uxap:blocks>
-						</uxap:ObjectPageSubSection>
-					</uxap:subSections>
-				</uxap:ObjectPageSection>
-				<uxap:ObjectPageSection title="Other">
-					<uxap:subSections>
-						<uxap:ObjectPageSubSection title="Other1">
-							<uxap:blocks>
-								<l:VerticalLayout width="100%" class="cssLayout">
-									<HBox alignItems="Start" class="cssHBox">
-										<Text text="2"/>
-									</HBox>
-								</l:VerticalLayout>
-							</uxap:blocks>
-						</uxap:ObjectPageSubSection>
-					</uxap:subSections>
-				</uxap:ObjectPageSection>
-				<uxap:ObjectPageSection title="Other Section">
-					<uxap:subSections>
-						<uxap:ObjectPageSubSection title="Other2">
-							<uxap:blocks>
-								<l:VerticalLayout width="100%" class="cssLayout">
-									<HBox alignItems="Start" class="cssHBox">
-										<Text text="3"/>
-									</HBox>
 								</l:VerticalLayout>
 							</uxap:blocks>
 						</uxap:ObjectPageSubSection>

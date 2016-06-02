@@ -105,6 +105,13 @@
 	text-overflow: ellipsis;
 }
 
+.cssGoalDetailTitle {
+	font-style:italic;
+	color : gray;
+	font-size : 15px;
+	padding-left: 15px;
+}
+
 /* DO NOTE OVER WRITE UI5 CSS CLASS*/
 /*.sapMListUl {
     padding: 0 2rem;
