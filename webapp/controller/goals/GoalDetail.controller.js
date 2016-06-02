@@ -28,7 +28,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 			var oModel;
 			var sPath;
 			if (event && event.data) {
-				this
+			//	this
 				if (event.data.mutiple == false) {
 					var oContext = event.data.contexts;
 					oModel = oContext.getModel();
@@ -40,6 +40,8 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 				path : sPath,
 				model : "GoalModel"
 			});
+			var oControl = this.getView().byId("idState");
+			this._formatStateBackground(oControl, oControl.getText());
 		},
 
 		bindMockData : function() {
@@ -67,28 +69,28 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 		_formatStateBackground : function(oControl, sText) {
 			oControl.addStyleClass("cssBackground");
-			switch (sText) {
-			case "Not Started":
+			switch (sText.toLowerCase()) {
+			case "not started":
 				$(".cssBackground").css("background-color", "white");
 				$(".cssBackground").css("color", "black");
 				break;
-			case "On Track":
+			case "on track":
 				$(".cssBackground").css("background-color", "yellow");
 				$(".cssBackground").css("color", "black");
 				break;
-			case "Behind":
+			case "behind":
 				$(".cssBackground").css("background-color", "red");
 				$(".cssBackground").css("color", "white");
 				break;
-			case "Completed":
+			case "completed":
 				$(".cssBackground").css("background-color", "green");
 				$(".cssBackground").css("color", "white");
 				break;
-			case "Postponed":
+			case "postponed":
 				$(".cssBackground").css("background-color", "purple");
 				$(".cssBackground").css("color", "white");
 				break;
-			case "Cancelled":
+			case "cancelled":
 				$(".cssBackground").css("background-color", "blue");
 				$(".cssBackground").css("color", "white");
 				break;

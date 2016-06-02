@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"_version": "1.1.0",
 	"sap.app": {
@@ -339,4 +340,347 @@
 		"uri": "webapp",
 		"_version": "1.1.0"
 	}
+=======
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "hcpsuccessfactors",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "hcpsuccessfactors.view.mainapp",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "hcpsuccessfactors.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "hcpsuccessfactors.view",
+				"controlId": "sfsf-ext-app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "home"
+				},
+				{
+					"pattern": "mygoal",
+					"name": "mygoal",
+					"target": "mygoal"
+				},
+				{
+					"pattern": "myteam",
+					"name": "myteam",
+					"target": "myteam"
+				},
+				
+				
+				{
+					"pattern": "detail1",
+					"name": "detail001",
+					"target": "detail001"
+				},
+				{
+					"pattern": "detail2",
+					"name": "detail002",
+					"target": "detail002"
+				},
+				
+				{
+					"pattern": "myform",
+					"name": "myform",
+					"target": "myform"
+				},
+				{
+					"pattern": "mygoal/goals/{id}",
+					"name": "goalDetail",
+					"target": "goalDetail"
+				},
+				{
+					"pattern": "myprofile",
+					"name": "myProfile",
+					"target": "myProfile"
+				},
+				{
+					"pattern": "myprofile/{id}",
+					"name": "navToMyProfile",
+					"target": "myProfile"
+				},
+				{
+					"pattern": "employeecenter",
+					"name": "employeeCenter",
+					"target": "employeeCenter"
+				},
+				{
+					"pattern": "employeecenter/profile/{id}",
+					"name": "userDetail",
+					"target": "profileDetail"
+				},
+				{
+					"pattern": "candidate",
+					"name": "candidate",
+					"target": "candidate"
+				},
+				{
+					"pattern": "myform/formDetail/{id}",
+					"name": "formdetail",
+					"target": "formDetail"
+				},
+				{
+					"pattern": "myshop",
+					"name": "myShop",
+					"target": "myShop"
+				},
+				{
+					"pattern": "emptransfer",
+					"name": "empTransfer",
+					"target": "empTransfer"
+				},
+				{
+					"pattern": "hiringprocess",
+					"name": "hiringProcess",
+					"target": "hiringProcess"
+				},
+				{
+					"pattern": "onboardProcess",
+					"name": "onboardProcess",
+					"target": "onboardProcess"
+				},
+				{
+					"pattern": "laborTypeChangeProcess",
+					"name": "laborTypeChangeProcess",
+					"target": "laborTypeChangeProcess"
+				},
+				{
+					"pattern": "promotionProcess",
+					"name": "promotionProcess",
+					"target": "promotionProcess"
+				},
+				{
+					"pattern": "contractRenewProcess",
+					"name": "contractRenewProcess",
+					"target": "contractRenewProcess"
+				},
+				{
+					"pattern": "performanceAppraisal",
+					"name": "performanceAppraisal",
+					"target": "performanceAppraisal"
+				},
+				{
+					"pattern": "partTimePartner",
+					"name": "partTimePartner",
+					"target": "partTimePartner"
+				},
+				{
+					"pattern": "terminationProcess",
+					"name": "terminationProcess",
+					"target": "terminationProcess"
+				},
+				{
+					"pattern": "changeStoreManager",
+					"name": "changeStoreManager",
+					"target": "changeStoreManager"
+				},
+				{
+					"pattern": "storePartnerInfo",
+					"name": "storePartnerInfo",
+					"target": "storePartnerInfo"
+				},
+				{
+					"pattern": "approvalList",
+					"name": "approvalList",
+					"target": "approvalList"
+				},
+				{
+					"pattern": "admincenter",
+					"name": "admincenter",
+					"target": "admincenter"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewPath": "hcpsuccessfactors.view",
+					"viewName": "overview"
+				},
+				"mygoal": {
+					"viewPath": "hcpsuccessfactors.view.goals",
+					"viewName": "MyGoal"
+				},
+				"myteam": {
+					"viewPath": "hcpsuccessfactors.view.employee",
+					"viewName": "MyTeam"
+				},
+				
+				"detail001": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "DemoDetail001"
+				},
+				"detail002": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "DemoDetail002"
+				},
+				
+				"goalDetail": {
+					"viewPath": "hcpsuccessfactors.view.detail.goal",
+					"viewName": "GoalDetail"
+				},
+				"myform": {
+					"viewPath": "hcpsuccessfactors.view.forms",
+					"viewName": "MyForm"
+				},
+				"myProfile": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "MyProfile"
+				},
+				"employeeCenter": {
+					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
+					"viewName": "EmployeeCenter"
+				},
+				"profileDetail": {
+					"viewPath": "hcpsuccessfactors.view.detail.empCenter",
+					"viewName": "ProfileDetail"
+				},
+				"candidate": {
+					"viewPath": "hcpsuccessfactors.view.detail",
+					"viewName": "Candidate"
+				},
+				"myShop": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "MyShop"
+				},
+				"empTransfer": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "EmployeeTransfer"
+				},
+				"formDetail": {
+					"viewPath": "hcpsuccessfactors.view.detail.form",
+					"viewName": "Formdetail"
+				},
+				"hiringProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "HiringProcess"
+				},
+				"onboardProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "OnboardProcess"
+				},
+				"laborTypeChangeProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "LaborTypeChangeProcess"
+				},
+				"promotionProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PromotionProcess"
+				},
+				"contractRenewProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ContractRenewProcess"
+				},
+				"performanceAppraisal": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PerformanceAppraisal"
+				},
+				"partTimePartner": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "PartTimePartner"
+				},
+				"terminationProcess": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "TerminationProcess"
+				},
+				"changeStoreManager": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ChangeStoreManager"
+				},
+				"storePartnerInfo": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "StorePartnerInfo"
+				},
+				"approvalList": {
+					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
+					"viewName": "ApprovalList"
+				},
+				"admincenter": {
+					"viewPath": "hcpsuccessfactors.view.admincenter",
+					"viewName": "AdminCenter"
+				},
+				"notFound": {
+					"viewName": "NotFound",
+					"transition": "show"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+>>>>>>> branch 'feature/bruce' of https://github.com/c5205383/hcpsuccessfactors
 }
