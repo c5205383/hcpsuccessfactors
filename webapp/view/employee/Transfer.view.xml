@@ -1,0 +1,65 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	controllerName="hcpsuccessfactors.controller.employee.Transfer" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>transfer-emp-shop}" id="transferEmployeeId" showNavButton="true">
+				<content>
+					<Table id="transfertable" items="{/}">
+						<columns>
+							<Column width="30%">
+								<Text text="{i18n>transfer-emp}" />
+							</Column>
+							<Column width="20%">
+								<Text text="{i18n>transfer-emp-to-city}" wrapping="false" />
+							</Column>
+							<Column width="20%">
+								<Text text="{i18n>transfer-emp-to-branch}" wrapping="false" />
+							</Column>
+							<Column width="20%">
+								<Text text="{i18n>transfer-emp-to-company}" wrapping="false" />
+							</Column>
+							<Column width="20%">
+								<Text text="{i18n>transfer-emp-effectiveDate}" wrapping="false" />
+							</Column>
+							<Column width="10%">
+								<Text text="{i18n>transfer-emp-shop-action}" wrapping="false" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier width="100%" title="{defaultFullName}"
+										text="{i18n>transfer-emp-id}: {userId}\r\n {i18n>transfer-emp-position}: {jobTitle}\r\n{i18n>transfer-emp-city}: {city}\r\n {i18n>transfer-emp-currentBranch}: {location}" />
+									<Select selectedKey="{transferCity}" forceSelection="false" change="onSelectCityKeyChange" width="100%">
+										<items>
+											<core:Item key="CD" text="Chengdu" />
+											<core:Item key="BJ" text="Beijing" />
+											<core:Item key="SH" text="Shanghai" />
+											<core:Item key="SZ" text="Shenzheng" />
+										</items>
+									</Select>
+									<Select selectedKey="{transferLocation}" forceSelection="false" change="onSelectLocationKeyChange" items="{path:'Location>/d/results'}"
+										width="100%">
+										<items>
+											<core:Item key="{Location>externalCode}" text="{Location>description} ({Location>externalCode})" />
+										</items>
+									</Select>
+									<Text text="{transferCompany}" />
+									<DatePicker value="{effectiveDate}" valueFormat="yyyy-MM-dd" change="onDateChange" width="100%" />
+									<Button icon="sap-icon://delete" press="onDeletePress" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Button text="Submit" type="Accept" press="onSubmit" />
+						<Button text="Cancel" press="onBackCancel" />
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

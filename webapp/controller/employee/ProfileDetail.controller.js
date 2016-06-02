@@ -2,6 +2,9 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController" ], function(BaseCo
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.employee.ProfileDetail", {
+
+		sMyTeamPageName : "hcpsuccessfactors.view.employee.MyTeam",
+
 		onInit : function() {
 			this.bindMockData();
 			this.getView().addEventDelegate({
@@ -39,7 +42,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController" ], function(BaseCo
 			if (oRouter != undefined) {
 				this.onNavBack(event);
 			} else {
-				var navTo = "view.employee.MyTeam";
+				var navTo = this.sMyTeamPageName
 				sap.ui.getCore().getEventBus().publish("nav", "to", {
 					id : navTo
 				});

@@ -28,17 +28,17 @@
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-startdate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'GoalModel>start',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+										<Text text="{path:'GoalModel>start',formatter:'hcpsuccessfactors.util.formatter.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
 											maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-duedate}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text text="{path:'GoalModel>due',formatter:'hcpsuccessfactors.util.format.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
+										<Text text="{path:'GoalModel>due',formatter:'hcpsuccessfactors.util.formatter.formatDate'}" class="sapUiSmallMarginEnd" textAlign="Begin"
 											maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-status}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
-										<Text id="idState" text="{path:'GoalModel>state',formatter:'hcpsuccessfactors.util.format.formatStatus'}" class="sapUiSmallMarginEnd"
+										<Text id="idState" text="{path:'GoalModel>state',formatter:'hcpsuccessfactors.util.formatter.formatStatus'}" class="sapUiSmallMarginEnd"
 											textAlign="Begin" maxLines="1"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
@@ -48,16 +48,16 @@
 									<HBox alignItems="Start" class="cssHBox">
 										<Label text="{i18n>goaldetail-progress}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
 										<ProgressIndicator class="sapUiSmallMarginEnd" width="200px" height="12px"
-											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.format.formatDone'}" displayValue="{GoalModel>done}%"
+											percentValue="{path:'GoalModel>done',formatter:'hcpsuccessfactors.util.formatter.formatDone'}" displayValue="{GoalModel>done}%"
 											showValue="true" state="None"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
-										<Label text="{path:'GoalModel>userId',formatter:'hcpsuccessfactors.util.format.formatCreatewarning'} " width="500px"
+										<Label text="{path:'GoalModel>userId',formatter:'hcpsuccessfactors.util.formatter.formatCreatewarning'} " width="500px"
 											class="sapUiSmallMarginEnd cssWarning"/>
 									</HBox>
 									<HBox alignItems="Start" class="cssHBox">
 										<Label
-											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.format.formatModifywarning'} {path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"
+											text="{path:'GoalModel>modifier',formatter:'hcpsuccessfactors.util.formatter.formatModifywarning'} {path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.formatter.formatDate'}"
 											width="500px" class="sapUiSmallMarginEnd cssWarning"/>
 									</HBox>
 								</l:VerticalLayout>
@@ -83,7 +83,7 @@
 												<cells>
 													<Text text="Modify"/>
 													<Text text="{GoalModel>modifier}"/>
-													<Text text="{path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.format.formatDate'}"/>
+													<Text text="{path:'GoalModel>lastModified',formatter:'hcpsuccessfactors.util.formatter.formatDate'}"/>
 												</cells>
 											</ColumnListItem>
 										</items>

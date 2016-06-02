@@ -3,6 +3,11 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.employee.MyTeam", {
+
+		sProfileDetailPageName : "hcpsuccessfactors.view.employee.ProfileDetail",
+		sHiringPageName : "hcpsuccessfactors.view.employee.Hiring",
+		sTransferPageName : "hcpsuccessfactors.view.employee.Transfer",
+
 		onInit : function() {
 			this.onRefreshPressed();
 			this.getView().addEventDelegate({
@@ -45,7 +50,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 		},
 
 		onListItemPress : function(oEvent) {
-			var navTo = "view.employee.ProfileDetail";
+			var navTo = this.sProfileDetailPageName;
 			var oItem = oEvent.getSource();
 			var oContext = oItem.getBindingContext();
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
@@ -68,7 +73,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 			}
 
 			if (aContexts) {
-				var navTo = "view.detail.starbucks.TransferShop";
+				var navTo = this.sTransferPageName;
 				sap.ui.getCore().getEventBus().publish("nav", "to", {
 					id : navTo,
 					data : {

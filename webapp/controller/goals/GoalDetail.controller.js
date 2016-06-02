@@ -1,11 +1,13 @@
-jQuery.sap.require("hcpsuccessfactors.util.format");
+jQuery.sap.require("hcpsuccessfactors.util.formatter");
 sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/json/JSONModel" ], function(
 		BaseController, JSONModel) {
 	"use strict";
 	return BaseController.extend("hcpsuccessfactors.controller.goals.GoalDetail", {
 
+		sGoalListPageName : "hcpsuccessfactors.view.goals.MyGoal",
+
 		onNavBack : function(event) {
-			var navTo = "view.goals.MyGoal";
+			var navTo = this.sGoalListPageName;
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
 				id : navTo,
 				data : {
