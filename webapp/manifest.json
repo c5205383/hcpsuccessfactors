@@ -105,8 +105,8 @@
 				
 				{
 					"pattern": "myform",
-					"name": "myForm",
-					"target": "myForm"
+					"name": "myform",
+					"target": "myform"
 				},
 				{
 					"pattern": "mygoal/goals/{id}",
@@ -241,8 +241,8 @@
 					"viewPath": "hcpsuccessfactors.view.detail.goal",
 					"viewName": "GoalDetail"
 				},
-				"myForm": {
-					"viewPath": "hcpsuccessfactors.view.detail.form",
+				"myform": {
+					"viewPath": "hcpsuccessfactors.view.forms",
 					"viewName": "MyForm"
 				},
 				"myProfile": {
