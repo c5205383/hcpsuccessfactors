@@ -5,7 +5,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 	return BaseController.extend("hcpsuccessfactors.controller.employee.MyTeam", {
 
 		sProfileDetailPageName : "hcpsuccessfactors.view.employee.ProfileDetail",
-		sHiringPageName : "hcpsuccessfactors.view.employee.Hiring",
+		sHiringPageName : "hcpsuccessfactors.view.employee.HiringEmployee",
 		sTransferPageName : "hcpsuccessfactors.view.employee.Transfer",
 
 		onInit : function() {
@@ -15,6 +15,18 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 					this._onBeforeShow(event);
 				}, this)
 			});
+		},
+
+		initActionSelect : function() {
+			var oActionSelect = this.getView().byId("myTeamActionSelectId");
+			oActionSelect.addButton(new sap.m.Button({
+				text : "{i18n>myTeam-transfer-employee-btn}",
+				press : this.onTransferShopPressed()
+			}));
+			oActionSelect.addButton(new sap.m.Button({
+				text : "{{i18n>myTeam-promote-employee-btn}}",
+				press : this.onTransferShopPressed()
+			}));
 		},
 
 		_onBeforeShow : function(event) {
@@ -40,9 +52,9 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 			}
 		},
 
-		onPress : function(oEvent) {
+		onAddPressed : function(oEvent) {
 			// this.getRouter().navTo("hiringProcess", {});
-			var navTo = "view.detail.starbucks.HiringProcess";
+			var navTo = this.sHiringPageName;
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
 				id : navTo
 			});

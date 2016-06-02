@@ -2,7 +2,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="{i18n>transfer-page-title}" id="transferEmployeeId" showNavButton="true">
+			<Page title="{i18n>transfer-page-title}" id="transferEmployeeId" showNavButton="true" navButtonPress="onNavBack">
 				<content>
 					<Table id="transfertable" items="{/}">
 						<columns>
@@ -55,8 +55,8 @@
 				<footer>
 					<Toolbar>
 						<ToolbarSpacer />
-						<Button text="Submit" type="Accept" press="onSubmit" />
-						<Button text="Cancel" press="onBackCancel" />
+						<Button text="{i18n>transfer-employee-action-submit}" type="Accept" press="onSubmit" />
+						<Button text="{i18n>transfer-employee-action-cancel}" press="onBackCancel" />
 					</Toolbar>
 				</footer>
 			</Page>
