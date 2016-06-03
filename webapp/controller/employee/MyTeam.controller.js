@@ -5,7 +5,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 	return BaseController.extend("hcpsuccessfactors.controller.employee.MyTeam", {
 
 		sProfileDetailPageName : "hcpsuccessfactors.view.employee.ProfileDetail",
-		sHiringPageName : "hcpsuccessfactors.view.employee.HiringEmployee",
+		sHiringPageName : "hcpsuccessfactors.view.employee.Hiring",
 		sTransferPageName : "hcpsuccessfactors.view.employee.Transfer",
 
 		onInit : function() {
