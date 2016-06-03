@@ -3,15 +3,17 @@
  * @author Zero Yu
  */
 jQuery.sap.require("hcpsuccessfactors.util.StringUtil");
+jQuery.sap.require("hcpsuccessfactors.util.formatter");
 sap.ui.define([
 	"hcpsuccessfactors/controller/BaseController",
 	"sap/ui/model/json/JSONModel",
-	"sap/m/MessageToast"
-], function(BaseController, JSONModel, MessageToast) {
+	"sap/m/MessageToast",
+	"hcpsuccessfactors/util/formatter"
+], function(BaseController, JSONModel, MessageToast, formatter) {
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.admincenter.AdminCenter", {
-
+		formatter: formatter,
 		/**
 		 * @event
 		 * @name onInit
@@ -33,9 +35,11 @@ sap.ui.define([
 
 			//var oBJTypeModel = new JSONModel();
 			var oBJsModel = new JSONModel();
+			var oUserModel = new JSONModel();
 
 			//oView.setModel(oBJTypeModel, "BJTypeModel");
 			oView.setModel(oBJsModel, "BJsModel");
+			oView.setModel(oUserModel, "UserModel");
 		},
 
 		/**
@@ -44,7 +48,22 @@ sap.ui.define([
 		 * @description preload admin center data
 		 */
 		_loadData: function() {
-
+			//load user data
+			var oUserModel = this.getView().getModel("UserModel");
+			oUserModel.loadData("/services/userapi/currentUser", null, false);
+			var sUsername = oUserModel.getData().name;
+			//load batch jobs data
+			var oBJsModel = this.getView().getModel("BJsModel");
+			$.ajax({
+				url: "/sfsfdataservice/hcp/batchJob?owner=" + sUsername,
+				type: "GET",
+				async: true,
+				success: function (oBJsData) {
+					oBJsModel.setData(oBJsData);
+				}, 
+				complete: function () {
+				}
+			});
 		},
 
 		/**
@@ -55,9 +74,9 @@ sap.ui.define([
 		onAddBJPress: function() {
 			if (!this._oDialog) {
 				this._oDialog = sap.ui.xmlfragment("hcpsuccessfactors.view.admincenter.AddBJDialog", this);
+				this.getView().addDependent(this._oDialog);
+				this._loadBJDialogData();
 			}
-			this.getView().addDependent(this._oDialog);
-			this._loadBJDialogData();
 			this._oDialog.open();
 		},
 
@@ -134,34 +153,50 @@ sap.ui.define([
 		 * @description when dialog's ok is clicked
 		 */
 		onDialogSelectOk: function() {
-			var oInputName = sap.ui.getCore().byId("bjdialog-ipt-name");
-			var oSelectType = sap.ui.getCore().byId("bjdialog-select-type");
-			var oSelectInterval = sap.ui.getCore().byId("bjdialog-select-interval");
-			var oInputDescription = sap.ui.getCore().byId("bjdialog-ipt-description");
+			var sInputName = sap.ui.getCore().byId("bjdialog-ipt-name").getValue();
+			var sSelectType = sap.ui.getCore().byId("bjdialog-select-type").getSelectedKey();
+			var sSelectInterval = sap.ui.getCore().byId("bjdialog-select-interval").getSelectedKey();
+			var sInputDescription = sap.ui.getCore().byId("bjdialog-ipt-description").getValue();
+			var bStatus = true;
+			var sOwner = this.getView().getModel("UserModel").getData().name;
 
-			if (oInputName.getValue() === "" || oInputDescription.getValue() === "") {
+			if (sInputName === "" || sInputDescription === "") {
 				MessageToast.show("please complete the input");
 				return;
 			}
 
 			var oBJData = {
-				name: oInputName.getValue(),
-				type: oSelectType.getSelectedKey(),
-				interval: oSelectInterval.getSelectedKey(),
-				info: oInputDescription.getValue(),
-				status: true
+				name: sInputName,
+				type: sSelectType,
+				interval: sSelectInterval,
+				info: sInputDescription,
+				status: bStatus,
+				owner: sOwner
 			};
+			
 			var oBJsModel = this.getView().getModel("BJsModel");
 			var oBJsData = oBJsModel.getData();
-			if (oBJsModel.getJSON() === "{}") {
-				oBJsData = [
-					oBJData
-				];
-				oBJsModel.setData(oBJsData);
-			} else {
-				oBJsData.push(oBJData);
-				oBJsModel.setData(oBJsData);
-			}
+			$.ajax({
+				url: "/sfsfdataservice/hcp/batchJob",
+				type: "POST",
+				async: true,
+				contentType: "application/json",
+				data: JSON.stringify(oBJData),
+				success: function (oReturnBJData) {
+					MessageToast.show("add success");
+					if (oBJsModel.getJSON() === "{}") {
+						oBJsData = [
+							oReturnBJData
+						];
+					oBJsModel.setData(oBJsData);
+					} else {
+						oBJsData.push(oReturnBJData);
+						oBJsModel.setData(oBJsData);
+					}
+				}, 
+				complete: function () {
+				}
+			});
 
 			this.onDialogClose();
 		},
@@ -187,11 +222,31 @@ sap.ui.define([
 		 */
 		onBJStatusChange: function(oEvent) {
 			var oItem = oEvent.getSource();
+			var oContext = oItem.getBindingContext("BJsModel");
+			var sPath = hcpsuccessfactors.util.StringUtil.subLastWord(oContext.getPath());
+			var oBJsModel = this.getView().getModel("BJsModel");
+			var oNewBJsData = oBJsModel.getData();
+			var oBJData = oBJsModel.getData()[sPath];
 			if (oItem.getIcon() === "sap-icon://begin") {
-				oItem.setIcon("sap-icon://stop");
+				oNewBJsData[sPath].status = true;
+				oBJData.status = true;
 			} else if (oItem.getIcon() === "sap-icon://stop") {
-				oItem.setIcon("sap-icon://begin");
+				oNewBJsData[sPath].status = false;
+				oBJData.status = false;
 			}
+			$.ajax({
+					url: "/sfsfdataservice/hcp/batchJob/" + oBJData.id,
+					type: "PUT",
+					async: true,
+					contentType: "application/json",
+					data: JSON.stringify(oBJData),
+					success: function () {
+						MessageToast.show("stop success");
+						oBJsModel.setData(oNewBJsData);
+					}, 
+					complete: function () {
+					}
+				});
 		},
 
 		/**

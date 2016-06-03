@@ -24,7 +24,7 @@
 							</VBox>
 						</HBox>
 						<HBox justifyContent="End" width="50%">
-							<Button press="onBJStatusChange" icon="sap-icon://begin" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+							<Button id="admincenter-btn-status" press="onBJStatusChange" icon="{path:'BJsModel>status', formatter:'.formatter.formatBtnStatus'}" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
 							<Button press="onDeleteBJPress" icon="sap-icon://delete" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
 							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
 						</HBox>
