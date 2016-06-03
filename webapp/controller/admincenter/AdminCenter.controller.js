@@ -235,18 +235,21 @@ sap.ui.define([
 				oBJData.status = false;
 			}
 			$.ajax({
-					url: "/sfsfdataservice/hcp/batchJob/" + oBJData.id,
-					type: "PUT",
-					async: true,
-					contentType: "application/json",
-					data: JSON.stringify(oBJData),
-					success: function () {
-						MessageToast.show("stop success");
-						oBJsModel.setData(oNewBJsData);
-					}, 
-					complete: function () {
-					}
-				});
+				url: "/sfsfdataservice/hcp/batchJob/" + oBJData.id,
+				type: "PUT",
+				async: true,
+				contentType: "application/json",
+				data: JSON.stringify(oBJData),
+				success: function () {
+					MessageToast.show("stop success");
+					oBJsModel.setData(oNewBJsData);
+				}, 
+				error: function () {
+					MessageToast.show("failed to change status");
+				},
+				complete: function () {
+				}
+			});
 		},
 
 		/**
@@ -260,8 +263,9 @@ sap.ui.define([
 			var oContext = oItem.getBindingContext("BJsModel");
 			var sPath = hcpsuccessfactors.util.StringUtil.subLastWord(oContext.getPath());
 			var oBJsModel = this.getView().getModel("BJsModel");
-			
-			var warningDialog = new sap.m.Dialog({
+			var sBatchJobId = oBJsModel.getData()[sPath].id;
+			//show dialog when pressing the button
+			var oDeleteWarningDialog = new sap.m.Dialog({
 				title: "Confirm",
 				type: "Message",
 				content: new sap.m.Text({
@@ -271,9 +275,22 @@ sap.ui.define([
 					text: "OK",
 					type: "Accept",
 					press: function() {
-						oBJsModel.getData().splice(sPath, 1);
-						oBJsModel.refresh(true);
-						warningDialog.close();
+						$.ajax({
+							url: "/sfsfdataservice/hcp/batchJob/" + sBatchJobId,
+							type: "DELETE",
+							async: true,
+							success: function () {
+								MessageToast.show("delete success");
+								oBJsModel.getData().splice(sPath, 1);
+								oBJsModel.refresh(true);
+							}, 
+							error: function () {
+								MessageToast.show("failed to delete");
+							},
+							complete: function () {
+								oDeleteWarningDialog.close();
+							}
+						});
 					}
 
 				}),
@@ -281,14 +298,14 @@ sap.ui.define([
 					text: "Cancel",
 					type: "Reject",
 					press: function() {
-						warningDialog.close();
+						oDeleteWarningDialog.close();
 					}
 				}),
 				afterClose: function() {
-					warningDialog.destroy();
+					oDeleteWarningDialog.destroy();
 				}
 			});
-			warningDialog.open();
+			oDeleteWarningDialog.open();
 		}
 
 	});
