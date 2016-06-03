@@ -24,6 +24,12 @@
 		},
 		"description": "dataservice"
 	}, {
+      "path": "/services/userapi",
+      "target": {
+        "type": "service",
+        "name": "userapi"
+      }
+    }, {
 		"path": "/pmapi",
 		"target": {
 			"type": "destination",
