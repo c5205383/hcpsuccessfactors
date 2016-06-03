@@ -4,7 +4,8 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 	"use strict";
 
 	var array = [];
-	return BaseController.extend("hcpsuccessfactors.controller.employee.HiringEmployee", {
+	return BaseController.extend("hcpsuccessfactors.controller.employee.Hiring", {
+		sMyTeamPageName : "hcpsuccessfactors.view.employee.MyTeam",
 
 		onInit : function() {
 
@@ -147,11 +148,11 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 
 		},
 
-		onBackCancel : function() {
+		onCancel : function() {
 			var otable = this.byId("hiringtable");
 			otable.destroyItems();
 			// this.onNavBack();
-			var navTo = "view.detail.starbucks.MyShop";
+			var navTo = this.sMyTeamPageName;
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
 				id : navTo
 			});

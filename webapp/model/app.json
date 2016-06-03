@@ -19,73 +19,16 @@
 			"navTo" : "myform"
 		},
 		{
-			"icon" : "travel-expense-report",
+			"icon" : "performance",
 			"type" : "Monitor",
 			"title" : "Admin Center",
 			"navTo" : "admincenter"
 		},
 		{
-			"icon" : "travel-expense-report",
+			"icon" : "pie-chart",
 			"type" : "Monitor",
 			"title" : "Charts",
 			"navTo" : ""
-		},
-		{
-			"icon" : "lab",
-			"number" : "1",
-			"numberUnit" : "Invention",
-			"title" : "Test Lab Reports",
-			"info" : "8 Days Ago"
-		},
-		{
-			"icon" : "inbox",
-			"type" : "Monitor",
-			"title" : "Leave Request History"
-		},
-		{
-			"type" : "Create",
-			"title" : "Create Purchase Order",
-			"info" : "890€ Open Budget",
-			"infoState" : "Success"
-		},
-		{
-			"icon" : "stethoscope",
-			"number" : "3",
-			"title" : "Yearly Health Check",
-			"info" : "3 year overdue",
-			"infoState" : "Error"
-		},
-		{
-			"icon" : "meal",
-			"type" : "Monitor",
-			"title" : "Meal Schedule"
-		},
-		{
-			"icon" : "cart",
-			"number" : "787",
-			"numberUnit" : "euro",
-			"title" : "My Shopping Carts",
-			"info" : "Waiting for Approval",
-			"infoState" : "Warning"
-		},
-		{
-			"icon" : "factory",
-			"number" : "2",
-			"numberUnit" : "Outages",
-			"title" : "Factory Power Management",
-			"info" : "Production On Hold",
-			"infoState" : "Error"
-		},
-		{
-			"icon" : "calendar",
-			"title" : "Team Calendar"
-		},
-		{
-			"icon" : "pie-chart",
-			"number" : "5",
-			"title" : "Financial Reports",
-			"info" : "4 day ago",
-			"infoState" : "Warning"
 		}
 	]
 }
