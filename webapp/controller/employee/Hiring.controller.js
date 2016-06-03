@@ -5,8 +5,9 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 
 	var array = [];
 	return BaseController.extend("hcpsuccessfactors.controller.employee.Hiring", {
-		sMyTeamPageName : "hcpsuccessfactors.view.employee.MyTeam",
 
+		sMyTeamPageName : "hcpsuccessfactors.view.employee.MyTeam",
+		sAddFormPageName : "hcpsuccessfactors.view.employee.NewEmployeeForm",
 		onInit : function() {
 
 		},
@@ -29,7 +30,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 				this.getView().addDependent(this._oPopover);
 				this._oPopover.bindElement("/ProductCollection/0");
 			}
-
 			var oButton = oEvent.getSource();
 			jQuery.sap.delayedCall(0, this, function() {
 				this._oPopover.openBy(oButton);
@@ -57,22 +57,11 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 			}
 		},
 
-		handleTableSelectDialogPress : function(oEvent) {
-			if (!this._oDialog) {
-				this._oDialog = sap.ui
-						.xmlfragment("testDialog", "hcpsuccessfactors.view.detail.starbucks.Dialog", this);
-			}
-
-			this.getView().addDependent(this._oDialog);
-			// toggle compact style
-			jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._oDialog);
-			// bind data
-			var dialogModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/dialogdata.json");
-			var dialogModel = new JSONModel();
-			dialogModel.loadData(dialogModelPath, null, false);
-			this._oDialog.setModel(dialogModel, "DialogModel");
-
-			this._oDialog.open();
+		onAddPressed : function(oEvent) {
+			var navTo = this.sAddFormPageName;
+			sap.ui.getCore().getEventBus().publish("nav", "to", {
+				id : navTo
+			});
 		},
 
 		onCloseDialog : function(oEvent) {
@@ -149,9 +138,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 		},
 
 		onCancel : function() {
-			var otable = this.byId("hiringtable");
-			otable.destroyItems();
-			// this.onNavBack();
 			var navTo = this.sMyTeamPageName;
 			sap.ui.getCore().getEventBus().publish("nav", "to", {
 				id : navTo

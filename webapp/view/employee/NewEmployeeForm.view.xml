@@ -1,0 +1,107 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m"
+	controllerName="hcpsuccessfactors.controller.employee.NewEmployeeForm" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>form-page-title}" showNavButton="false" navButtonPress="onNavBack">
+
+		<l:VerticalLayout id="containerLayout" width="100%">
+			<l:BlockLayout id="BlockLayout" background="{/selectedBackground}">
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-personal-block-title}">
+							<form:content>
+								<Label text="{i18n>form-employee-username}" design="Bold" />
+								<Input editable="true" value="{}" />
+								<Label text="{i18n>form-employee-userId}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-externalId}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-externalId}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-firstName}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-lastName}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-email}" design="Bold" />
+								<Input editable="true" type="Email" value="{}" />
+
+								<Label text="{i18n>form-employee-gender}" design="Bold" />
+								<Select>
+									<core:Item key="{i18n>form-employee-gender-male-key}" text="{i18n>form-employee-gender-male}" />
+									<core:Item key="{i18n>form-employee-gender-female-key}" text="{i18n>form-employee-gender-female}" />
+								</Select>
+
+
+
+							</form:content>
+						</form:SimpleForm>
+					</l:BlockLayoutCell>
+					<l:BlockLayoutCell>
+						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-employeement-block-title}">
+							<form:content>
+								<Label text="{i18n>form-employee-company}" design="Bold" />
+								<Select selectedKey="{}" change="onSelectCompanyKeyChange" items="{path:'Company>/d/results'}">
+									<items>
+										<core:Item key="{}" text="{} {}" />
+									</items>
+								</Select>
+
+								<Label text="{i18n>form-employee-jobCode}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-startDate}" design="Bold" />
+								<Input editable="true" type="Date" value="{}" />
+
+								<Label text="{i18n>form-employee-businessUnit}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-manager}" design="Bold" />
+								<Input editable="true" value="{}" />
+
+								<Label text="{i18n>form-employee-eventReason}" design="Bold" />
+								<Input editable="true" value="{}" />
+							</form:content>
+						</form:SimpleForm>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-employeement-block-title}">
+							<form:content>
+								<Label text="{i18n>form-employee-country}" design="Bold" />
+								<Select selectedKey="{}" change="onSelectCompanyKeyChange" items="{path:'Company>/d/results'}">
+									<items>
+										<core:Item key="{}" text="{} {}" />
+									</items>
+								</Select>
+
+								<Label text="{i18n>form-employee-nationalIdType}" design="Bold" />
+								<Select selectedKey="{}" change="onSelectCompanyKeyChange" items="{path:'Company>/d/results'}">
+									<items>
+										<core:Item key="{}" text="{} {}" />
+									</items>
+								</Select>
+
+								<Label text="{i18n>form-employee-nationalId}" design="Bold" />
+								<Input editable="true" type="Date" value="{}" />
+
+							</form:content>
+						</form:SimpleForm>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+		</l:VerticalLayout>
+
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer />
+				<Button text="{i18n>form-employee-action-ok}" type="Accept" press="onOKPressed" />
+				<Button text="{i18n>form-employee-action-cancel}" press="onBackCancel" />
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

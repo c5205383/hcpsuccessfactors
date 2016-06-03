@@ -1,104 +1,80 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
-	controllerName="hcpsuccessfactors.controller.employee.Hiring" xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" controllerName="hcpsuccessfactors.controller.employee.Hiring"
+	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="{i18n>hiring-page-title}">
 				<content>
 					<OverflowToolbar design="Transparent">
-						<Title text="{i18n>hiring-employee-list-title}"/>
-						<ToolbarSpacer/>
-						<Button icon="sap-icon://add" type="Transparent" press="handleTableSelectDialogPress">
+						<Title text="{i18n>hiring-employee-list-title}" />
+						<ToolbarSpacer />
+						<Button icon="sap-icon://add" type="Transparent" press="onAddPressed">
 							<layoutData>
-								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
 							</layoutData>
 						</Button>
 						<Button icon="sap-icon://display" type="Transparent" press="handleResponsivePopoverPress">
 							<layoutData>
-								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
 							</layoutData>
 						</Button>
 					</OverflowToolbar>
-					<!--<l:VerticalLayout alignItems="Center" class="sapUiResponsiveMargin" width="auto">-->
+					<!--<l:VerticalLayout alignItems="Center" class="sapUiResponsiveMargin" width="auto"> -->
 					<Table width="100%" id="hiringtable" items="{path:'TableModel>/emp'}">
-						<columns >
-							<!--<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-whetherhireagain}" wrapping="false"/>
+						<columns>
+							<!--<Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-whetherhireagain}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" 
+								demandPopin="true"> <Text text="{i18n>hiring-city}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-store}" 
+								wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-position}" wrapping="false"/> </Column> 
+								<Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-employmenttype}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" 
+								demandPopin="true"> <Text text="{i18n>hiring-defaultFullName}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text 
+								text="{i18n>hiring-idnumber}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-employeetype}" 
+								wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-payrollsuggestion}" wrapping="false"/> 
+								</Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-specialrate}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" 
+								demandPopin="true"> <Text text="{i18n>hiring-hiredate}" wrapping="false"/> </Column> -->
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiring-username}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-city}" wrapping="false"/>
+								<Text text="{i18n>hiring-userId}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-store}" wrapping="false"/>
+								<Text text="{i18n>hiring-personIdExternal}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-position}" wrapping="false"/>
+								<Text text="{i18n>hiring-firstName}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-employmenttype}" wrapping="false"/>
+								<Text text="{i18n>hiring-lastName}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-defaultFullName}" wrapping="false"/>
+								<Text text="{i18n>hiring-gender}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-idnumber}" wrapping="false"/>
+								<Text text="{i18n>hiring-company}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-employeetype}" wrapping="false"/>
+								<Text text="{i18n>hiring-jobCode}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-payrollsuggestion}" wrapping="false"/>
+								<Text text="{i18n>hiring-startDate}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-specialrate}" wrapping="false"/>
+								<Text text="{i18n>hiring-status}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-hiredate}" wrapping="false"/>
-							</Column>-->
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-username}" wrapping="false"/>
+								<Text text="{i18n>hiring-businessUnit}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-userId}" wrapping="false"/>
+								<Text text="{i18n>hiring-managerId}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-personIdExternal}" wrapping="false"/>
+								<Text text="{i18n>hiring-initials}" wrapping="false" />
 							</Column>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-firstName}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-lastName}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-gender}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-company}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-jobCode}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-startDate}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-status}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-businessUnit}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-managerId}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-initials}" wrapping="false"/>
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-eventReason}" wrapping="false"/>
+								<Text text="{i18n>hiring-eventReason}" wrapping="false" />
 							</Column>
 						</columns>
 						<items>
-						    <ColumnListItem >
+							<ColumnListItem>
 								<cells>
 									<Text text="{TableModel>username}" wrapping="false" />
 									<Text text="{TableModel>userId}" wrapping="false" />
@@ -107,25 +83,25 @@
 									<Text text="{TableModel>lastName}" wrapping="false" />
 									<Text text="{TableModel>gender}" wrapping="false" />
 									<Text text="{TableModel>initials}" wrapping="false" />
-									<Text text="{TableModel>company}" wrapping="false" />  
-								    <Text text="{TableModel>jobCode}" wrapping="false" />
-								    <Text text="{TableModel>startDate}" wrapping="false" />
-								    <Text text="{TableModel>status}" wrapping="false" />
-								    <Text text="{TableModel>businessUnit}" wrapping="false" />
-								    <Text text="{TableModel>managerId}" wrapping="false" />
-								    <Text text="{TableModel>eventReason}" wrapping="false" />
+									<Text text="{TableModel>company}" wrapping="false" />
+									<Text text="{TableModel>jobCode}" wrapping="false" />
+									<Text text="{TableModel>startDate}" wrapping="false" />
+									<Text text="{TableModel>status}" wrapping="false" />
+									<Text text="{TableModel>businessUnit}" wrapping="false" />
+									<Text text="{TableModel>managerId}" wrapping="false" />
+									<Text text="{TableModel>eventReason}" wrapping="false" />
 								</cells>
 							</ColumnListItem>
 						</items>
 					</Table>
-					<!--</l:VerticalLayout>-->
+					<!--</l:VerticalLayout> -->
 				</content>
 				<footer>
 					<Toolbar>
-						<ToolbarSpacer/>
-						<Button text="Submit" type="Accept" press="onSubmitData"/>
-						<Button text="Save" type="Reject" press="onBack"/>
-						<Button text="Cancel" press="onCancel"/>
+						<ToolbarSpacer />
+						<Button text="Submit" type="Accept" press="onSubmitData" />
+						<Button text="Save" type="Reject" press="onBack" />
+						<Button text="Cancel" press="onCancel" />
 					</Toolbar>
 				</footer>
 			</Page>
