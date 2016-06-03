@@ -85,6 +85,11 @@
 					"name": "mygoal",
 					"target": "mygoal"
 				},
+				{
+					"pattern": "myteam",
+					"name": "myteam",
+					"target": "myteam"
+				},
 				
 				
 				{
@@ -100,8 +105,8 @@
 				
 				{
 					"pattern": "myform",
-					"name": "myForm",
-					"target": "myForm"
+					"name": "myform",
+					"target": "myform"
 				},
 				{
 					"pattern": "mygoal/goals/{tid}_{gid}",
@@ -202,15 +207,25 @@
 					"pattern": "approvalList",
 					"name": "approvalList",
 					"target": "approvalList"
+				},
+				{
+					"pattern": "admincenter",
+					"name": "admincenter",
+					"target": "admincenter"
 				}
 			],
 			"targets": {
 				"home": {
+					"viewPath": "hcpsuccessfactors.view",
 					"viewName": "overview"
 				},
 				"mygoal": {
 					"viewPath": "hcpsuccessfactors.view.goals",
 					"viewName": "MyGoal"
+				},
+				"myteam": {
+					"viewPath": "hcpsuccessfactors.view.employee",
+					"viewName": "MyTeam"
 				},
 				
 				"detail001": {
@@ -226,8 +241,8 @@
 					"viewPath": "hcpsuccessfactors.view.detail.goal",
 					"viewName": "GoalDetail"
 				},
-				"myForm": {
-					"viewPath": "hcpsuccessfactors.view.detail.form",
+				"myform": {
+					"viewPath": "hcpsuccessfactors.view.forms",
 					"viewName": "MyForm"
 				},
 				"myProfile": {
@@ -301,6 +316,10 @@
 				"approvalList": {
 					"viewPath": "hcpsuccessfactors.view.detail.starbucks",
 					"viewName": "ApprovalList"
+				},
+				"admincenter": {
+					"viewPath": "hcpsuccessfactors.view.admincenter",
+					"viewName": "AdminCenter"
 				},
 				"notFound": {
 					"viewName": "NotFound",

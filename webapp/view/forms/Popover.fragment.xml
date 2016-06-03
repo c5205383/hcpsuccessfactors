@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Popover showHeader="false" placement="Bottom" class="sapMOTAPopover sapTntToolHeaderPopover">
+		<content>
+			<l:VerticalLayout class="sapUiSmallMargin">
+				<CheckBox text="{i18n>myform-table-formtitle}" selected="true" id="m0" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-employee}" selected="true" id="m1" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formstartdate}" selected="true" id="m2" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formenddate}" selected="true" id="m3" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-formduedate}" selected="true" id="m4" select="changeCheckbox"/>
+				<CheckBox text="{i18n>myform-table-lastmodified}" selected="true" id="m5" select="changeCheckbox"/>
+			</l:VerticalLayout>
+		</content>
+	</Popover>
+</core:FragmentDefinition>

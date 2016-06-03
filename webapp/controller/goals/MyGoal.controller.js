@@ -5,7 +5,9 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.goals.MyGoal", {
-
+		
+		sGoalDetailPageName : "hcpsuccessfactors.view.goals.GoalDetail",
+		
 		onInit : function() {
 			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");
 			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
@@ -88,7 +90,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 		},
 
 		onItemPress : function(oEvent) {
-			var navTo = "view.goals.GoalDetail";
+			var navTo = this.sGoalDetailPageName;
 			var oItem = oEvent.getSource();
 			var oContext = oItem.getBindingContext("GoalModel");
 			sap.ui.getCore().getEventBus().publish("nav", "to", {

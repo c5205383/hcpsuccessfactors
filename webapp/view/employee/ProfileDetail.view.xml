@@ -1,0 +1,123 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:ux="sap.uxap"
+	controllerName="hcpsuccessfactors.controller.employee.ProfileDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<Page title="Profile of {UserModel>username}" showNavButton="true" navButtonPress="onSubNavBack">
+			<ux:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true" showEditHeaderButton="true"
+				editHeaderButtonPress="handleEditBtnPress">
+				<ux:headerTitle>
+					<ux:ObjectPageHeader objectImageURI="data:image/png; base64,{photoModel>/photo}" objectTitle="{UserModel>defaultFullName}"
+						objectImageShape="Circle" objectImageAlt="{UserModel>defaultFullName}" objectSubtitle="{UserModel>department}, {UserModel>division}"
+						isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false">
+						<ux:actions>
+							<ux:ObjectPageHeaderActionButton icon="sap-icon://pull-down" text="show section" type="Emphasized"/>
+							<ux:ObjectPageHeaderActionButton icon="sap-icon://show" text="show state" type="Emphasized"/>
+						</ux:actions>
+					</ux:ObjectPageHeader>
+				</ux:headerTitle>
+				<ux:headerContent>
+					<l:VerticalLayout>
+						<HBox>
+							<core:Icon src="sap-icon://iphone" width="1rem"/>
+							<Link text="{UserModel>businessPhone}"/>
+						</HBox>
+						<HBox>
+							<core:Icon src="sap-icon://email" width="1rem"/>
+							<Link text="{UserModel>email}"/>
+						</HBox>
+					</l:VerticalLayout>
+					<!--<l:HorizontalLayout>
+						<Image src=""></Image>
+						<Image src=""></Image>
+					</l:HorizontalLayout>
+					<l:VerticalLayout>
+						<Label text="Hello! I am Tim and I use UxAP"/>
+						<VBox height="63px">
+							<Label text="Achieved goals"/>
+							<ProgressIndicator percentValue="30" displayValue="30%" showValue="true" state="None"/>
+						</VBox>
+					</l:VerticalLayout>
+					<l:VerticalLayout>
+						<Label text="San Jose, USA"/>
+					</l:VerticalLayout>-->
+				</ux:headerContent>
+				<ux:sections>
+					<ux:ObjectPageSection title="{i18n>empDetail-sectionOne}">
+						<ux:subSections>
+							<ux:ObjectPageSubSection title="{i18n>empDetail-sectionOne}">
+								<ux:blocks>
+									<l:VerticalLayout >
+										<HBox alignItems="Start" class="cssHBox">
+											<Label text="{i18n>empDetail-fullname}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UserModel>defaultFullName}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										</HBox>
+										<HBox alignItems="Start" class="cssHBox">
+											<Label text="{i18n>empDetail-email}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UserModel>email}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										</HBox>
+										<HBox alignItems="Start" class="cssHBox">
+											<Label text="{i18n>empDetail-businessPhone}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UserModel>businessPhone}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										</HBox>
+									</l:VerticalLayout>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+						</ux:subSections>
+					</ux:ObjectPageSection>
+					<ux:ObjectPageSection title="{i18n>empDetail-sectionTwo}" importance="Medium">
+						<ux:subSections>
+							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-talent}">
+								<ux:blocks>
+									<l:VerticalLayout >
+										<HBox alignItems="Start" class="cssHBox">
+											<Label text="{i18n>empDetail-talent-riskofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UserModel>riskOfLoss}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										</HBox>
+										<HBox alignItems="Start" class="cssHBox">
+											<Label text="{i18n>empDetail-talent-impactofloss}" design="Bold" width="200px" class="sapUiSmallMarginEnd"/>
+											<Text text="{UserModel>impactOfLoss}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1"/>
+										</HBox>
+									</l:VerticalLayout>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-skill}">
+								<ux:blocks>
+									<Text text="2.2.1"/>
+								</ux:blocks>
+								<ux:moreBlocks>
+									<Text text="2.2.2"/>
+								</ux:moreBlocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="{i18n>empDetail-talent-community}">
+								<ux:blocks>
+									<Text text="2.3"/>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+						</ux:subSections>
+					</ux:ObjectPageSection>
+					<ux:ObjectPageSection title="Employment">
+						<ux:subSections>
+							<ux:ObjectPageSubSection title="Job information">
+								<ux:blocks>
+									<Text text="3.1"/>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="Employee Details" mode="Collapsed" importance="Medium">
+								<ux:blocks>
+									<Text text="3.2.1"/>
+								</ux:blocks>
+								<ux:moreBlocks>
+									<Text text="3.2.2"/>
+								</ux:moreBlocks>
+							</ux:ObjectPageSubSection>
+							<ux:ObjectPageSubSection title="Job Relationship" mode="Collapsed" importance="Low">
+								<ux:blocks>
+									<Text text="3.3"/>
+								</ux:blocks>
+							</ux:ObjectPageSubSection>
+						</ux:subSections>
+					</ux:ObjectPageSection>
+				</ux:sections>
+			</ux:ObjectPageLayout>
+		</Page>
+	</App>
+</mvc:View>

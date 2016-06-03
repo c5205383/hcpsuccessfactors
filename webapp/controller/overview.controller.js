@@ -12,7 +12,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController" ], function(BaseCo
 				var path = oContext.getPath();
 				var data = model.getProperty(path);
 				window.console.log(data);
-				this.getRouter(this).navTo(data.navTo);
+				this.getRouter().navTo(data.navTo);
 			}
 		},
 

@@ -1,0 +1,33 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="Add a new batch job">
+		<List>
+			<InputListItem label="{i18n>admincenter-page-batchjob-name}">
+				<Input id="bjdialog-ipt-name" width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" />
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-type}">
+				<Select id="bjdialog-select-type" width="250px" class="cssRightPostion" >
+					<items>
+						<!--<core:Item key="{BJTypeModel>name}" text="{BJTypeModel>name}" />-->
+						<core:Item />
+					</items>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-interval}">
+				<Select id="bjdialog-select-interval" width="250px" class="cssRightPostion" >
+					<items>
+						<core:Item />
+					</items>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-description}">
+				<Input id="bjdialog-ipt-description" width="250px" class="cssRightPostion cssInput" editable="true" design="Bold"  />
+			</InputListItem>
+		</List>
+		<beginButton>
+			<Button text="OK" press="onDialogSelectOk" type="Accept"/>
+		</beginButton>
+		<endButton>
+			<Button text="Cancel" press="onDialogClose" type="Reject"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

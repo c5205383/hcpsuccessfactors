@@ -40,20 +40,34 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController" ], function(BaseCo
 			} else {
 
 				var app = this.getView().app;
-				if (app.getPage(id) === null) {
-					jQuery.sap.log.info(id);
+
+				var page = app.getPage(id);
+				if (page === null) {
+					var pages = app.getPages();
+					for (var i = 0; i < pages.length; i++) {
+						if (pages[i].getViewName() === id) {
+							page = pages[i];
+							break;
+						}
+					}
+				}
+				if (page === null) {
 					var type = "XML";
-					var page = sap.ui.view({
+					page = sap.ui.view({
 						id : id,
-						viewName : "hcpsuccessfactors." + id,
+						viewName : id,
 						type : type
 					});
+
+				}
+				if (page !== null) {
+					// navigate in the app control
 					app.addPage(page);
 					jQuery.sap.log.info("app controller > loaded page: " + id);
+					var transition = (!jQuery.device.is.phone) ? "show" : "slide";
+					app.to(page.getId(), transition, data);
 				}
-				// navigate in the app control
-				var transition = (!jQuery.device.is.phone) ? "show" : "slide";
-				app.to(id, transition, data);
+
 			}
 		},
 		navBack : function(id) {

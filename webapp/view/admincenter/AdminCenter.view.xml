@@ -1,0 +1,36 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
+	controllerName="hcpsuccessfactors.controller.admincenter.AdminCenter" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>admincenter-page-title}" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<List class="sapUiResponsiveMargin" width="auto" items="{ path : 'BJsModel>/'}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="{i18n>admincenter-page-batchjob-title}"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://add" press="onAddBJPress"/>
+					</Toolbar>
+				</headerToolbar>
+				<CustomListItem>
+					<HBox>
+						<HBox justifyContent="Start" width="50%">
+							<core:Icon size="2rem" src="sap-icon://e-care" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+							<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+								<HBox>
+									<Label text="{i18n>admincenter-page-batchjob-name}: {BJsModel>name}" />
+									<Label width="1.5rem" text="" />
+									<Label text="{i18n>admincenter-page-batchjob-type}: {BJsModel>type}" />
+								</HBox>
+								<Label text="{i18n>admincenter-page-batchjob-description}: {BJsModel>info}"/>
+							</VBox>
+						</HBox>
+						<HBox justifyContent="End" width="50%">
+							<Button id="admincenter-btn-status" press="onBJStatusChange" icon="{path:'BJsModel>status', formatter:'.formatter.formatBtnStatus'}" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+							<Button press="onDeleteBJPress" icon="sap-icon://delete" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
+						</HBox>
+					</HBox>
+				</CustomListItem>
+			</List>
+		</content>
+	</Page>
+</mvc:View>
