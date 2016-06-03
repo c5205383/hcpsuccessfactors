@@ -31,10 +31,10 @@ sap.ui.define([
 		_bindModel: function() {
 			var oView = this.getView();
 
-			var oBJTypeModel = new JSONModel();
+			//var oBJTypeModel = new JSONModel();
 			var oBJsModel = new JSONModel();
 
-			oView.setModel(oBJTypeModel, "BJTypeModel");
+			//oView.setModel(oBJTypeModel, "BJTypeModel");
 			oView.setModel(oBJsModel, "BJsModel");
 		},
 
@@ -68,7 +68,7 @@ sap.ui.define([
 		 */
 		_loadBJDialogData: function() {
 			//load interval data
-			(function () {
+			(function() {
 				var oSelectInterval = sap.ui.getCore().byId("bjdialog-select-interval");
 				var intervalData = {
 					list: [{
@@ -104,7 +104,7 @@ sap.ui.define([
 			// this.getView().getModel("BJTypeModel").setData(oBJTypeData);
 
 			//dynamic load type data
-			(function () {
+			(function() {
 				var oSelectType = sap.ui.getCore().byId("bjdialog-select-type");
 				var oBJTypeData = {
 					list: [{
@@ -148,19 +148,18 @@ sap.ui.define([
 				name: oInputName.getValue(),
 				type: oSelectType.getSelectedKey(),
 				interval: oSelectInterval.getSelectedKey(),
-				info: oInputDescription.getValue()
+				info: oInputDescription.getValue(),
+				status: true
 			};
 			var oBJsModel = this.getView().getModel("BJsModel");
 			var oBJsData = oBJsModel.getData();
 			if (oBJsModel.getJSON() === "{}") {
-				oBJsData = {
-					d: {
-						results: [oBJData]
-					}
-				};
+				oBJsData = [
+					oBJData
+				];
 				oBJsModel.setData(oBJsData);
 			} else {
-				oBJsData.d.results.push(oBJData);
+				oBJsData.push(oBJData);
 				oBJsModel.setData(oBJsData);
 			}
 
@@ -182,6 +181,21 @@ sap.ui.define([
 
 		/**
 		 * @event
+		 * @name onBJStatusChange
+		 * @description press status button
+		 * @param {sap.ui.base.Event} - oEvent The fired event.
+		 */
+		onBJStatusChange: function(oEvent) {
+			var oItem = oEvent.getSource();
+			if (oItem.getIcon() === "sap-icon://begin") {
+				oItem.setIcon("sap-icon://stop");
+			} else if (oItem.getIcon() === "sap-icon://stop") {
+				oItem.setIcon("sap-icon://begin");
+			}
+		},
+
+		/**
+		 * @event
 		 * @name onDeleteBJPress
 		 * @description delete the batch job
 		 * @param {sap.ui.base.Event} - oEvent The fired event.
@@ -191,8 +205,35 @@ sap.ui.define([
 			var oContext = oItem.getBindingContext("BJsModel");
 			var sPath = hcpsuccessfactors.util.StringUtil.subLastWord(oContext.getPath());
 			var oBJsModel = this.getView().getModel("BJsModel");
-			oBJsModel.getData().d.results.splice(sPath, 1);
-			oBJsModel.refresh(true);
+			
+			var warningDialog = new sap.m.Dialog({
+				title: "Confirm",
+				type: "Message",
+				content: new sap.m.Text({
+					text: "Are you sure you to delete this batch job?"
+				}),
+				beginButton: new sap.m.Button({
+					text: "OK",
+					type: "Accept",
+					press: function() {
+						oBJsModel.getData().splice(sPath, 1);
+						oBJsModel.refresh(true);
+						warningDialog.close();
+					}
+
+				}),
+				endButton: new sap.m.Button({
+					text: "Cancel",
+					type: "Reject",
+					press: function() {
+						warningDialog.close();
+					}
+				}),
+				afterClose: function() {
+					warningDialog.destroy();
+				}
+			});
+			warningDialog.open();
 		}
 
 	});
