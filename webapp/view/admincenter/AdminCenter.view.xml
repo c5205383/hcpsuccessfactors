@@ -2,7 +2,7 @@
 	controllerName="hcpsuccessfactors.controller.admincenter.AdminCenter" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>admincenter-page-title}" showNavButton="true" navButtonPress="onNavBack">
 		<content>
-			<List class="sapUiResponsiveMargin" width="auto" items="{ path : 'BJsModel>/d/results'}">
+			<List class="sapUiResponsiveMargin" width="auto" items="{ path : 'BJsModel>/'}">
 				<headerToolbar>
 					<Toolbar>
 						<Title text="{i18n>admincenter-page-batchjob-title}"/>
@@ -24,7 +24,7 @@
 							</VBox>
 						</HBox>
 						<HBox justifyContent="End" width="50%">
-							<Button icon="sap-icon://begin" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+							<Button press="onBJStatusChange" icon="sap-icon://begin" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
 							<Button press="onDeleteBJPress" icon="sap-icon://delete" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
 							<Button text="" type="Transparent" enabled="false" width="1.5rem"/>
 						</HBox>

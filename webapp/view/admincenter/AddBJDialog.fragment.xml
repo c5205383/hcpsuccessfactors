@@ -5,7 +5,7 @@
 				<Input id="bjdialog-ipt-name" width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" />
 			</InputListItem>
 			<InputListItem label="{i18n>admincenter-page-batchjob-type}">
-				<Select id="bjdialog-select-type" width="250px" class="cssRightPostion" items="{path:'BJTypeModel>/d/results'}">
+				<Select id="bjdialog-select-type" width="250px" class="cssRightPostion" >
 					<items>
 						<!--<core:Item key="{BJTypeModel>name}" text="{BJTypeModel>name}" />-->
 						<core:Item />
@@ -13,7 +13,7 @@
 				</Select>
 			</InputListItem>
 			<InputListItem label="{i18n>admincenter-page-batchjob-interval}">
-				<Select id="bjdialog-select-interval" width="250px" class="cssRightPostion" items="{path:'BJTypeModel>/d/results'}">
+				<Select id="bjdialog-select-interval" width="250px" class="cssRightPostion" >
 					<items>
 						<core:Item />
 					</items>
