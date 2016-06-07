@@ -4,32 +4,24 @@
 		<pages>
 			<Page title="{i18n>hiring-page-title}">
 				<content>
-					<OverflowToolbar design="Transparent">
-						<Title text="{i18n>hiring-employee-list-title}" />
-						<ToolbarSpacer />
-						<Button icon="sap-icon://add" type="Transparent" press="onAddPressed">
-							<layoutData>
-								<OverflowToolbarLayoutData priority="NeverOverflow" />
-							</layoutData>
-						</Button>
-						<Button icon="sap-icon://display" type="Transparent" press="handleResponsivePopoverPress">
-							<layoutData>
-								<OverflowToolbarLayoutData priority="NeverOverflow" />
-							</layoutData>
-						</Button>
-					</OverflowToolbar>
-					<!--<l:VerticalLayout alignItems="Center" class="sapUiResponsiveMargin" width="auto"> -->
 					<Table width="100%" id="hiringtable" items="{path:'TableModel>/emp'}">
+						<headerToolbar>
+							<OverflowToolbar design="Transparent">
+								<Title text="{i18n>hiring-employee-list-title}" />
+								<ToolbarSpacer />
+								<Button icon="sap-icon://add" type="Transparent" press="onAddPressed">
+									<layoutData>
+										<OverflowToolbarLayoutData priority="NeverOverflow" />
+									</layoutData>
+								</Button>
+								<Button icon="sap-icon://display" type="Transparent" press="handleResponsivePopoverPress">
+									<layoutData>
+										<OverflowToolbarLayoutData priority="NeverOverflow" />
+									</layoutData>
+								</Button>
+							</OverflowToolbar>
+						</headerToolbar>
 						<columns>
-							<!--<Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-whetherhireagain}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" 
-								demandPopin="true"> <Text text="{i18n>hiring-city}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-store}" 
-								wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-position}" wrapping="false"/> </Column> 
-								<Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-employmenttype}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" 
-								demandPopin="true"> <Text text="{i18n>hiring-defaultFullName}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text 
-								text="{i18n>hiring-idnumber}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-employeetype}" 
-								wrapping="false"/> </Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-payrollsuggestion}" wrapping="false"/> 
-								</Column> <Column minScreenWidth="Tablet" demandPopin="true"> <Text text="{i18n>hiring-specialrate}" wrapping="false"/> </Column> <Column minScreenWidth="Tablet" 
-								demandPopin="true"> <Text text="{i18n>hiring-hiredate}" wrapping="false"/> </Column> -->
 							<Column minScreenWidth="Tablet" demandPopin="true">
 								<Text text="{i18n>hiring-username}" wrapping="false" />
 							</Column>

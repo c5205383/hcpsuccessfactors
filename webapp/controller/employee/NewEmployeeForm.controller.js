@@ -4,6 +4,8 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 	return BaseController.extend("hcpsuccessfactors.controller.employee.NewEmployeeForm", {
 
+		sParentPageName : "hcpsuccessfactors.view.employee.Hiring",
+		
 		onInit : function() {
 			this.getView().addEventDelegate({
 				onBeforeShow : jQuery.proxy(function(event) {
@@ -33,6 +35,13 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 					messageStrip.setTooltip(message);
 				}
 			}
+		},
+
+		onBackCancel : function(oEvent) {
+			var navTo = this.sParentPageName;
+			sap.ui.getCore().getEventBus().publish("nav", "to", {
+				id : navTo
+			});
 		}
 	});
 });
