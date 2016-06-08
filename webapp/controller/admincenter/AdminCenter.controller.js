@@ -48,12 +48,15 @@ sap.ui.define([
 		 * @description preload admin center data
 		 */
 		_loadData: function() {
+			var that = this;
 			//load user data
 			var oUserModel = this.getView().getModel("UserModel");
 			oUserModel.loadData("/services/userapi/currentUser", null, false);
 			var sUsername = oUserModel.getData().name;
 			//load batch jobs data
 			var oBJsModel = this.getView().getModel("BJsModel");
+			//function from base controller
+			this._showBusyIndicator(true);
 			$.ajax({
 				url: "/sfsfdataservice/hcp/batchJob?owner=" + sUsername,
 				type: "GET",
@@ -62,6 +65,7 @@ sap.ui.define([
 					oBJsModel.setData(oBJsData);
 				}, 
 				complete: function () {
+					that._showBusyIndicator(false);
 				}
 			});
 		},
