@@ -1,0 +1,7 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
+	controllerName="hcpsuccessfactors.controller.peoplesession.PeopleSession" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,7 +1,7 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" controllerName="hcpsuccessfactors.controller.forms.MyForm" xmlns:html="http://www.w3.org/1999/xhtml"
 	height="100%">
 	<App>
-		<Page title="{i18n>myform-title}">
+		<Page title="{i18n>myform-title}" showNavButton="true" navButtonPress="onNavBack">
 			<tnt:ToolPage id="toolPage">
 				<tnt:header>
 					<tnt:ToolHeader>

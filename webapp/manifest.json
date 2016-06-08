@@ -212,6 +212,11 @@
 					"pattern": "admincenter",
 					"name": "admincenter",
 					"target": "admincenter"
+				},
+				{
+					"pattern": "peoplesession",
+					"name": "peoplesession",
+					"target": "peoplesession"
 				}
 			],
 			"targets": {
@@ -320,6 +325,10 @@
 				"admincenter": {
 					"viewPath": "hcpsuccessfactors.view.admincenter",
 					"viewName": "AdminCenter"
+				},
+				"peoplesession": {
+					"viewPath": "hcpsuccessfactors.view.peoplesession",
+					"viewName": "PeopleSession"
 				},
 				"notFound": {
 					"viewName": "NotFound",

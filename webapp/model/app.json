@@ -29,6 +29,12 @@
 			"type" : "Monitor",
 			"title" : "Charts",
 			"navTo" : ""
+		},
+		{
+			"icon" : "employee-pane",
+			"type" : "Monitor",
+			"title" : "People Session",
+			"navTo" : "peoplesession"
 		}
 	]
 }
