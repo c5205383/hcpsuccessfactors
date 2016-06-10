@@ -245,7 +245,11 @@ sap.ui.define([
 				contentType: "application/json",
 				data: JSON.stringify(oBJData),
 				success: function () {
-					MessageToast.show("stop success");
+					if (oBJData.status === false) {
+						MessageToast.show("start success");
+					} else {
+						MessageToast.show("stop success");
+					}
 					oBJsModel.setData(oNewBJsData);
 				}, 
 				error: function () {
