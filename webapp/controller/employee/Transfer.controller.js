@@ -43,7 +43,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 
 		getLocationList : function() {
 			var host = this.getServiceHost();
-			var url = this.getServiceUrl("getFOLocation");
+			var url = this.getServiceUrl("FOLocation");
 			var that = this;
 			var result = httpRequest.httpGetRequest(host, url, null, true, function(result) {
 				if (result != null) {

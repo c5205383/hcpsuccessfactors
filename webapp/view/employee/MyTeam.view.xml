@@ -34,21 +34,9 @@
 		<footer>
 			<OverflowToolbar>
 				<ToolbarSpacer />
-				<Button icon="sap-icon://add" press="onAddPressed" tooltip="{i18n>myTeam-add-employee-btn}">
-					<layoutData>
-						<OverflowToolbarLayoutData priority="NeverOverflow" />
-					</layoutData>
-				</Button>
-				<Button text="{i18n>myTeam-transfer-employee-btn}" type="Accept" press="onTransferShopPressed">
-					<layoutData>
-						<OverflowToolbarLayoutData priority="AlwaysOverflow" />
-					</layoutData>
-				</Button>
-				<Button text="{i18n>myTeam-promote-employee-btn}" type="Accept">
-					<layoutData>
-						<OverflowToolbarLayoutData priority="AlwaysOverflow" />
-					</layoutData>
-				</Button>
+				<Button text="{i18n>myTeam-add-employee-btn}" press="onAddPressed" tooltip="{i18n>myTeam-add-employee-btn}" />
+				<Button text="{i18n>myTeam-transfer-employee-btn}" press="onTransferShopPressed" />
+				<Button text="{i18n>myTeam-promote-employee-btn}" />
 			</OverflowToolbar>
 		</footer>
 	</Page>
