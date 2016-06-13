@@ -26,7 +26,7 @@
 							</Column>
 						</columns>
 						<items>
-							<ColumnListItem>
+							<ColumnListItem vAlign="Middle">
 								<cells>
 									<ObjectIdentifier width="100%" title="{defaultFullName}"
 										text="{i18n>transfer-employee-id}: {userId}\r\n {i18n>transfer-employee-position}: {jobTitle}\r\n{i18n>transfer-employee-city}: {city}\r\n {i18n>transfer-employee-location}: {location}" />

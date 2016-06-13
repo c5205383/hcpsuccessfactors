@@ -1,6 +1,6 @@
 <mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m"
 	controllerName="hcpsuccessfactors.controller.employee.NewEmployeeForm" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="{i18n>form-page-title}" showNavButton="false" navButtonPress="onNavBack">
+	<Page title="{i18n>form-page-title}" showNavButton="false" navButtonPress="onNavBack" binding="{/}">
 
 		<l:VerticalLayout id="containerLayout" width="100%">
 			<l:BlockLayout id="BlockLayout" background="{/selectedBackground}">
@@ -31,13 +31,13 @@
 								<Input editable="true" type="Email" value="{/employee/email}" />
 
 								<Label text="{i18n>form-employee-gender}" design="Bold" />
-								<Select selectedKey="{/employee/gender}">
+								<Select id="genderSelectorId" selectedKey="{/employee/gender}" change="onValueChanged">
 									<core:Item key="{i18n>form-employee-gender-key1}" text="{i18n>form-employee-gender-value1}" />
 									<core:Item key="{i18n>form-employee-gender-key2}" text="{i18n>form-employee-gender-value2}" />
 								</Select>
 
 								<Label text="{i18n>form-employee-type}" design="Bold" />
-								<Select selectedKey="{/employee/type}">
+								<Select id="empTypeSelectorId" selectedKey="{/employee/type}" change="onValueChanged">
 									<core:Item key="{i18n>form-employee-type-key1}" text="{i18n>form-employee-type-value1}" />
 									<core:Item key="{i18n>form-employee-type-key2}" text="{i18n>form-employee-type-value2}" />
 								</Select>
@@ -49,34 +49,34 @@
 						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-employeement-block-title}">
 							<form:content>
 								<Label text="{i18n>form-employee-company}" design="Bold" />
-								<Select selectedKey="{/employeement/company}" forceSelection="false" change="onCompanyChanged" items="{path:'Company>/d/results'}">
+								<Select id="companySelectorId" selectedKey="{/employee/company}" forceSelection="false" change="onValueChanged" items="{path:'Company>/d/results'}">
 									<items>
 										<core:Item key="{Company>externalCode}" text="{Company>name}" />
 									</items>
 								</Select>
 
 								<Label text="{i18n>form-employee-jobCode}" design="Bold" />
-								<Select selectedKey="{/employeement/jobCode}" forceSelection="false" change="onJobCodeChanged" items="{path:'JobCode>/d/results'}">
+								<Select id="jobCodeSelectorId" selectedKey="{/employee/jobCode}" forceSelection="false" change="onValueChanged" items="{path:'JobCode>/d/results'}">
 									<items>
 										<core:Item key="{JobCode>externalCode}" text="{JobCode>name}" />
 									</items>
 								</Select>
 
 								<Label text="{i18n>form-employee-startDate}" design="Bold" />
-								<Input editable="true" type="Date" value="{/employeement/startDate}" />
+								<Input editable="true" type="Date" value="{/employee/startDate}" />
 
 								<Label text="{i18n>form-employee-businessUnit}" tooltip="{i18n>form-employee-businessUnit}" design="Bold" />
-								<Select selectedKey="{/employeement/businessUnit}" forceSelection="false" change="onBusinessUnitChanged" items="{path:'BusinessUnit>/d/results'}">
+								<Select id="businessUnitSelectorId" selectedKey="{/employee/businessUnit}" forceSelection="false" change="onValueChanged" items="{path:'BusinessUnit>/d/results'}">
 									<items>
 										<core:Item key="{BusinessUnit>externalCode}" text="{BusinessUnit>name}" />
 									</items>
 								</Select>
 
 								<Label text="{i18n>form-employee-manager}" design="Bold" />
-								<Input editable="true" value="{/employeement/manager}" />
+								<Input editable="true" value="{/employee/manager}" />
 
 								<Label text="{i18n>form-employee-eventReason}" tooltip="{i18n>form-employee-eventReason}" design="Bold" />
-								<Input editable="false" value="{/employeement/eventReason}" />
+								<Input editable="false" value="{/employee/eventReason}" />
 							</form:content>
 						</form:SimpleForm>
 					</l:BlockLayoutCell>
@@ -84,21 +84,21 @@
 						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-national-block-title}">
 							<form:content>
 								<Label text="{i18n>form-employee-country}" design="Bold" />
-								<Select selectedKey="{/national/country}" forceSelection="false"  change="onCountryChanged" items="{path:'Country>/d/results'}">
+								<Select id = "countrySelectorId" selectedKey="{/employee/country}" forceSelection="false" change="onValueChanged" items="{path:'Country>/d/results'}">
 									<items>
 										<core:Item key="{Country>code}" text="{Country>externalName_defaultValue}" />
 									</items>
 								</Select>
 
-								<Label text="{i18n>form-employee-nationalIdType}" design="Bold" />
-								<Select selectedKey="{/national/nationalIdType}" change="onSelectCompanyKeyChange" items="{path:'Company>/d/results'}">
+								<!-- <Label text="{i18n>form-employee-nationalIdType}" design="Bold" />
+								<Select selectedKey="{/employee/nationalIdType}" change="onSelectCompanyKeyChange" items="{path:'Company>/d/results'}">
 									<items>
 										<core:Item key="{}" text="{} {}" />
 									</items>
-								</Select>
+								</Select> -->
 
 								<Label text="{i18n>form-employee-nationalId}" design="Bold" />
-								<Input editable="true" value="{/national/nationalId}" />
+								<Input editable="true" value="{/employee/nationalId}" />
 
 							</form:content>
 						</form:SimpleForm>
@@ -111,7 +111,7 @@
 			<Toolbar>
 				<ToolbarSpacer />
 				<Button text="{i18n>form-employee-action-ok}" type="Accept" press="onOKPressed" />
-				<Button text="{i18n>form-employee-action-cancel}" press="onBackCancel" />
+				<Button text="{i18n>form-employee-action-cancel}" press="onCancelPressed" />
 			</Toolbar>
 		</footer>
 	</Page>

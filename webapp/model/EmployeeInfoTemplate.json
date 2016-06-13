@@ -16,20 +16,15 @@
 		"hireDate": "",
 		"country": "",
 		"email": "",
-		"firstName": ""
-	},
-	"employeement":{
+		"firstName": "",
 		"company":"",
 		"jobCode":"",
 		"startDate":"2016-07-01",
 		"businessUnit" :"",
 		"manager":"",
-		"eventReason":"NEW HIRE"
-	},
-	"national":{
+		"eventReason":"NEW HIRE",
 		"country":"CHN",
 		"nationalIdType":"",
 		"nationalId":""
-		
 	}
 }
