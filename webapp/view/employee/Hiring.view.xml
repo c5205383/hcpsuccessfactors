@@ -23,11 +23,12 @@
 						</headerToolbar>
 						<columns>
 							<Column minScreenWidth="Tablet" demandPopin="true">
-								<Text text="{i18n>hiring-username}" wrapping="false" />
-							</Column>
-							<Column minScreenWidth="Tablet" demandPopin="true">
 								<Text text="{i18n>hiring-userId}" wrapping="false" />
 							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="{i18n>hiring-username}" wrapping="false" />
+							</Column>
+
 							<Column minScreenWidth="Tablet" demandPopin="true">
 								<Text text="{i18n>hiring-personIdExternal}" wrapping="false" />
 							</Column>
@@ -53,14 +54,15 @@
 						<items>
 							<ColumnListItem vAlign="Middle">
 								<cells>
-									<Text text="{employee/username}" wrapping="false" />
-									<Text text="{employee/userId}" wrapping="false" />
-									<Text text="{employee/personIdExternal}" wrapping="false" />
-									<Text text="{employee/firstName}, {employee/lastName}" wrapping="false" />
-									<Text text="{employee/gender}" wrapping="false" />
-									<Text text="{employee/company}" wrapping="false" />
-									<Text text="{employee/jobCode}" wrapping="false" />
-									<Text text="{employee/startDate}" wrapping="false" />
+									<Text text="{userId}" wrapping="false" />
+									<Text text="{username}" wrapping="false" />
+
+									<Text text="{personIdExternal}" wrapping="false" />
+									<Text text="{firstName}, {lastName}" wrapping="false" />
+									<Text text="{gender}" wrapping="false" />
+									<Text text="{company}" wrapping="false" />
+									<Text text="{jobCode}" wrapping="false" />
+									<Text text="{startDate}" wrapping="false" />
 									<Button icon="sap-icon://delete" press="onRemovePressed" />
 								</cells>
 							</ColumnListItem>

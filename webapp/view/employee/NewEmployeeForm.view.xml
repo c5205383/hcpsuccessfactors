@@ -9,35 +9,35 @@
 						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-personal-block-title}">
 							<form:content>
 								<Label text="{i18n>form-employee-username}" design="Bold" />
-								<Input editable="true" value="{/employee/username}" />
+								<Input editable="true" value="{/username}" />
 								<Label text="{i18n>form-employee-userId}" design="Bold" />
-								<Input editable="true" value="{/employee/userId}" />
+								<Input editable="true" value="{/userId}" />
 
 								<Label text="{i18n>form-employee-externalId}" design="Bold" />
-								<Input editable="true" value="{/employee/personIdExternal}" />
+								<Input editable="true" value="{/personIdExternal}" />
 
 								<Label text="{i18n>form-employee-employeeId}" design="Bold" />
-								<Input editable="true" value="{/employee/empId}" />
+								<Input editable="true" value="{/empId}" />
 
 								<Label text="{i18n>form-employee-firstName}" design="Bold" />
-								<Input editable="true" value="{/employee/firstName}" />
+								<Input editable="true" value="{/firstName}" />
 
 								<Label text="{i18n>form-employee-lastName}" design="Bold" />
-								<Input editable="true" value="{/employee/lastName}" />
+								<Input editable="true" value="{/lastName}" />
 								<Label text="{i18n>form-employee-defaultFullName}" design="Bold" />
-								<Input editable="true" value="{/employee/defaultFullName}" />
+								<Input editable="true" value="{/defaultFullName}" />
 
 								<Label text="{i18n>form-employee-email}" design="Bold" />
-								<Input editable="true" type="Email" value="{/employee/email}" />
+								<Input editable="true" type="Email" value="{/email}" />
 
 								<Label text="{i18n>form-employee-gender}" design="Bold" />
-								<Select id="genderSelectorId" selectedKey="{/employee/gender}" change="onValueChanged">
+								<Select id="genderSelectorId" selectedKey="{/gender}" change="onValueChanged">
 									<core:Item key="{i18n>form-employee-gender-key1}" text="{i18n>form-employee-gender-value1}" />
 									<core:Item key="{i18n>form-employee-gender-key2}" text="{i18n>form-employee-gender-value2}" />
 								</Select>
 
 								<Label text="{i18n>form-employee-type}" design="Bold" />
-								<Select id="empTypeSelectorId" selectedKey="{/employee/type}" change="onValueChanged">
+								<Select id="empTypeSelectorId" selectedKey="{/type}" change="onValueChanged">
 									<core:Item key="{i18n>form-employee-type-key1}" text="{i18n>form-employee-type-value1}" />
 									<core:Item key="{i18n>form-employee-type-key2}" text="{i18n>form-employee-type-value2}" />
 								</Select>
@@ -49,34 +49,34 @@
 						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-employeement-block-title}">
 							<form:content>
 								<Label text="{i18n>form-employee-company}" design="Bold" />
-								<Select id="companySelectorId" selectedKey="{/employee/company}" forceSelection="false" change="onValueChanged" items="{path:'Company>/d/results'}">
+								<Select id="companySelectorId" selectedKey="{/company}" forceSelection="false" change="onValueChanged" items="{path:'Company>/d/results'}">
 									<items>
 										<core:Item key="{Company>externalCode}" text="{Company>name}" />
 									</items>
 								</Select>
 
 								<Label text="{i18n>form-employee-jobCode}" design="Bold" />
-								<Select id="jobCodeSelectorId" selectedKey="{/employee/jobCode}" forceSelection="false" change="onValueChanged" items="{path:'JobCode>/d/results'}">
+								<Select id="jobCodeSelectorId" selectedKey="{/jobCode}" forceSelection="false" change="onValueChanged" items="{path:'JobCode>/d/results'}">
 									<items>
 										<core:Item key="{JobCode>externalCode}" text="{JobCode>name}" />
 									</items>
 								</Select>
 
 								<Label text="{i18n>form-employee-startDate}" design="Bold" />
-								<Input editable="true" type="Date" value="{/employee/startDate}" />
+								<Input editable="true" type="Date" value="{/startDate}" />
 
 								<Label text="{i18n>form-employee-businessUnit}" tooltip="{i18n>form-employee-businessUnit}" design="Bold" />
-								<Select id="businessUnitSelectorId" selectedKey="{/employee/businessUnit}" forceSelection="false" change="onValueChanged" items="{path:'BusinessUnit>/d/results'}">
+								<Select id="businessUnitSelectorId" selectedKey="{/businessUnit}" forceSelection="false" change="onValueChanged" items="{path:'BusinessUnit>/d/results'}">
 									<items>
 										<core:Item key="{BusinessUnit>externalCode}" text="{BusinessUnit>name}" />
 									</items>
 								</Select>
 
 								<Label text="{i18n>form-employee-manager}" design="Bold" />
-								<Input editable="true" value="{/employee/manager}" />
+								<Input editable="true" value="{/managerId}" />
 
 								<Label text="{i18n>form-employee-eventReason}" tooltip="{i18n>form-employee-eventReason}" design="Bold" />
-								<Input editable="false" value="{/employee/eventReason}" />
+								<Input editable="false" value="{/eventReason}" />
 							</form:content>
 						</form:SimpleForm>
 					</l:BlockLayoutCell>
@@ -84,21 +84,21 @@
 						<form:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="{i18n>form-national-block-title}">
 							<form:content>
 								<Label text="{i18n>form-employee-country}" design="Bold" />
-								<Select id = "countrySelectorId" selectedKey="{/employee/country}" forceSelection="false" change="onValueChanged" items="{path:'Country>/d/results'}">
+								<Select id = "countrySelectorId" selectedKey="{/country}" forceSelection="false" change="onValueChanged" items="{path:'Country>/d/results'}">
 									<items>
 										<core:Item key="{Country>code}" text="{Country>externalName_defaultValue}" />
 									</items>
 								</Select>
 
 								<!-- <Label text="{i18n>form-employee-nationalIdType}" design="Bold" />
-								<Select selectedKey="{/employee/nationalIdType}" change="onSelectCompanyKeyChange" items="{path:'Company>/d/results'}">
+								<Select selectedKey="{/nationalIdType}" change="onSelectCompanyKeyChange" items="{path:'Company>/d/results'}">
 									<items>
 										<core:Item key="{}" text="{} {}" />
 									</items>
 								</Select> -->
 
 								<Label text="{i18n>form-employee-nationalId}" design="Bold" />
-								<Input editable="true" value="{/employee/nationalId}" />
+								<Input editable="true" value="{/nationalId}" />
 
 							</form:content>
 						</form:SimpleForm>

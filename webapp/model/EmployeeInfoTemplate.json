@@ -1,30 +1,26 @@
-{
-	"employee":
 	{
-		"userId": "test",
+		"userId": "",
 		"businessPhone": "null",
 		"personIdExternal":"",
 		"empId": "",
 		"city": "null",
 		"username": "",
-		"jobCode": "",
 		"defaultFullName": "",
 		"function": null,
-		"gender": "FM",
+		"gender": "F",
 		"lastName": "",
 		"type": "CL",
+		"status":"Active",
 		"hireDate": "",
-		"country": "",
 		"email": "",
 		"firstName": "",
 		"company":"",
 		"jobCode":"",
 		"startDate":"2016-07-01",
 		"businessUnit" :"",
-		"manager":"",
+		"managerId":"",
 		"eventReason":"NEW HIRE",
 		"country":"CHN",
 		"nationalIdType":"",
 		"nationalId":""
 	}
-}

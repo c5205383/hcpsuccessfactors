@@ -140,17 +140,17 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 			var object = this.getView().getModel().getData();
 
 			if (source === genderSelector) {
-				object.employee.gender = key;
+				object.gender = key;
 			} else if (source == employeeTypeSelector) {
-				object.employee.type = key;
+				object.type = key;
 			} else if (source == companySelector) {
-				object.employee.company = key;
+				object.company = key;
 			} else if (source == jobCodeSelector) {
-				object.employee.jobCode = key;
+				object.jobCode = key;
 			} else if (source == businessUnitSelector) {
-				object.employee.businessUnit = key;
+				object.businessUnit = key;
 			} else if (source == countrySelector) {
-				object.employee.country = key;
+				object.country = key;
 			}
 			console.log(object);
 		},
