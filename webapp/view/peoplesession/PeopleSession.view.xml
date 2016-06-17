@@ -1,7 +1,338 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:t="sap.ui.table" xmlns:m="sap.suite.ui.microchart" xmlns:commons="sap.ui.commons"
 	controllerName="hcpsuccessfactors.controller.peoplesession.PeopleSession" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="" showNavButton="true" navButtonPress="onNavBack">
+	<Page title="People Session" showNavButton="true" navButtonPress="onNavBack">
 		<content>
+			<l:Splitter height="750px" orientation="Vertical">
+				<l:Splitter>
+					<l:Splitter orientation="Vertical">
+						<l:layoutData><l:SplitterLayoutData size="370px" resizable="false"/></l:layoutData>
+						<l:contentAreas>
+							<f:SimpleForm backgroundDesign="Solid">
+								<f:toolbar>
+									<Toolbar>
+										<Title id="Title1" text="Employee Information" level="H4" titleStyle="H4"/>
+										<ToolbarSpacer/>
+										<Button icon="sap-icon://edit"/>
+									</Toolbar>
+								</f:toolbar>
+								<HBox>
+									<Image src="data:image/png; base64,{photoModel>/photo}" width="100px" height="110px"/>
+									<VBox class="cssPeopleSessionLayout">
+										<HBox>
+											<Label text="Name: " width="120px"/>
+											<Text text="Donald Duck"/>
+										</HBox>
+										<HBox>
+											<Label text="Age: " width="120px"/>
+											<Text text="1980 (34)"/>
+										</HBox>
+										<HBox>
+											<Label text="Address: " width="120px"/>
+											<Text text="The specific address of DooShan."/>
+										</HBox>
+										<HBox>
+											<Label text="Apply Department: " width="120px"/>
+											<Text text="Software Center"/>
+										</HBox>
+										<HBox >
+											<Label text="Apply Position: " width="120px"/>
+											<Text text="HR"/>
+										</HBox>
+									</VBox>
+								</HBox>
+								<f:layoutData><l:SplitterLayoutData size="220px" resizable="false"/></f:layoutData>
+							</f:SimpleForm>
+							<Table inset="false" backgroundDesign="Solid">
+								<headerToolbar>
+									<Toolbar>
+										<Title text="Personal experience " level="H2"/>
+										<ToolbarSpacer/>
+										<Button icon="sap-icon://add"/>
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Date"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Event"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="2000.03-2010.12"/>
+											<Text text="Offical Disney Mascot"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text="1996.08-2000.03"/>
+											<Text text="Apprentice to Micky"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text="1987.01-1996.08"/>
+											<Text text="In an eqq"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text=""/>
+											<Text text=""/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text=""/>
+											<Text text=""/>
+										</cells>
+									</ColumnListItem>
+								</items>
+								<layoutData><l:SplitterLayoutData size="325px" resizable="false"/></layoutData>
+							</Table>
+							<Table inset="false" backgroundDesign="Solid">
+								<headerToolbar>
+									<Toolbar>
+										<Title text="LPM" level="H2"/>
+										<ToolbarSpacer/>
+										<Button icon="sap-icon://add"/>
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column></Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<m:ComparisonMicroChart width="300px">
+											<m:data>
+												<m:ComparisonMicroChartData title="2011 Employee_003" value="55" displayValue="Meets/C" color="Critical"/>
+												<m:ComparisonMicroChartData title="2012 Employee_003" value="55" displayValue="Meet/S" color="Good"/>
+												<m:ComparisonMicroChartData title="2013 Mickey Mouse" value="50" displayValue="Meet/DR" color="Error"/>
+											</m:data>
+										</m:ComparisonMicroChart>
+									</ColumnListItem>
+								</items>
+								<layoutData><l:SplitterLayoutData size="190px" resizable="false"/></layoutData>
+							</Table>
+						</l:contentAreas>
+					</l:Splitter>
+					<l:Splitter orientation="Vertical">
+						<l:layoutData><l:SplitterLayoutData size="505px" resizable="false"/></l:layoutData>
+						<l:contentAreas>
+							<t:Table id="treeTable" enableColumnReordering="false" allowColumnReordering="false" selectionMode="None" rows="{/catalog}"
+								visibleRowCount="6" editable="false">
+								<t:toolbar>
+									<Toolbar>
+										<Title text="LPM" level="H2"/>
+									</Toolbar>
+								</t:toolbar>
+								<t:columns>
+									<t:Column headerSpan="3" width="61px" resizable="false">
+										<t:multiLabels>
+											<Label text="Competency" textAlign="Center" width="100%"/>
+										</t:multiLabels>
+										<t:template>
+											<Text text="{category}"/>
+										</t:template>
+									</t:Column>
+									<t:Column width="84px" resizable="false">
+										<t:multiLabels>
+											<Label text="Competency"/>
+										</t:multiLabels>
+										<t:template>
+											<Text text="{name}"/>
+										</t:template>
+									</t:Column>
+									<t:Column width="180px" resizable="false">
+										<t:multiLabels>
+											<Label text="Competency"/>
+										</t:multiLabels>
+										<t:template>
+											<Text text="{event}"/>
+										</t:template>
+									</t:Column>
+									<t:Column width="47px" resizable="false">
+										<t:multiLabels>
+											<Label text="UDN" textAlign="Center" width="100%"/>
+										</t:multiLabels>
+										<t:template>
+											<Text text="{udn}"/>
+										</t:template>
+									</t:Column>
+									<t:Column width="37px" resizable="false">
+										<t:multiLabels>
+											<Label text="DN" textAlign="Center" width="100%"/>
+										</t:multiLabels>
+										<t:template>
+											<Text value="{dn}"/>
+										</t:template>
+									</t:Column>
+									<t:Column width="27px" resizable="false">
+										<t:multiLabels>
+											<Label text="C" textAlign="Center" width="100%"/>
+										</t:multiLabels>
+										<t:template>
+											<core:Icon src="{c}"/>
+										</t:template>
+									</t:Column>
+									<t:Column width="37px" resizable="false">
+										<t:multiLabels>
+											<Label text="HC" textAlign="Center" width="100%"/>
+										</t:multiLabels>
+										<t:template>
+											<Text value="{hc}"/>
+										</t:template>
+									</t:Column>
+									<t:Column width="27px" resizable="false">
+										<t:multiLabels>
+											<Label text="M" textAlign="Center" width="100%"/>
+										</t:multiLabels>
+										<t:template>
+											<Text value="{m}"/>
+										</t:template>
+									</t:Column>
+								</t:columns>
+								<t:layoutData><l:SplitterLayoutData size="340px" minSize="250px" resizable="false"/></t:layoutData>
+							</t:Table>
+							<Table inset="false" backgroundDesign="Solid">
+								<headerToolbar>
+									<Toolbar>
+										<Title text="Business Result Evaluation[Meet]" level="H2"/><ToolbarSpacer/>
+										<Button icon="sap-icon://add"/>
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Type"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Description (1/16 Lines)"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Select width="100%" selectedKey="USA">
+												<items>
+													<core:Item text="Business" key="Business"/>
+													<core:Item text="USA" key="USA"/>
+													<core:Item text="England" key="England"/>
+												</items>
+											</Select>
+											<Text text="Business - KPI"/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text=""/>
+											<Text text=""/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text=""/>
+											<Text text=""/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text=""/>
+											<Text text=""/>
+										</cells>
+									</ColumnListItem>
+									<ColumnListItem>
+										<cells>
+											<Text text=""/>
+											<Text text=""/>
+										</cells>
+									</ColumnListItem>
+								</items>
+								<layoutData><l:SplitterLayoutData size="358px" minSize="250px" resizable="false"/></layoutData>
+							</Table>
+							<MessageStrip text="Information of DC" type="Information">
+								<layoutData><l:SplitterLayoutData size="38px" resizable="false"/></layoutData>
+							</MessageStrip>
+						</l:contentAreas>
+					</l:Splitter>
+					<l:Splitter orientation="Vertical">
+						<l:layoutData><l:SplitterLayoutData size="auto" resizable="false"/></l:layoutData>
+						<Panel backgroundDesign="Solid">
+							<headerToolbar>
+								<Toolbar>
+									<Title text="People Performance"/>
+									<ToolbarSpacer/>
+									<Button icon="sap-icon://edit"/>
+								</Toolbar>
+							</headerToolbar>
+							<content>
+								<HBox class="cssPeopleSessionBoder">
+									<core:Icon src="sap-icon://bo-strategy-management"/>
+									<Text text=" LPM: MA"/></HBox>
+								<HBox>
+									<core:Icon src="sap-icon://bo-strategy-management"/>
+									<Text text=" Description (1/16 Lines)"/>
+								</HBox>
+								<Text text="This is description of people performance.\n\n\n\n\n\n\n\n\n\n\n\n\n"/>
+							</content>
+							<layoutData><l:SplitterLayoutData size="340px" resizable="false"/></layoutData>
+						</Panel>
+						<Panel backgroundDesign="Solid">
+							<headerToolbar>
+								<Toolbar>
+									<Title text="Detail Information"/>
+									<ToolbarSpacer/>
+									<Button icon="sap-icon://save"/>
+								</Toolbar>
+							</headerToolbar>
+							<content>
+								<VBox height ="270px">
+									<HBox>
+										<VBox class="cssBoxBorder" width="95px" alignItems="Center" justifyContent="Center">
+											<Text text="Information"/>
+										</VBox>
+										<VBox width="85px">
+											<VBox class="cssBoxBorder">
+												<Text text="Type1(0)"/>
+											</VBox>
+											<VBox class="cssBoxBorder">
+												<Text text="Type2(0)"/></VBox>
+										</VBox>
+										<VBox width="157px">
+											<VBox class="cssBoxBorder">
+												<Text text=" "/></VBox>
+											<VBox class="cssBoxBorder">
+												<Text text=" "/></VBox>
+										</VBox>
+									</HBox>
+									<HBox>
+										<VBox class="cssBoxBorder" width="95px" alignItems="Center" justifyContent="Center">
+											<Text text="People"/>
+												<Text text="(2/7 Line)"/>
+											</VBox>
+										<VBox class="cssBoxBorder" width="242px">
+											<Text text="Building Dooshan Talent\nIn-hwa\n\n\n\n\n\n"/></VBox>
+									</HBox>
+									<HBox>
+										<VBox class="cssBoxBorder" width="95px" alignItems="Center" justifyContent="Center">
+											<Text text="Performance"/>
+												<Text text="(2/7 Line)"/>
+											</VBox>
+										<VBox class="cssBoxBorder" width="242px">
+											<Text text="Innovation\nExecution\n\n\n\n\n\n"/></VBox>
+									</HBox>
+								</VBox>
+							</content>
+							<layoutData><l:SplitterLayoutData size="358px" minSize="250px" resizable="false"/></layoutData>
+						</Panel>
+						<MessageStrip text="Promotability Code" type="Information" showIcon="true" customIcon="sap-icon://request">
+							<layoutData><l:SplitterLayoutData size="38px" resizable="false"/></layoutData>
+						</MessageStrip>
+					</l:Splitter>
+				</l:Splitter>
+			</l:Splitter>
 		</content>
 	</Page>
 </mvc:View>

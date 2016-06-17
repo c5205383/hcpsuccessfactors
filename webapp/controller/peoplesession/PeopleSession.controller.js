@@ -17,6 +17,32 @@ sap.ui.define([
 		 * @memberOf hcpsuccessfactors.view.peoplesession.PeopleSession
 		 */
 		onInit: function() {
+			this.bindMockData();
+			this.bindModel();
+		},
+
+		bindMockData: function() {
+			var photoModelPath = jQuery.sap.getModulePath("hcpsuccessfactors", "/mockData/photo.json");
+			var photoModel = new sap.ui.model.json.JSONModel();
+			photoModel.loadData(photoModelPath, null, false);
+			this.getView().setModel(photoModel, "photoModel");
+		},
+		bindModel: function() {
+			var oModel = new JSONModel();
+			var oData = {
+  "catalog": [
+              {"category": "People","name": "Building\nDooshan\nTalent", "event": "People-Centric\nPipeline Management\nCoaching & Development", "udn": "", "dn": "","c": "sap-icon://favorite","hc": "","m": ""},
+              {"category": "","name": "In-hwa", "event": "Famirness\nInclusiveness\nTeamwork", "udn": "", "dn": "","c": "sap-icon://favorite","hc": "","m": ""},
+              {"category": "","name": "Openness", "event": "Open Communication\nTransparency", "udn": "", "dn": "","c": "sap-icon://favorite","hc": "","m": ""},
+          {"category": "Perfor-mance","name": "Innovation", "event": "Visioning & Goal Setting\nInnovative Change", "udn": "", "dn": "","c": "sap-icon://favorite","hc": "","m": ""},
+          {"category": "","name": "Execution", "event": "Resourcefulness\nTenacious Execution", "udn": "", "dn": "","c": "sap-icon://favorite","hc": "","m": ""},
+          {"category": "","name": "Priority\nFocus", "event": "Business Acumen\nPriority Focus", "udn": "", "dn": "","c": "sap-icon://favorite","hc": "","m": ""}
+        ]};
+
+			oModel.setData(oData);
+			var oView = this.getView();
+			oView.setModel(oModel);
+		//	this.getView().byId("treeTable").expandToLevel(1);
 		}
 
 	});
