@@ -106,7 +106,7 @@
 								</columns>
 								<items>
 									<ColumnListItem>
-										<m:ComparisonMicroChart width="300px">
+										<m:ComparisonMicroChart width="300px" height="108px">
 											<m:data>
 												<m:ComparisonMicroChartData title="2011 Employee_003" value="55" displayValue="Meets/C" color="Critical"/>
 												<m:ComparisonMicroChartData title="2012 Employee_003" value="55" displayValue="Meet/S" color="Good"/>
