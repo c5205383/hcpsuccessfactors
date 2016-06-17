@@ -115,7 +115,30 @@
 .cssTableAlignment {
 	vertical-align: middle;
 }
+.cssPeopleSessionLayout {
+	margin-left:10px;
+}
+.cssPeopleSessionBoder{
+	border-bottom:1px solid #dddddd;
+	padding-bottom:5px;
+}
+.cssBoxBorder {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
 
+#__xmlview1--treeTable-rows-row0-col0 {
+	border-bottom:none;
+}
+#__xmlview1--treeTable-rows-row1-col0 {
+	border-bottom:none;
+}
+#__xmlview1--treeTable-rows-row3-col0 {
+	border-bottom:none;
+}
+#__xmlview1--treeTable-rows-row4-col0 {
+	border-bottom:none;
+}
 /* DO NOTE OVER WRITE UI5 CSS CLASS*/
 /*.sapMListUl {
     padding: 0 2rem;
