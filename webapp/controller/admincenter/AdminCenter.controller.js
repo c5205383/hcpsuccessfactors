@@ -11,6 +11,7 @@ sap.ui.define(
 
 			return BaseController.extend("hcpsuccessfactors.controller.admincenter.AdminCenter", {
 				formatter : formatter,
+				sNewBatchJobTemplatePath : "model/NewBatchJobTemplate.json",
 				loginUserPath : "loginUser",
 				/**
 				 * @event
@@ -77,6 +78,7 @@ sap.ui.define(
 						}
 					}, function(error) {
 						that._showBusyIndicator(false);
+						// TODO: get login user failed, request re-login again
 					});
 				},
 
@@ -87,66 +89,23 @@ sap.ui.define(
 				 */
 				onAddBatchJobPress : function() {
 					if (!this._oDialog) {
-						this._oDialog = sap.ui.xmlfragment("hcpsuccessfactors.view.admincenter.AddBJDialog", this);
+						this._oDialog = sap.ui
+								.xmlfragment("hcpsuccessfactors.view.admincenter.AddBatchJobDialog", this);
 						this.getView().addDependent(this._oDialog);
-						this._loadBatchJobDialogData();
 					}
+					this._initialDialogData(this._oDialog);
 					this._oDialog.open();
 				},
 
-				/**
-				 * @function
-				 * @name _loadData
-				 * @description preload add batch job dialog data
-				 */
-				_loadBatchJobDialogData : function() {
-					// load interval data
-					(function() {
-						var oSelectInterval = sap.ui.getCore().byId("bjdialog-select-interval");
-						var intervalData = {
-							list : [ {
-								key : "0.5",
-								value : "30 min"
-							}, {
-								key : "1",
-								value : "1 hour"
-							} ]
-						};
-						var intervalSelectItem;
-						oSelectInterval.removeAllItems();
-						for (var i = 0, length = intervalData.list.length; i < length; i++) {
-							intervalSelectItem = new sap.ui.core.Item({
-								key : intervalData.list[i].key,
-								text : intervalData.list[i].value
-							});
-							oSelectInterval.addItem(intervalSelectItem);
-						}
-						oSelectInterval.setSelectedKey(intervalData.list[0].key);
-					})();
-
-					// dynamic load type data
-					(function() {
-						var oSelectType = sap.ui.getCore().byId("bjdialog-select-type");
-						var oBJTypeData = {
-							list : [ {
-								key : "workflow",
-								value : "workflow"
-							}, {
-								key : "user",
-								value : "user"
-							} ]
-						};
-						var typeSelectItem;
-						oSelectType.removeAllItems();
-						for (var i = 0, length = oBJTypeData.list.length; i < length; i++) {
-							typeSelectItem = new sap.ui.core.Item({
-								key : oBJTypeData.list[i].key,
-								text : oBJTypeData.list[i].value
-							});
-							oSelectType.addItem(typeSelectItem);
-						}
-						oSelectType.setSelectedKey(oBJTypeData.list[0].key);
-					})();
+				_initialDialogData : function(dialog) {
+					var oModel = new sap.ui.model.json.JSONModel();
+					oModel.loadData(this.sNewBatchJobTemplatePath, null, false);
+					var oUserModel = this.getView().getModel("UserModel");
+					if (oUserModel != undefined) {
+						var sUserName = oUserModel.getData().user;
+						oModel.getData().owner = sUserName;
+						dialog.setModel(oModel, "NewBatchJob");
+					}
 				},
 
 				/**
@@ -155,47 +114,30 @@ sap.ui.define(
 				 * @description when dialog's ok is clicked
 				 */
 				onDialogSelectOk : function() {
-					var sInputName = sap.ui.getCore().byId("bjdialog-ipt-name").getValue();
-					var sSelectType = sap.ui.getCore().byId("bjdialog-select-type").getSelectedKey();
-					var sSelectInterval = sap.ui.getCore().byId("bjdialog-select-interval").getSelectedKey();
-					var sInputDescription = sap.ui.getCore().byId("bjdialog-ipt-description").getValue();
-					var bStatus = true;
-					var sOwner = this.getView().getModel("UserModel").getData().user;
 
-					if (sInputName === "" || sInputDescription === "") {
-						MessageToast.show("please complete the input");
-						return;
+					if (this._oDialog) {
+						var oDialogModel = this._oDialog.getModel("NewBatchJob");
+						var oPostBatchJobData = oDialogModel.getData();
+
+						var oBatchJobsModel = this.getView().getModel("BatchJobsModel");
+						var oBatchJobsData = oBatchJobsModel.getData();
+						var view = this.getView();
+						var host = this.getServiceHost();
+						var url = this.getServiceUrl("batchJob");
+						var result = httpRequest.httpPostRequest(host, url, JSON.stringify(oPostBatchJobData), true,
+								function(result) {
+									view.setBusy(false);
+									oBatchJobsData.push(result);
+									oBatchJobsModel.setData(oBatchJobsData);
+									view.setModel(oBatchJobsModel, "BatchJobsModel");
+									MessageToast.show("Create Batch Job Successed!");
+								}, function(result) {
+									view.setBusy(false);
+								});
+
+						this.onDialogClose();
 					}
 
-					var oPostBatchJobData = {
-						name : sInputName,
-						type : sSelectType,
-						interval : sSelectInterval,
-						info : sInputDescription,
-						status : bStatus,
-						owner : sOwner
-					};
-
-					var oBatchJobsModel = this.getView().getModel("BatchJobsModel");
-					var oBatchJobsData = oBatchJobsModel.getData();
-					var view = this.getView();
-					var host = this.getServiceHost();
-					var url = this.getServiceUrl("batchJob");
-					var result = httpRequest.httpPostRequest(host, url, JSON.stringify(oPostBatchJobData), true,
-							function(result) {
-								view.setBusy(false);
-								MessageToast.show("add success");
-								if (oBatchJobsModel.getJSON() === "{}") {
-									oBatchJobsData = [ result ];
-								} else {
-									oBatchJobsData.push(result);
-								}
-								oBatchJobsModel.setData(oBatchJobsData);
-							}, function(result) {
-								view.setBusy(false);
-							});
-
-					this.onDialogClose();
 				},
 
 				/**

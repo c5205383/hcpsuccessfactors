@@ -37,7 +37,9 @@ hcpsuccessfactors.util.httpRequest = {
 					data : textStatus + "\n" + errorThrown
 				};
 				if (typeof onSuccess === 'function') {
+					window.console.log(result);
 					onError(result);
+
 				}
 			}
 		});
@@ -70,6 +72,7 @@ hcpsuccessfactors.util.httpRequest = {
 				result = {
 					success : true,
 					data : rdata
+					
 				};
 				if (typeof onSuccess === 'function') {
 					onSuccess(result);
@@ -81,6 +84,7 @@ hcpsuccessfactors.util.httpRequest = {
 					data : textStatus + "\n" + errorThrown
 				};
 				if (typeof onSuccess === 'function') {
+					window.console.log(result);
 					onError(result);
 				}
 			}

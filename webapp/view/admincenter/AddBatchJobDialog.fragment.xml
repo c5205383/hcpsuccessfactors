@@ -1,0 +1,46 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="Add a new batch job" binding="{NewBatchJob>/}">
+		<List>
+			<InputListItem label="{i18n>admincenter-page-batchjob-name}">
+				<Input id="bjdialog-ipt-name" value="{NewBatchJob>/name}" width="250px" class="cssRightPostion cssInput" editable="true" design="Bold" />
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-type}">
+				<Select id="bjdialog-select-type" width="250px" forceSelection="false" class="cssRightPostion" selectedKey="{NewBatchJob>/type}">
+					<items>
+						<core:Item key="workflow" text="workflow" />
+						<core:Item key="user" text="user" />
+					</items>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-interval}">
+				<Select id="bjdialog-select-interval" width="250px" forceSelection="false" class="cssRightPostion" selectedKey="{NewBatchJob>/interval}">
+					<items>
+						<core:Item key="0.5" text="30 mins" />
+						<core:Item key="1" text="60 mins" />
+					</items>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-description}">
+				<Input id="bjdialog-ipt-description" value="{NewBatchJob>/info}" width="250px" class="cssRightPostion cssInput" editable="true"
+					design="Bold" />
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-status}">
+				<Select width="250px" forceSelection="false" class="cssRightPostion" selectedKey="{NewBatchJob>/status}">
+					<items>
+						<core:Item key="active" text="active" />
+						<core:Item key="inactive" text="inactive" />
+					</items>
+				</Select>
+			</InputListItem>
+			<InputListItem label="{i18n>admincenter-page-batchjob-owner}">
+				<Input value="{NewBatchJob>/owner}" width="250px" class="cssRightPostion cssInput" editable="false" design="Bold" />
+			</InputListItem>
+		</List>
+		<beginButton>
+			<Button text="OK" press="onDialogSelectOk" type="Accept" />
+		</beginButton>
+		<endButton>
+			<Button text="Cancel" press="onDialogClose" type="Reject" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
