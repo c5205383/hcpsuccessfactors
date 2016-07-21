@@ -24,7 +24,7 @@
 				<Input id="bjdialog-ipt-description" value="{NewBatchJob>/info}" width="250px" class="cssRightPostion cssInput" editable="true"
 					design="Bold" />
 			</InputListItem>
-			<InputListItem label="{i18n>admincenter-page-batchjob-status}">
+			<InputListItem label="{i18n>admincenter-page-batchjob-status}" visible="false">
 				<Select width="250px" forceSelection="false" class="cssRightPostion" selectedKey="{NewBatchJob>/status}">
 					<items>
 						<core:Item key="active" text="active" />

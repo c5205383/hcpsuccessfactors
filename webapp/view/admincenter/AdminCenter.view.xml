@@ -25,8 +25,8 @@
 							</VBox>
 						</HBox>
 						<HBox justifyContent="End" width="50%">
-							<Button id="admincenter-btn-status" press="onBJStatusChange" icon="{path:'BatchJobsModel>object/status', formatter:'.formatter.formatBtnStatus'}"
-								type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
+							<Button press="onChangeBatchJobStatus" icon="{path:'BatchJobsModel>object/status', formatter:'.formatter.formatBtnStatus'}" type="Transparent"
+								class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
 							<Button press="onDeleteBatchJobPressed" icon="sap-icon://delete" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
 							<Button text="" type="Transparent" enabled="false" width="1.5rem" />
 						</HBox>

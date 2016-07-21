@@ -83,7 +83,7 @@ sap.ui.define(
 
 				/**
 				 * @event
-				 * @name onAddBJPress
+				 * @name onAddBatchJobPressed
 				 * @description open add batch job dialog
 				 */
 				onAddBatchJobPressed : function() {
@@ -156,44 +156,39 @@ sap.ui.define(
 
 				/**
 				 * @event
-				 * @name onBJStatusChange
+				 * @name onChangeBatchJobStatus
 				 * @description press status button
 				 * @param {sap.ui.base.Event} -
 				 *            oEvent The fired event.
 				 */
-				onBJStatusChange : function(oEvent) {
+				onChangeBatchJobStatus : function(oEvent) {
+
+					var oJobList = this.getView().byId("jobListId");
 					var oItem = oEvent.getSource();
-					var oContext = oItem.getBindingContext("BJsModel");
+					var oContext = oItem.getBindingContext(this.batchJobsModel);
 					var sPath = StringUtil.subLastWord(oContext.getPath());
-					var oBJsModel = this.getView().getModel("BJsModel");
-					var oNewBJsData = oBJsModel.getData();
-					var oBJData = oBJsModel.getData()[sPath];
-					if (oItem.getIcon() === "sap-icon://begin") {
-						oNewBJsData[sPath].status = true;
-						oBJData.status = true;
-					} else if (oItem.getIcon() === "sap-icon://stop") {
-						oNewBJsData[sPath].status = false;
-						oBJData.status = false;
-					}
-					$.ajax({
-						url : "/sfsfdataservice/hcp/batchJob/" + oBJData.id,
-						type : "PUT",
-						async : true,
-						contentType : "application/json",
-						data : JSON.stringify(oBJData),
-						success : function() {
-							if (oBJData.status === false) {
-								MessageToast.show("start success");
-							} else {
-								MessageToast.show("stop success");
-							}
-							oBJsModel.setData(oNewBJsData);
-						},
-						error : function() {
-							MessageToast.show("failed to change status");
-						},
-						complete : function() {
+					var oModel = this.getView().getModel(this.batchJobsModel);
+					var object = oModel.getData()[sPath].object
+
+					if (object == undefined)
+						return;
+
+					object.status = !object.status;
+
+					var that = this;
+					var host = this.getServiceHost();
+					var url = this.getServiceUrl("batchJob/" + object.id);
+					var result = httpRequest.httpRequest(host, url, JSON.stringify(object), true, "PUT", function(
+							result) {
+						if (result.success) {
+
 						}
+						/*
+						 * if (result.status === false) { MessageToast.show("start success"); } else { MessageToast.show("stop success"); }
+						 */
+						that.initialJobData();
+					}, function(result) {
+						MessageToast.show("failed to change status");
 					});
 				},
 
@@ -223,7 +218,7 @@ sap.ui.define(
 						title : "Confirm",
 						type : "Message",
 						content : new sap.m.Text({
-							text : "Are you sure you to delete this batch job?"
+							text : "Are you sure to delete this batch job?"
 						}),
 						beginButton : new sap.m.Button({
 							text : "OK",
