@@ -5,9 +5,9 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 	"use strict";
 
 	return BaseController.extend("hcpsuccessfactors.controller.goals.MyGoal", {
-		
+
 		sGoalDetailPageName : "hcpsuccessfactors.view.goals.GoalDetail",
-		
+
 		onInit : function() {
 			this.getView().setModel(sap.ui.getCore().getModel("i18n"), "i18n");
 			this.getView().setModel(models.createDeviceModel(), "device").bindElement("device>/");
@@ -16,29 +16,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 			oSelector.setBusy(true);
 
 			this.bindGoalPlanData(oSelector);
-		},
-
-		bindGoalListData : function(goalId, oList) {
-			var host = this.getServiceHost();
-			var url = this.getServiceUrl("goals");
-			var that = this;
-			var data = {
-				goalPlanId : goalId
-			};
-			var result = httpRequest.httpGetRequest(host, url, data, true, function(result) {
-				if (result != null) {
-					// that.hideBusyIndicator();
-					oList.setBusy(false);
-					if (result.success === true) {
-						var oModel = new sap.ui.model.json.JSONModel();
-						oModel.setData(result.data);
-						that.getView().setModel(oModel, "GoalModel");
-					} else {
-						// TODO: ERROR
-
-					}
-				}
-			});
 		},
 
 		bindGoalPlanData : function(control) {
@@ -66,11 +43,31 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 						that.bindGoalListData(goalPlanId, oList);
 					} else {
 						// TODO: ERROR
+						window.console.log(result);
+					}
+				}
+			});
+		},
+
+		bindGoalListData : function(goalId, oList) {
+			var host = this.getServiceHost();
+			var url = this.getServiceUrl("goals");
+			var that = this;
+			var data = {
+				goalPlanId : goalId
+			};
+			var result = httpRequest.httpGetRequest(host, url, data, true, function(result) {
+				if (result != null) {
+					oList.setBusy(false);
+					if (result.success === true) {
+						var oModel = new sap.ui.model.json.JSONModel();
+						oModel.setData(result.data);
+						that.getView().setModel(oModel, "GoalModel");
+					} else {
+						window.console.log(result);
 
 					}
 				}
-			}, function(result) {
-				control.setBusy(false);
 			});
 		},
 

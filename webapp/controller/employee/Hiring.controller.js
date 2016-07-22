@@ -83,8 +83,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 						// TODO: ERROR
 					}
 				}
-			}, function(result) {
-				view.setBusy(false);
 			});
 		},
 

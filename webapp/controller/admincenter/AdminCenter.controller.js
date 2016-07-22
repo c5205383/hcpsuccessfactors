@@ -47,7 +47,6 @@ sap.ui.define(
 								// TODO: ERROR
 							}
 						}
-					}, function(error) {
 					});
 				},
 
@@ -75,9 +74,6 @@ sap.ui.define(
 
 							}
 						}
-					}, function(error) {
-						that._showBusyIndicator(false);
-						// TODO: get login user failed, request re-login again
 					});
 				},
 
@@ -130,7 +126,6 @@ sap.ui.define(
 								function(result) {
 									MessageToast.show("Create Batch Job Successed!");
 									that.initialJobData();
-								}, function(result) {
 								});
 						this.onDialogClose();
 					}
@@ -178,18 +173,16 @@ sap.ui.define(
 					var that = this;
 					var host = this.getServiceHost();
 					var url = this.getServiceUrl("batchJob/" + object.id);
-					var result = httpRequest.httpRequest(host, url, JSON.stringify(object), true, "PUT", function(
-							result) {
-						if (result.success) {
+					var result = httpRequest.httpRequest(host, url, JSON.stringify(object), true,
+							httpRequest.httpRequestMethod.PUT, function(result) {
+								if (result.success) {
 
-						}
-						/*
-						 * if (result.status === false) { MessageToast.show("start success"); } else { MessageToast.show("stop success"); }
-						 */
-						that.initialJobData();
-					}, function(result) {
-						MessageToast.show("failed to change status");
-					});
+								} else {
+									MessageToast.show("failed to change status");
+								}
+
+								that.initialJobData();
+							});
 				},
 
 				/**
@@ -230,8 +223,6 @@ sap.ui.define(
 											oDeleteWarningDialog.close();
 											MessageToast.show("Delete Job Successfully!");
 											that.initialJobData();
-											oJobList.setBusy(false);
-										}, function(result) {
 											oJobList.setBusy(false);
 										});
 							}

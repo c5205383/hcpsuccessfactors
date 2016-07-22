@@ -8,6 +8,7 @@
 				<Select id="bjdialog-select-type" width="250px" forceSelection="false" class="cssRightPostion" selectedKey="{NewBatchJob>/type}">
 					<items>
 						<core:Item key="workflow" text="workflow" />
+						<core:Item key="form" text="form" />
 						<core:Item key="user" text="user" />
 					</items>
 				</Select>

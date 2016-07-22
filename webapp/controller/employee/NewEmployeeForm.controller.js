@@ -1,4 +1,4 @@
-sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/json/JSONModel", 
+sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/json/JSONModel",
 		"hcpsuccessfactors/util/httpRequest" ], function(BaseController, JSONModel, httpRequest) {
 	"use strict";
 
@@ -63,7 +63,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 					}
 				}
-			}, function(error) {
 			});
 		},
 
@@ -83,7 +82,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 					}
 				}
-			}, function(error) {
 			});
 		},
 
@@ -103,7 +101,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 					}
 				}
-			}, function(error) {
 			});
 		},
 
@@ -123,7 +120,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 					}
 				}
-			}, function(error) {
 			});
 		},
 

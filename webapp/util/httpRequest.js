@@ -7,7 +7,7 @@ hcpsuccessfactors.util.httpRequest = {
 		DELETE : "DELETE",
 		PUT : "PUT"
 	},
-	httpRequest : function(host, url, data, async, method, onSuccess, onError) {
+	httpRequest : function(host, url, data, async, method, onProcess) {
 
 		var result = null;
 		var datatype = "json";
@@ -33,18 +33,20 @@ hcpsuccessfactors.util.httpRequest = {
 					success : true,
 					data : rdata
 				};
-				if (typeof onSuccess === 'function') {
-					onSuccess(result);
+				if (typeof onProcess === 'function') {
+					onProcess(result);
 				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
 				result = {
 					success : false,
-					data : textStatus + "\n" + errorThrown
+					data : {
+						"message" : textStatus + "" + errorThrown
+					}
 				};
-				if (typeof onError === 'function') {
+				if (typeof onProcess === 'function') {
 					window.console.log(result);
-					onError(result);
+					onProcess(result);
 
 				}
 			}
@@ -52,7 +54,7 @@ hcpsuccessfactors.util.httpRequest = {
 		return result;
 	},
 
-	httpGetRequest : function(host, url, data, async, onSuccess, onError) {
+	httpGetRequest : function(host, url, data, async, onProcess) {
 
 		var result = null;
 		var datatype = "json";
@@ -78,18 +80,20 @@ hcpsuccessfactors.util.httpRequest = {
 					success : true,
 					data : rdata
 				};
-				if (typeof onSuccess === 'function') {
-					onSuccess(result);
+				if (typeof onProcess === 'function') {
+					onProcess(result);
 				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
 				result = {
 					success : false,
-					data : textStatus + "\n" + errorThrown
+					data : {
+						"message" : textStatus + "" + errorThrown
+					}
 				};
-				if (typeof onSuccess === 'function') {
+				if (typeof onProcess === 'function') {
 					window.console.log(result);
-					onError(result);
+					onProcess(result);
 
 				}
 			}
@@ -97,7 +101,7 @@ hcpsuccessfactors.util.httpRequest = {
 		return result;
 	},
 
-	httpPostRequest : function(host, url, data, async, onSuccess, onError) {
+	httpPostRequest : function(host, url, data, async, onProcess) {
 
 		var result = null;
 		var datatype = "json";
@@ -125,18 +129,20 @@ hcpsuccessfactors.util.httpRequest = {
 					data : rdata
 
 				};
-				if (typeof onSuccess === 'function') {
-					onSuccess(result);
+				if (typeof onProcess === 'function') {
+					onProcess(result);
 				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
 				result = {
 					success : false,
-					data : textStatus + "\n" + errorThrown
+					data : {
+						"message" : textStatus + "" + errorThrown
+					}
 				};
-				if (typeof onSuccess === 'function') {
+				if (typeof onProcess === 'function') {
 					window.console.log(result);
-					onError(result);
+					onProcess(result);
 				}
 			}
 		});

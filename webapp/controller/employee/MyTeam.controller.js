@@ -102,8 +102,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 					}
 				}
-			}, function(error) {
-				oList.setBusy(false);
 			});
 		},
 

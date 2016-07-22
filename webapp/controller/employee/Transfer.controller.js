@@ -56,7 +56,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 
 					}
 				}
-			}, function(error) {
 			});
 		},
 
@@ -87,8 +86,6 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "jquery.sap.globa
 						// TODO: ERROR
 					}
 				}
-			}, function(result) {
-				view.setBusy(false);
 			});
 		},
 		onSelectCityKeyChange : function(event) {
