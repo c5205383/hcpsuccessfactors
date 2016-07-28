@@ -217,6 +217,11 @@
 					"pattern": "peoplesession",
 					"name": "peoplesession",
 					"target": "peoplesession"
+				},
+				{
+					"pattern": "performance",
+					"name": "performance",
+					"target": "performance"
 				}
 			],
 			"targets": {
@@ -329,6 +334,10 @@
 				"peoplesession": {
 					"viewPath": "hcpsuccessfactors.view.peoplesession",
 					"viewName": "PeopleSession"
+				},
+				"performance": {
+					"viewPath": "hcpsuccessfactors.view.forms",
+					"viewName": "Performance"
 				},
 				"notFound": {
 					"viewName": "NotFound",

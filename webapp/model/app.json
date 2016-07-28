@@ -19,7 +19,7 @@
 			"navTo" : "myform"
 		},
 		{
-			"icon" : "performance",
+			"icon" : "settings",
 			"type" : "Monitor",
 			"title" : "Admin Center",
 			"navTo" : "admincenter"
@@ -35,6 +35,12 @@
 			"type" : "Monitor",
 			"title" : "People Session",
 			"navTo" : "peoplesession"
+		},
+		{
+			"icon" : "performance",
+			"type" : "Monitor",
+			"title" : "My Performance",
+			"navTo" : "performance"
 		}
 	]
 }
