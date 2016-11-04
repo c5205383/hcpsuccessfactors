@@ -5,9 +5,9 @@
 			<Toolbar class="sapUiResponsiveMargin" width="auto">
 				<Title text="{i18n>GoalListTitle}" />
 				<ToolbarSpacer />
-				<Select id="goalPlanSelectId" width="20%" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/d/results'}">
+				<Select id="goalPlanSelectId" width="20%" selectedKey="1" change="onSelectKeyChange" items="{path:'GoalPlanModel>/'}">
 					<items>
-						<core:Item key="{GoalPlanModel>id}" text="{GoalPlanModel>name}" />
+						<core:Item key="{GoalPlanModel>object/goalPlanId}" text="{GoalPlanModel>object/name}" />
 					</items>
 				</Select>
 				<Button icon="sap-icon://refresh" press="onRefreshPressed">

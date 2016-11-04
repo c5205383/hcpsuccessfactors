@@ -19,16 +19,16 @@
 								<HBox>
 									<Label text="{i18n>admincenter-page-batchjob-name}: {BatchJobsModel>object/name}" />
 									<Label width="1.5rem" text="" />
-									<Label text="{i18n>admincenter-page-batchjob-type}: {BatchJobsModel>object/type}" />
+									<Label text="{i18n>admincenter-page-batchjob-object}: {BatchJobsModel>object/type}" />
+									<Label width="1.5rem" text="" />
+									<Label text="{i18n>admincenter-batchjob-running-status}: {BatchJobsModel>object/runningStatus}" />
 								</HBox>
 								<Label text="{i18n>admincenter-page-batchjob-description}: {BatchJobsModel>object/info}" />
 							</VBox>
 						</HBox>
 						<HBox justifyContent="End" width="50%">
-							<Button press="onChangeBatchJobStatus" icon="{path:'BatchJobsModel>object/status', formatter:'.formatter.formatBtnStatus'}" type="Transparent"
-								class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
-							<Button press="onDeleteBatchJobPressed" icon="sap-icon://delete" type="Transparent" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
-							<Button text="" type="Transparent" enabled="false" width="1.5rem" />
+							<Button press="onChangeBatchJobStatus" icon="{path:'BatchJobsModel>object/status', formatter:'.formatter.formatBtnStatus'}" type="Transparent" />
+							<Button press="onDeleteBatchJobPressed" icon="sap-icon://delete" type="Transparent" />
 						</HBox>
 					</HBox>
 				</CustomListItem>

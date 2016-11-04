@@ -12,9 +12,11 @@ sap.ui.define(
 			return BaseController.extend("hcpsuccessfactors.controller.admincenter.AdminCenter", {
 				formatter : formatter,
 				sNewBatchJobTemplatePath : "model/NewBatchJobTemplate.json",
+				sBatchJobObjectsPath : "model/BatchJobObjects.json",
 				loginUserPath : "loginUser",
 				userModel : "UserModel",
 				batchJobsModel : "BatchJobsModel",
+				batchJobUrl : "batchJob",
 
 				/**
 				 * @event
@@ -23,14 +25,19 @@ sap.ui.define(
 				 * @memberOf hcpsuccessfactors.view.admincenter.AdminCenter
 				 */
 				onInit : function() {
-					this.initialJobData();
+					this.getJobData();
+					this.refreshUser();
+					var that = this;
+					setInterval(function() {
+						that.getJobData();
+					}, 1000 * 30,that);
 				},
 
 				onRefreshPressed : function() {
-					this.initialJobData();
+					this.getJobData();
 				},
 
-				initialJobData : function() {
+				refreshUser : function() {
 					var host = this.getServiceHost();
 					var url = this.getServiceUrl(this.loginUserPath);
 					var that = this;
@@ -40,9 +47,6 @@ sap.ui.define(
 								var oModel = new sap.ui.model.json.JSONModel();
 								oModel.setData(result.data);
 								that.getView().setModel(oModel, that.userModel);
-
-								that.bindBatchJobsData();
-
 							} else {
 								// TODO: ERROR
 							}
@@ -52,14 +56,13 @@ sap.ui.define(
 
 				/**
 				 * @function
-				 * @name bindBatchJobsData
+				 * @name getJobData
 				 * @description preload admin center data
 				 */
-				bindBatchJobsData : function() {
+				getJobData : function() {
 					var that = this;
-					// function from base controller
 					var host = this.getServiceHost();
-					var url = this.getServiceUrl("mybatchjob");
+					var url = this.getServiceUrl(that.batchJobUrl);
 					this._showBusyIndicator(true);
 					var result = httpRequest.httpGetRequest(host, url, null, true, function(result) {
 						that._showBusyIndicator(false);
@@ -99,8 +102,13 @@ sap.ui.define(
 					if (oUserModel != undefined) {
 						var sUserName = oUserModel.getData().user;
 						oModel.getData().owner = sUserName;
-						dialog.setModel(oModel, "NewBatchJob");
 					}
+					dialog.setModel(oModel, "NewBatchJob");
+
+					var oObjectsModel = new sap.ui.model.json.JSONModel();
+					oObjectsModel.loadData(this.sBatchJobObjectsPath, null, false);
+					dialog.setModel(oObjectsModel, "BatchJobObjects");
+
 				},
 
 				/**
@@ -120,12 +128,14 @@ sap.ui.define(
 
 						var that = this;
 						var host = this.getServiceHost();
-						var url = this.getServiceUrl("batchJob");
+						var url = this.getServiceUrl(that.batchJobUrl);
 
 						var result = httpRequest.httpPostRequest(host, url, JSON.stringify(oPostBatchJobData), true,
 								function(result) {
-									MessageToast.show("Create Batch Job Successed!");
-									that.initialJobData();
+									if (result.success == true) {
+										MessageToast.show("Create Batch Job Successed!");
+										that.getJobData();
+									}
 								});
 						this.onDialogClose();
 					}
@@ -169,10 +179,16 @@ sap.ui.define(
 						return;
 
 					object.status = !object.status;
+					if (object.status) {
+						object.runningStatus = "RUNNING";
+					} else {
+						object.runningStatus = "STOP";
+					}
 
 					var that = this;
 					var host = this.getServiceHost();
-					var url = this.getServiceUrl("batchJob/" + object.id);
+					var url = this.getServiceUrl(that.batchJobUrl + "/" + object.id);
+					oJobList.setBusy(true);
 					var result = httpRequest.httpRequest(host, url, JSON.stringify(object), true,
 							httpRequest.httpRequestMethod.PUT, function(result) {
 								if (result.success) {
@@ -180,8 +196,9 @@ sap.ui.define(
 								} else {
 									MessageToast.show("failed to change status");
 								}
+								oJobList.setBusy(false);
+								that.getJobData();
 
-								that.initialJobData();
 							});
 				},
 
@@ -205,7 +222,7 @@ sap.ui.define(
 					// show dialog when pressing the button
 					var that = this;
 					var host = this.getServiceHost();
-					var url = this.getServiceUrl("batchJob/" + sBatchJobId);
+					var url = this.getServiceUrl(that.batchJobUrl + "/" + sBatchJobId);
 
 					var oDeleteWarningDialog = new sap.m.Dialog({
 						title : "Confirm",
@@ -222,7 +239,7 @@ sap.ui.define(
 										httpRequest.httpRequestMethod.DELETE, function(result) {
 											oDeleteWarningDialog.close();
 											MessageToast.show("Delete Job Successfully!");
-											that.initialJobData();
+											that.getJobData();
 											oJobList.setBusy(false);
 										});
 							}

@@ -1,9 +1,11 @@
 	{
 		"name": "BatchJobWorker",
-		"type": "null",
+		"type": "",
 		"interval":"",
 		"empId": "",
 		"info": "",
-		"status": "",
-		"owner": ""
+		"status": "false",
+		"owner": "",
+		"interval":"",
+		"runningStatus":"STOP"
 	}
