@@ -1,0 +1,57 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="hcpsuccessfactors.controller.user.users"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+			<Table id="idProductsTable" inset="false" items="{
+			path: '/ProductCollection',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Products" level="H2" />
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="12em">
+						<Text text="Product" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Supplier" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+						<Text text="Dimensions" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+						<Text text="Weight" />
+					</Column>
+					<Column hAlign="Right">
+						<Text text="Price" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{Name}" text="{ProductId}" />
+							<Text text="{SupplierName}" />
+							<Text text="{Width} x {Depth} x {Height} {DimUnit}" />
+							<ObjectNumber number="{WeightMeasure}" unit="{WeightUnit}"
+								state="{
+							path: 'WeightMeasure',
+							formatter: 'sap.m.sample.Table.Formatter.weightState'
+						}" />
+							<ObjectNumber
+								number="{
+								parts:[{path:'Price'},{path:'CurrencyCode'}],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {showMeasure: false}
+							}"
+								unit="{CurrencyCode}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</core:View>

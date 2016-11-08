@@ -13,6 +13,11 @@
 			"navTo": "myteam"
 		},
 		{
+			"icon" : "employee-pane",
+			"title" : "Users",
+			"navTo": "users"
+		},
+		{
 			"icon": "documents",
 			"type" : "Monitor",
 			"title" : "Forms",

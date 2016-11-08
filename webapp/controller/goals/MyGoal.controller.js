@@ -52,7 +52,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 
 		bindGoalListData : function(goalId, oList) {
 			var host = this.getServiceHost();
-			var url = this.getServiceUrl("goals");
+			var url = this.getServiceUrl("apigoals");
 			var that = this;
 			var data = {
 				goalPlanId : goalId

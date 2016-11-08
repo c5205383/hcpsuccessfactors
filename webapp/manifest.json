@@ -90,8 +90,11 @@
 					"name": "myteam",
 					"target": "myteam"
 				},
-				
-				
+				{
+					"pattern": "users",
+					"name": "users",
+					"target": "users"
+				},
 				{
 					"pattern": "detail1",
 					"name": "detail001",
@@ -237,7 +240,10 @@
 					"viewPath": "hcpsuccessfactors.view.employee",
 					"viewName": "MyTeam"
 				},
-				
+				"users": {
+					"viewPath": "hcpsuccessfactors.view.user",
+					"viewName": "users"
+				},
 				"detail001": {
 					"viewPath": "hcpsuccessfactors.view.detail",
 					"viewName": "DemoDetail001"

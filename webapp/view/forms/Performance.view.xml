@@ -1,0 +1,112 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout"
+	controllerName="hcpsuccessfactors.controller.forms.Performance" xmlns:html="http://www.w3.org/1999/xhtml" height="100%">
+	<App>
+		<Page title="{i18n>myform-title}" showNavButton="true" navButtonPress="onNavBack">
+			<tnt:ToolPage id="toolPage">
+				<tnt:header>
+					<tnt:ToolHeader>
+						<Button id="sideNavigationToggleButton" icon="sap-icon://menu2" press="onCollapseExapandPress">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
+							</layoutData>
+						</Button>
+						<tnt:ToolHeaderUtilitySeparator />
+						<ToolbarSpacer>
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px" />
+							</layoutData>
+						</ToolbarSpacer>
+						<Button text="display" icon="sap-icon://display" type="Transparent" press="handleResponsivePopoverPress">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
+							</layoutData>
+						</Button>
+					</tnt:ToolHeader>
+				</tnt:header>
+				<tnt:sideContent expanded="false">
+					<tnt:SideNavigation id="sideNavigation" expanded="true" itemSelect="onItemSelect" class="cssList">
+						<tnt:NavigationList id="navigationList">
+							<tnt:NavigationListItem text="All Forms" icon="sap-icon://form" expanded="true" key="root1"></tnt:NavigationListItem>
+							<tnt:NavigationListItem text="In Process" icon="sap-icon://pending" expanded="true" key="page2-1">
+								<tnt:NavigationListItem text="Inbox" expanded="true" key="page2-1"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="En Route" expanded="true" key="page2-2"></tnt:NavigationListItem>
+							</tnt:NavigationListItem>
+							<tnt:NavigationListItem text="Completed" icon="sap-icon://complete" expanded="true" key="root3">
+								<tnt:NavigationListItem text="Create New Folder" expanded="true" key="page3-1"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="360 Reviews" expanded="true" key="page3-2"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="Goal Plans" expanded="true" key="page3-3"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="Job Description Reviews" expanded="true" key="page3-4"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="Performance Reviews" expanded="true" key="page3-5"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="Stack Rankings" expanded="true" key="page3-6"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="Succession Nominations" expanded="true" key="page3-7"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="Talent Reviews" expanded="true" key="page3-8"></tnt:NavigationListItem>
+							</tnt:NavigationListItem>
+							<tnt:NavigationListItem text="Form Status" icon="sap-icon://order-status" expanded="true" key="root4">
+								<tnt:NavigationListItem text="Aggregrate" expanded="true" key="page4-1"></tnt:NavigationListItem>
+								<tnt:NavigationListItem text="Individual" expanded="true" key="page4-2"></tnt:NavigationListItem>
+							</tnt:NavigationListItem>
+						</tnt:NavigationList>
+					</tnt:SideNavigation>
+				</tnt:sideContent>
+				<tnt:mainContents>
+					<NavContainer id="pageContainer">
+						<pages>
+							<ScrollContainer id="page2-1" horizontal="true" vertical="true" height="100%">
+								<l:VerticalLayout class="cssFormlayout">
+									<Table inset="false" items="{path:'FormModel>/d/results'}" id="table2-1">
+										<columns>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="{i18n>myform-table-formtitle}" />
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="{i18n>myform-table-employee}" />
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="{i18n>myform-table-formstartdate}" />
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="{i18n>myform-table-formenddate}" />
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="{i18n>myform-table-formduedate}" />
+											</Column>
+											<Column minScreenWidth="Tablet" demandPopin="true">
+												<Text text="{i18n>myform-table-lastmodified}" />
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem type="Active" press="onItemTablePress">
+												<cells>
+													<Text text="{FormModel>formTitle}" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1" />
+													<Text text="{FormModel>formOriginator}" wrapping="false" class="sapUiSmallMarginEnd" textAlign="Begin" maxLines="1" />
+													<Text text="{path:'FormModel>formReviewStartDate',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" class="sapUiSmallMarginEnd"
+														textAlign="Begin" maxLines="1" />
+													<Text text="{path:'FormModel>formReviewEndDate',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" class="sapUiSmallMarginEnd"
+														textAlign="Begin" maxLines="1" />
+													<Text text="{path:'FormModel>formReviewDueDate',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" class="sapUiSmallMarginEnd"
+														textAlign="Begin" maxLines="1" />
+													<Text text="{path:'FormModel>formLastModifiedDate',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" class="sapUiSmallMarginEnd"
+														textAlign="Begin" maxLines="1" />
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+								</l:VerticalLayout>
+							</ScrollContainer>
+							<ScrollContainer id="root1" horizontal="true" vertical="true" height="100%">
+								<l:VerticalLayout class="cssFormlayout">
+									<Text text="This page has all forms in my form." />
+								</l:VerticalLayout>
+							</ScrollContainer>
+							<ScrollContainer id="page2-2" horizontal="false" vertical="true" height="100%">
+								<l:VerticalLayout class="cssFormlayout">
+									<Text text="This is the first page." />
+								</l:VerticalLayout>
+							</ScrollContainer>
+						</pages>
+					</NavContainer>
+				</tnt:mainContents>
+			</tnt:ToolPage>
+		</Page>
+	</App>
+</mvc:View>
