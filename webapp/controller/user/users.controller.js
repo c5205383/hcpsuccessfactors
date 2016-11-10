@@ -1,38 +1,47 @@
-sap.ui.controller("hcpsuccessfactors.controller.user.users", {
+sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactors/util/httpRequest",
+		"sap/ui/model/Filter" ], function(BaseController, httpRequest,Filter) {
+	"use strict";
 
-/**
-* Called when a controller is instantiated and its View controls (if available) are already created.
-* Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
-* @memberOf view.user.users
-*/
-//	onInit: function() {
-//
-//	},
+	return BaseController.extend("hcpsuccessfactors.controller.user.users",
+			{
 
-/**
-* Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-* (NOT before the first rendering! onInit() is used for that one!).
-* @memberOf view.user.users
-*/
-//	onBeforeRendering: function() {
-//
-//	},
+				onInit : function() {
+					var oTable = this.getView().byId("idUsersTable");
+					this.bindUserList(oTable);
+				},
 
-/**
-* Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-* This hook is the same one that SAPUI5 controls get after being rendered.
-* @memberOf view.user.users
-*/
-//	onAfterRendering: function() {
-//
-//	},
+				bindUserList : function(oTable) {
+					var host = this.getServiceHost();
+					var url = this.getServiceUrl("users");
+					var that = this;
+					oTable.setBusy(true);
+					var result = httpRequest.httpGetRequest(host, url, null, true, function(result) {
+						if (result != null) {
+							oTable.setBusy(false);
+							if (result.success === true) {
+								var oModel = new sap.ui.model.json.JSONModel();
+								oModel.setData(result.data);
+								oTable.setModel(oModel, "AllUsers");
+							} else {
+								window.console.log(result);
 
-/**
-* Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-* @memberOf view.user.users
-*/
-//	onExit: function() {
-//
-//	}
+							}
+						}
+					});
+				},
 
+				onSearch : function(oEvt) {
+					var aFilters = [];
+					var sQuery = oEvt.getSource().getValue();
+					if (sQuery && sQuery.length > 0) {
+						var filter = new Filter("object/defaultFullName",
+								sap.ui.model.FilterOperator.Contains, sQuery);
+						aFilters.push(filter);
+					}
+					var oTable = this.getView().byId("idUsersTable");
+					var binding = oTable.getBinding("items");
+					binding.filter(aFilters, "Application");
+				}
+
+			});
 });

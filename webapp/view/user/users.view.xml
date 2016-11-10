@@ -1,53 +1,43 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="hcpsuccessfactors.controller.user.users"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Title">
+	<Page title="User" showNavButton="true" navButtonPress="onNavBack">
 		<content>
-			<Table id="idProductsTable" inset="false" items="{
-			path: '/ProductCollection',
+			<Table id="idUsersTable" inset="false" items="{
+			path: 'AllUsers>/',
 			sorter: {
-				path: 'Name'
+				path: 'object/userId'
 			}
 		}">
 				<headerToolbar>
 					<Toolbar>
-						<Title text="Products" level="H2" />
+						<SearchField liveChange="onSearch" width="100%"></SearchField>
 					</Toolbar>
 				</headerToolbar>
 				<columns>
 					<Column width="12em">
-						<Text text="Product" />
+						<Label text="User Id" design="Bold"/>
 					</Column>
 					<Column minScreenWidth="Tablet" demandPopin="true">
-						<Text text="Supplier" />
+						<Label text="User Name" design="Bold"/>
 					</Column>
-					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
-						<Text text="Dimensions" />
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Full Name" design="Bold"/>
 					</Column>
-					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-						<Text text="Weight" />
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Department" design="Bold"/>
 					</Column>
 					<Column hAlign="Right">
-						<Text text="Price" />
+						<Label text="Email" design="Bold"/>
 					</Column>
 				</columns>
 				<items>
 					<ColumnListItem>
 						<cells>
-							<ObjectIdentifier title="{Name}" text="{ProductId}" />
-							<Text text="{SupplierName}" />
-							<Text text="{Width} x {Depth} x {Height} {DimUnit}" />
-							<ObjectNumber number="{WeightMeasure}" unit="{WeightUnit}"
-								state="{
-							path: 'WeightMeasure',
-							formatter: 'sap.m.sample.Table.Formatter.weightState'
-						}" />
-							<ObjectNumber
-								number="{
-								parts:[{path:'Price'},{path:'CurrencyCode'}],
-								type: 'sap.ui.model.type.Currency',
-								formatOptions: {showMeasure: false}
-							}"
-								unit="{CurrencyCode}" />
+							<Text text="{AllUsers>object/userId}" />
+							<Text text="{AllUsers>object/username}" />
+							<Text text="{AllUsers>object/defaultFullName}" />
+							<Text text="{AllUsers>object/department}" />
+							<Text text="{AllUsers>object/email}" />
 						</cells>
 					</ColumnListItem>
 				</items>

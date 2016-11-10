@@ -8,7 +8,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 		getRouter : function() {
 			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
-		
+
 		onNavBack : function(oEvent) {
 			var oHistory, sPreviousHash;
 			oHistory = History.getInstance();
@@ -31,7 +31,8 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 						+ (window.location.port ? ":" + window.location.port : "");
 
 			} else {
-				var host = null;
+				host = window.location.protocol + "//" + window.location.hostname
+						+ (window.location.port ? ":" + window.location.port : "") + window.location.pathname;
 			}
 			return host;
 		},
@@ -55,58 +56,67 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 		 * @function
 		 * @name httpGet
 		 * @description retrieve data from odata
-		 * @param {Boolean} bAsync - async or not
-		 * @param {String} sEntitySet - entity set
-		 * @param {String} sId - id of entity set
-		 * @param {String} sExpand - expand
-		 * @param {String} sQuery - filter
-		 * @param {Function} fnSuccessCallback- invoke when success
-		 * @param {Function} fnErrorCallback - invoke when error
-		 * @param {Function} fnCompleteCallback - invoke when complete
+		 * @param {Boolean}
+		 *            bAsync - async or not
+		 * @param {String}
+		 *            sEntitySet - entity set
+		 * @param {String}
+		 *            sId - id of entity set
+		 * @param {String}
+		 *            sExpand - expand
+		 * @param {String}
+		 *            sQuery - filter
+		 * @param {Function}
+		 *            fnSuccessCallback- invoke when success
+		 * @param {Function}
+		 *            fnErrorCallback - invoke when error
+		 * @param {Function}
+		 *            fnCompleteCallback - invoke when complete
 		 */
-		httpGet: function(bAsync, sEntitySet, sId, sExpand, sQuery, fnSuccessCallback, fnErrorCallback, fnCompleteCallback) {
-			var url = sEntitySet + (sId !== null ? "(" + sId + ")" : "") +
-				(function() {
-					if (sExpand !== null && sQuery !== null) {
-						return "?$expand=" + sExpand + "&$filter=" + sQuery + "&$format=json";
-					} else if (sExpand !== null) {
-						return "?$expand=" + sExpand + "&$format=json";
-					} else if (sQuery !== null) {
-						return "?$filter=" + sQuery + "&$format=json";
-					} else {
-						return "?$format=json";
-					}
-				})();
+		httpGet : function(bAsync, sEntitySet, sId, sExpand, sQuery, fnSuccessCallback, fnErrorCallback,
+				fnCompleteCallback) {
+			var url = sEntitySet + (sId !== null ? "(" + sId + ")" : "") + (function() {
+				if (sExpand !== null && sQuery !== null) {
+					return "?$expand=" + sExpand + "&$filter=" + sQuery + "&$format=json";
+				} else if (sExpand !== null) {
+					return "?$expand=" + sExpand + "&$format=json";
+				} else if (sQuery !== null) {
+					return "?$filter=" + sQuery + "&$format=json";
+				} else {
+					return "?$format=json";
+				}
+			})();
 			$.ajax({
-				url: "/pmapi/" + url,
-				type: "GET",
-				async: bAsync,
-				success: function(oData) {
+				url : "/pmapi/" + url,
+				type : "GET",
+				async : bAsync,
+				success : function(oData) {
 					if (fnSuccessCallback) {
 						fnSuccessCallback(oData);
 					}
 				},
-				error: function() {
+				error : function() {
 					jQuery.sap.log.error("failed to get");
 					if (fnErrorCallback) {
 						fnErrorCallback();
 					}
 				},
-				complete: function() {
+				complete : function() {
 					if (fnCompleteCallback) {
 						fnCompleteCallback();
 					}
 				}
 			});
 		},
-		
+
 		/**
 		 * @function
 		 * @name _showBusyIndicator
 		 * @description show busy indicator of whole view or not
-		 * @param {Boolean} bBusy - true or false
+		 * @param {Boolean}
+		 *            bBusy - true or false
 		 */
-		_showBusyIndicator : function (bBusy) {
+		_showBusyIndicator : function(bBusy) {
 			this.getView().setBusy(bBusy);
 		}
 
