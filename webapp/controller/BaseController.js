@@ -31,8 +31,7 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/ui/core/routing/History" ], f
 						+ (window.location.port ? ":" + window.location.port : "");
 
 			} else {
-				host = window.location.protocol + "//" + window.location.hostname
-						+ (window.location.port ? ":" + window.location.port : "") + window.location.pathname;
+				host = null;
 			}
 			return host;
 		},
