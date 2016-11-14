@@ -87,7 +87,7 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "sap/ui/model/jso
 
 		getMyEmployeeList : function(oList) {
 			var host = this.getServiceHost();
-			var url = this.getServiceUrl("empDirectReports");
+			var url = this.getServiceUrl("apiempdirectreports");
 
 			var that = this;
 			var result = httpRequest.httpGetRequest(host, url, null, true, function(result) {
