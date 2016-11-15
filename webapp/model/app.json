@@ -7,6 +7,11 @@
 			"navTo" : "mygoal"
 		},
 		{
+			"icon" : "target-group",
+			"title" : "My Goals 2",
+			"navTo": "localgoal"
+		},
+		{
 			"icon" : "employee",
 			"number" : "8",
 			"title" : "My Team",

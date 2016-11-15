@@ -1,0 +1,77 @@
+<mvc:View id="localgoal" xmlns:core="sap.ui.core" controllerName="hcpsuccessfactors.controller.goals.localgoal" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>mygoal-title}" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<Table id="idLocalGoalsTable" inset="false" items="{
+			path: 'LocalGoalModel>/',
+			sorter: {
+				path: 'object/id'
+			}
+		}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="{i18n>GoalListTitle}" />
+						<ToolbarSpacer />
+						<SearchField liveChange="onSearch" width="40%"></SearchField>
+
+						<Select id="idLocalGoalPlanSelectId" width="20%" selectedKey="1" change="onSelectKeyChange" items="{path:'LocalGoalPlanModel>/'}">
+							<items>
+								<core:Item key="{LocalGoalPlanModel>object/goalPlanId}" text="{LocalGoalPlanModel>object/name}" />
+							</items>
+						</Select>
+						<Button icon="sap-icon://refresh" press="onRefreshPressed">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow" />
+							</layoutData>
+						</Button>
+
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="12em">
+						<Label text="Category" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Name" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Description" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Numbering" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Rating" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="State" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Type" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Start" design="Bold" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Due" design="Bold" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{LocalGoalModel>object/category}" />
+							<Text text="{LocalGoalModel>object/name}" wrapping="false" tooltip="{LocalGoalModel>object/name}" />
+							<Text text="{LocalGoalModel>object/description}" wrapping="false" tooltip="{LocalGoalModel>object/name}" />
+							<Text text="{LocalGoalModel>object/numbering}" />
+							<Text text="{LocalGoalModel>object/rating}" />
+							<Text text="{LocalGoalModel>object/state}" />
+							<Text text="{LocalGoalModel>object/type}" />
+							<Text text="{path:'LocalGoalModel>object/start',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" />
+							<Text text="{path:'LocalGoalModel>object/due',formatter:'hcpsuccessfactors.util.formatter.formatFormDate'}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
