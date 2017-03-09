@@ -74,19 +74,23 @@ sap.ui.define([ "hcpsuccessfactors/controller/BaseController", "hcpsuccessfactor
 			var key = oEvent.getSource().getSelectedKey();
 			var oTable = this.getView().byId("idLocalGoalsTable");
 			this.bindGoalListData(oTable, key);
+			var oSearch = this.getView().byId("idGoalSearchField");
+			oSearch.setValue("");
 		},
 
 		onRefreshPressed : function(oEvent) {
 			var oSelector = this.getView().byId("idLocalGoalPlanSelectId");
 			this.bindGoalPlanData(oSelector);
+			var oSearch = this.getView().byId("idGoalSearchField");
+			oSearch.setValue("");
+
 		},
-		
+
 		onSearch : function(oEvt) {
 			var aFilters = [];
 			var sQuery = oEvt.getSource().getValue();
 			if (sQuery && sQuery.length > 0) {
-				var filter = new sap.ui.model.Filter("object/name",
-						sap.ui.model.FilterOperator.Contains, sQuery);
+				var filter = new sap.ui.model.Filter("object/name", sap.ui.model.FilterOperator.Contains, sQuery);
 				aFilters.push(filter);
 			}
 			var oTable = this.getView().byId("idLocalGoalsTable");

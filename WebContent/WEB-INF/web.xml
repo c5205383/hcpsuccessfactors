@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+	<display-name>hcpsuccessfactors</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- deploy to HCP -->
+	<!-- <servlet> <display-name>ConnectivityProxy</display-name> <servlet-name>ConnectivityProxy</servlet-name> <servlet-class>com.sap.cloudlabs.connectivity.proxy.ProxyServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>ConnectivityProxy</servlet-name> <url-pattern>/sfsfdataservice/*</url-pattern> </servlet-mapping> -->
+	<!-- deploy to HCP -->
+	<login-config>
+		<auth-method>SAML2</auth-method>
+	</login-config>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Protected
+				Area
+			</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Everyone</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-role id="SecurityRole_1461128827748">
+		<description>All Users</description>
+		<role-name>Everyone</role-name>
+	</security-role>
+	<session-config>
+		<session-timeout>15</session-timeout>
+	</session-config>
+</web-app>

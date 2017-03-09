@@ -12,7 +12,7 @@
 					<Toolbar>
 						<Title text="{i18n>GoalListTitle}" />
 						<ToolbarSpacer />
-						<SearchField liveChange="onSearch" width="40%"></SearchField>
+						<SearchField id = "idGoalSearchField" liveChange="onSearch" width="40%"></SearchField>
 
 						<Select id="idLocalGoalPlanSelectId" width="20%" selectedKey="1" change="onSelectKeyChange" items="{path:'LocalGoalPlanModel>/'}">
 							<items>
